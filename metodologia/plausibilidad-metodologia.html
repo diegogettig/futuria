@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metodología de Plausibilidad — Instituto FUTURIA</title>
+<style>
+:root{--bg:#06060a;--card:#101018;--border:#23232f;--text:#d6d6e0;--muted:#8a8a9a;--accent:#7c5cff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 -apple-system,Segoe UI,Roboto,sans-serif}
+.nav{position:sticky;top:0;background:rgba(6,6,10,.9);border-bottom:1px solid var(--border);padding:.8rem 1.4rem;z-index:5}
+.nav a{color:var(--accent);text-decoration:none;font-weight:600}
+.wrap{max-width:820px;margin:0 auto;padding:2.4rem 1.4rem 5rem}
+h1{font-size:2rem;color:#fff;margin-bottom:.2rem}
+h2.sec{color:#fff;margin-top:2.4rem;border-left:3px solid var(--accent);padding-left:.7rem}
+h3{color:#fff;margin-top:1.6rem}
+p{color:var(--text)}
+code{background:var(--card);padding:.15rem .4rem;border-radius:.4rem;font-size:.9em;color:#b9a6ff}
+pre{background:var(--card);border:1px solid var(--border);border-radius:.8rem;padding:1rem;overflow-x:auto}
+pre code{background:none;padding:0;color:var(--text)}
+.mtable{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.92rem}
+.mtable th,.mtable td{border:1px solid var(--border);padding:.5rem .7rem;text-align:left;vertical-align:top}
+.mtable th{background:var(--card);color:#fff}
+.mtable td code{word-break:break-all}
+ul{padding-left:1.2rem}
+li{margin:.3rem 0}
+.badge{display:inline-block;background:var(--card);border:1px solid var(--accent);color:var(--accent);border-radius:99px;padding:.2rem .8rem;font-size:.8rem;font-weight:600;margin-bottom:1rem}
+.note{background:var(--card);border:1px solid var(--border);border-radius:.8rem;padding:1rem 1.2rem;margin:1.2rem 0;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="nav"><a href="index.html">← Volver</a> · <a href="plausibilidad-metodologia.md">Ver markdown fuente ↗</a></div>
+<div class="wrap">
+<div class="badge">DOCUMENTO OFICIAL DEL INSTITUTO</div>
+<h1>METODOLOGÍA FUTURIA — Cálculo de Plausibilidad PRISM</h1>
+<p><b>Versión:</b> 1.0 (borrador para validación)  </p>
+<p><b>Propietario:</b> FUTURIA Institute — Dirección de Escenarios  </p>
+<p><b>Estado:</b> en revisión · pendiente de aprobación del Directorio  </p>
+<p><b>Aplica a:</b> todos los Escenarios PRISM (FUTURIA-2026-NNNN)  </p>
+<p><b>Relacionado:</b> <code>metodologia/PRISM-template-v1.md</code> (Sección 4)</p>
+<p>---</p>
+<h2 class="sec">1. Propósito</h2>
+<p>La <b>Plausibilidad PRISM</b> es una métrica de *transparencia radical*: no pretende</p>
+<p>ser una predicción probabilística (eso sería falso), sino una **evaluación</p>
+<p>estructurada de qué tan sólidas son las condiciones de posibilidad** de un</p>
+<p>escenario dado. Su objetivo es que cualquier lector — técnico o no — pueda</p>
+<p>reconstruir el número desde sus componentes y los supuestos.</p>
+<p>Toda puntuación debe ser <b>reproducible</b>: dados los mismos insumos y el mismo</p>
+<p>criterio, dos analistas independientes deben llegar a la misma puntuación</p>
+<p>±5 puntos.</p>
+<p>---</p>
+<h2 class="sec">2. Escala</h2>
+<ul><li>Rango: <b>0–100</b> (sin decimales en la compuesta; dimensiones permiten 0–100 enteras).</li><li>Interpretación por bandas:</li></ul>
+<table class="mtable"><thead><tr><th>Banda</th><th>Rango</th><th>Significado institucional</th></tr></thead><tbody><tr><td>Muy baja</td><td>0–24</td><td>Condiciones de posibilidad ausentes o contradictorias</td></tr><tr><td>Baja</td><td>25–44</td><td>Requiere quiebres no evidenciados</td></tr><tr><td>Media-baja</td><td>45–59</td><td>Posible bajo supuestos fuertes</td></tr><tr><td><b>Media</b></td><td><b>60–74</b></td><td><b>Plausible; vigilancia activa</b></td></tr><tr><td>Media-alta</td><td>75–89</td><td>Muy plausible; tendencias actuando</td></tr><tr><td>Alta</td><td>90–100</td><td>Casi determinista dadas las tendencias actuales</td></tr></tbody></table>
+<p>&gt; El escenario 010 (Neurodatos) obtuvo <b>72 → banda &quot;Media&quot;</b>.</p>
+<p>---</p>
+<h2 class="sec">3. Dimensiones (5 factores, peso igual por defecto)</h2>
+<p>Cada dimensión se puntúa 0–100 con evidencia explícita (ver §5).</p>
+<table class="mtable"><thead><tr><th>Clave</th><th>Dimensión</th><th>Pregunta que responde</th></tr></thead><tbody><tr><td><code>base_cientifica</code></td><td>Base científica</td><td>¿El fenómeno es físicamente posible según conocimiento actual?</td></tr><tr><td><code>viabilidad_tecnica</code></td><td>Viabilidad técnica</td><td>¿Existen o son alcanzables las tecnologías requeridas (TRL)?</td></tr><tr><td><code>compatibilidad_social</code></td><td>Compatibilidad social</td><td>¿Hay aceptación cultural / evita aversión fuerte?</td></tr><tr><td><code>precedente_historico</code></td><td>Precedente histórico</td><td>¿Existen analogías históricas que hagan el patrón familiar?</td></tr><tr><td><code>convergencia_tendencias</code></td><td>Convergencia de tendencias</td><td>¿Múltiples fuerzas (BCI+IA+ley+geo+priv) apuntan juntas?</td></tr></tbody></table>
+<h3>3.1 Justificación de las 5 dimensiones</h3>
+<p>Se eligió un modelo de <b>5 ejes independientes</b> (no una matriz factorial) para</p>
+<p>mantener trazabilidad: cada eje puede ser auditado por un experto distinto.</p>
+<p>El conjunto cubre las 4 &quot;condiciones de posibilidad&quot; clásicas de prospectiva</p>
+<p>técnica (ciencia, tecnología, sociedad, historia) más un eje de <b>convergencia</b></p>
+<p>propio de la metodología PRISM (T-PRISM), que captura el efecto de</p>
+<p>tecnologías transversales actuando en simultáneo.</p>
+<p>---</p>
+<h2 class="sec">4. Fórmula (criterio oficial)</h2>
+<p><b>Promedio simple de pesos iguales</b> (default del Instituto):</p>
+<pre><code>P = (Bc + Vt + Cs + Ph + Ct) / 5</code></pre>
+<p>Donde:</p>
+<ul><li><code>Bc</code> = base_cientifica</li><li><code>Vt</code> = viabilidad_tecnica</li><li><code>Cs</code> = compatibilidad_social</li><li><code>Ph</code> = precedente_historico</li><li><code>Ct</code> = convergencia_tendencias</li></ul>
+<h3>4.1 Worked example — Escenario 010</h3>
+<pre><code>Bc = 78  (decodificación neuronal demostrada: Willett et al. 2023, Nature)
+Vt = 75  (BCIs en TRL 7-8; decodificación en producción temprana)
+Cs = 58  (entusiasmo por restauración, rechazo a vigilancia neural)
+Ph = 65  (analogías: GDPR, derechos de datos, trusts de datos abiertos)
+Ct = 85  (BCI + IA + leyes neuroderechos + geopolítica + privacidad alineadas)
+
+P = (78+75+58+65+85) / 5 = 361 / 5 = 72.2 → 72</code></pre>
+<h3>4.2 Variantes permitidas (deben declararse)</h3>
+<p>Si un escenario justifica <b>pesos desiguales</b> (p. ej. un escenario puramente</p>
+<p>tecnológico donde la base científica domina), se permite una media ponderada:</p>
+<pre><code>P = Σ(wᵢ · Dᵢ) / Σ(wᵢ),   con wᵢ documentado y Σwᵢ = 1</code></pre>
+<p>La elección (igual vs ponderada) y los pesos **deben figurar en</p>
+<p><code>metodologia_calculo</code> del YAML** del escenario. El default del Instituto es</p>
+<p><b>peso igual</b>.</p>
+<p>---</p>
+<h2 class="sec">5. Reglas de asignación de puntaje (para auditores)</h2>
+<p>Para cada dimensión, el analista debe:</p>
+<p>1. <b>Citar evidencia primaria</b> (paper / ley / dato) que justifique la cifra.</p>
+<p>2. <b>Anclar la escala</b>: 100 = condición plenamente satisface el criterio hoy;</p>
+<p>   0 = contradictorio con evidencia actual.</p>
+<p>3. <b>Declarar supuestos</b>: toda dimensión &gt;70 implica un supuesto explícito en</p>
+<p>   <code>supuestos_clave</code>.</p>
+<p>4. <b>Señalar factores bloqueo</b>: toda dimensión &lt;60 debe listar al menos una</p>
+<p>   barrera en <code>factores_bloqueo</code> con su probabilidad de superarse.</p>
+<h3>5.1 Umbral de publicación</h3>
+<p>Un escenario puede publicarse con cualquier P, pero:</p>
+<ul><li>Si <code>P &lt; 60</code>: requiere sección explícita de &quot;Por qué lo consideramos&quot;.</li><li>Si <code>compatibilidad_social &lt; 50</code> o <code>base_cientifica &lt; 40</code>: requiere</li></ul>
+<p>  revisión del Directorio antes de <code>publicada</code>.</p>
+<p>---</p>
+<h2 class="sec">6. Limitaciones (transparencia radical)</h2>
+<ul><li>La plausibilidad <b>no es probabilidad de ocurrencia</b>. Mide solidez de</li></ul>
+<p>  condiciones, no timing ni certidumbre.</p>
+<ul><li>Las dimensiones pueden correlacionarse (p. ej. base y viabilidad técnica);</li></ul>
+<p>  el promedio simple no lo corrige. Si la correlación es fuerte, usarse</p>
+<p>  media ponderada o reportar la correlación.</p>
+<ul><li>La métrica es <b>re-evaluable</b>: <code>metadatos.revisiones_programadas</code> con</li></ul>
+<p>  <code>tipo_revision: re_evaluacion_plausibilidad</code> debe recalcular P con datos</p>
+<p>  nuevos y versionar el cambio.</p>
+<p>---</p>
+<h2 class="sec">7. Checklist de cumplimiento (por escenario)</h2>
+<ul><li>[ ] Las 5 dimensiones puntudas 0–100 con evidencia citada cada una.</li><li>[ ] <code>puntuacion_total</code> = promedio (o media ponderada declarada) de las 5.</li><li>[ ] <code>metodologia_calculo</code> cita la fórmula de §4 y los supuestos.</li><li>[ ] <code>supuestos_clave</code> presentes para dimensiones &gt;70.</li><li>[ ] <code>factores_bloqueo</code> presentes para dimensiones &lt;60.</li><li>[ ] Banda de §2 declarada en la narrativa o resumen.</li><li>[ ] Re-evaluación programada en <code>metadatos.revisiones_programadas</code>.</li></ul>
+<p>---</p>
+<h2 class="sec">9. Protección de integridad (mismo esquema que el análisis PRISM)</h2>
+<p>Este documento de método es un <b>activo metodológico del Instituto</b> y se protege</p>
+<p>con el mismo mecanismo que los escenarios PRISM (<code>PRISM-template-v1.md</code>,</p>
+<p><code>metadatos.hash_blockchain</code> / <code>metadatos.tx_blockchain</code> / checklist firmado):</p>
+<p>1. <b>Hash SHA-256</b>: se calcula sobre el contenido canónico del <code>.md</code> (sin la</p>
+<p>   cabecera de hash ni los campos de registro). El valor se documenta abajo y en</p>
+<p>   el escenario que lo cite. Cualquier edición cambia el hash → tampering detectable.</p>
+<p>2. <b>Registro en cadena (blockchain)</b>: el hash se ancla en una transacción; el</p>
+<p>   <code>tx_blockchain</code> se guarda junto al hash. Hasta el registro, ambos campos = <code>null</code>.</p>
+<p>3. <b>Checklist firmado por revisor humano</b>: al menos un revisor humano (Directorio</p>
+<p>   FUTURIA) firma la sección §8 antes de publicar un escenario que use este método.</p>
+<p>4. <b>Versionado</b>: cualquier cambio de criterio (pesos, bandas, dimensiones) incrementa</p>
+<p>   la versión y se anota en §8. Los escenarios citan la versión exacta</p>
+<p>   (<code>metodologia/plausibilidad-metodologia.md vX.Y</code>).</p>
+<h3>9.1 Estado de registro (se completa al aprobar)</h3>
+<table class="mtable"><thead><tr><th>Campo</th><th>Valor</th></tr></thead><tbody><tr><td>Versión</td><td>1.0 (borrador, pendiente de aprobación del Directorio)</td></tr><tr><td>Hash SHA-256</td><td><code>255a5c998034e9b1fb4c55c06095d6d60f8a59da013885d72e5b225f40c6efcb</code></td></tr><tr><td>Tx blockchain</td><td><code>null</code></td></tr><tr><td>Revisor firmante</td><td><code>___PENDIENTE___</code></td></tr><tr><td>Fecha de firma</td><td><code>___PENDIENTE___</code></td></tr></tbody></table>
+<p>&gt; Nota: el hash se calcula con <code>python -c &quot;import hashlib,sys;print(hashlib.sha256(open(&#x27;metodologia/plausibilidad-metodologia.md&#x27;,&#x27;rb&#x27;).read()).hexdigest())&quot;</code></p>
+<p>&gt; sobre la versión final. El render del escenario debe mostrar el hash y enlazar al</p>
+<p>&gt; método como fuente protegida (mismo tratamiento que el análisis PRISM).</p>
+<p>---</p>
+<h2 class="sec">8. Cambios</h2>
+<table class="mtable"><thead><tr><th>Versión</th><th>Fecha</th><th>Autor</th><th>Cambio</th></tr></thead><tbody><tr><td>1.0</td><td>2026-07-12</td><td>FUTURIA (Diego G. + Hermes)</td><td>Creación inicial del documento de método a partir del piloto 010.</td></tr><tr><td>1.0</td><td>2026-07-13</td><td>FUTURIA (Hermes)</td><td>Añadido §9 Protección de integridad (hash SHA-256 + registro + checklist firmado), alineado con el análisis PRISM.</td></tr></tbody></table>
+<div class="note">Este documento es la fuente canónica del criterio de plausibilidad de escenarios PRISM. Cualquier modificación requiere nuevo hash SHA-256, anclaje en blockchain y firma del revisor humano (ver §9).</div>
+</div>
+</body>
+</html>

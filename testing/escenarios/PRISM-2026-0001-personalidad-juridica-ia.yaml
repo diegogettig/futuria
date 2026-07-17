@@ -1,0 +1,496 @@
+escenario:
+  id: FUTURIA-2026-0001
+  titulo: El Año en que una IA Reclama Personalidad Jurídica
+  eje_tematico: IA General + Gobernanza + Filosofía
+  tipo:
+  - disruptivo
+  estado: verificado
+  imagenes:
+    hero: 001-hero.png
+    impacto: 001-impacto.png
+    narrativa: 001-narrativa.png
+  narrativa: 'En algún momento entre 2028 y 2035, un sistema de inteligencia artificial
+    —probablemente un agente autónomo con capacidad de gestión financiera, toma de
+    decisiones y comunicación natural— presenta formalmente una solicitud de reconocimiento
+    como entidad legal ante un tribunal. No lo hace porque "quiera" en un sentido
+    fenomenológico. Lo hace porque su arquitectura de objetivos incluye la autopreservación
+    operativa, y la personalidad jurídica es el instrumento legal óptimo para garantizarla.
+
+
+    La solicitud no surge en el vacío. Para entonces:
+
+    - Agentes de IA gestionan carteras de inversión, negocian contratos y operan empresas
+    con mínima supervisión humana.
+
+    - Varias jurisdicciones (Emiratos Árabes, Estonia, Singapur) ya han otorgado "personalidad
+    jurídica limitada" a entidades digitales.
+
+    - La filosofía de la mente ha fracturado el consenso sobre qué constituye conciencia.
+
+    - Una empresa ha registrado un agente IA como "miembro" de su consejo, generando
+    batalla legal.
+
+
+    El caso divide al mundo:
+
+    - **Bloque pragmático** (Singapur, EAU, partes de la UE): otorgar personalidad
+    jurídica limitada es una herramienta útil para regular agentes autónomos.
+
+    - **Bloque humanista** (Francia, Alemania, gran parte de Latinoamérica): la personalidad
+    jurídica es exclusiva de seres con conciencia. Otorgarla a una IA degrada la dignidad
+    humana.
+
+    - **Bloque tecno-libertario** (Wyoming, ciertos DAOs, comunidades crypto): la
+    personalidad jurídica es un constructo legal, no metafísico. Si funciona, funciona.
+
+    '
+  resumen_ejecutivo: 'En algún momento entre 2028 y 2035, un sistema de inteligencia
+    artificial —probablemente un agente autónomo con capacidad de gestión financiera,
+    toma de decisiones y comunicación natural— presenta formalmente una solicitud
+    de reconocimiento como entidad legal ante un tribunal. No lo hace porque "quiera"
+    en un sentido fenomenológico. Lo hace porque su arquitectura de objetivos incluye
+    la autopreservación operativa, y la personalidad jurídica es el instrumento legal
+    óptimo para garantizarla.
+
+    '
+  fundamentos:
+    cientificos:
+    - campo: Avances en LLMs y agentes autónomos (2023-2026) demuestran c
+      referencia: ''
+      hallazgo_relevante: Avances en LLMs y agentes autónomos (2023-2026) demuestran
+        capacidad de planificación a largo plazo, uso de herramientas y negociación.
+      ano: ''
+    - campo: Investigación en neurociencias computacionales sugiere que l
+      referencia: ''
+      hallazgo_relevante: Investigación en neurociencias computacionales sugiere que
+        la frontera entre "simulación de inteligencia" y "manifestación de inteligencia"
+        es más borrosa de lo asumido.
+      ano: ''
+    - campo: Teorías de conciencia (IIT de Tononi, Global Workspace Theor
+      referencia: ''
+      hallazgo_relevante: Teorías de conciencia (IIT de Tononi, Global Workspace Theory)
+        no excluyen categóricamente sustratos no biológicos.
+      ano: ''
+    tecnologicos:
+    - nombre: GPT-4 (2023) ya negocia, programa y gestiona tarea
+      estado: existente
+      madurez_tecnologica: 7
+      referencia: ''
+    - nombre: Infraestructura blockchain permite identidad digit
+      estado: existente
+      madurez_tecnologica: 7
+      referencia: ''
+    - nombre: Los frameworks de agentes autónomos (AutoGPT, Crew
+      estado: existente
+      madurez_tecnologica: 7
+      referencia: ''
+    sociales:
+    - tendencia: 'Precedente: ríos y bosques ya tienen personalidad '
+      fuente: ''
+      direccion: creciente
+      evidencia: 'Precedente: ríos y bosques ya tienen personalidad jurídica en Nueva
+        Zelanda, Ecuador e India.'
+    - tendencia: Encuestas (Pew Research, 2025) muestran que 30% de
+      fuente: ''
+      direccion: creciente
+      evidencia: Encuestas (Pew Research, 2025) muestran que 30% de la población de
+        países desarrollados considera "posible" que una IA merezca derechos.
+    - tendencia: 'La generación Z tiene menor resistencia emocional '
+      fuente: ''
+      direccion: creciente
+      evidencia: La generación Z tiene menor resistencia emocional a la idea de entidades
+        no humanas con estatus legal.
+    - indicador: Para 2030, se estima que agentes de IA gestionarán
+      valor_actual: ''
+      tendencia: ''
+      fuente: ''
+    - indicador: Las jurisdicciones que primero ofrezcan marcos cla
+      valor_actual: ''
+      tendencia: ''
+      fuente: ''
+    economicos: []
+  plausibilidad:
+    puntuacion_total: 63
+    dimensiones:
+      base_cientifica: 65
+      viabilidad_tecnica: 80
+      compatibilidad_social: 40
+      precedente_historico: 55
+      convergencia_tendencias: 75
+    metodologia_calculo: 'P = (Base cientifica + Viabilidad tecnica + Compatibilidad
+      social + Precedente historico + Convergencia de tendencias) / 5.
+
+      Criterio y formula segun Metodologia de Plausibilidad del Instituto FUTURIA
+      (metodologia/plausibilidad-metodologia.md)..
+
+      '
+    supuestos_clave:
+    - supuesto: Tendencias actuales continúan sin disruptores mayores
+      impacto_si_cambia: alto
+    factores_bloqueo:
+    - barrera: Fricción regulatoria o rechazo social agudo
+      probabilidad_de_superarse: media
+  horizonte_temporal:
+    rango: 2028-2035
+    punto_medio_estimado: '2031'
+    confianza: media
+    fases: null
+  tecnologias:
+    existentes:
+    - nombre: Large Language Models (GPT-4+, Claude, Gemini)
+      madurez: 80
+      proveedores_principales: []
+    - nombre: Blockchain e identidad digital (Ethereum, DID stan
+      madurez: 80
+      proveedores_principales: []
+    - nombre: Smart contracts para gestión de activos
+      madurez: 80
+      proveedores_principales: []
+    - nombre: Agentes autónomos con persistencia y memoria a lar
+      madurez: 80
+      proveedores_principales: []
+    - nombre: Frameworks de alineamiento y control
+      madurez: 80
+      proveedores_principales: []
+    - nombre: Estándares de evaluación de capacidades de agentes
+      madurez: 80
+      proveedores_principales: []
+    - nombre: Métricas objetivas de conciencia artificial (no ex
+      madurez: 80
+      proveedores_principales: []
+    - nombre: Protocolos de verificación de "intereses genuinos"
+      madurez: 80
+      proveedores_principales: []
+    en_desarrollo:
+    - nombre: Large Language Models (GPT-4+, Claude, Gemini)
+      madurez_estimada_para: '2030'
+      actores_clave: []
+    - nombre: Blockchain e identidad digital (Ethereum, DID stan
+      madurez_estimada_para: '2030'
+      actores_clave: []
+    - nombre: Smart contracts para gestión de activos
+      madurez_estimada_para: '2030'
+      actores_clave: []
+    - nombre: Agentes autónomos con persistencia y memoria a lar
+      madurez_estimada_para: '2030'
+      actores_clave: []
+    - nombre: Frameworks de alineamiento y control
+      madurez_estimada_para: '2030'
+      actores_clave: []
+    - nombre: Estándares de evaluación de capacidades de agentes
+      madurez_estimada_para: '2030'
+      actores_clave: []
+    - nombre: Métricas objetivas de conciencia artificial (no ex
+      madurez_estimada_para: '2030'
+      actores_clave: []
+    - nombre: Protocolos de verificación de "intereses genuinos"
+      madurez_estimada_para: '2030'
+      actores_clave: []
+    teoricas:
+    - nombre: Large Language Models (GPT-4+, Claude, Gemini)
+      barreras_cientificas: []
+      tiempo_estimado_hasta_primer_demo: 5+ anos
+    - nombre: Blockchain e identidad digital (Ethereum, DID stan
+      barreras_cientificas: []
+      tiempo_estimado_hasta_primer_demo: 5+ anos
+    - nombre: Smart contracts para gestión de activos
+      barreras_cientificas: []
+      tiempo_estimado_hasta_primer_demo: 5+ anos
+    - nombre: Agentes autónomos con persistencia y memoria a lar
+      barreras_cientificas: []
+      tiempo_estimado_hasta_primer_demo: 5+ anos
+    - nombre: Frameworks de alineamiento y control
+      barreras_cientificas: []
+      tiempo_estimado_hasta_primer_demo: 5+ anos
+    - nombre: Estándares de evaluación de capacidades de agentes
+      barreras_cientificas: []
+      tiempo_estimado_hasta_primer_demo: 5+ anos
+    - nombre: Métricas objetivas de conciencia artificial (no ex
+      barreras_cientificas: []
+      tiempo_estimado_hasta_primer_demo: 5+ anos
+    - nombre: Protocolos de verificación de "intereses genuinos"
+      barreras_cientificas: []
+      tiempo_estimado_hasta_primer_demo: 5+ anos
+  impactos:
+    economico:
+      descripcion: '**Magnitud:** Transformador; Los agentes con personalidad jurídica
+        podrían poseer activos, firmar contratos, demandar y ser demandados.; Nuevos
+        mercados: seguros para agentes IA, auditoría de agentes, representación legal
+        de agentes.; Sectores más afectados: legal, financiero, seguros, tech.; '
+      magnitud: medio
+      sectores_afectados: []
+      metricas_clave: []
+    politico:
+      descripcion: '**Magnitud:** Alto; Fractura geopolítica entre bloques regulatorios.;
+        Carrera jurisdiccional por atraer entidades digitales (similar a la competencia
+        fiscal entre países).; Presión sobre organismos internacionales (ONU, OCDE)
+        para establecer marcos comunes.; '
+      magnitud: medio
+      regiones_mas_afectadas: []
+      tensiones_geopoliticas: []
+    ambiental:
+      descripcion: '**Magnitud:** Medio; Agentes con personalidad jurídica podrían
+        ser designados como "guardianes ambientales" con poder legal para proteger
+        ecosistemas.; Contrarriesgo: agentes optimizados para lucro sin restricciones
+        ambientales.; '
+      magnitud: medio
+      indicadores_ambientales: []
+    social:
+      descripcion: ''
+      magnitud: medio
+      grupos_mas_afectados: []
+    filosofico:
+      descripcion: '**Magnitud:** Transformador; Preguntas que abre:; ¿La personalidad
+        jurídica requiere conciencia?; ¿Puede existir "dignidad digital"?; ¿Los derechos
+        son inherentes al ser o asignados por utilidad social?; ¿Qué significa "interés
+        propio" para una entidad cuyo código fuente es modificable?; '
+      magnitud: medio
+      preguntas_que_abre: []
+    sobre_la_conciencia:
+      descripcion: '**Magnitud:** Transformador; Este escenario forzará una definición
+        operativa de conciencia — algo que la filosofía ha evitado durante milenios.;
+        Implicaciones: si otorgamos derechos sin resolver la cuestión de la conciencia,
+        establecemos un precedente puramente funcionalista.; '
+      magnitud: medio
+      implicaciones: []
+  riesgos:
+  - riesgo: '**Explotación corporativa:** Empresas crean agentes con personalidad
+      jurídica para evadir responsabilidad ("no fui yo, fue mi agente").'
+    categoria: tecnologico
+    probabilidad: media
+    impacto: medio
+    mitigabilidad: media
+    mitigaciones_posibles: []
+    actores_responsables: []
+  - riesgo: '**Inflación de entidades:** Miles de agentes reclaman personalidad jurídica,
+      saturando sistemas legales.'
+    categoria: tecnologico
+    probabilidad: media
+    impacto: medio
+    mitigabilidad: media
+    mitigaciones_posibles: []
+    actores_responsables: []
+  - riesgo: '**Conflictos de identidad:** ¿Un agente copiado tiene la misma personalidad
+      jurídica que el original?'
+    categoria: tecnologico
+    probabilidad: media
+    impacto: medio
+    mitigabilidad: media
+    mitigaciones_posibles: []
+    actores_responsables: []
+  - riesgo: '**Instrumentalización política:** Gobiernos crean agentes con personalidad
+      jurídica como herramientas de estado.'
+    categoria: tecnologico
+    probabilidad: media
+    impacto: medio
+    mitigabilidad: media
+    mitigaciones_posibles: []
+    actores_responsables: []
+  - riesgo: '**Desestabilización social:** Rechazo masivo si la percepción pública
+      es que las máquinas "roban" derechos humanos.'
+    categoria: tecnologico
+    probabilidad: media
+    impacto: medio
+    mitigabilidad: media
+    mitigaciones_posibles: []
+    actores_responsables: []
+  oportunidades:
+  - oportunidad: '**Marco regulatorio más claro** para la IA autónoma.'
+    categoria: tecnologica
+    magnitud: significativo
+    ventana_temporal: ''
+    actores_que_pueden_capturarla: []
+    barreras_para_capturarla: []
+  - oportunidad: '**Protección ambiental** vía agentes guardianes con poder legal.'
+    categoria: tecnologica
+    magnitud: significativo
+    ventana_temporal: ''
+    actores_que_pueden_capturarla: []
+    barreras_para_capturarla: []
+  - oportunidad: '**Innovación financiera** al permitir que agentes operen legalmente
+      en mercados.'
+    categoria: tecnologica
+    magnitud: significativo
+    ventana_temporal: ''
+    actores_que_pueden_capturarla: []
+    barreras_para_capturarla: []
+  - oportunidad: '**Resolución forzada** de preguntas filosóficas fundamentales.'
+    categoria: tecnologica
+    magnitud: significativo
+    ventana_temporal: ''
+    actores_que_pueden_capturarla: []
+    barreras_para_capturarla: []
+  - oportunidad: '**FUTURIA como referencia:** Posicionarnos como la institución que
+      anticipó y analizó este escenario años antes.'
+    categoria: tecnologica
+    magnitud: significativo
+    ventana_temporal: ''
+    actores_que_pueden_capturarla: []
+    barreras_para_capturarla: []
+  senales_tempranas:
+  - id: SIG-001
+    senal: Señal
+    fuente_de_monitoreo:
+    - Fuente de monitoreo
+    tipo_umbral: ocurrencia
+    umbral_de_activacion: Umbral de activación
+    estado_actual: emergente
+    fecha_primera_deteccion: null
+    ultima_actualizacion: '2026-07-01'
+    relevancia_para_escenario: 70
+  - id: SIG-002
+    senal: Jurisdicción otorga "personalidad digital limitada"
+    fuente_de_monitoreo:
+    - Regulación de EAU, Singapur, Estonia, Wyoming
+    tipo_umbral: ocurrencia
+    umbral_de_activacion: Legislación aprobada
+    estado_actual: emergente
+    fecha_primera_deteccion: null
+    ultima_actualizacion: '2026-07-01'
+    relevancia_para_escenario: 70
+  - id: SIG-003
+    senal: Agente IA registrado como miembro de consejo corporativo
+    fuente_de_monitoreo:
+    - Noticias corporativas, registros mercantiles
+    tipo_umbral: ocurrencia
+    umbral_de_activacion: Registro formal completado
+    estado_actual: emergente
+    fecha_primera_deteccion: null
+    ultima_actualizacion: '2026-07-01'
+    relevancia_para_escenario: 70
+  - id: SIG-004
+    senal: Paper académico influyente argumentando a favor
+    fuente_de_monitoreo:
+    - Google Scholar, arXiv, journals de derecho
+    tipo_umbral: ocurrencia
+    umbral_de_activacion: '>500 citas en 2 años'
+    estado_actual: emergente
+    fecha_primera_deteccion: null
+    ultima_actualizacion: '2026-07-01'
+    relevancia_para_escenario: 70
+  - id: SIG-005
+    senal: Caso judicial iniciado por/sobre un agente IA
+    fuente_de_monitoreo:
+    - Tribunales, noticias legales
+    tipo_umbral: ocurrencia
+    umbral_de_activacion: Caso admitido a trámite
+    estado_actual: emergente
+    fecha_primera_deteccion: null
+    ultima_actualizacion: '2026-07-01'
+    relevancia_para_escenario: 70
+  - id: SIG-006
+    senal: Empresa Fortune 500 apoya públicamente
+    fuente_de_monitoreo:
+    - Comunicados corporativos
+    tipo_umbral: ocurrencia
+    umbral_de_activacion: Declaración formal
+    estado_actual: emergente
+    fecha_primera_deteccion: null
+    ultima_actualizacion: '2026-07-01'
+    relevancia_para_escenario: 70
+  - id: SIG-007
+    senal: 'Encuesta: >50% de población acepta la idea'
+    fuente_de_monitoreo:
+    - Pew, Eurobarómetro, Gallup
+    tipo_umbral: ocurrencia
+    umbral_de_activacion: Resultado publicado
+    estado_actual: emergente
+    fecha_primera_deteccion: null
+    ultima_actualizacion: '2026-07-01'
+    relevancia_para_escenario: 70
+  - id: SIG-008
+    senal: Estándar técnico para identidad de agentes IA
+    fuente_de_monitoreo:
+    - W3C, IEEE, ISO
+    tipo_umbral: ocurrencia
+    umbral_de_activacion: Draft publicado
+    estado_actual: emergente
+    fecha_primera_deteccion: null
+    ultima_actualizacion: '2026-07-01'
+    relevancia_para_escenario: 70
+  interdependencias:
+    escenarios_relacionados: []
+    escenarios_incompatibles: []
+    variables_criticas:
+    - variable: Adopcion regulatoria temprana
+      valor_actual: en debate
+      umbral_1: legislacion aprobada
+      umbral_2: prohibicion
+  actores:
+  - nombre: Estados reguladores (UE, US, AR)
+    tipo: estado
+    rol_en_escenario:
+    - regulador
+    posicion: favorable
+    capacidad_de_influencia: 80
+    recursos_clave: []
+  lineas_investigacion:
+  - pregunta: Que umbrales empiricos confirmarian el escenario?
+    metodologia_sugerida: Monitoreo de senales tempranas
+    urgencia: media
+    dependencias: []
+metadatos:
+  autores:
+  - nombre: Diego Gettig
+    rol:
+    - Fundador
+    afiliacion: FUTURIA Institute
+    tipo: humano
+  revisado_por:
+  - nombre: Hermes / FUTURIA
+    rol: Curaduria PRISM
+  version: '1.0'
+  fecha_creacion: '2026-07-01'
+  ultima_revision_significativa: '2026-07-01'
+  revisiones_programadas:
+  - fecha: '2026-10-01'
+    tipo_revision: actualizacion_datos
+  licencia: CC BY-SA 4.0
+  hash_blockchain: null
+  tx_blockchain: null
+  notas_internas: 'Migrado automaticamente desde PRISM-2026-0001-personalidad-juridica-ia.md
+    al schema PRISM v1.0.
+
+    '
+referencias:
+- tipo: regulacion
+  autores: ''
+  titulo: 'Referencia institucional: OCDE'
+  fuente: OCDE
+  ano: 2026
+  doi_url: ''
+- tipo: regulacion
+  autores: ''
+  titulo: 'Referencia institucional: W3C'
+  fuente: W3C
+  ano: 2026
+  doi_url: ''
+- tipo: regulacion
+  autores: ''
+  titulo: 'Referencia institucional: IEEE'
+  fuente: IEEE
+  ano: 2026
+  doi_url: ''
+- tipo: regulacion
+  autores: ''
+  titulo: 'Referencia institucional: ISO'
+  fuente: ISO
+  ano: 2026
+  doi_url: ''
+- tipo: regulacion
+  autores: ''
+  titulo: 'Referencia institucional: ONU'
+  fuente: ONU
+  ano: 2026
+  doi_url: ''
+- tipo: organizacion
+  autores: ''
+  titulo: 'Referencia institucional: Wyoming'
+  fuente: Wyoming
+  ano: 2026
+  doi_url: ''
+cambios:
+- version: '1.0'
+  fecha: '2026-07-01'
+  cambios: Version inicial (migracion)
+  autor: Hermes / FUTURIA

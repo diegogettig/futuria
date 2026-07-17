@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUTURIA — {{TITULO}}</title>
+  <style>
+    :root{--bg:#06060a;--text:#e4e4ec;--muted:#8a8a9e;--accent:#ff5230;--border:rgba(255,255,255,.07);--card:rgba(255,255,255,.03)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:system-ui,-apple-system,'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.75}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1180px;margin:0 auto;padding:0 1.8rem}
+    nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(6,6,10,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:1180px;margin:0 auto;padding:1rem 1.8rem;display:flex;align-items:center;justify-content:space-between}
+    .nav-brand{font-weight:900;letter-spacing:-.04em;font-size:1.3rem;color:#fff;text-decoration:none}
+    .nav-brand em{color:var(--accent);font-style:normal}
+    .back{color:var(--muted);font-size:.9rem;margin-top:3.2rem;display:inline-block}
+    .meta{color:var(--muted);font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;margin-top:3.2rem;margin-bottom:.8rem}
+    h1{font-size:2.4rem;line-height:1.15;color:#fff;letter-spacing:-.03em;margin-bottom:.8rem}
+    .lead{font-size:1.15rem;color:var(--text);max-width:780px;margin-top:.6rem}
+    .body{max-width:760px;margin-top:2rem}
+    .body h2{color:#fff;font-size:1.6rem;margin-top:2rem;margin-bottom:.6rem}
+    .body h3{color:#fff;font-size:1.15rem;margin-top:1.4rem;margin-bottom:.4rem}
+    .body p{color:var(--muted);margin:.8rem 0}
+    .hook{margin-top:2.2rem;padding:1.4rem;border-radius:1rem;background:linear-gradient(180deg,rgba(255,82,48,.12),rgba(255,82,48,0));border:1px solid rgba(255,82,48,.30)}
+    .hook h2{color:#fff;font-size:1.3rem;margin-bottom:.4rem}
+    .wall{margin-top:1.2rem;padding:1.4rem;border-radius:1rem;background:linear-gradient(180deg,rgba(255,82,48,.10),rgba(255,82,48,0));border:1px solid rgba(255,82,48,.28)}
+    .wall h3{color:#fff;font-size:1.1rem;margin-bottom:.4rem}
+    .wall input[type="email"]{width:100%;padding:.8rem 1.2rem;border-radius:999px;margin-top:.8rem;background:rgba(255,255,255,.04);border:1px solid var(--border);color:#fff;font-size:.95rem}
+    .wall input[type="email"]:focus{outline:none;border-color:var(--accent)}
+    .related{margin-top:2.4rem;padding-top:1.2rem;border-top:1px solid var(--border)}
+    .related h4{color:#fff;margin-bottom:.6rem}
+    .pill{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);border:1px solid rgba(255,82,48,.35);padding:.25rem .7rem;border-radius:999px;margin-right:.5rem;margin-bottom:.5rem}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">FUTU<em>RIA</em></a>
+    <a href="/" class="back">← Volver al sitio</a>
+  </div>
+</nav>
+<div class="container">
+  <div class="meta">{{META}}</div>
+  <h1>{{TITULO}}</h1>
+  <p class="lead">{{SUBTITULO}}</p>
+
+  <div class="hook">
+    <h2>¿Por qué debería importarte?</h2>
+    <p>{{GANCHO}}</p>
+  </div>
+
+  <div class="body">
+    <h2>Resumen ejecutivo</h2>
+    <p>{{ME_IMPORTA}}</p>
+
+    <h2>Señal</h2>
+    <p>{{SENAL}}</p>
+
+    <h2>La incógnita</h2>
+    <p>{{INCÓGNITA}}</p>
+  </div>
+
+  <div class="wall" id="acceso-scenario">
+    <h3>Querés leer el escenario completo?</h3>
+    <p>{{CTA_TEXTO}}</p>
+    <form id="form-acceso" style="margin-top:1rem;">
+      <input type="email" name="email" placeholder="tu@email.com" required style="width:100%;padding:.8rem 1.2rem;border-radius:999px;margin-top:.8rem;background:rgba(255,255,255,.04);border:1px solid var(--border);color:#fff;font-size:.95rem;">
+      <input type="hidden" name="subject" value="{{SUBJECT}}">
+      <button class="btn btn-primary" type="submit" style="margin-top:.8rem;width:100%;">{{CTA_BODY}}</button>
+    </form>
+    <div id="acceso-ok" style="display:none;margin-top:1.2rem;padding:1rem;border-radius:1rem;background:rgba(255,255,255,.04);border:1px solid var(--border);">
+      <p style="color:#fff;margin:.4rem 0;"><strong>Gracias.</strong> Te registramos como prospecto y ya podés leer el escenario completo.</p>
+    </div>
+    </div>
+  </div>
+
+  <div id="contenido-bloqueado" style="display:none; margin-top:2.4rem; padding:1.4rem; border-top:1px solid var(--border);">
+    <h2 style="color:#fff;">Escenario completo</h2>
+    <p>Aquí va el contenido completo del escenario. Reemplazá este texto por el documento final.</p>
+    <p>Este bloque se habilita al registrar el mail y representa la entrega real del escenario.</p>
+  </div>
+
+  <div class="related">
+    <h4>Vinculado</h4>
+    <a href="{{RELACIONADO_URL}}" target="_blank" rel="noopener">{{RELACIONADO_NOMBRE}} →</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  const form = document.getElementById('form-acceso');
+  const ok = document.getElementById('acceso-ok');
+  const contenido = document.getElementById('contenido-bloqueado');
+  if(!form || !ok) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch('https://formspree.io/f/mdaqnrdj', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(function(){
+      ok.style.display = 'block';
+      form.style.display = 'none';
+      if(contenido) contenido.style.display = 'block';
+      const btn = document.querySelector('#acceso-ok .btn');
+      if(!btn && contenido){
+        const b = document.createElement('button');
+        b.className = 'btn btn-primary';
+        b.textContent = 'Leer escenario completo ahora';
+        b.style.marginTop = '.8rem';
+        b.addEventListener('click', function(){
+          contenido.scrollIntoView({behavior:'smooth'});
+        });
+        ok.appendChild(b);
+      }
+      if(btn) btn.setAttribute('type','button');
+    }).catch(function(){
+      ok.style.display = 'block';
+      ok.querySelector('p').innerHTML = '<strong>Error.</strong> Intentá de nuevo.';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

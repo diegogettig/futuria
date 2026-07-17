@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informe de Convergencia — Grupo SanCor Salud (PREVIEW)</title>
+<style>
+  :root{
+    --bg:#0b0b10; --surface:#121219; --border:#26263a; --text:#e8e8ef;
+    --muted:#9a9ab0; --accent:#ff5230; --accent2:#3dc2ff; --ok:#00d68f;
+    --warn:#ffaa00; --t1:#3dc2ff; --t2:#9a7bff; --t3:#ff8a5c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter','Segoe UI',system-ui,sans-serif;background:var(--bg);
+    color:var(--text);line-height:1.65;padding:40px 20px}
+  .page{max-width:920px;margin:0 auto 50px;background:var(--surface);
+    border:1px solid var(--border);border-radius:14px;overflow:hidden;position:relative}
+  .cover{padding:60px 50px;text-align:center;border-bottom:1px solid var(--border);position:relative}
+  .cover::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;
+    background:linear-gradient(90deg,var(--accent),#ff8a00,var(--accent))}
+  .logo{font-size:13px;letter-spacing:5px;color:var(--accent);text-transform:uppercase;
+    font-weight:700;margin-bottom:28px}
+  .cover h1{font-size:34px;font-weight:800;line-height:1.25;margin-bottom:14px}
+  .cover .sub{color:var(--muted);font-size:15px;margin-bottom:24px}
+  .preview{display:inline-block;background:rgba(255,170,0,.12);color:var(--warn);
+    border:1px solid var(--warn);border-radius:20px;padding:6px 16px;font-size:12px;
+    font-weight:700;letter-spacing:1px}
+  .body{padding:45px 50px}
+  h2{font-size:21px;font-weight:800;margin:34px 0 14px;color:#fff;
+    border-left:4px solid var(--accent);padding-left:12px}
+  h3{font-size:16px;font-weight:700;margin:20px 0 8px;color:var(--accent2)}
+  p{margin:10px 0;color:#d6d6e2}
+  .watermark-note{position:fixed;bottom:8px;right:14px;font-size:11px;color:#4a4a5e;
+    transform:rotate(-30deg);pointer-events:none;opacity:.6;z-index:99}
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+  th,td{border:1px solid var(--border);padding:9px 11px;text-align:left;vertical-align:top}
+  th{background:#1a1a26;color:#fff;font-weight:700}
+  tr:nth-child(even){background:#16161f}
+  .tag{display:inline-block;border-radius:5px;padding:1px 7px;font-size:11px;font-weight:700}
+  .t1{background:rgba(61,194,255,.15);color:var(--t1)}
+  .t2{background:rgba(154,123,255,.15);color:var(--t2)}
+  .t3{background:rgba(255,138,92,.15);color:var(--t3)}
+  .var{background:#16161f;border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin:12px 0}
+  .var h4{color:var(--accent2);font-size:14px;margin-bottom:6px}
+  .cite{font-size:12px;color:var(--muted);margin-top:8px;border-top:1px dashed var(--border);padding-top:8px}
+  .cite a{color:var(--accent2);text-decoration:none}
+  .footer{padding:18px 50px;border-top:1px solid var(--border);font-size:12px;
+    color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+  .footer .logo{font-size:11px;letter-spacing:3px;margin:0}
+  .ok{color:var(--ok);font-weight:700}
+  .score{font-family:monospace}
+</style>
+</head>
+<body>
+<div class="watermark-note">FUTURIA · CONFIDENCIAL</div>
+
+<div class="page">
+  <div class="cover">
+    <div class="logo">FUTURIA INSTITUTE</div>
+    <h1>Informe de Convergencia<br>Grupo SanCor Salud</h1>
+    <div class="sub">Flujo 2 · Prospección por cliente · Sistema SAT-FUTURIA (100% trazable)<br>
+      Control: FUT-CONV-SANCOR-2026 · Fecha: 14/07/2026</div>
+    <span class="preview">PREVIEW — ILUSTRATIVO · NO VERIFICADO POR EL CHAIRMAN</span>
+  </div>
+
+  <div class="body">
+    <h2>0 · Propósito de este documento</h2>
+    <p>Este es el <b>Informe de Convergencia</b> de Grupo SanCor Salud (Flujo 2). Parte del estudio
+      minucioso del cliente, extrae las <b>variables que afectan su negocio hoy y potencialmente</b>, las
+      proyecta en <b>escenarios</b>, y de ellas deriva las <b>señales y fuentes</b> que deben rastrearse en el
+      Laboratorio de Vigilancia (Flujo 1). Las señales aquí identificadas alimentan la investigación base
+      del cliente y el corpus general del Instituto.</p>
+    <p><i>Regla del Chairman: este informe es la base que rastrea señales y variables hacia atrás. No se
+      factura por horas; es insumo del producto vendible (PRISM&nbsp;#001 en variantes A/B/C).</i></p>
+
+    <h2>1 · Estudio del cliente (síntesis verificada)</h2>
+    <p>SanCor Salud es una <b>Asociación Mutual</b> (constituida 6/7/1973, Sunchales, Santa Fe) de capital
+      nacional, 3°/4° del mercado de prepagas (~672.000 afiliados; 825.793 según su reporte 2024/25). Perfil
+      "federal" (fuerte en interior). Vertical integrada: Medicina Privada, Mista Seguros, Trayectoria
+      Leasing, Vitus, Farmavitus, Fundación.
+      <span class="cite">Fuentes: Reporte Sustentabilidad SanCor 2024/25 (T2, verificado en vivo:
+      sancorsalud.com.ar) · Hechos #1–#17 del CONSOLIDADO.</span></p>
+    <p>Contexto regulatorio argentino 2023–2026: DNU&nbsp;70/2023 desreguló cuotas; causa por cartelización
+      2024 (Res. 107/2024 CNAC) cerrada por acuerdo.
+      <span class="cite">Fuentes: <a href="https://www.argentina.gob.ar/noticias/reglamentacion-del-dnu-7023">argentina.gob.ar</a> (T1) ·
+      <a href="https://www.boletinoficial.gob.ar">Boletín Oficial CNAC Res. 107/2024</a> (T1) · Entorno #1–#15.</span></p>
+
+    <h2>2 · Variables del negocio</h2>
+    <table>
+      <tr><th>#</th><th>Variable</th><th>Dato verificado</th><th>Hecho/Tier</th></tr>
+      <tr><td>V1</td><td>Regulación de precios</td><td>DNU 70/23 desregula cuotas; SSS pierde fijación</td><td><span class="tag t1">T1</span> Entorno #1–2</td></tr>
+      <tr><td>V2</td><td>Empleo registrado</td><td>~12,84M ocupados (sep-2025); −217k desde nov-2023</td><td><span class="tag t2">T2</span> Entorno #15</td></tr>
+      <tr><td>V3</td><td>Costos médicos</td><td>Inflación médica &gt; general (WTW +11,9% LatAm 2026)</td><td><span class="tag t2">T2</span> Entorno #9</td></tr>
+      <tr><td>V4</td><td>Envejecimiento</td><td>&gt;65 se duplica al 2050 en LatAm</td><td><span class="tag t1">T1</span> Global #13–14</td></tr>
+      <tr><td>V5</td><td>IA en siniestralidad</td><td>Mercado imagen médica US$1,8B→US$20,2B (2033)</td><td><span class="tag t2">T2</span> Global #4</td></tr>
+      <tr><td>V6</td><td>Modelos de negocio</td><td>FFS→capitación/VBC/payvider; telemed+RPM</td><td><span class="tag t1">T1</span> Global #9–11</td></tr>
+      <tr><td>V7</td><td>Mutualismo vs concentración</td><td>INAES: 1,94M en mutuales/cooperativas</td><td><span class="tag t1">T1</span> Entorno #13</td></tr>
+      <tr><td>V8</td><td>Alto costo farmacológico</td><td>Terapias génicas US$25,3B (2026)</td><td><span class="tag t3">T3</span> Global #8</td></tr>
+      <tr><td>V9</td><td>Interoperabilidad</td><td>FHIR: 78% países con regulación; AR rezagada</td><td><span class="tag t3">T3</span> Global #6</td></tr>
+      <tr><td>V10</td><td>Personalidad jurídica de la IA</td><td>Eje PRISM #001 (vacío regulatorio)</td><td><span class="tag t1">T1</span> SIG-00001</td></tr>
+    </table>
+
+    <h2>3 · Escenarios prospectivos (2026–2035)</h2>
+    <div class="var"><h4>A — Mutual federal eficiente (base)</h4><p>Retiene interior, capitación + RPM de crónicos, IA en siniestralidad. Sostén: V6, V7, V4.</p></div>
+    <div class="var"><h4>B — Guerra de cuotas y concentración (adverso)</h4><p>Cuotas libres, OSDE/Swiss por precio, empleo cae. Sostén: V1, V2.</p></div>
+    <div class="var"><h4>C — Shock de costo (genérico/biológico + pandemia) (cola)</h4><p>Siniestralidad disparada. Sostén: V8, V3.</p></div>
+    <div class="var"><h4>D — Payvider mutualista latino (oportunidad)</h4><p>Integración vertical + alianzas healthtech. Sostén: V6, V7.</p></div>
+
+    <h2>4 · Cruce con señales del corpus del Laboratorio (Flujo 1)</h2>
+    <p>Del corpus de 75 señales (9 escenarios PRISM), <b>5 señales</b> convergen con variables de Sancor (eje de personalidad jurídica de IA):</p>
+    <table>
+      <tr><th>Señal</th><th>Título</th><th>IRS</th><th>Variable</th></tr>
+      <tr><td>SIG-2026-00002</td><td>Agente IA en consejo corporativo</td><td>71,2</td><td>V10, V5</td></tr>
+      <tr><td>SIG-2026-00004</td><td>Caso judicial por/sobre agente IA</td><td>66,2</td><td>V10, V5</td></tr>
+      <tr><td>SIG-2026-00007</td><td>Estándar técnico identidad de agentes IA</td><td>71,2</td><td>V10</td></tr>
+      <tr><td>SIG-2026-00013</td><td>FGA capitalizado + operativo</td><td>69,8</td><td>V5</td></tr>
+      <tr><td>SIG-2026-00014</td><td>Monotributo Automatizado vigente</td><td>74,8</td><td>V5</td></tr>
+    </table>
+
+    <h2>5 · NUEVAS señales propuestas para captura en el Flujo 1</h2>
+    <p><b>9 de 10 variables del negocio de Sancor NO tienen señal directa en el corpus.</b> Ya se dieron de alta como SIG-2026-00076…00084 (origen: convergencia_sancor):</p>
+    <table>
+      <tr><th>Nueva señal</th><th>Variable</th><th>Fuente (Tier)</th></tr>
+      <tr><td>Regulación de cuotas post-DNU 70/23</td><td>V1</td><td>Decretos 170/171/172-2024; Res. 107/2024 CNAC <span class="tag t1">T1</span></td></tr>
+      <tr><td>Caída de empleo registrado</td><td>V2</td><td>CEPA/SIPA/IIEP-UBA <span class="tag t2">T2</span></td></tr>
+      <tr><td>Inflación médica vs general</td><td>V3</td><td>WTW 2026; INDEC IPC <span class="tag t2">T2</span></td></tr>
+      <tr><td>Envejecimiento demográfico (Censo 2022)</td><td>V4</td><td>INDEC <span class="tag t1">T1</span></td></tr>
+      <tr><td>Capitación/VBC/payvider</td><td>V6</td><td>CMS capitation; Deloitte VBC <span class="tag t1">T1</span></td></tr>
+      <tr><td>Mutualismo vs concentración</td><td>V7</td><td>INAES Relevar Salud <span class="tag t1">T1</span></td></tr>
+      <tr><td>Terapias génicas como tail risk</td><td>V8</td><td>AJMC; OMS RAM <span class="tag t3">T3</span></td></tr>
+      <tr><td>Adopción FHIR / HCE interoperable</td><td>V9</td><td>Fire.ly State of FHIR <span class="tag t3">T3</span></td></tr>
+      <tr><td>Responsabilidad IA en dispositivos médicos</td><td>V10</td><td>ANMAT <span class="tag t2">T2</span> (verificar existencia)</td></tr>
+    </table>
+
+    <h2>6 · Brechas de información (no inventadas)</h2>
+    <p>Facturación/ingresos de SanCor (no públicos) · <i>market share</i> oficial por empresa (confirmar SSS) ·
+      CD 2025–2026 y CEO actual (Nari es 2023–2024) · envejecimiento AR específico (INDEC) ·
+      existencia de resolución ANMAT de IA en dispositivos médicos (verificar; posible alucinación si se afirma sin fuente).</p>
+
+    <h2>7 · Derivación a variantes de entrega (PRISM #001)</h2>
+    <p>Este Informe de Convergencia alimenta las <b>3 variantes del producto vendible</b> al cliente:
+      <b>A (Ejecutivo/CEO)</b> secciones 1–3 + recomendaciones · <b>B (Tecnológica/CTO)</b> V5/V6/V9/V10 +
+      señales SIG-00002/004/007 · <b>C (Política/Reguladores)</b> V1/V10 + comparativa internacional.</p>
+
+    <div class="cite">
+      <b>Trazabilidad SAT:</b> base de 60 hechos con URL+Tier+fecha en
+      <code>investigacion/CONSOLIDADO-hechos.md</code>. Auditoría de trazabilidad: APTO-CON-SALVEDADES.
+      Auditoría de veracidad (variantes): APTO.
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="logo">FUTURIA INSTITUTE</span>
+    <span>PREVIEW — ILUSTRATIVO · Confidencial · FUT-CONV-SANCOR-2026</span>
+  </div>
+</div>
+</body>
+</html>

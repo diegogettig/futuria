@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRISM #001 — Variante C Política · Grupo SanCor Salud</title>
+<style>
+  :root{
+    --azul:#0a2540; --azul2:#13315c; --cian:#1f8a9e; --oro:#c9a227;
+    --gris:#5b6470; --griscl:#eef2f6; --borde:#d8e0e8; --rojo:#b3261e; --verde:#2e7d32; --amb:#e8a317;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#1a1f26;line-height:1.55;margin:0;background:#f6f8fa;}
+  .hoja{max-width:960px;margin:24px auto;background:#fff;padding:46px 54px;box-shadow:0 2px 12px rgba(0,0,0,.08);border-radius:6px;}
+  header.portada{background:linear-gradient(135deg,#16314f,#1f5d6b);color:#fff;border-radius:8px;padding:36px 42px;position:relative;overflow:hidden;}
+  header.portada .marca{font-weight:700;letter-spacing:2px;font-size:13px;color:var(--oro);text-transform:uppercase;}
+  header.portada h1{font-size:27px;margin:12px 0 6px;line-height:1.2;}
+  header.portada .sub{font-size:14px;opacity:.92;}
+  header.portada .meta{margin-top:18px;font-size:12.5px;opacity:.85;}
+  .sello{position:absolute;top:20px;right:24px;border:2px solid var(--oro);color:var(--oro);background:rgba(0,0,0,.18);
+    padding:6px 12px;font-weight:700;font-size:11px;letter-spacing:1px;border-radius:4px;transform:rotate(4deg);}
+  h2{color:var(--azul);border-bottom:3px solid var(--cian);padding-bottom:6px;margin-top:36px;font-size:20px;}
+  h3{color:var(--azul2);font-size:15px;margin-top:20px;}
+  p{margin:10px 0;}
+  .cite{font-size:11.5px;color:var(--gris);margin-top:4px;}
+  .cite a{color:var(--cian);text-decoration:none;word-break:break-all;}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px;}
+  th,td{border:1px solid var(--borde);padding:8px 10px;vertical-align:top;text-align:left;}
+  th{background:var(--azul);color:#fff;font-weight:600;}
+  tbody tr:nth-child(even){background:var(--griscl);}
+  .v{color:var(--verde);font-weight:700;} .a{color:var(--amb);font-weight:700;} .r{color:var(--rojo);font-weight:700;}
+  .pre{background:var(--griscl);border-left:5px solid var(--oro);padding:14px 18px;border-radius:4px;font-style:italic;margin:12px 0;}
+  .esc{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0;}
+  .esc .e{border:1px solid var(--borde);border-radius:6px;padding:12px;background:#fff;}
+  .esc .e b{color:var(--azul2);}
+  .riesgos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0;}
+  .riesgos .ri{border:1px solid var(--borde);border-radius:6px;padding:12px;background:#fdf3f2;}
+  .recactor{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0;}
+  .recactor .ra{border:1px solid var(--borde);border-radius:6px;padding:12px;background:#fffdf3;}
+  .recactor .ra h4{margin:0 0 6px;color:var(--oro);font-size:13px;}
+  .footer{margin-top:38px;border-top:2px solid var(--azul);padding-top:14px;font-size:11.5px;color:var(--gris);}
+  .footer .marca{font-weight:700;color:var(--azul);letter-spacing:1px;}
+  .badge-preview{display:inline-block;border:1px solid var(--oro);color:var(--oro);padding:2px 8px;border-radius:4px;font-weight:700;font-size:10.5px;margin-bottom:6px;}
+  ul{margin:8px 0 8px 20px;} li{margin:3px 0;}
+  .small{font-size:12px;color:var(--gris);}
+  .nota{font-size:11.5px;background:#fff8e6;border:1px solid var(--amb);border-radius:4px;padding:8px 12px;margin:10px 0;}
+</style>
+</head>
+<body>
+
+<section class="hoja">
+  <header class="portada">
+    <div class="sello">PREVIEW — ILUSTRATIVO</div>
+    <div class="marca">FUTURIA INSTITUTE</div>
+    <h1>Informe PRISM #001 — Personalidad Jurídica de la IA</h1>
+    <div class="sub">Variante C · Política y Regulatoria (para legisladores y entes reguladores)</div>
+    <div class="meta">Observatorio de Vigilancia Estratégica · Cliente de referencia: Grupo SanCor Salud · Fecha de emisión: 14/07/2026<br>
+    Estado: <b>PREVIEW — ILUSTRATIVO</b>. Sujeto a firma del Chairman. Sistema SAT-FUTURIA 100% trazable.</div>
+  </header>
+
+  <h2>2 · Palabras preliminares</h2>
+  <div class="pre">
+    La personalidad jurídica de la inteligencia artificial dejó de ser una curiosidad académica para convertirse en una
+    cuestión de <b>soberanía regulatoria</b>. Mientras jurisdicciones como la UE avanzan con marcos de responsabilidad
+    vinculantes, Argentina —con un sector de salud mutualista de ~1,94 millones de personas atendidas por mutuales y
+    cooperativas (INAES)— enfrenta un vacío que traslada todo el riesgo a las entidades y a los pacientes.
+  </div>
+  <div class="cite">Fuente: INAES / Relevar Salud — <a href="https://www.argentina.gob.ar/noticias/casi-dos-millones-de-personas-acceden-la-salud-traves-de-cooperativas-o-mutuales">argentina.gob.ar</a> (T1). Acceso 14/07/2026.</div>
+
+  <h2>3 · Síntesis para policymakers</h2>
+  <p><b>Línea de tiempo (hechos verificados):</b></p>
+  <ul>
+    <li><b>2023:</b> DNU 70/2023 desregula cuotas de prepagas; la SSS pierde fijación de precios (T1).</li>
+    <li><b>2024:</b> Causa por cartelización resuelta por acuerdo (Res. 107/2024); la UE publica el AI Liability Directive.</li>
+    <li><b>2025–2026:</b> Aceleración de adopción de IA en salud; Argentina sin régimen específico de responsabilidad IA.</li>
+  </ul>
+  <p><b>3 acciones:</b> (1) constituir comisión multisectorial sobre responsabilidad por IA; (2) armonizar Ley 25.326 con
+  estándares de trazabilidad algorítmica; (3) habilitar un fondo fiduciario piloto de garantía.</p>
+  <p><b>1 recomendación normativa:</b> tipificar la <b>trazabilidad obligatoria</b> de decisiones asistidas por IA en
+  salud y seguros, anclada en la Ley 25.326 como marco aplicable.</p>
+  <div class="cite">Fuentes: DNU 70/2023 — <a href="https://www.argentina.gob.ar/noticias/reglamentacion-del-dnu-7023">argentina.gob.ar</a> (T1) · Res. 107/2024 — <a href="https://www.boletinoficial.gob.ar">Boletín Oficial CNAC (Res. 107/2024)</a> (T1) · AI Liability Directive — <a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">EUR-Lex</a> (T1). Acceso 14/07/2026.</div>
+
+  <h2>4 · Contexto internacional (comparativa de 5 jurisdicciones)</h2>
+  <table>
+    <thead><tr><th>Jurisdicción</th><th>Régimen de responsabilidad / personalidad IA</th><th>Tipo de instrumento</th><th>Estado</th></tr></thead>
+    <tbody>
+      <tr><td>Unión Europea</td><td>AI Liability Directive — primer marco de responsabilidad por IA defectuosa</td><td>Directiva vinculante (ELI)</td><td class="v">Vigente (nov 2024)</td></tr>
+      <tr><td>Reino Unido</td><td>AI Regulation White Paper — enfoque por sectores, transparencia</td><td>White Paper (no ley)</td><td class="a">Política vigente</td></tr>
+      <tr><td>Estados Unidos</td><td>NIST AI Risk Management Framework — marco voluntario</td><td>Framework voluntario</td><td class="a">Vigente (ene 2023)</td></tr>
+      <tr><td>Singapur</td><td>Model AI Governance Framework (2ª ed.) — sandbox regulatorio</td><td>Marco de gobernanza</td><td class="a">Vigente (2023–24)</td></tr>
+      <tr><td>Emiratos Árabes</td><td>Cabinet Resolution No. (99) of 2023 — estrategia nacional de IA</td><td>Estrategia nacional</td><td class="a">No es ley específica</td></tr>
+    </tbody>
+  </table>
+  <div class="cite">Fuentes: UE — <a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">eur-lex.europa.eu/eli/dir/2024/2853/oj</a> (T1) · UK — <a href="https://www.gov.uk/government/publications/ai-regulation-white-paper">gov.uk</a> (T1) · US NIST — <a href="https://www.nist.gov/itl/ai-risk-management-framework">nist.gov</a> (T1) · Singapur IMDA — <a href="https://www.imda.gov.sg/ai/governance">imda.gov.sg</a> (T1) · UAE — <a href="https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/artificial-intelligence">u.ae</a> (T1, estrategia nacional, no ley específica). Acceso 14/07/2026.</div>
+
+  <h2>5 · Análisis local — Argentina y la Ley 25.326</h2>
+  <p>La <b>Ley 25.326 de Protección de Datos Personales</b> es el marco normativo aplicable por interpretación a los
+  algoritmos que tratan datos personales de salud, pero <b>no constituye una regulación específica de IA</b>. Su
+  aplicabilidad a algoritmos es interpretativa.</p>
+  <ul>
+    <li><b>Normativa existente:</b> Ley 25.326 (vigente con modificaciones 2018) sobre datos personales.</li>
+    <li><b>Vacíos:</b> no hay sujeto de responsabilidad civil para daños originados por IA autónoma; no hay estándar de
+      identidad/trazabilidad del agente IA; no hay fondo de garantía.</li>
+    <li><b>Iniciativas en discusión:</b> el Informe de Convergencia señala que existen <b>iniciativas en discusión</b>
+      sobre personalidad jurídica de la IA, sin número de expediente verificado.</li>
+  </ul>
+  <div class="nota"><b>Nota de trazabilidad:</b> no se citan números de expediente del Congreso por no estar verificados.
+    Se referencia genéricamente como "iniciativas en discusión".</div>
+  <div class="cite">Fuentes: Ley 25.326 — <a href="https://www.argentina.gob.ar/normativa/nacional/ley-25326-67876/actualizacion">argentina.gob.ar</a> (T1) · DNU 70/2023 — <a href="https://www.argentina.gob.ar/noticias/reglamentacion-del-dnu-7023">argentina.gob.ar</a> (T1). Acceso 14/07/2026.</div>
+
+  <h2>6 · Escenarios de proyección (2026–2035)</h2>
+  <div class="esc">
+    <div class="e"><b>Baseline (prob. alta)</b><br>No se regula; criterio de responsabilidad humana pura. Litigios caso a caso, sin techo.</div>
+    <div class="e"><b>Intermedio (prob. media)</b><br>Argentina adopta régimen híbrido con fondo de garantía y trazabilidad obligatoria anclada en Ley 25.326.</div>
+    <div class="e"><b>Disruptivo (prob. baja)</b><br>Jurisdicción extranjera opera como arbitraje forzoso; pérdida de soberanía regulatoria local.</div>
+  </div>
+  <div class="cite">Referencia comparada: AI Liability Directive (UE) — <a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">EUR-Lex</a> (T1). Acceso 14/07/2026.</div>
+
+  <h2>7 · Riesgos y agenda regulatoria</h2>
+  <div class="riesgos">
+    <div class="ri"><b>Captura regulatoria</b><br>Actores con mayor capacidad técnica moldean la norma a su favor.</div>
+    <div class="ri"><b>Deslocalización de riesgo</b><br>El daño recae en la entidad/paciente; el proveedor queda fuera.</div>
+    <div class="ri"><b>Asimetría de poder</b><br>Mutuales/cooperativas compiten con grupos integrados sin red de respaldo.</div>
+  </div>
+
+  <h2>8 · Recomendaciones por actor</h2>
+  <div class="recactor">
+    <div class="ra"><h4>Congreso</h4><ul>
+      <li>Crear comisión multisectorial sobre responsabilidad por IA.</li>
+      <li>Debate de ley marco de trazabilidad algorítmica.</li>
+    </ul></div>
+    <div class="ra"><h4>INDEC / ANMAT</h4><ul>
+      <li>INDEC: datos demográficos para impacto de IA en salud.</li>
+      <li>ANMAT: lineamientos de IA en dispositivos médicos (verificar existencia).</li>
+    </ul></div>
+    <div class="ra"><h4>SSS / INAES</h4><ul>
+      <li>SSS: supervisión de IA en siniestralidad de prepagas.</li>
+      <li>INAES: guía para mutuales sobre gobernanza de IA.</li>
+    </ul></div>
+  </div>
+  <div class="cite">Fuentes: INAES Relevar Salud — <a href="https://www.argentina.gob.ar/noticias/casi-dos-millones-de-personas-acceden-la-salud-traves-de-cooperativas-o-mutuales">argentina.gob.ar</a> (T1) · Ley 25.326 — <a href="https://www.argentina.gob.ar/normativa/nacional/ley-25326-67876/actualizacion">argentina.gob.ar</a> (T1). Acceso 14/07/2026.</div>
+
+  <h2>9 · Apéndice metodológico</h2>
+  <table>
+    <thead><tr><th>Jurisdicción / Tema</th><th>Fuente oficial</th><th>Tier</th></tr></thead>
+    <tbody>
+      <tr><td>UE — AI Liability Directive</td><td><a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">eur-lex.europa.eu/eli/dir/2024/2853/oj</a></td><td>T1</td></tr>
+      <tr><td>UK — AI Regulation White Paper</td><td><a href="https://www.gov.uk/government/publications/ai-regulation-white-paper">gov.uk</a></td><td>T1</td></tr>
+      <tr><td>US — NIST AI RMF 1.0</td><td><a href="https://www.nist.gov/itl/ai-risk-management-framework">nist.gov</a></td><td>T1</td></tr>
+      <tr><td>Singapur — Model AI Governance</td><td><a href="https://www.imda.gov.sg/ai/governance">imda.gov.sg</a></td><td>T1</td></tr>
+      <tr><td>UAE — Cabinet Res 99/2023</td><td><a href="https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/artificial-intelligence">u.ae</a></td><td>T1</td></tr>
+      <tr><td>Argentina — Ley 25.326</td><td><a href="https://www.argentina.gob.ar/normativa/nacional/ley-25326-67876/actualizacion">argentina.gob.ar</a></td><td>T1</td></tr>
+      <tr><td>Argentina — DNU 70/2023</td><td><a href="https://www.argentina.gob.ar/noticias/reglamentacion-del-dnu-7023">argentina.gob.ar</a></td><td>T1</td></tr>
+      <tr><td>Argentina — INAES / Relevar Salud</td><td><a href="https://www.argentina.gob.ar/noticias/casi-dos-millones-de-personas-acceden-la-salud-traves-de-cooperativas-o-mutuales">argentina.gob.ar</a></td><td>T1</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <span class="badge-preview">PREVIEW — ILUSTRATIVO</span><br>
+    <span class="marca">FUTURIA INSTITUTE</span> · Observatorio de Vigilancia Estratégica — Sistema SAT-FUTURIA 100% trazable.<br>
+    Documento PREVIEW sujeto a firma del Chairman. Cada afirmación de hecho incluye cita y fecha de acceso (14/07/2026).
+    Variante C · Política y Regulatoria · Referencia: Grupo SanCor Salud · PRISM #001.
+  </div>
+</section>
+
+</body>
+</html>

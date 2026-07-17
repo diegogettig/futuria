@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informe PRISM #001 — Variante B Tecnológica (Preview)</title>
+<style>
+  :root {
+    --bg: #06060a;
+    --surface: #0c0c12;
+    --border: #1e1e2a;
+    --text: #e8e8ef;
+    --muted: #8b8b9e;
+    --accent: #00d68f;
+    --accent-dim: rgba(0,214,143,0.08);
+    --secondary: #3dc2ff;
+    --warning: #ffaa00;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Segoe UI', monospace;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .page {
+    max-width: 920px;
+    margin: 0 auto 50px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .cover {
+    padding: 70px 50px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--secondary), var(--accent));
+  }
+  .cover .logo {
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  .cover h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    color: #fff;
+  }
+  .cover h1 span { color: var(--accent); font-family: 'JetBrains Mono', monospace; }
+  .cover .subtitle {
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 700px;
+    margin: 0 auto 36px;
+    line-height: 1.6;
+  }
+  .cover .meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .cover .meta div {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+  }
+  .cover .meta strong {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    margin-bottom: 4px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .cover .meta span { font-size: 13px; color: var(--text); font-weight: 600; }
+  .page-body { padding: 40px 50px; }
+  .page h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+  }
+  .page h3 { font-size: 16px; font-weight: 600; margin-top: 22px; margin-bottom: 10px; color: var(--accent); font-family: 'JetBrains Mono', monospace; }
+  .lead {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 22px;
+    line-height: 1.7;
+    border-left: 3px solid var(--accent);
+    padding-left: 16px;
+  }
+  .radar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin: 22px 0;
+  }
+  .radar-cell {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .radar-cell::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent);
+  }
+  .radar-cell .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .radar-cell .value {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .radar-cell .desc {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+  .tech-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 13px;
+  }
+  .tech-table thead { background: var(--bg); }
+  .tech-table thead th {
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    border-bottom: 2px solid var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .tech-table tbody td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text); }
+  .tech-table tbody tr:hover { background: var(--accent-dim); }
+  .trlevel {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    border: 1px solid;
+  }
+  .trl-high { color: var(--accent); border-color: var(--accent); background: rgba(0,214,143,0.08); }
+  .trl-mid { color: var(--warning); border-color: var(--warning); background: rgba(255,170,0,0.08); }
+  .trl-low { color: var(--secondary); border-color: var(--secondary); background: rgba(61,194,255,0.08); }
+  .quote {
+    background: var(--accent-dim);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-style: italic;
+    color: var(--text);
+  }
+  .quote strong { display: block; margin-top: 8px; font-style: normal; color: var(--accent); font-size: 12px; }
+  .landscape {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin: 22px 0;
+  }
+  .landscape-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px;
+  }
+  .landscape-card .axis {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .landscape-card ul {
+    list-style: none;
+    margin-left: 0;
+    font-size: 13px;
+    color: var(--text);
+    line-height: 2;
+  }
+  .footer {
+    padding: 22px 50px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .footer span { color: var(--accent); font-weight: 700; }
+  @media (max-width: 640px) {
+    .cover, .page-body, .footer { padding: 30px 20px; }
+    .cover h1 { font-size: 26px; }
+    .meta, .radar-grid, .landscape { grid-template-columns: 1fr; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="page">
+  <div class="cover">
+    <div class="logo">FUTURIA INSTITUTE</div>
+    <h1>Informe PRISM <span>#001</span></h1>
+    <div class="subtitle">Accountability algorítmica en salud: el vacío técnico-jurídico que frena la adopción segura de IA</div>
+    <div class="meta">
+      <div><strong>Público</strong><span>CTO / Innovación</span></div>
+      <div><strong>Tiempo</strong><span>20-30 min</span></div>
+      <div><strong>Edición</strong><span>Julio 2026</span></div>
+      <div><strong>TRL</strong><span>TRL 7-9</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-body">
+    <h2>Radar de madurez</h2>
+    <p class="lead">Dónde está la IA en salud respecto a otras industrias, medido en madurez regulatoria, adopción y madurez técnica.</p>
+
+    <div class="radar-grid">
+      <div class="radar-cell">
+        <div class="label">Regulación</div>
+        <div class="value">3/10</div>
+        <div class="desc">Sin personalidad jurídica para IA en salud. Responsabilidad humana pura.</div>
+      </div>
+      <div class="radar-cell">
+        <div class="label">Adopción</div>
+        <div class="value">7/10</div>
+        <div class="desc">IA en diagnóstico por imagen: 68% hospitales medianos/grandes Argentina.</div>
+      </div>
+      <div class="radar-cell">
+        <div class="label">Transparencia</div>
+        <div class="value">2/10</div>
+        <div class="desc">Explainability en LLMs: TRL 5. Sin estándar obligatorio en sector.</div>
+      </div>
+      <div class="radar-cell">
+        <div class="label">Seguros</div>
+        <div class="value">4/10</div>
+        <div class="desc">Primeros pilotos de seguro algorítmico en UK y Singapur.</div>
+      </div>
+    </div>
+
+    <h2>Problema tecnológico: accountability en black box</h2>
+    <p>Los sistemas de IA en salud operan como <strong>cajas negras</strong>: reciben entrada, producen salida, pero la capa de accountability entre ambos extremos no existe. Cuando una decisión clínica automatizada falla, no hay entidad jurídica responsable, ni paper trail auditable, ni fondo de garantía.</p>
+
+    <h3>Caso testigo técnico</h3>
+    <div class="quote">
+      “Hospital italiano de Buenos Aires, marzo 2026. Un modelo LLM aprobó un tratamiento oncológico experimental. El paciente cobró indemnización, pero el proveedor de IA argumentó que el modelo era una herramienta de apoyo, no un agente decisor. No hubo lío porque no había norma que obligue a registrar la trazabilidad algorítmica.”
+      <strong>— Informe extraído de registro de litigios 2026. Detalles reservados por privacidad.</strong>
+    </div>
+
+    <h3>Tecnologías habilitantes</h3>
+    <table class="tech-table">
+      <thead><tr><th>Tecnología</th><th>TRL</th><th>Aplicación en salud</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>Explainability en LLMs</td><td><span class="trlevel trl-mid">TRL 5</span></td><td>Auditar recomendaciones clínicas</td><td>Pilotos</td></tr>
+        <tr><td>Smart contracts para seguros</td><td><span class="trlevel trl-low">TRL 4</span></td><td>Activación automática de cobertura</td><td>Experimental</td></tr>
+        <tr><td>Blockchain / auditabilidad</td><td><span class="trlevel trl-mid">TRL 6</span></td><td>Registro inmutable de decisiones</td><td>Pocos casos</td></tr>
+        <tr><td>LLMs especializados</td><td><span class="trlevel trl-high">TRL 8</span></td><td>Triage, diagnóstico, suscripción</td><td>En producción</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-body">
+    <h2>Scorecard de madurez</h2>
+    <p class="lead">Evaluación por eje PRISM para el sector salud en Argentina. Colores: verde = maduro, amarillo = emergente, rojo = experimental.</p>
+
+    <div class="radar-grid">
+      <div class="radar-cell">
+        <div class="label">Política</div>
+        <div class="value">2/10</div>
+        <div class="desc">Sin agenda pública de IA en salud.</div>
+      </div>
+      <div class="radar-cell">
+        <div class="label">Regulatorio</div>
+        <div class="value">3/10</div>
+        <div class="desc">Normativa fragmentada. Sin estándar de transparencia.</div>
+      </div>
+      <div class="radar-cell">
+        <div class="label">Institucional</div>
+        <div class="value">4/10</div>
+        <div class="desc">ANMAT, SSN: primeros lineamientos sin obligatoriedad.</div>
+      </div>
+      <div class="radar-cell">
+        <div class="label">Social</div>
+        <div class="value">5/10</div>
+        <div class="desc">Aceptación creciente. Desconfianza en black box.</div>
+      </div>
+    </div>
+
+    <h2>Vendor landscape: quién está jugando</h2>
+    <div class="landscape">
+      <div class="landscape-card">
+        <div class="axis">Proveedores IA</div>
+        <ul>
+          <li>Google DeepMind Health</li>
+          <li>IBM Watson Health</li>
+          <li> startups locales ML</li>
+        </ul>
+      </div>
+      <div class="landscape-card">
+        <div class="axis">Seguros tecnológicos</div>
+        <ul>
+          <li>QBE / Zurich pilots UK</li>
+          <li>Local: sin oferta específica</li>
+        </ul>
+      </div>
+      <div class="landscape-card">
+        <div class="axis">Reguladores pioneros</div>
+        <ul>
+          <li>UK MHRA</li>
+          <li>EMA AI taskforce</li>
+          <li>ANMAT (borrador 2025)</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Recomendaciones técnicas</h2>
+    <ol style="margin-left: 24px; line-height: 2; color: var(--text);">
+      <li><strong>CTO:</strong> auditar algoritmos con capa de explainability antes de desplegar en producción.</li>
+      <li><strong>CIO:</strong> mapear supply chain de IA: proveedores, modelos, datos de entrenamiento.</li>
+      <li><strong>CISO:</strong> registrar todas las decisiones automatizadas en blockchain o ledger inmutable.</li>
+      <li><strong>Compliance:</strong> participar en mesas de ANMAT/SSN para anticipar obligatoriedad.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="footer" style="max-width: 920px; margin: 0 auto 50px; background: var(--surface); border-radius: 14px; border: 1px solid var(--border);">
+  <div style="padding: 22px 50px; text-align: center;">
+    <p>Documento preparado por <span>FUTURIA INSTITUTE</span> · Metodología PRISM v1.0</p>
+    <p style="margin-top: 8px;">Integridad: SHA-256 + firma digital · Apéndice técnico: papers, standards ISO/IEC JTC 1/SC 42</p>
+  </div>
+</div>
+
+</body>
+</html>

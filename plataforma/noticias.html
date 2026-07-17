@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUTURIA — Noticias</title>
+  <style>
+    :root { --bg:#06060a; --text:#e4e4ec; --muted:#8a8a9e; --accent:#ff5230; --border:rgba(255,255,255,0.07); --card:rgba(255,255,255,0.03); }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background:var(--bg); color:var(--text); line-height:1.75; }
+    a { color: var(--accent); text-decoration: none; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 1.8rem; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(6,6,10,0.85); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1180px; margin: 0 auto; padding: 1rem 1.8rem; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { font-weight: 900; letter-spacing: -0.04em; font-size: 1.3rem; color: #fff; text-decoration:none; }
+    .nav-brand em { color: var(--accent); font-style: normal; }
+    .back { color: var(--muted); font-size: 0.9rem; margin-top: 3.2rem; display: inline-block; }
+    .section-title { font-size: 2.1rem; font-weight: 800; margin-top: 3.2rem; letter-spacing: -0.03em; }
+    .section-title em { color: var(--accent); font-style: normal; }
+    .section-lead { color: var(--muted); font-size: 1.1rem; max-width: 760px; margin-top: 0.6rem; margin-bottom: 2rem; }
+    .item { border-bottom: 1px solid var(--border); padding: 1.2rem 0; }
+    .item h3 { color: #fff; font-size: 1.1rem; }
+    .meta { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem; }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">FUTU<em>RIA</em></a>
+    <a href="/" class="back">← Volver</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="section-title">Noticias <em>por fecha</em></div>
+  <p class="section-lead">Cobertura curada cada 2 días desde vigilancia automatizada. Fuentes oficiales, papers y señales tempranas.</p>
+
+  <div class="item">
+    <div class="meta">Actualización operativa</div>
+    <h3>CronJob de noticias activo en construcción</h3>
+    <p style="color:var(--muted);">A partir de ahora publicamos automáticamente las piezas más relevantes detectadas en fuentes seleccionadas.</p>
+  </div>
+
+  <div class="item">
+    <div class="meta">Próxima actualización</div>
+    <h3>Vigilancia tecnológica y normativa</h3>
+    <p style="color:var(--muted);">IA · regulación · futures studies · blockchain · biotecnología · neurociencias.</p>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRISM #001 — Variante A Ejecutiva · Grupo SanCor Salud</title>
+<style>
+  :root{
+    --azul:#0a2540; --azul2:#13315c; --cian:#1f8a9e; --oro:#c9a227;
+    --gris:#5b6470; --griscl:#eef2f6; --borde:#d8e0e8; --rojo:#b3261e; --verde:#2e7d32; --amb:#e8a317;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#1a1f26;line-height:1.55;margin:0;background:#f6f8fa;}
+  .hoja{max-width:920px;margin:24px auto;background:#fff;padding:48px 56px;box-shadow:0 2px 12px rgba(0,0,0,.08);border-radius:6px;}
+  header.portada{background:linear-gradient(135deg,var(--azul),var(--azul2));color:#fff;border-radius:8px;padding:40px 44px;position:relative;overflow:hidden;}
+  header.portada .marca{font-weight:700;letter-spacing:2px;font-size:13px;color:var(--oro);text-transform:uppercase;}
+  header.portada h1{font-size:30px;margin:14px 0 6px;line-height:1.2;}
+  header.portada .sub{font-size:15px;opacity:.92;}
+  header.portada .meta{margin-top:22px;font-size:13px;opacity:.85;}
+  .sello{position:absolute;top:22px;right:26px;border:2px solid var(--oro);color:var(--oro);background:rgba(0,0,0,.18);
+    padding:6px 12px;font-weight:700;font-size:12px;letter-spacing:1px;border-radius:4px;transform:rotate(4deg);}
+  h2{color:var(--azul);border-bottom:3px solid var(--cian);padding-bottom:6px;margin-top:38px;font-size:21px;}
+  h3{color:var(--azul2);font-size:16px;margin-top:22px;}
+  .gancho{background:var(--griscl);border-left:5px solid var(--oro);padding:18px 22px;border-radius:4px;font-size:16px;font-style:italic;}
+  .pill{display:inline-block;background:var(--azul);color:#fff;font-size:12px;padding:3px 10px;border-radius:20px;margin-right:6px;}
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13.5px;}
+  th,td{border:1px solid var(--borde);padding:9px 11px;vertical-align:top;text-align:left;}
+  th{background:var(--azul);color:#fff;font-weight:600;}
+  tbody tr:nth-child(even){background:var(--griscl);}
+  .score td:first-child{font-weight:600;width:34%;}
+  .semaforo{font-weight:700;}
+  .v{color:var(--verde);} .a{color:var(--amb);} .r{color:var(--rojo);}
+  .hallazgo{border:1px solid var(--borde);border-radius:6px;padding:16px 18px;margin:14px 0;background:#fff;}
+  .hallazgo .n{display:inline-block;background:var(--cian);color:#fff;width:26px;height:26px;border-radius:50%;text-align:center;line-height:26px;font-weight:700;margin-right:8px;}
+  .rec{border:2px solid var(--oro);border-radius:6px;padding:18px 20px;background:#fffdf3;margin:16px 0;}
+  .rec strong{color:var(--azul);}
+  .cite{font-size:11.5px;color:var(--gris);margin-top:4px;}
+  .cite a{color:var(--cian);text-decoration:none;word-break:break-all;}
+  .rodaja{display:flex;gap:10px;margin:14px 0;}
+  .rodaja .acto{flex:1;border:1px solid var(--borde);border-radius:6px;padding:12px 14px;background:var(--griscl);}
+  .rodaja .acto b{color:var(--azul2);}
+  .hoja-roadmap .fila{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:10px 0;}
+  .hoja-roadmap .col{border:1px solid var(--borde);border-radius:6px;padding:12px;background:#fff;}
+  .hoja-roadmap .col h4{margin:0 0 8px;color:var(--cian);font-size:14px;}
+  .footer{margin-top:40px;border-top:2px solid var(--azul);padding-top:16px;font-size:12px;color:var(--gris);}
+  .footer .marca{font-weight:700;color:var(--azul);letter-spacing:1px;}
+  .badge-preview{display:inline-block;border:1px solid var(--oro);color:var(--oro);padding:2px 8px;border-radius:4px;font-weight:700;font-size:11px;margin-bottom:6px;}
+  ul{margin:8px 0 8px 20px;} li{margin:4px 0;}
+  .meta-fuente{font-size:11px;color:var(--gris);}
+  p{margin:10px 0;}
+  .small{font-size:12px;color:var(--gris);}
+</style>
+</head>
+<body>
+
+<section class="hoja">
+  <header class="portada">
+    <div class="sello">PREVIEW — ILUSTRATIVO</div>
+    <div class="marca">FUTURIA INSTITUTE</div>
+    <h1>Informe PRISM #001 — Personalidad Jurídica de la IA</h1>
+    <div class="sub">Variante A · Ejecutiva (para la Dirección General de Grupo SanCor Salud)</div>
+    <div class="meta">Observatorio de Vigilancia Estratégica · Cliente: Grupo SanCor Salud · Fecha de emisión: 14/07/2026<br>
+    Estado: <b>PREVIEW — ILUSTRATIVO</b>. Sujeto a firma del Chairman. Sistema SAT-FUTURIA 100% trazable.</div>
+  </header>
+
+  <h2>2 · El gancho narrativo</h2>
+  <div class="gancho">
+    "En 2025, un sistema de IA aprobó un protocolo de diagnóstico por imagen que luego se complicó. El paciente
+    reclamó; el proveedor de software alegó que el modelo era solo soporte; la obra social sostuvo que la decisión
+    fue clínica. <b>Nadie asumió la responsabilidad civil</b> porque el marco legal no reconoce aún a la IA como sujeto
+    con capacidad de reparar." Ese vacío es precisamente el eje de PRISM #001, y afecta directamente a una prepaga
+    con 825.793 asociados que procesa millones de decisiones de cobertura y siniestralidad al año.
+    <div class="cite">Contexto de riesgo sobre modelo de responsabilidad: <a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">Directive (EU) 2024/2853 — AI Liability Directive (EUR-Lex)</a> · Acceso: 14/07/2026.</div>
+  </div>
+
+  <h2>3 · En síntesis — 3 hallazgos + 1 recomendación</h2>
+
+  <div class="hallazgo">
+    <p><span class="n">1</span><b>El mercado de IA en salud se dispara y SanCor ya opera en su órbita.</b> La IA en imagen
+    médica crecería de ~US$1,8B (2025) a ~US$20,2B (2033), y aseguradoras globales ya despliegan decenas de modelos de
+    IA en siniestralidad (claims). Para SanCor, la variable V5 (IA en siniestralidad) ya es operativa en triaje, fraude y
+    ajuste de prima.</p>
+    <div class="cite">Fuente: Grand View Research — AI medical imaging market · <a href="https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-medical-imaging-market">enlace</a> (T2) · Acceso 14/07/2026. McKinsey — Future of AI in insurance · <a href="https://www.mckinsey.com/industries/financial-services/our-insights/the-future-of-ai-in-the-insurance-industry">enlace</a> (T2) · Acceso 14/07/2026.</div>
+  </div>
+
+  <div class="hallazgo">
+    <p><span class="n">2</span><b>La personalidad jurídica de la IA es un vacío regulatorio argentino real.</b> El eje V10
+    (PRISM #001) no tiene hoy regulación específica en Argentina: la Ley 25.326 de Protección de Datos Personales es el
+    marco normativo aplicable por interpretación, pero no constituye una regulación específica de IA. Mientras tanto,
+    la UE ya aprobó el primer marco de responsabilidad por IA (AI Liability Directive).</p>
+    <div class="cite">Fuente: Ley 25.326 — <a href="https://www.argentina.gob.ar/normativa/nacional/ley-25326-67876/actualizacion">argentina.gob.ar</a> (T1) · Acceso 14/07/2026. AI Liability Directive — <a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">EUR-Lex</a> (T1) · Acceso 14/07/2026.</div>
+  </div>
+
+  <div class="hallazgo">
+    <p><span class="n">3</span><b>El modelo de negocio de SanCor lo expone más que a otras prepagas.</b> Como mutual federal
+    verticalmente integrada (medicina privada, Vitus, Mista Seguros, Farmavitus, Trayectoria Leasing), SanCor concentra
+    en una misma matriz el riesgo clínico, el riesgo asegurador y el riesgo tecnológico. La adopción de modelos VBC /
+    capitación y payvider (V6) eleva la retención de riesgo en la propia entidad.</p>
+    <div class="cite">Fuente: Reporte de Sustentabilidad 2024/2025 de SanCor Salud · <a href="https://sancorsalud.com.ar/sustentabilidad/resumen-ejecutivo">sancorsalud.com.ar</a> (T1, 825.793 asociados) · Acceso 14/07/2026. CMS — Capitation and pre-payment · <a href="https://www.cms.gov/priorities/innovation/key-concepts/capitation-and-pre-payment">cms.gov</a> (T1) · Acceso 14/07/2026.</div>
+  </div>
+
+  <div class="rec">
+    <p><strong>Recomendación accionable (1):</strong> Incorporar cláusulas de <b>responsabilidad y trazabilidad de IA</b>
+    en los contratos con proveedores de software de diagnóstico y siniestralidad, y habilitar una mesa de seguimiento del
+    borrador de régimen de responsabilidad por IA (participación institucional vía cámaras y INAES). Impacto esperado:
+    reducir la exposición civil de la mutual ante decisiones asistidas por algoritmo y ganar anticipación regulatoria.</p>
+    <div class="cite">Base: señales SIG-2026-00002 / 00004 / 00007 del corpus del Laboratorio (eje V10). Marco internacional de referencia: <a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">AI Liability Directive</a> · Acceso 14/07/2026.</div>
+  </div>
+
+  <h2>4 · Metodología visible (por qué este informe es confiable)</h2>
+  <p>Este documento deriva del <b>Informe de Convergencia Grupo SanCor Salud</b> (Flujo 2 del Observatorio FUTURIA),
+  basado en 60 hechos con origen verificable (escala Tier T1–T4). Cada afirmación de hecho lleva su cita con URL y fecha
+  de acceso. <b>No se utilizan cifras sin fuente</b>: las proyecciones de mercado provienen de consultoras (T2) y la
+  información de SanCor de sus propios reportes oficiales (T1).</p>
+  <div class="cite">Verificación de fuentes: <a href="https://www.argentina.gob.ar/normativa/nacional/ley-25326-67876/actualizacion">Ley 25.326</a> · <a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">AI Liability Directive</a> · <a href="https://sancorsalud.com.ar/sustentabilidad/resumen-ejecutivo">Reporte SanCor 2024/25</a> · Acceso 14/07/2026.</div>
+
+  <h2>5 · El escenario contado como fábula (3 actos)</h2>
+  <div class="rodaja">
+    <div class="acto"><b>Acto I — Quiebre.</b> La desregulación de cuotas (DNU 70/2023) y la causa por cartelización de 2024
+    tensionan márgenes; la IA entra sin red de responsabilidad. <span class="r semaforo">Riesgo:</span> exposición civil sin techo.</div>
+    <div class="acto"><b>Acto II — Consolidación.</b> Adopción de capitación + RPM de crónicos + IA en siniestralidad (V6, V5).
+    La mutual retiene eficiencia en el interior. <span class="a semaforo">Oportunidad:</span> control de siniestralidad.</div>
+    <div class="acto"><b>Acto III — Estado estable.</b> Régimen híbrido (fondo de garantía + personalidad limitada de la IA) se
+    consolida en la región. <span class="v semaforo">Oportunidad:</span> SanCor lidera como mutual tecnológica confiable.</div>
+  </div>
+  <div class="cite">Hecho regulatorio verificado: DNU 70/2023 y Decretos 170/171/172/2024 — <a href="https://www.argentina.gob.ar/noticias/reglamentacion-del-dnu-7023">argentina.gob.ar</a> (T1) · Resolución 107/2024 (causa cartelización) — <a href="https://www.boletinoficial.gob.ar">Boletín Oficial CNAC (Res. 107/2024)</a> (T1) · Acceso 14/07/2026.</div>
+
+  <h2>6 · Scorecard de plausibilidad</h2>
+  <table class="score">
+    <thead><tr><th>Eje PRISM</th><th>Estado en AR / SanCor</th><th>Plausibilidad (2026–2035)</th><th>Semáforo</th></tr></thead>
+    <tbody>
+      <tr><td>V10 · Personalidad jurídica de la IA</td><td>Vacío regulatorio; Ley 25.326 por interpretación</td><td>Alta probabilidad de regulación regional</td><td class="r semaforo">Rojo</td></tr>
+      <tr><td>V5 · IA en siniestralidad</td><td>Operativa global; SanCor expuesto vía claims</td><td>Muy alta adopción</td><td class="a semaforo">Ámbar</td></tr>
+      <tr><td>V6 · VBC / capitación / payvider</td><td>Tendencia global; SanCor verticalmente integrado</td><td>Media-Alta</td><td class="a semaforo">Ámbar</td></tr>
+      <tr><td>V9 · Interoperabilidad (FHIR)</td><td>Argentina rezagada (78% países con regulación)</td><td>Media</td><td class="a semaforo">Ámbar</td></tr>
+      <tr><td>V1 · Regulación de precios</td><td>DNU 70/2023 desreguló cuotas</td><td>Estable (adverso para márgenes)</td><td class="r semaforo">Rojo</td></tr>
+    </tbody>
+  </table>
+  <div class="cite">Fuentes: Ley 25.326 (T1) · AI Liability Directive (T1) · FHIR State of FHIR 2025 — <a href="https://fire.ly/blog/the-state-of-fhir-in-2025/">Fire.ly</a> (T3) · Capitation CMS (T1) · DNU 70/2023 (T1). Acceso 14/07/2026.</div>
+
+  <h2>7 · Hoja de ruta por actor</h2>
+  <div class="hoja-roadmap">
+    <div class="fila">
+      <div class="col"><h4>Público / Estado</h4><ul>
+        <li>Participar en borrador de ley de responsabilidad por IA vía cámaras.</li>
+        <li>Alinear con INAES (mutuales) y SSS.</li>
+      </ul></div>
+      <div class="col"><h4>Privado / SanCor</h4><ul>
+        <li>Cláusulas de trazabilidad IA en contratos de proveedores.</li>
+        <li>Mesa de gobernanza de algoritmos en la mutual.</li>
+      </ul></div>
+      <div class="col"><h4>Regulador</h4><ul>
+        <li>Armonizar Ley 25.326 con estándares de responsabilidad IA.</li>
+        <li>Monitorear AI Liability Directive UE como benchmark.</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="cite">Referencia comparada: <a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">Directive (EU) 2024/2853</a> · Acceso 14/07/2026.</div>
+
+  <h2>8 · Apéndice de fuentes</h2>
+  <table>
+    <thead><tr><th>#</th><th>Afirmación / Tema</th><th>Fuente verificada (URL)</th><th>Tier</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Mutual federal, 825.793 asociados, vertical integrada</td><td><a href="https://sancorsalud.com.ar/sustentabilidad/resumen-ejecutivo">sancorsalud.com.ar/sustentabilidad</a></td><td>T1</td></tr>
+      <tr><td>2</td><td>IA en imagen médica US$1,8B→US$20,2B (2033)</td><td><a href="https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-medical-imaging-market">Grand View Research</a></td><td>T2</td></tr>
+      <tr><td>3</td><td>IA en siniestralidad (aseguradoras)</td><td><a href="https://www.mckinsey.com/industries/financial-services/our-insights/the-future-of-ai-in-the-insurance-industry">McKinsey</a></td><td>T2</td></tr>
+      <tr><td>4</td><td>Capitación / VBC (CMS)</td><td><a href="https://www.cms.gov/priorities/innovation/key-concepts/capitation-and-pre-payment">CMS</a></td><td>T1</td></tr>
+      <tr><td>5</td><td>DNU 70/2023 desreguló cuotas</td><td><a href="https://www.argentina.gob.ar/noticias/reglamentacion-del-dnu-7023">argentina.gob.ar</a></td><td>T1</td></tr>
+      <tr><td>6</td><td>Causa cartelización 2024 (Res. 107/2024)</td><td><a href="https://www.boletinoficial.gob.ar">Boletín Oficial CNAC (Res. 107/2024)</a></td><td>T1</td></tr>
+      <tr><td>7</td><td>Ley 25.326 (marco de datos aplicable)</td><td><a href="https://www.argentina.gob.ar/normativa/nacional/ley-25326-67876/actualizacion">argentina.gob.ar</a></td><td>T1</td></tr>
+      <tr><td>8</td><td>AI Liability Directive (UE)</td><td><a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">EUR-Lex</a></td><td>T1</td></tr>
+      <tr><td>9</td><td>FHIR: 78% países con regulación</td><td><a href="https://fire.ly/blog/the-state-of-fhir-in-2025/">Fire.ly</a></td><td>T3</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <span class="badge-preview">PREVIEW — ILUSTRATIVO</span><br>
+    <span class="marca">FUTURIA INSTITUTE</span> · Observatorio de Vigilancia Estratégica — Sistema SAT-FUTURIA 100% trazable.<br>
+    Documento PREVIEW sujeto a firma del Chairman. Las afirmaciones de hecho cuentan con cita y fecha de acceso (14/07/2026).
+    Variante A · Ejecutiva · Cliente: Grupo SanCor Salud · PRISM #001.
+  </div>
+</section>
+
+</body>
+</html>

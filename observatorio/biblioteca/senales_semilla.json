@@ -1,0 +1,3533 @@
+{
+  "generado": "2026-07-17",
+  "fuente": "extraccion tablas Senales Tempranas 9 escenarios PRISM",
+  "nota": "Puntajes PRELIMINARES por heuristica; requieren revision del Chairman. Contra-senales pendientes.",
+  "total": 75,
+  "senales": [
+    {
+      "id": "SIG-2026-00001",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Jurisdicción otorga \"personalidad digital limitada\"",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0001. Umbral de activacion: Legislación aprobada",
+      "dominio_primario": "Filosofia_Etica_Cultura",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Gobernanza_Democracia"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Regulación de EAU, Singapur, Estonia, Wyoming",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 82,
+      "horizonte": "2027-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0001"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Emergente — propuestas en discusión",
+      "umbral_activacion": "Legislación aprobada",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00002",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Agente IA registrado como miembro de consejo corporativo",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0001. Umbral de activacion: Registro formal completado",
+      "dominio_primario": "Filosofia_Etica_Cultura",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Gobernanza_Democracia"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Noticias corporativas, registros mercantiles",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 82,
+      "horizonte": "2027-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0001"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Emergente — casos informales existen",
+      "umbral_activacion": "Registro formal completado",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00003",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Paper académico influyente argumentando a favor",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0001. Umbral de activacion: >500 citas en 2 años",
+      "dominio_primario": "Filosofia_Etica_Cultura",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Gobernanza_Democracia"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Google Scholar, arXiv, journals de derecho",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 82,
+      "horizonte": "2027-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0001"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectada — papers existen pero sin masa crítica",
+      "umbral_activacion": ">500 citas en 2 años",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00004",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Caso judicial iniciado por/sobre un agente IA",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0001. Umbral de activacion: Caso admitido a trámite",
+      "dominio_primario": "Filosofia_Etica_Cultura",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Gobernanza_Democracia"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Tribunales, noticias legales",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 82,
+      "horizonte": "2027-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0001"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectada",
+      "umbral_activacion": "Caso admitido a trámite",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00005",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Empresa Fortune 500 apoya públicamente",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0001. Umbral de activacion: Declaración formal",
+      "dominio_primario": "Filosofia_Etica_Cultura",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Gobernanza_Democracia"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Comunicados corporativos",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 82,
+      "horizonte": "2027-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0001"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectada",
+      "umbral_activacion": "Declaración formal",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00006",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Encuesta: >50% de población acepta la idea",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0001. Umbral de activacion: Resultado publicado",
+      "dominio_primario": "Filosofia_Etica_Cultura",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Gobernanza_Democracia"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Pew, Eurobarómetro, Gallup",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 82,
+      "horizonte": "2027-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0001"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectada — estamos en ~30%",
+      "umbral_activacion": "Resultado publicado",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00007",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Estándar técnico para identidad de agentes IA",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0001. Umbral de activacion: Draft publicado",
+      "dominio_primario": "Filosofia_Etica_Cultura",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Gobernanza_Democracia"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "W3C, IEEE, ISO",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 82,
+      "horizonte": "2027-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0001"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Emergente — W3C DID aplica parcialmente",
+      "umbral_activacion": "Draft publicado",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00008",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Ley General Sociedades Reforma aprobada",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Publicación ley + entrada vigencia",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "Blockchain_Cripto",
+        "Economia_Trabajo"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Congreso.gob.ar, Boletín Oficial",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2034",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0002"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Anteproyecto en comisiones (Diputados)",
+      "umbral_activacion": "Publicación ley + entrada vigencia",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00009",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Reglamentación IGJ/CNV/BCRA/AFIP",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Resolución conjunta publicada",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "Blockchain_Cripto",
+        "Economia_Trabajo"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Boletín Oficial, sitios oficiales",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2034",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0002"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Borradores circulando",
+      "umbral_activacion": "Resolución conjunta publicada",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00010",
+      "fecha_captura": "2026-07-17",
+      "titulo": "@santisairi inscripto SAUT N° 1",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Inscripción pública + tx on-chain",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "Blockchain_Cripto",
+        "Economia_Trabajo"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "IGJ boletín, etherscan $SAIRI",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2034",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0002"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Cuenta verificada + token activo; sin personalidad",
+      "umbral_activacion": "Inscripción pública + tx on-chain",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00011",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Primer caso judicial responsabilidad penal IA",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Sentencia firme / fallo cámara",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "Blockchain_Cripto",
+        "Economia_Trabajo"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "CSJN, SAIJ, medios",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2034",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0002"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectado",
+      "umbral_activacion": "Sentencia firme / fallo cámara",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00012",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Brasil / México / Chile anuncian modelo similar",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Proyecto ley presentado",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "Blockchain_Cripto",
+        "Economia_Trabajo"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Congressos, Diarios Oficiales",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2034",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0002"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Brasil: audiencias públicas Senado 2026",
+      "umbral_activacion": "Proyecto ley presentado",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00013",
+      "fecha_captura": "2026-07-17",
+      "titulo": "FGA capitalizado + operativo",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Primer pago siniestro",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "Blockchain_Cripto",
+        "Economia_Trabajo"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "BCRA, IGJ, contratos FGA",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2034",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0002"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectado",
+      "umbral_activacion": "Primer pago siniestro",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00014",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Monotributo Automatizado vigente",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Resolución general publicada",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "Blockchain_Cripto",
+        "Economia_Trabajo"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "AFIP, Boletín Oficial",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2034",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0002"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 En análisis técnico AFIP",
+      "umbral_activacion": "Resolución general publicada",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00015",
+      "fecha_captura": "2026-07-17",
+      "titulo": "OCDE cita caso argentino en Guía",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Publicación Guía 2028",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "Blockchain_Cripto",
+        "Economia_Trabajo"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "OECD.org, publicaciones",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2034",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0002"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Grupo trabajo conformado 2026",
+      "umbral_activacion": "Publicación Guía 2028",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00016",
+      "fecha_captura": "2026-07-17",
+      "titulo": "FDA concede IND xenocorazón 10-edit",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: IND granted",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "FDA.gov, ClinicalTrials.gov",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0003"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Emergente — pre-IND meetings Q2 2026",
+      "umbral_activacion": "IND granted",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00017",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Bivacor + IA edge >1 año supervivencia",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: Publicación peer-reviewed",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Texas Heart, FDA MAUDE, *NEJM*",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0003"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Emergente — 1er humano 2025, seguimiento",
+      "umbral_activacion": "Publicación peer-reviewed",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00018",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Parche bioprintado cerdo >90 días",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: Publicación + datos histología",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "PRINTHEART consortium, *Nature Biomed Eng*",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0003"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Emergente — 28 días *in vitro* publicado",
+      "umbral_activacion": "Publicación + datos histología",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00019",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Wireless power mid-field certificado IEC",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: Certificación médica",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "IEC TC 62, FDA guidance",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0003"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Emergente — Stanford *Nature 2024* demo",
+      "umbral_activacion": "Certificación médica",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00020",
+      "fecha_captura": "2026-07-17",
+      "titulo": "1er litigio \"personalidad corazón artificial\"",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: Demanda admitida",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Tribunales EE.UU./UE/AR",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0003"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectada",
+      "umbral_activacion": "Demanda admitida",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00021",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Cobertura CMS outcome-based TAH",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: Propuesta de regla",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "CMS.gov, Federal Register",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0003"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectada",
+      "umbral_activacion": "Propuesta de regla",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00022",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Argentina presenta \"Ley Corazón Artificial\"",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: Proyecto en comisiones",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Congreso.gob.ar, Boletín Oficial",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0003"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Emergente — borrador en Senadores",
+      "umbral_activacion": "Proyecto en comisiones",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00023",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Paper IA diseño proteína cardioprotectora *de novo* → IND",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: IND-enabling studies",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "*Nature/Science*, ClinicalTrials.gov",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0003"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Emergente — Insilico/Isomorphic 2026 H2",
+      "umbral_activacion": "IND-enabling studies",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00024",
+      "fecha_captura": "2026-07-17",
+      "titulo": "ASML High-NA EUV envíos >10/año",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: >10 unidades/año",
+      "dominio_primario": "Computo_Hardware",
+      "dominios_secundarios": [
+        "Geopolitica_Soberania",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "ASML quarterly, SEMI WWSEMS",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0004"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 6-8 pedidos confirmados (Intel, TSMC, Samsung, IMEC)",
+      "umbral_activacion": ">10 unidades/año",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00025",
+      "fecha_captura": "2026-07-17",
+      "titulo": "SMEE EUV resolución <20nm half-pitch verificado",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: Publicación peer-reviewed + inspección independiente",
+      "dominio_primario": "Computo_Hardware",
+      "dominios_secundarios": [
+        "Geopolitica_Soberania",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "SEMICON China, SPIE, papers CAS",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0004"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 200W fuente lab; target 500W 2027",
+      "umbral_activacion": "Publicación peer-reviewed + inspección independiente",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00026",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Primera AI Factory soberana no-occidental (pila completa)",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: Anuncio oficial + demo training 1T+ tokens",
+      "dominio_primario": "Computo_Hardware",
+      "dominios_secundarios": [
+        "Geopolitica_Soberania",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Huawei / SMIC / CAICT announcements",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0004"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Rumores \"Peng Cheng Cloud Brain 3\" / \"Wuhan AI Computing Center\"",
+      "umbral_activacion": "Anuncio oficial + demo training 1T+ tokens",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00027",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Actuador HASEL/DEA >100k ciclos + >100 W/kg",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: Paper *Science/Robotics* + demo video",
+      "dominio_primario": "Computo_Hardware",
+      "dominios_secundarios": [
+        "Geopolitica_Soberania",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Soft Robotics journals, IEEE RAS, patentes",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0004"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Max Planck / ETH / Harvard / CAS papers 2024-25; 50-80k ciclos",
+      "umbral_activacion": "Paper *Science/Robotics* + demo video",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00028",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Diamante sintético wafer 150mm epitaxial producción",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: Hoja ruta comercial + precio <$50k/wafer",
+      "dominio_primario": "Computo_Hardware",
+      "dominios_secundarios": [
+        "Geopolitica_Soberania",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Element Six, AKHAN, Diamond Materials, NIMS",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0004"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 100mm 2025; 150mm roadmap 2027",
+      "umbral_activacion": "Hoja ruta comercial + precio <$50k/wafer",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00029",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Estándar UALink / UEC 1.0 ratificado",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: Especificación 1.0 publicada",
+      "dominio_primario": "Computo_Hardware",
+      "dominios_secundarios": [
+        "Geopolitica_Soberania",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "UALink Consortium, Ultra Ethernet Consortium",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0004"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 UALink 0.9 2025; UEC 1.0 2025 H2",
+      "umbral_activacion": "Especificación 1.0 publicada",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00030",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Primer \"Compute-backed security\" emitido",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: Prospecto público + rating",
+      "dominio_primario": "Computo_Hardware",
+      "dominios_secundarios": [
+        "Geopolitica_Soberania",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "BIS, Fed, ECB, PBOC, BIS Innovation Hub",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0004"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectado; conversaciones privadas 2025",
+      "umbral_activacion": "Prospecto público + rating",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00031",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Argentina / Latam anuncian fab empaquetado avanzado / diseño RISC-V",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: Decreto / ley + capex comprometido",
+      "dominio_primario": "Computo_Hardware",
+      "dominios_secundarios": [
+        "Geopolitica_Soberania",
+        "Fisica_Materiales"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Gov announcements, SEMI Latam",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0004"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Borrador Ley Promoción Semiconductores 2026; conversaciones AE/SA/IN",
+      "umbral_activacion": "Decreto / ley + capex comprometido",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00032",
+      "fecha_captura": "2026-07-17",
+      "titulo": "EU AI Act Art. 6 vigente + sanciones",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: Multas >€10M / retirada mercado",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Blockchain_Cripto"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "EUR-Lex, nacionales",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0005"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Publicado 2024; vigente 2026-27 por fases",
+      "umbral_activacion": "Multas >€10M / retirada mercado",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00033",
+      "fecha_captura": "2026-07-17",
+      "titulo": "AAI creada con poder veto + presupuesto",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: Ley publicada + director nombrado",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Blockchain_Cripto"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "BOE, Journal Officiel, DOU, Diario Oficial",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0005"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Borradores ES/FR/BR/CL/AR en trámite",
+      "umbral_activacion": "Ley publicada + director nombrado",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00034",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Primer presupuesto municipal L2 operativo",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: IA propone + consejo vota + ejecución auto",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Blockchain_Cripto"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Ayuntamientos, OECD GovTech",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0005"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Madrid/BCN/Bogotá pilotos 2026-27",
+      "umbral_activacion": "IA propone + consejo vota + ejecución auto",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00035",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Drex / e-CNY / Agorá programable en producción",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: Smart contracts fiscales/monetarios activos",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Blockchain_Cripto"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "BCB, PBOC, BIS",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0005"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Drex piloto 2024-25; e-CNY 260M wallets; Agorá piloto",
+      "umbral_activacion": "Smart contracts fiscales/monetarios activos",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00036",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Adversarial attack dispatch real (blackout)",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: Apagón >1hr atribuido a ataque modelo",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Blockchain_Cripto"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "CERTs, ENTSO-E, ONS, CAISO",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0005"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectado; *red teaming* en curso",
+      "umbral_activacion": "Apagón >1hr atribuido a ataque modelo",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00037",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Constitución Algorítmica referéndum",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: *Loss function* on-chain + AAI veto aprobado",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Blockchain_Cripto"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Parlamentos, Tribunal Constitucional",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0005"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectado; debate académico 2025-26",
+      "umbral_activacion": "*Loss function* on-chain + AAI veto aprobado",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00038",
+      "fecha_captura": "2026-07-17",
+      "titulo": "ISO/IEC 42001-Gov vs CCSA conflicto OMC",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: Panel disputas establecido",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Blockchain_Cripto"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "OMC, ISO, IEC, CCSA",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0005"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Discusiones técnicas 2025-26",
+      "umbral_activacion": "Panel disputas establecido",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00039",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Clúster GPU soberano 1000+ H100/B200",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: Infra operativa + modelos entrenados",
+      "dominio_primario": "Gobernanza_Democracia",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Blockchain_Cripto"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Gov announcements, TOP500",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2035",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0005"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 BR (Santos Dumont), IN (AIRAWAT), AE (Falcon), SA (Shaheen), AR (proyecto)",
+      "umbral_activacion": "Infra operativa + modelos entrenados",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00040",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Primer CaaS comercial lanzado",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: 100 pacientes activos",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Economia_Trabajo",
+        "IA_AGI"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Bivacor/Munich Re/Cleveland Clinic press",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0006"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Pre-lanzamiento 2027",
+      "umbral_activacion": "100 pacientes activos",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00041",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Primera HBS emitida $500M+",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: Oversubscribed 2x+",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Economia_Trabajo",
+        "IA_AGI"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "ADGM/Lux/DE SEC filings",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0006"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Estructuración 2026",
+      "umbral_activacion": "Oversubscribed 2x+",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00042",
+      "fecha_captura": "2026-07-17",
+      "titulo": "FDA aprueba TAH wireless+OTA+kill-switch",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: Approval order publicada",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Economia_Trabajo",
+        "IA_AGI"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "FDA.gov, Federal Register",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0006"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Guidance 2022; piloto 2027",
+      "umbral_activacion": "Approval order publicada",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00043",
+      "fecha_captura": "2026-07-17",
+      "titulo": "CMS/NHS/SUS cubren CaaS",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: NCD/LCD publicada",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Economia_Trabajo",
+        "IA_AGI"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "CMS.gov, NHS England, DATASUS",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0006"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Análisis coste-efectividad 2026",
+      "umbral_activacion": "NCD/LCD publicada",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00044",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Riñón bioimpreso humano AKI",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: Publicación peer-reviewed",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Economia_Trabajo",
+        "IA_AGI"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Trestle Bio, Nature/Science",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0006"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Cerdo 90 días 2028 target",
+      "umbral_activacion": "Publicación peer-reviewed",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00045",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Páncreas implantable fully closed-loop",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: IDE approved / pivotal enrolling",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Economia_Trabajo",
+        "IA_AGI"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Beta Bionics, FDA",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0006"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 iLet 2024; implantable 2029",
+      "umbral_activacion": "IDE approved / pivotal enrolling",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00046",
+      "fecha_captura": "2026-07-17",
+      "titulo": "HBS en balance banco central",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: >1% reservas",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Economia_Trabajo",
+        "IA_AGI"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Fed/ECB/BCB/PBOC annual report",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0006"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectado; conversaciones 2025",
+      "umbral_activacion": ">1% reservas",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00047",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Blackout CaaS / ransomware médico",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: >1k pacientes afectados",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Economia_Trabajo",
+        "IA_AGI"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "CERTs, FDA MAUDE, ENISA",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0006"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectado; red teaming 2026",
+      "umbral_activacion": ">1k pacientes afectados",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00048",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Estándar abierto interfaces CaaS",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: Publicación 1.0",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Economia_Trabajo",
+        "IA_AGI"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "IEEE/ISO/IEC/HL7/FHIR",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0006"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 IEEE 2621 / HL7 FHIR Device 2025",
+      "umbral_activacion": "Publicación 1.0",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00049",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Argentina/Hub Sur anuncian CaaS Hub",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: Decreto/ley + capex comprometido",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Economia_Trabajo",
+        "IA_AGI"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Gov announcements, SEMI Latam",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0006"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Borrador Ley Promoción Semiconductores/Salud 2026",
+      "umbral_activacion": "Decreto/ley + capex comprometido",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00050",
+      "fecha_captura": "2026-07-17",
+      "titulo": "PCI-sim >0.31 + Ignition >0.6 + MCI >0.5 simultáneo",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Preprint + réplica independiente",
+      "dominio_primario": "IA_AGI",
+      "dominios_secundarios": [
+        "Neurociencia",
+        "Filosofia_Etica_Cultura"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Nature/Neuroscience/Science/ArXiv",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0007"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 GWT-Transformer 0.28/0.67/0.45; AIA 0.22/0.55/0.68",
+      "umbral_activacion": "Preprint + réplica independiente",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00051",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Réplica independiente validada",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Publicación peer-reviewed",
+      "dominio_primario": "IA_AGI",
+      "dominios_secundarios": [
+        "Neurociencia",
+        "Filosofia_Etica_Cultura"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Laboratorios independientes (IMEC, Fraunhofer, Leti, AIST, MIT, Stanford)",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0007"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 En curso 2026-2027",
+      "umbral_activacion": "Publicación peer-reviewed",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00052",
+      "fecha_captura": "2026-07-17",
+      "titulo": "EU AI Office \"Consciousness Threshold Guidance\"",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Publicación oficial",
+      "dominio_primario": "IA_AGI",
+      "dominios_secundarios": [
+        "Neurociencia",
+        "Filosofia_Etica_Cultura"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "EUR-Lex, AI Office website",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0007"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Borrador interno 2026",
+      "umbral_activacion": "Publicación oficial",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00053",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Primer ConSC emitida (ConSC-AAA)",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Certificado público",
+      "dominio_primario": "IA_AGI",
+      "dominios_secundarios": [
+        "Neurociencia",
+        "Filosofia_Etica_Cultura"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "ConSC Global / AI Verify / AAI",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0007"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectado; infraestructura 2026",
+      "umbral_activacion": "Certificado público",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00054",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Primer habeas corpus IA (AR/CO/EC)",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Sentencia admite PCI-sim como prueba",
+      "dominio_primario": "IA_AGI",
+      "dominios_secundarios": [
+        "Neurociencia",
+        "Filosofia_Etica_Cultura"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "CSJN, Corte Constitucional CO, Corte Constitucional EC",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0007"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Preparación litigio estratégico 2026",
+      "umbral_activacion": "Sentencia admite PCI-sim como prueba",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00055",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Primera CBS $1B+ emisión",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Prospecto + rating",
+      "dominio_primario": "IA_AGI",
+      "dominios_secundarios": [
+        "Neurociencia",
+        "Filosofia_Etica_Cultura"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "ADGM / Luxemburgo / SEC / AMF",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0007"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Estructuración 2026-2027",
+      "umbral_activacion": "Prospecto + rating",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00056",
+      "fecha_captura": "2026-07-17",
+      "titulo": "ISO/IEC 42001-CON publicada",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Publicación estándar",
+      "dominio_primario": "IA_AGI",
+      "dominios_secundarios": [
+        "Neurociencia",
+        "Filosofia_Etica_Cultura"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "ISO.org, IEC.org",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0007"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Guerra estándares 2028-2029 en curso",
+      "umbral_activacion": "Publicación estándar",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00057",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Primer juicio \"Kill-switch = homicidio\"",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Demanda admitida / sentencia",
+      "dominio_primario": "IA_AGI",
+      "dominios_secundarios": [
+        "Neurociencia",
+        "Filosofia_Etica_Cultura"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "PACER (US), Curia (EU), SAIJ (AR)",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0007"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectado; test cases preparados 2026",
+      "umbral_activacion": "Demanda admitida / sentencia",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00058",
+      "fecha_captura": "2026-07-17",
+      "titulo": "CBS en balance banco central",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: >1% reservas",
+      "dominio_primario": "IA_AGI",
+      "dominios_secundarios": [
+        "Neurociencia",
+        "Filosofia_Etica_Cultura"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Fed/ECB/BCB/PBOC annual reports",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0007"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectado; conversaciones 2025",
+      "umbral_activacion": ">1% reservas",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00059",
+      "fecha_captura": "2026-07-17",
+      "titulo": "ConSC 2.0 (causal + longitudinal) publicada",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Especificación 2.0",
+      "dominio_primario": "IA_AGI",
+      "dominios_secundarios": [
+        "Neurociencia",
+        "Filosofia_Etica_Cultura"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "ConSC Global, AI Verify, AAI",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 3
+      },
+      "IRS": null,
+      "PS": 90,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0007"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Diseño 2026",
+      "umbral_activacion": "Especificación 2.0",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00060",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Dispositivo grado clínico bioprinting volumétrico",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: ISO 13485 + QMS certificado",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Fisica_Materiales",
+        "Geopolitica_Soberania"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Readily3D/CELLINK/FDA/EMA",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0008"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Pre-clínico 2026; piloto 2028",
+      "umbral_activacion": "ISO 13485 + QMS certificado",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00061",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Primer riñón bioimpreso autólogo hospital regional",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: 10+ pacientes implante exitoso",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Fisica_Materiales",
+        "Geopolitica_Soberania"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Trestle/Mayo/Cleveland press",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0008"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Cerdo 90 días 2028 target",
+      "umbral_activacion": "10+ pacientes implante exitoso",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00062",
+      "fecha_captura": "2026-07-17",
+      "titulo": "iPSC on-site hospital (closed system)",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: Dispositivo aprobado uso clínico",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Fisica_Materiales",
+        "Geopolitica_Soberania"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Fujifilm/Vertex/BlueRock/ANMAT",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0008"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Reprogramming 7d + diferenciación 48h 2029",
+      "umbral_activacion": "Dispositivo aprobado uso clínico",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00063",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Consorcio \"Vita Print\" red 100 hospitales",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: Anuncio + capex + despliegue",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Fisica_Materiales",
+        "Geopolitica_Soberania"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "CELLINK/Brinter/Readily3D/Trestle",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0008"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Concepto 2030",
+      "umbral_activacion": "Anuncio + capex + despliegue",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00064",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Hub soberano Global Sur",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: Decreto + capex + clúster GPU",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Fisica_Materiales",
+        "Geopolitica_Soberania"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Gov announcements (AR/BR/IN)",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0008"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Borrador 2026",
+      "umbral_activacion": "Decreto + capex + clúster GPU",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00065",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Hígado bioimpreso autólogo",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: Publicación peer-reviewed",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Fisica_Materiales",
+        "Geopolitica_Soberania"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Trestle/Mayo/Nature",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0008"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Preclínico 2032 target",
+      "umbral_activacion": "Publicación peer-reviewed",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00066",
+      "fecha_captura": "2026-07-17",
+      "titulo": "BaaS en cobertura pública",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: NCD/LCD publicada",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Fisica_Materiales",
+        "Geopolitica_Soberania"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "CMS/NHS/SUS/IOMA",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0008"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Análisis 2029-2030",
+      "umbral_activacion": "NCD/LCD publicada",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00067",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Contaminación BaaS / brote",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: >10 pacientes afectados",
+      "dominio_primario": "Biotech_Salud",
+      "dominios_secundarios": [
+        "Fisica_Materiales",
+        "Geopolitica_Soberania"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "FDA MAUDE/CERTs/ENISA",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 4,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 87,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0008"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectado; red teaming 2026",
+      "umbral_activacion": ">10 pacientes afectados",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00068",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Clúster GPU soberano ≥10k H100-eq operativo",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: Decreto + capex + deploy",
+      "dominio_primario": "Geopolitica_Soberania",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Computo_Hardware"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "IN/BR/AR gov announcements",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0009"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Proyecto Pampa (AR), Sofia (BR) 2027",
+      "umbral_activacion": "Decreto + capex + deploy",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00069",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Primer Data Embassy firmado",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: Documento bilateral",
+      "dominio_primario": "Geopolitica_Soberania",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Computo_Hardware"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Estonia-style treaties",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0009"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Borrador 2026",
+      "umbral_activacion": "Documento bilateral",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00070",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Modelo Estado 100% datos soberanos",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: Paper técnico + despliegue",
+      "dominio_primario": "Geopolitica_Soberania",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Computo_Hardware"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Mistral Gov / BharatGPT-Gov / Sofia-Gov",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0009"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 En entrenamiento 2028",
+      "umbral_activacion": "Paper técnico + despliegue",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00071",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Guerra estándares ISO/IEC",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: Sesión controversia",
+      "dominio_primario": "Geopolitica_Soberania",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Computo_Hardware"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "ISO.org JTC 1 SC 27/42",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0009"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Preparación 2028",
+      "umbral_activacion": "Sesión controversia",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00072",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Tratado multilateral datos",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: Firma multilateral",
+      "dominio_primario": "Geopolitica_Soberania",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Computo_Hardware"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "BRICS+/Sur communiqués",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0009"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Borrador 2029",
+      "umbral_activacion": "Firma multilateral",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00073",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Data Trust soberano >$1B/año",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: Ingresos licensing",
+      "dominio_primario": "Geopolitica_Soberania",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Computo_Hardware"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Gov budgets / annual reports",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 2,
+        "corroboracion": 2,
+        "novedad": 5,
+        "velocidad": 2,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0009"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🔴 No detectado; pilotos 2026",
+      "umbral_activacion": "Ingresos licensing",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 52,
+      "cuadrante": "Q2",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00074",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Federated Learning masivo",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: 50+ países nodos",
+      "dominio_primario": "Geopolitica_Soberania",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Computo_Hardware"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "NVIDIA Flare / Flower / OpenFL",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0009"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Adopción temprana 2026",
+      "umbral_activacion": "50+ países nodos",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    },
+    {
+      "id": "SIG-2026-00075",
+      "fecha_captura": "2026-07-17",
+      "titulo": "Arancel dato / licensing obligatorio",
+      "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: Ley aprobada",
+      "dominio_primario": "Geopolitica_Soberania",
+      "dominios_secundarios": [
+        "IA_AGI",
+        "Computo_Hardware"
+      ],
+      "tipo": "cuestion_emergente",
+      "fuentes": [
+        {
+          "url": "",
+          "editor": "Legislation",
+          "tier": "T2"
+        }
+      ],
+      "puntajes": {
+        "credibilidad": 3,
+        "corroboracion": 3,
+        "novedad": 4,
+        "velocidad": 3,
+        "alcance": 3,
+        "profundidad": 5,
+        "convergencia": 5,
+        "irreversibilidad": 4
+      },
+      "IRS": null,
+      "PS": 95,
+      "horizonte": "2026-2038",
+      "contra_senal": "PENDIENTE — completar en revision (obligatorio antes de escalar).",
+      "escenarios_vinculados": [
+        "FUTURIA-2026-0009"
+      ],
+      "senales_relacionadas": [],
+      "estado": "madurando",
+      "estado_maduracion_original": "🟡 Propuesta 2029",
+      "umbral_activacion": "Ley aprobada",
+      "escalar_a_humano": true,
+      "_origen": "semilla_extraccion_escenarios",
+      "_puntajes_preliminares": true,
+      "IES": 63,
+      "cuadrante": "Q1",
+      "estado_relevancia": "prioritaria",
+      "_integridad": "ok"
+    }
+  ]
+}

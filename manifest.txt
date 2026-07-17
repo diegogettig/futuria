@@ -1,0 +1,9 @@
+PRISM-2026-0001-personalidad-juridica-ia.md
+PRISM-2026-0002-sociedades-automatizadas.md
+PRISM-2026-0003-cardio-bionico.md
+PRISM-2026-0004-hard-tech-foundations.md
+PRISM-2026-0005-gobernanza-algoritmica.md
+PRISM-2026-0006-longevidad-caas.md
+PRISM-2026-0007-conciencia-verificable.md
+PRISM-2026-0008-bioprinting-distribuido.md
+PRISM-2026-0009-geopolitica-datos.md

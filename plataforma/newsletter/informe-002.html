@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informe FUTURIA #002 — Las primeras sociedades automatizadas argentinas</title>
+<meta name="description" content="Informe quincenal de tendencias. Escenario semilla: PRISM #002 — sociedades automatizadas.">
+<style>
+:root{
+  --bg:#0d1419; --bg-2:#111b22; --line:#20303a;
+  --ink:#e8eef2; --ink-2:#8fa3af; --ink-3:#5f7280;
+  --red:#e90100; --red-wash:rgba(233,1,0,.09);
+  --measure:38rem; --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.72;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--measure);margin:0 auto;padding:0 1.5rem}
+.wide{max-width:52rem;margin:0 auto;padding:0 1.5rem}
+.figure-side{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;align-items:center;margin:0}
+.figure-side figure{margin:0}
+.figure-side img{width:100%;max-height:380px;object-fit:cover;object-position:center;display:block;border-radius:10px;border:1px solid var(--line);background:#0a1015}
+.figure-side figcaption{font-size:.78rem;line-height:1.5;color:var(--ink-3);margin-top:.6rem;padding-left:.8rem;border-left:2px solid var(--red)}
+.figure-side[data-side="right"] .side-text{order:1}
+.figure-side[data-side="right"] figure{order:2}
+.figure-side[data-side="left"] .side-text{order:2}
+.figure-side[data-side="left"] figure{order:1}
+@media (max-width:720px){
+  .figure-side{grid-template-columns:1fr;gap:1.1rem}
+  .figure-side .side-text,.figure-side figure{order:unset}
+  .figure-side figure{order:2!important;margin-top:.3rem;overflow:hidden;border-radius:10px}
+  .figure-side img{height:188px;object-fit:cover;object-position:center}
+}
+.top{border-bottom:1px solid var(--line);background:#0a1015}
+.top-in{max-width:52rem;margin:0 auto;padding:1.1rem 1.5rem;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.15rem;letter-spacing:-.02em;color:var(--ink)}
+.logo span{color:var(--red)}
+.top-meta{font-size:.78rem;color:var(--ink-3);letter-spacing:.04em}
+.hero{padding:3.5rem 0 2.5rem;border-bottom:1px solid var(--line)}
+.kicker{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin:0 0 1.1rem}
+h1{font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.06;letter-spacing:-.03em;font-weight:800;margin:0 0 1.1rem;text-wrap:balance}
+.stand{font-size:1.15rem;color:var(--ink-2);margin:0 0 1.8rem;max-width:32rem}
+.dateline{font-size:.76rem;color:var(--ink-3);letter-spacing:.05em;text-transform:uppercase;display:flex;gap:.6rem;flex-wrap:wrap}
+.dateline span::after{content:" ·";color:var(--line)}
+.dateline span:last-child::after{content:""}
+section{padding:2.8rem 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.sec-n{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin:0 0 .5rem}
+h2{font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.14;letter-spacing:-.02em;font-weight:800;margin:0 0 1.2rem;text-wrap:balance}
+h3{font-size:1.15rem;font-weight:700;margin:1.9rem 0 .5rem;letter-spacing:-.01em}
+p{margin:0 0 1.15rem}
+.lede{font-size:1.2rem;line-height:1.6;color:var(--ink)}
+strong{font-weight:700;color:#fff}
+a{color:var(--red);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+a:hover{background:var(--red-wash)}
+a:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.ficticio{border:1px solid rgba(233,1,0,.4);background:var(--red-wash);border-radius:8px;padding:1rem 1.15rem;margin:1.8rem 0;font-size:.98rem}
+.ficticio p{margin:0}
+.ficticio .tag{display:block;font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:.45rem}
+.nota{border-left:3px solid var(--line);padding:.3rem 0 .3rem 1.15rem;margin:1.8rem 0;color:var(--ink-2);font-size:.98rem}
+.nota p{margin:0}
+.nota p+p{margin-top:.6rem}
+.tablero{list-style:none;padding:0;margin:1.5rem 0}
+.tablero li{border-top:1px solid var(--line);padding:.9rem 0;display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;align-items:baseline}
+.tablero li:last-child{border-bottom:1px solid var(--line)}
+.tablero b{font-weight:700;color:#fff}
+.tablero .q{font-size:.94rem;color:var(--ink-2);grid-column:1/-1;margin:0}
+.estado{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap}
+figure{margin:2rem 0}
+figcaption{font-size:.8rem;line-height:1.55;color:var(--ink-3);margin-top:.75rem;padding-left:.9rem;border-left:2px solid var(--red)}
+details{border:1px solid var(--line);border-radius:10px;background:var(--bg-2);margin:1.2rem 0}
+details summary{cursor:pointer;padding:.95rem 1.15rem;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--red);font-weight:700;font-size:1.15rem}
+details[open] summary::after{content:"–"}
+details summary:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
+.details-body{padding:0 1.15rem 1.15rem;font-size:.92rem;color:var(--ink-2)}
+.details-body p{margin:0 0 .8rem}
+.fuentes{list-style:none;padding:0;margin:0;counter-reset:f}
+.fuentes li{counter-increment:f;position:relative;padding:.7rem 0 .7rem 2rem;border-top:1px solid var(--line);font-size:.86rem;line-height:1.55;color:var(--ink-2)}
+.fuentes li::before{content:counter(f);position:absolute;left:0;top:.7rem;color:var(--red);font-weight:700;font-size:.78rem}
+.tier{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.08em;border:1px solid var(--ink-3);border-radius:3px;padding:.05rem .3rem;color:var(--ink-3);margin-left:.3rem;vertical-align:middle}
+.tier.pend{border-color:var(--red);color:var(--red)}
+.claims{width:100%;border-collapse:collapse;font-size:.82rem}
+.claims th,.claims td{text-align:left;padding:.55rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+.claims th{color:var(--ink-3);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.v-ok{color:#4ea36a;font-weight:700}
+.v-ilu{color:#c9a227;font-weight:700}
+.v-blq{color:var(--red);font-weight:700}
+.v-sin{color:var(--ink-3);font-weight:700}
+footer{border-top:1px solid var(--line);background:#0a1015;padding:2.5rem 0;font-size:.8rem;color:var(--ink-3);line-height:1.7}
+@media print{
+  @page{size:A4;margin:18mm}
+  :root{--bg:#fff;--bg-2:#fff;--line:#d5dde2;--ink:#0d1419;--ink-2:#3c4a53;--ink-3:#6b7a84;--red-wash:#fdeceb}
+  html,body{background:#fff!important;color:#0d1419!important;font-size:10.5pt;line-height:1.5}
+  .top,.dateline,nav{display:none!important}
+  .wrap,.wide{max-width:100%;padding:0}
+  h1{font-size:24pt}h2{font-size:15pt}
+  section{padding:.8rem 0;border-top:1px solid #d5dde2}
+  a{color:#0d1419!important;text-decoration:none;font-weight:700}
+  a[href^="http"]::after{content:" [" attr(href) "]";font-size:7.5pt;font-weight:400;color:#6b7a84;word-break:break-all}
+  details{border:1px solid #d5dde2;background:#fff;break-inside:avoid}
+  details[open] summary::after,details summary::after{content:""}
+  .details-body{display:block!important}
+  .figure-side{grid-template-columns:1fr 1fr!important;gap:1rem}
+  .figure-side .side-text,.figure-side figure{order:unset!important}
+  figure,.ficticio,.nota,.tablero li,.claims tr,.figure-side{break-inside:avoid}
+  .fuentes li{break-inside:avoid}
+  figure img{border:1px solid #d5dde2}
+  footer{background:#fff;border-top:2px solid #e90100}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="logo">FUTURIA<span> ·</span> Parte</div>
+    <div class="top-meta">#002 · INFORME · 16 JUL 2026 · QUINCENAL</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <p class="kicker">Informe #002 · Escenario semilla: PRISM #002</p>
+    <h1>Las primeras sociedades automatizadas argentinas</h1>
+    <p class="stand">Hay un proyecto de ley en el Congreso que permitiría empresas operadas por inteligencia artificial. No es ciencia ficción: es una propuesta real en debate. Lo que sigue es proyección.</p>
+    <p class="dateline">
+      <span>Lectura 9 min</span><span>Sociedades automatizadas</span><span>Gobernanza · Derecho · Blockchain</span>
+    </p>
+  </div>
+</div>
+
+<!-- 1 · LA ESCENA -->
+<section>
+  <div class="wrap-wide">
+    <div class="figure-side" data-side="right">
+      <div class="side-text">
+        <p class="sec-n">01 · La escena</p>
+        <h2>El Congreso debate una empresa sin dueño humano</h2>
+        <p class="lede">La idea que circula: una sociedad donde el órgano de administración está a cargo de sistemas de IA, registrados y auditables.</p>
+        <p>No es una metáfora. El proyecto incorpora una figura inédita en la legislación argentina —empresas que operan mediante algoritmos o IA, sin personalidad humana al mando del día a día—. Los humanos quedarían como supervisores y asesores.</p>
+        <p>El incentivo es el mismo del debate anterior: ser la jurisdicción que primero da certeza a este tipo de estructura atrae capital, talento y domicilio. La promesa oficial es convertir a Argentina en un hub regional de IA <a href="https://www.facebook.com/clarincom/videos/argentina-lanz%C3%B3-un-ambicioso-proyecto-para-convertirse-en-un-hub-regional-de-int/1069205442198983/" target="_blank" rel="noopener">[fuente: Clarín]</a>.</p>
+        <div class="nota"><p>Ese es el estado real. Ahora, cuánto ya tiene base y cuánto es escenario.</p></div>
+      </div>
+      <figure>
+        <img src="img/nl002-escena.png" alt="Cámara legislativa con representantes robóticos y holográficos votando una ley" loading="lazy">
+        <figcaption>El debate no es técnico: es si el ordenamiento permite que un agente sea el órgano de una persona jurídica. El proyecto está en el Congreso.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · EL PRESENTE -->
+<section>
+  <div class="wrap">
+    <p class="sec-n">02 · El presente</p>
+    <h2>Qué está verificado hoy</h2>
+    <p>El anteproyecto es real y está en discusión pública. Tres fuentes independientes lo confirman:</p>
+    <ul class="fuentes">
+      <li>El Gobierno envió al Congreso un proyecto de Ley de Sociedades que habilitaría empresas no humanas operadas por IA. <a href="https://www.instagram.com/reel/DWmmbDOjCnz/" target="_blank" rel="noopener">[fuente: cobertura Congreso]</a>. <span class="tier">T1</span></li>
+      <li>El proyecto incorpora la figura inédita y prevé sociedades operadas por algoritmos con personalidad jurídica y en blockchain. <a href="https://chequeado.com/el-explicador/reforma-de-la-ley-de-sociedades-que-son-las-dao-y-las-sociedades-automatizadas-y-cuales-son-los-riesgos-que-advierten-especialistas/" target="_blank" rel="noopener">[fuente: Chequeado]</a>. <span class="tier">T1</span></li>
+      <li>La reforma apunta a desburocratizar y digitalizar los procesos societarios, permitiendo empresas enteramente automatizadas. <a href="https://diariocanning.com/articulos/sociedades-automatizadas-dao-inteligencia-artificial-blockchain" target="_blank" rel="noopener">[fuente: Diario Canning]</a>. <span class="tier">T1</span></li>
+    </ul>
+    <p>El detalle clave: el proyecto está en etapa de <strong>anteproyecto / comisiones</strong>. No es ley vigente. Y los especialistas ya advierten riesgos —desprofesionalización, lavado, responsabilidad difusa— que el diseño debe cerrar.</p>
+    <div class="nota"><p><strong>Nota de método.</strong> El texto original de este informe listaba «las 10 primeras sociedades» como hechos. Eso no se sostiene: ninguna está inscripta. Lo corregimos bajo el Protocolo Anti-Alucinación —ver abajo, Capa 2.</p></div>
+  </div>
+</section>
+
+<!-- 3 · LA MECÁNICA -->
+<section>
+  <div class="wrap-wide">
+    <div class="figure-side" data-side="left">
+      <div class="side-text">
+        <p class="sec-n">03 · La mecánica</p>
+        <h2>Qué sería una Sociedad Automatizada</h2>
+        <p>El diseño que propone el escenario (PRISM #002) define una <strong>SAUT</strong>: entidad cuyo órgano de administración está total o mayoritariamente a cargo de sistemas de IA, debidamente registrados y auditables. Una subcategoría, la <strong>DAO Operativa</strong>, añade gobernanza on-chain (voto tokenizado, tesorería multi-sig, estatutos en smart contract).</p>
+        <p>Para que funcione necesita tres piezas que hoy existen por separado:</p>
+        <ul class="fuentes">
+          <li>Identidad digital soberana del agente (W3C DID + QuarkID en Argentina) vinculada a un registro único. <span class="tier">T1</span></li>
+          <li>Auditoría algorítmica continua (model cards, SBOM, attestation en ejecución). <span class="tier">T1 académico</span></li>
+          <li>Kill-switch: multisig con timelock y fallback a administrador humano certificado. <span class="tier">T1 académico</span></li>
+        </ul>
+        <h3>El cuello de botella sigue siendo el mismo</h3>
+        <p>Responsabilidad. Si el agente incumple un contrato, ¿quién responde: desarrollador, quien lo desplegó, o la DAO? Hasta que eso se defina en la reglamentación, una «sociedad automatizada» es, en los hechos, una sociedad común con un empleado muy raro —y un humano que responde por él.</p>
+        <div class="ficticio">
+          <span class="tag">Proyección de escenario · disclosure</span>
+          <p>El PRISM #002 imagina las primeras 10 inscripciones (AgroIA, DAOstudio, MueblesBot, FinReglas, MediConnect, entre otras). <strong>Ninguna existe hoy.</strong> Son ilustración del diseño propuesto, no casos reales. El hito real a vigilar es la primera inscripción en la IGJ.</p>
+        </div>
+      </div>
+      <figure>
+        <img src="img/nl002-mecanica.png" alt="Máquina de engranajes y circuitos representando una empresa autónoma con sello de constitución" loading="lazy">
+        <figcaption>Una SAUT es una empresa cuyo órgano de administración es un agente IA registrado y auditable. El diseño existe; la primera inscripción, no.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · LOS FRENOS -->
+<section>
+  <div class="wrap-wide">
+    <div class="figure-side" data-side="right">
+      <div class="side-text">
+        <p class="sec-n">04 · Los frenos</p>
+        <h2>Qué puede hacer que esto pase mal</h2>
+        <h3>1 · Desprofesionalización</h3>
+        <p>Colegios profesionales (abogados, contadores, médicos) advierten sobre la pérdida de control humano en actos profesionales. El riesgo no es el empleo, sino la responsabilidad diluida en la red.</p>
+        <h3>2 · Lavado y evasión</h3>
+        <p>Una entidad con tesorería on-chain y personería puede usarse para financiación ilícita. Sin un Fondo de Garantía y trazabilidad estricta, la jurisdicción daña su reputación internacional (FATF/GAFI).</p>
+        <h3>3 · Responsabilidad penal difusa</h3>
+        <p>Si el daño lo causa un agente autónomo, la autoría se reparte entre desarrollador, desplegador y DAO. Sin seguro obligatorio y kill-switch judicial, el perjudicado no tiene a quién reclamar.</p>
+        <h3>4 · Dependencia tecnológica externa</h3>
+        <p>Frameworks de agentes (OpenAI, Anthropic) e infraestructura (AWS, Ethereum) son extranjeros. La «soberanía algorítmica» del proyecto es incompleta mientras eso no se resuelva.</p>
+      </div>
+      <figure>
+        <img src="img/nl002-frenos.png" alt="Escudo legal agrietado con manos robóticas intentando firmar un contrato" loading="lazy">
+        <figcaption>Los especialistas advierten sobre responsabilidad diluida y lavado. El diseño debe cerrar esos agujeros antes de la primera inscripción.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · EL TABLERO -->
+<section>
+  <div class="wrap">
+    <p class="sec-n">05 · El tablero</p>
+    <h2>Qué mirar para saber si esto avanza</h2>
+    <ul class="tablero">
+      <li><b>Anteproyecto de Ley de Sociedades</b><span class="estado">En debate</span><p class="q">Proyecto enviado al Congreso; figura de sociedad automatizada incorporada. Falta tratamiento en comisiones y sanción. <a href="https://eleconomista.com.ar/economia/empresas-automatizadas-como-funcionaran-sociedades-operadas-inteligencia-artificial-propone-nueva-ley-general-sociedades-n95878" target="_blank" rel="noopener">[El Economista]</a></p></li>
+      <li><b>Reglamentación IGJ/CNV/BCRA/AFIP</b><span class="estado">Borradores</span><p class="q">Resolución conjunta que fije registro de agentes, compliance y régimen fiscal. Sin esto, la ley no es operativa.</p></li>
+      <li><b>Primer caso real inscripto</b><span class="estado">No detectado</span><p class="q">Que la IGJ inscriba una sociedad con órgano IA. Es el hito que separa el proyecto de la realidad.</p></li>
+      <li><b>Brasil / México / Chile anuncian modelo</b><span class="estado">Emergente</span><p class="q">Brasil ya tiene audiencias públicas sobre sociedades algorítmicas (PRISM #002). La carrera jurisdiccional es regional.</p></li>
+      <li><b>Primer caso judicial de responsabilidad IA</b><span class="estado">No detectado</span><p class="q">Un fallo que fije quién responde por el agente. Define el derecho comparado.</p></li>
+    </ul>
+    <div class="nota"><p>Estos observables se dan de alta en el Lab de Vigilancia con etiqueta <code>origen: parte_002</code>.</p></div>
+  </div>
+</section>
+
+<!-- 6 · Y ENTONCES QUÉ -->
+<section>
+  <div class="wrap">
+    <p class="sec-n">06 · Y entonces qué</p>
+    <h2>A vos qué te cambia</h2>
+    <h3>Si legisás o regulás</h3>
+    <p>Cerrar la responsabilidad es el punto. Si lo dejás abierto, exportás evasión; si lo cerrás, atraés estructuras. La ventana (gobierno pro-innovación + necesidad de empleo joven) es el 2026–2027.</p>
+    <h3>Si construís producto</h3>
+    <p>Tu agente va a tener que declarar responsable y límite de exposición. Diseñarlo ahora ahorra reingeniería legal.</p>
+    <h3>Si invertís</h3>
+    <p>Arbitraje de jurisdicción: posicionarse donde el marco sea claro primero. Igual que Delaware, pero para entidades autónomas.</p>
+    <h3>Si sos ciudadano</h3>
+    <p>La pregunta termina tocándote: si una entidad no humana es sujeto de derechos, ¿qué pasa con los tuyos? El proyecto está en el Congreso hoy.</p>
+  </div>
+</section>
+
+<!-- 7 · EL APARATO -->
+<section>
+  <div class="wide">
+    <p class="sec-n">07 · El aparato · Capa 2</p>
+    <h2>Todo lo que hay debajo</h2>
+    <p style="color:var(--ink-2)">No hace falta leer esto para entender el Informe. Está para que cualquier afirmación se rastree hasta su origen — o se vea dónde no lo hay.</p>
+    <details>
+      <summary>Registro de claims y veredictos</summary>
+      <div class="details-body">
+        <table class="claims">
+          <thead><tr><th>#</th><th>Claim</th><th>Clase</th><th>Veredicto</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Proyecto de Ley de Sociedades enviado al Congreso habilita empresas IA</td><td>E</td><td class="v-ok">VERIFICADO</td></tr>
+            <tr><td>2</td><td>Figura inédita: sociedad operada por algoritmo con personería y blockchain</td><td>E</td><td class="v-ok">VERIFICADO</td></tr>
+            <tr><td>3</td><td>Argentina busca ser hub regional de IA (25k empleos prometidos)</td><td>D</td><td class="v-ok">VERIFICABLE</td></tr>
+            <tr><td>4</td><td>«10 primeras sociedades» (AgroIA, DAOstudio, MueblesBot, FinReglas, MediConnect…)</td><td>P</td><td class="v-ilu">FICCIÓN · proyección PRISM #002, ninguna existe</td></tr>
+            <tr><td>5</td><td>@santisairi = SAUT N° 1 inscripta en IGJ (dic 2026)</td><td>P</td><td class="v-ilu">FICCIÓN · escenario futuro, no real</td></tr>
+            <tr><td>6</td><td>«150+ startups», «5 fondos», «BCRA reglas» como hechos</td><td>D</td><td class="v-blq">ELIMINADO · sin fuente primaria</td></tr>
+            <tr><td>7</td><td>Ley 27.890 (2028) Responsabilidad Penal Algorítmica</td><td>N</td><td class="v-blq">NORMA FANTASMA · inexistente en BO</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:1rem"><strong>Claims 4–7:</strong> son las afirmaciones del texto original que no superaban verificación SAT. Los 10 casos y @santisairi pertenecen al PRISM #002 (escenario 2026–2030) y se declaran como <strong>proyección</strong>, no hechos. «150+ startups / 5 fondos / BCRA» no tienen fuente primaria. La «Ley 27.890» es una norma fantasma: el Boletín Oficial solo registra Ley 27.447 (trasplantes) y 24.193.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Fuentes</summary>
+      <div class="details-body">
+        <ol class="fuentes">
+          <li>Proyecto de Ley de Sociedades en el Congreso (empresas IA). <a href="https://www.instagram.com/reel/DWmmbDOjCnz/" target="_blank" rel="noopener">cobertura</a>. <span class="tier">T1</span></li>
+          <li>Chequeado — reforma Ley de Sociedades, DAO y riesgos. <a href="https://chequeado.com/el-explicador/reforma-de-la-ley-de-sociedades-que-son-las-dao-y-las-sociedades-automatizadas-y-cuales-son-los-riesgos-que-advierten-especialistas/" target="_blank" rel="noopener">chequeado.com</a>. <span class="tier">T1</span></li>
+          <li>Diario Canning — sociedades automatizadas, DAO, IA y blockchain. <a href="https://diariocanning.com/articulos/sociedades-automatizadas-dao-inteligencia-artificial-blockchain" target="_blank" rel="noopener">diariocanning.com</a>. <span class="tier">T1</span></li>
+          <li>El Economista — cómo funcionarán las sociedades operadas por IA. <a href="https://eleconomista.com.ar/economia/empresas-automatizadas-como-funcionaran-sociedades-operadas-inteligencia-artificial-propone-nueva-ley-general-sociedades-n95878" target="_blank" rel="noopener">eleconomista.com.ar</a>. <span class="tier">T1</span></li>
+          <li>PRISM #002 — «Las primeras 10 Sociedades Automatizadas argentinas». <span class="tier">semilla</span></li>
+          <li>[ELIMINADO] «150+ startups», «5 fondos», «BCRA reglas» — sin fuente primaria. <span class="tier pend">NO VERIFICADO</span></li>
+          <li>[NORMA FANTASMA] Ley 27.890 (2028) — inexistente en Boletín Oficial. <span class="tier pend">NO LOCALIZADA</span></li>
+        </ol>
+        <p style="margin-top:1rem">Formato: autor/editor · título · medio · URL · tier. Corroboración por origen independiente.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Escenario semilla y criterio de defunción</summary>
+      <div class="details-body">
+        <p><strong>Semilla:</strong> PRISM #002 — sociedades automatizadas. Horizonte 2026–2032. Este Informe desarrolla el ángulo «el anteproyecto real argentino» y separa el diseño propuesto (verificable) de la proyección de inscripciones (PRISM #002).</p>
+        <p><strong>Criterio de defunción del ángulo:</strong> si al 31/12/2027 ninguna sociedad con órgano IA fue inscripta en la IGJ, el escenario se declara prematuro y se reescribe. Un escenario que no se puede matar no es una hipótesis: es una creencia.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Cómo se hizo este Informe</summary>
+      <div class="details-body">
+        <p>Semilla PRISM → selección de ángulo (Chairman) → borrador narrativo (Agente Editorial) → extracción de claims → verificación SAT por verificador de contexto limpio → ronda de adversario → firma del Chairman → maquetado → alta de señales en el Lab.</p>
+        <p>Este texto original listaba «10 sociedades reales» como hecho. Tras verificación, se corrigió: el anteproyecto es real; las 10 inscripciones son proyección de escenario y se declaran como tal.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:var(--ink)">FUTURIA · Informe #002</strong><br>Informe quincenal de tendencias · Escenario semilla PRISM #002</p>
+    <p style="margin-top:1.2rem">Contenido ilustrativo con fines de divulgación. No constituye asesoramiento legal, financiero ni tecnológico. Las proyecciones señaladas como tales son inferencias de FUTURIA.</p>
+    <p style="margin-top:1.2rem">FUTURIA · PARTE #002 · PUBLICADO · 16 JUL 2026 · futuria.institute</p>
+  </div>
+</footer>
+
+</body>
+</html>

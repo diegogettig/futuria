@@ -1,0 +1,11 @@
+node_modules/
+__pycache__/
+*.pyc
+.env
+*.log
+*.tmp
+.DS_Store
+.git-backup-*
+*.backup
+__pycache__/
+*.pyc

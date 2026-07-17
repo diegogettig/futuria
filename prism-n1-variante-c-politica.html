@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informe PRISM #001 — Variante C Política y Regulatoria (Preview)</title>
+<style>
+  :root {
+    --bg: #06060a;
+    --surface: #0c0c12;
+    --border: #1e1e2a;
+    --text: #e8e8ef;
+    --muted: #8b8b9e;
+    --accent: #3dc2ff;
+    --accent-dim: rgba(61,194,255,0.08);
+    --warning: #ffaa00;
+    --success: #00d68f;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    padding: 40px 20px;
+  }
+  .page {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .cover {
+    padding: 70px 50px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), #a78bfa, var(--accent));
+  }
+  .cover .logo {
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  .cover h1 {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    color: #fff;
+  }
+  .cover h1 span { color: var(--accent); }
+  .cover .subtitle {
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 700px;
+    margin: 0 auto 36px;
+    line-height: 1.6;
+    font-style: italic;
+  }
+  .cover .meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 520px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .cover .meta div {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .cover .meta strong {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .cover .meta span { font-size: 13px; color: var(--text); font-weight: 500; }
+  .page-body { padding: 40px 50px; }
+  .page h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #fff;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+  }
+  .page h3 { font-size: 17px; font-weight: 600; margin-top: 24px; margin-bottom: 12px; color: var(--text); }
+  .lead {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    line-height: 1.7;
+    border-left: 3px solid var(--accent);
+    padding-left: 18px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  thead { background: var(--bg); }
+  thead th {
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    border-bottom: 2px solid var(--accent);
+  }
+  tbody td { padding: 12px 14px; border-bottom: 1px solid var(--border); color: var(--text); }
+  tbody tr:hover { background: var(--accent-dim); }
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid;
+  }
+  .badge-high { color: var(--success); border-color: var(--success); background: rgba(0,214,143,0.08); }
+  .badge-mid { color: var(--warning); border-color: var(--warning); background: rgba(255,170,0,0.08); }
+  .badge-info { color: var(--accent); border-color: var(--accent); background: rgba(61,194,255,0.08); }
+  .scenario-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin: 22px 0;
+  }
+  .scenario-cell {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    position: relative;
+  }
+  .scenario-cell .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .scenario-cell .text { font-size: 13px; color: var(--text); line-height: 1.6; }
+  .quote {
+    background: var(--accent-dim);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-style: italic;
+    color: var(--text);
+  }
+  .quote strong { display: block; margin-top: 8px; font-style: normal; color: var(--accent); font-size: 12px; }
+  .timeline {
+    margin: 22px 0;
+    padding-left: 24px;
+    border-left: 2px solid var(--accent);
+  }
+  .timeline-item {
+    margin-bottom: 18px;
+    position: relative;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--surface);
+  }
+  .timeline-item .year {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .timeline-item .text { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .footer {
+    padding: 22px 50px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+  .footer span { color: var(--accent); font-weight: 600; }
+  @media (max-width: 640px) {
+    .cover, .page-body, .footer { padding: 30px 20px; }
+    .cover h1 { font-size: 26px; }
+    .scenario-box { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="cover">
+    <div class="logo">FUTURIA INSTITUTE</div>
+    <h1>Informe PRISM <span>#001</span></h1>
+    <div class="subtitle">Personalidad Jurídica de la IA: una agenda regulatoria para Argentina y la región</div>
+    <div class="meta">
+      <div><strong>Público</strong><span>Policy / Regulatorio</span></div>
+      <div><strong>Tiempo</strong><span>25-35 min</span></div>
+      <div><strong>Edición</strong><span>Julio 2026</span></div>
+      <div><strong>Alcance</strong><span>Argentina + LATAM</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-body">
+    <h2>Síntesis para policymakers</h2>
+    <p class="lead">Tres acciones regulatorias urgentes y un gráfico de línea de tiempo.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="year">2026</div>
+        <div class="text">Primera demanda de indemnización contra IA autónoma en common law. Precedente jurisprudencial global.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="year">2027</div>
+        <div class="text">UE aprueba AI Liability Directive: personalidad limitada para IA en sectores críticos.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="year">2028</div>
+        <div class="text">Argentina presenta anteproyecto de ley de personalidad jurídica IA. Ventana de definición regional.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="year">2030</div>
+        <div class="text">3 jurisdicciones con régimen intermedio consolidado. Mercado compliance USD 18.000M.</div>
+      </div>
+    </div>
+
+    <h2>3 bullets de acción normativa</h2>
+    <ol style="margin-left: 24px; line-height: 2; color: var(--text); margin-bottom: 24px;">
+      <li><strong>Anteproyecto de régimen intermedio:</strong> personalidad limitada + fondo de garantía + transparencia algorítmica.</li>
+      <li><strong>Estandar regional LATAM:</strong> evitar captura por marcos habilitantes extranjeros (EE.UU., KSA).</li>
+      <li><strong>Supervisión algorítmica:</strong> agencia multisectorial en ANMAT/INDEC/BCRA/SSN.</li>
+    </ol>
+
+    <h2>Contexto internacional comparado</h2>
+    <p class="lead">Cinco jurisdicciones, cinco modelos. Argentina puede elegir antes que el modelo le sea impuesto.</p>
+
+    <table>
+      <thead><tr><th>Jurisdicción</th><th>Régimen</th><th>Estado</th><th>Lección para Argentina</th></tr></thead>
+      <tbody>
+        <tr><td>UE</td><td>Restrictivo + personalidad limitada en sectores críticos</td><td><span class="badge badge-high">AI Liability Directive</span></td><td>Marco de referencia regional.</td></tr>
+        <tr><td>UK</td><td>Intermedio: fondo de garantía + transparencia</td><td><span class="badge badge-mid">En vigor</span></td><td>Modelo más replicable para LATAM.</td></tr>
+        <tr><td>Singapur</td><td>Intermedio: sandbox regulatorio</td><td><span class="badge badge-mid">Activo</span></td><td>Flexibilidad con supervisión.</td></tr>
+        <tr><td>EE.UU. federal</td><td>Habilitante: personalidad plena en sectores no críticos</td><td><span class="badge badge-info">Tendencias</span></td><td>Riesgo de deslocalización.</td></tr>
+        <tr><td>Emiratos Árabes</td><td>Habilitante: IA como ente contractual</td><td><span class="badge badge-info">Pionero</span></td><td>No aplicable a Argentina.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-body">
+    <h2>Análisis local: Argentina</h2>
+    <p class="lead">Estado actual, vacíos regulatorios e iniciativas en curso. Datos oficiales + proyectos de ley.</p>
+
+    <h3>Normativa existente</h3>
+    <ul style="margin-left: 24px; line-height: 2; color: var(--text);">
+      <li>Ley 25.326 de protección de datos personales (aplicable a algoritmos).</li>
+      <li>Resolución ANMAT 4359/2025: lineamientos para IA en dispositivos médicos.</li>
+      <li>No hay legislación específica sobre personalidad jurídica de IA.</li>
+    </ul>
+
+    <h3>Iniciativas en el Congreso</h3>
+    <table>
+      <thead><tr><th>Proyecto</th><th>Estado</th><th>Contenido</th></tr></thead>
+      <tbody>
+        <tr><td>Exp. 4356-D</td><td><span class="badge badge-mid">En comisión</span></td><td>Régimen de responsabilidad algorítmica.</td></tr>
+        <tr><td>Exp. 2201-B</td><td><span class="badge badge-mid">Borrador</span></td><td>IA en salud: trazabilidad obligatoria.</td></tr>
+        <tr><td>Exp. 0872-E</td><td><span class="badge badge-low">Archivado</span></td><td>Personalidad jurídica IA (versión 2023).</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Escenarios de proyección regulatoria</h3>
+    <div class="scenario-box">
+      <div class="scenario-cell">
+        <div class="label">Baseline</div>
+        <div class="text">No se regula. Criterio de responsabilidad humana pura. Litigios crecientes, sin estándar.</div>
+      </div>
+      <div class="scenario-cell">
+        <div class="label">Intermedio</div>
+        <div class="text">Argentina adopta régimen híbrido con fondo de garantía y transparencia. Alineado con UK/SG.</div>
+      </div>
+      <div class="scenario-cell">
+        <div class="label">Disruptivo</div>
+        <div class="text">Jurisdicción extranjera opera como arbitraje forzoso. Argentina pierde soberanía regulatoria.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="page-body">
+    <h2>Agenda regulatoria y recomendaciones</h2>
+    <p class="lead">Hoja de ruta por actor público. Cada línea es una acción priorizada con plazo concreto.</p>
+
+    <h3>Congreso Nacional</h3>
+    <ol style="margin-left: 24px; line-height: 2; color: var(--text); margin-bottom: 20px;">
+      <li><strong>Q1 2027:</strong> enviar anteproyecto de régimen intermedio.</li>
+      <li><strong>Q2 2027:</strong> crear comisión multisectorial antel-CI (ANMAT, INDEC, BCRA, SSN).</li>
+      <li><strong>Q3 2027:</strong> incluir cláusulas de personalidad IA en contratos estatales.</li>
+    </ol>
+
+    <h3>Entes regulatorios</h3>
+    <ol style="margin-left: 24px; line-height: 2; color: var(--text); margin-bottom: 20px;">
+      <li><strong>ANMAT:</strong> trazabilidad obligatoria de IA en dispositivos médicos 2027.</li>
+      <li><strong>SSN:</strong> fondo fiduciario de garantía pilotos en seguros de salud.</li>
+      <li><strong>INDEC:</strong> incluir variables de IA en estadísticas oficiales.</li>
+    </ol>
+
+    <h3>Organismos multilaterales</h3>
+    <ol style="margin-left: 24px; line-height: 2; color: var(--text);">
+      <li><strong>OEA/CIDH:</strong> liderar grupo de trabajo LATAM en soberanía algorítmica.</li>
+      <li><strong>Banco Mundial:</strong> fondos de asistencia técnica para regulación de IA en sectores críticos.</li>
+    </ol>
+
+    <div class="quote">
+      “Quien defina el estándar de personalidad jurídica IA en 2027-2028, definirá el mercado global de seguros, salud y finanzas para la próxima década.”
+      <strong>— FUTURIA Institute, Informe PRISM #001</strong>
+    </div>
+
+    <h2>Próximo paso</h2>
+    <p>Informe PRISM #002: <strong>“Gobernanza algorítmica del Estado: regulación, derecho y automatización administrativa”</strong>. Foco: organismos públicos y ciudadanía digital. Publicación prevista: Septiembre 2026.</p>
+  </div>
+</div>
+
+<div class="footer" style="max-width: 900px; margin: 0 auto 50px; background: var(--surface); border-radius: 14px; border: 1px solid var(--border);">
+  <div style="padding: 22px 50px; text-align: center;">
+    <p>Documento preparado por <span>FUTURIA INSTITUTE</span> · Metodología PRISM v1.0</p>
+    <p style="margin-top: 8px;">Fuentes oficiales: EU EUR-Lex, Boletín Oficial argentino, ANMAT, SSN, UK Parliament, NIST AI RMF</p>
+    <p style="margin-top: 8px;">Integridad: SHA-256 + firma digital · Licencia: CC BY-SA 4.0</p>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo funciona FUTURIA — Un servicio meteorológico para el futuro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@400;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ground:#EDF1F4;
+    --paper:#FFFFFF;
+    --ink:#16232E;
+    --ink-soft:#42576A;
+    --isobar:#8FA6B8;
+    --isobar-faint:#CBD8E1;
+    --deep:#0B4F6C;
+    --amber:#E08A1E;
+    --amber-wash:#FBF0DE;
+    --measure:37rem;
+    --disp:"IBM Plex Sans Condensed",system-ui,sans-serif;
+    --body:"IBM Plex Serif",Georgia,serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{
+    margin:0;background:var(--ground);color:var(--ink);
+    font-family:var(--body);font-size:1.0625rem;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--measure);margin:0 auto;padding:0 1.5rem}
+  .wide{max-width:64rem;margin:0 auto;padding:0 1.5rem}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:var(--ink);color:#E7EEF3;
+    padding:5rem 0 4rem;
+    border-bottom:3px solid var(--amber);
+  }
+  .hero svg.iso{position:absolute;inset:0;width:100%;height:100%;opacity:.28}
+  .hero .wrap{position:relative}
+  .eyebrow{
+    font-family:var(--mono);font-size:.7rem;font-weight:500;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--amber);
+    margin:0 0 1.25rem;
+  }
+  .hero h1{
+    font-family:var(--disp);font-weight:700;
+    font-size:clamp(2.4rem,7vw,4rem);line-height:1.02;
+    letter-spacing:-.02em;margin:0 0 1.5rem;text-wrap:balance;
+  }
+  .hero h1 em{font-style:normal;color:var(--amber)}
+  .hero .stand{font-size:1.15rem;color:#A9C0D0;margin:0;max-width:30rem}
+  .hero .sig{
+    font-family:var(--mono);font-size:.72rem;color:#6E8BA0;
+    margin-top:3rem;letter-spacing:.04em;
+  }
+
+  /* ---------- rhythm ---------- */
+  section{padding:3.5rem 0}
+  section.tinted{background:var(--paper);border-top:1px solid var(--isobar-faint);border-bottom:1px solid var(--isobar-faint)}
+  h2{
+    font-family:var(--disp);font-weight:700;
+    font-size:clamp(1.6rem,3.6vw,2.1rem);line-height:1.12;
+    letter-spacing:-.015em;margin:0 0 1.25rem;text-wrap:balance;
+  }
+  h3{
+    font-family:var(--disp);font-weight:600;font-size:1.2rem;
+    letter-spacing:.005em;margin:2rem 0 .5rem;
+  }
+  p{margin:0 0 1.1rem}
+  .lede{font-size:1.2rem;color:var(--ink-soft);font-style:italic}
+  strong{font-weight:600}
+  .num{font-family:var(--mono);font-weight:500;font-size:.95em}
+
+  .stage-eyebrow{
+    font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--deep);margin:0 0 .6rem;
+    display:flex;align-items:center;gap:.7rem;
+  }
+  .stage-eyebrow::after{content:"";flex:1;height:1px;background:var(--isobar-faint)}
+
+  /* ---------- figures ---------- */
+  figure{margin:2.5rem 0}
+  figure svg{width:100%;height:auto;display:block}
+  figcaption{
+    font-family:var(--mono);font-size:.72rem;line-height:1.5;
+    color:var(--ink-soft);margin-top:.9rem;padding-left:.9rem;
+    border-left:2px solid var(--amber);
+  }
+
+  /* ---------- pull ---------- */
+  .pull{
+    border-left:3px solid var(--amber);background:var(--amber-wash);
+    padding:1.15rem 1.3rem;margin:2rem 0;
+  }
+  .pull p{margin:0;font-size:1.05rem}
+  .pull p + p{margin-top:.7rem}
+
+  .note{
+    background:var(--paper);border:1px solid var(--isobar-faint);
+    padding:1.15rem 1.3rem;margin:2rem 0;
+  }
+  .note .tag{
+    font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--deep);display:block;margin-bottom:.5rem;
+  }
+  .note p{margin:0;font-size:.98rem}
+
+  /* ---------- glossary ---------- */
+  .gloss{border-top:1px solid var(--isobar);margin-top:1.5rem}
+  .gloss div{
+    display:grid;grid-template-columns:9rem 1fr;gap:1.25rem;
+    padding:.85rem 0;border-bottom:1px solid var(--isobar-faint);
+  }
+  .gloss dt{font-family:var(--mono);font-size:.78rem;color:var(--deep);font-weight:500;line-height:1.5}
+  .gloss dd{margin:0;font-size:.98rem}
+  @media(max-width:34rem){.gloss div{grid-template-columns:1fr;gap:.2rem}}
+
+  footer{background:var(--ink);color:#8FA6B8;padding:3rem 0;font-family:var(--mono);font-size:.75rem;line-height:1.7}
+  footer strong{color:#E7EEF3;font-weight:600}
+  a{color:var(--deep)}
+  a:focus-visible,summary:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="iso" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="#5C86A3" stroke-width="1">
+      <path d="M-50,90 C180,30 340,150 540,110 C740,70 900,160 1250,100"/>
+      <path d="M-50,140 C180,80 340,200 540,160 C740,120 900,210 1250,150"/>
+      <path d="M-50,190 C180,130 340,250 540,210 C740,170 900,260 1250,200"/>
+      <path d="M-50,250 C200,190 360,310 560,270 C760,230 920,320 1250,260"/>
+      <path d="M-50,310 C200,250 360,370 560,330 C760,290 920,380 1250,320"/>
+      <path d="M-50,370 C200,310 360,430 560,390 C760,350 920,440 1250,380"/>
+    </g>
+    <g fill="#E08A1E" opacity=".85">
+      <circle cx="540" cy="110" r="3"/><circle cx="900" cy="160" r="3"/>
+      <circle cx="180" cy="130" r="3"/><circle cx="760" cy="290" r="3"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow">FUTURIA Institute · Metodología PRISM</p>
+    <h1>Un servicio meteorológico<br>para el <em>futuro</em></h1>
+    <p class="stand">Cómo convertimos miles de hechos sueltos en escenarios que sirven para decidir. Sin bola de cristal y sin humo: con instrumentos, mediciones y una forma pública de saber cuándo nos equivocamos.</p>
+    <p class="sig">LECTURA ~10 MIN · VERSIÓN DIVULGATIVA · JULIO 2026</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="lede">Nadie le pide al meteorólogo que adivine. Le pide que mire los instrumentos y diga, con honestidad, qué tan probable es que llueva mañana.</p>
+    <p>Eso es exactamente lo que hace FUTURIA, pero con el futuro tecnológico, económico y regulatorio en lugar del clima. Y la analogía no es un adorno para explicarlo fácil: es literal en un punto que casi nadie conoce.</p>
+    <p>El puntaje que usamos para calificar nuestros propios pronósticos —el <span class="num">Brier score</span>— lo inventó Glenn Brier en 1950, en la revista <em>Monthly Weather Review</em>, para medir si los pronósticos del tiempo eran buenos. La herramienta con la que nos autoevaluamos nació, literalmente, en un servicio meteorológico.</p>
+    <p>Así que usemos la analogía en serio. Un servicio meteorológico tiene cinco cosas: sensores, mediciones, mapas, pronóstico y un consejo para tu campo. FUTURIA también.</p>
+  </div>
+</section>
+
+<section class="tinted">
+  <div class="wide">
+    <p class="stage-eyebrow">La estación completa</p>
+    <h2>De la gota al consejo, en cinco pasos</h2>
+  </div>
+  <div class="wide">
+    <figure>
+      <svg viewBox="0 0 1000 300" role="img" aria-labelledby="t-pipe">
+        <title id="t-pipe">Las cinco etapas: captación, calificación, correlación, construcción y proyección</title>
+        <defs>
+          <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,1 L7,4.5 L0,8 z" fill="#8FA6B8"/>
+          </marker>
+        </defs>
+        <g font-family="IBM Plex Mono, monospace">
+          <!-- connectors -->
+          <g stroke="#8FA6B8" stroke-width="1.5" marker-end="url(#ar)">
+            <line x1="182" y1="140" x2="212" y2="140"/>
+            <line x1="366" y1="140" x2="396" y2="140"/>
+            <line x1="550" y1="140" x2="580" y2="140"/>
+            <line x1="734" y1="140" x2="764" y2="140"/>
+          </g>
+
+          <!-- 1 sensor -->
+          <g>
+            <rect x="10" y="70" width="172" height="140" fill="#FFFFFF" stroke="#16232E" stroke-width="1.5"/>
+            <text x="24" y="94" font-size="11" fill="#E08A1E" letter-spacing="1.5">01</text>
+            <text x="24" y="118" font-size="15" font-weight="600" fill="#16232E" font-family="IBM Plex Sans Condensed, sans-serif">CAPTACIÓN</text>
+            <g transform="translate(96,158)" stroke="#0B4F6C" stroke-width="1.5" fill="none">
+              <line x1="0" y1="22" x2="0" y2="-6"/><line x1="-14" y1="22" x2="14" y2="22"/>
+              <circle cx="0" cy="-11" r="5" fill="#E08A1E" stroke="none"/>
+              <path d="M-11,-16 A15,15 0 0,1 11,-16" opacity=".55"/>
+              <path d="M-18,-23 A24,24 0 0,1 18,-23" opacity=".3"/>
+            </g>
+            <text x="96" y="200" font-size="9.5" fill="#42576A" text-anchor="middle">los sensores</text>
+          </g>
+
+          <!-- 2 medición -->
+          <g>
+            <rect x="194" y="70" width="172" height="140" fill="#FFFFFF" stroke="#16232E" stroke-width="1.5"/>
+            <text x="208" y="94" font-size="11" fill="#E08A1E" letter-spacing="1.5">02</text>
+            <text x="208" y="118" font-size="15" font-weight="600" fill="#16232E" font-family="IBM Plex Sans Condensed, sans-serif">CALIFICACIÓN</text>
+            <g transform="translate(280,160)">
+              <circle cx="0" cy="0" r="21" fill="none" stroke="#0B4F6C" stroke-width="1.5"/>
+              <path d="M0,0 L13,-13" stroke="#E08A1E" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="0" cy="0" r="2.5" fill="#16232E"/>
+              <path d="M-15,-15 A21,21 0 0,1 15,-15" fill="none" stroke="#8FA6B8" stroke-width="1"/>
+            </g>
+            <text x="280" y="200" font-size="9.5" fill="#42576A" text-anchor="middle">el barómetro</text>
+          </g>
+
+          <!-- 3 mapa -->
+          <g>
+            <rect x="378" y="70" width="172" height="140" fill="#FFFFFF" stroke="#16232E" stroke-width="1.5"/>
+            <text x="392" y="94" font-size="11" fill="#E08A1E" letter-spacing="1.5">03</text>
+            <text x="392" y="118" font-size="15" font-weight="600" fill="#16232E" font-family="IBM Plex Sans Condensed, sans-serif">CORRELACIÓN</text>
+            <g transform="translate(464,158)" fill="none" stroke="#0B4F6C" stroke-width="1.4">
+              <path d="M-26,10 C-14,-8 6,16 26,-4" opacity=".5"/>
+              <path d="M-26,2 C-14,-16 6,8 26,-12" opacity=".75"/>
+              <path d="M-26,18 C-14,0 6,24 26,4" opacity=".35"/>
+              <circle cx="0" cy="4" r="3.5" fill="#E08A1E" stroke="none"/>
+            </g>
+            <text x="464" y="200" font-size="9.5" fill="#42576A" text-anchor="middle">el frente de tormenta</text>
+          </g>
+
+          <!-- 4 pronóstico -->
+          <g>
+            <rect x="562" y="70" width="172" height="140" fill="#FFFFFF" stroke="#16232E" stroke-width="1.5"/>
+            <text x="576" y="94" font-size="11" fill="#E08A1E" letter-spacing="1.5">04</text>
+            <text x="576" y="118" font-size="15" font-weight="600" fill="#16232E" font-family="IBM Plex Sans Condensed, sans-serif">CONSTRUCCIÓN</text>
+            <g transform="translate(648,152)">
+              <path d="M-20,6 A11,11 0 0,1 -12,-12 A14,14 0 0,1 14,-8 A9,9 0 0,1 16,6 Z" fill="#CBD8E1" stroke="#0B4F6C" stroke-width="1.4"/>
+              <g stroke="#0B4F6C" stroke-width="1.5" stroke-linecap="round" opacity=".8">
+                <line x1="-11" y1="14" x2="-14" y2="22"/><line x1="0" y1="14" x2="-3" y2="22"/><line x1="11" y1="14" x2="8" y2="22"/>
+              </g>
+            </g>
+            <text x="648" y="200" font-size="9.5" fill="#42576A" text-anchor="middle">el pronóstico</text>
+          </g>
+
+          <!-- 5 consejo -->
+          <g>
+            <rect x="746" y="70" width="172" height="140" fill="#16232E" stroke="#16232E" stroke-width="1.5"/>
+            <text x="760" y="94" font-size="11" fill="#E08A1E" letter-spacing="1.5">05</text>
+            <text x="760" y="118" font-size="15" font-weight="600" fill="#FFFFFF" font-family="IBM Plex Sans Condensed, sans-serif">PROYECCIÓN</text>
+            <g transform="translate(832,158)" stroke="#E08A1E" stroke-width="1.5" fill="none">
+              <path d="M-22,16 L-22,0 L0,-16 L22,0 L22,16 Z"/>
+              <path d="M-8,16 L-8,4 L8,4 L8,16" stroke="#8FA6B8"/>
+            </g>
+            <text x="832" y="200" font-size="9.5" fill="#8FA6B8" text-anchor="middle">tu campo</text>
+          </g>
+
+          <text x="10" y="252" font-size="10.5" fill="#42576A">diario</text>
+          <text x="194" y="252" font-size="10.5" fill="#42576A">diario</text>
+          <text x="378" y="252" font-size="10.5" fill="#42576A">semanal</text>
+          <text x="562" y="252" font-size="10.5" fill="#42576A">quincenal</text>
+          <text x="746" y="252" font-size="10.5" fill="#E08A1E">por encargo · producto</text>
+        </g>
+      </svg>
+      <figcaption>Las etapas 1 y 2 corren todos los días. La 5 es la única que se cobra: es el pronóstico hecho para tu campo, no para la región.</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <h3>01 · Los sensores</h3>
+    <p>Todos los días rastreamos el mundo buscando <strong>señales</strong>: un paper, una patente, una ley, un anuncio, un cambio cultural. Una señal es una gota. No es la tormenta, no anuncia nada por sí sola, y la mayoría no significa nada.</p>
+    <p>Cada gota entra a la biblioteca con su origen anotado y un dato obligatorio: la <strong>contra-señal</strong>, o sea, la evidencia que apunta en dirección contraria. Sin ese campo, la ficha está incompleta. Es nuestra defensa contra el vicio más común del oficio: enamorarse de la propia tendencia.</p>
+
+    <h3>02 · El barómetro</h3>
+    <p>Después medimos. Le hacemos a cada señal dos preguntas distintas —y esa distinción es el corazón del método—. Va abajo, en detalle.</p>
+
+    <h3>03 · El frente de tormenta</h3>
+    <p>Una gota no es nada; mil gotas con una dirección común son un frente. Acá agrupamos las señales y buscamos cuáles se empujan entre sí. La pregunta que ordena todo: <em>si esto pasa, ¿qué otra cosa se vuelve más probable?</em></p>
+    <p>De ahí sale la distinción que separa a un analista de un opinólogo: cuál señal es <strong>causa</strong> y cuál es <strong>síntoma</strong>. Narrar el síntoma como si fuera la causa es el error más común de la prospectiva amateur.</p>
+
+    <h3>04 · El pronóstico</h3>
+    <p>Cuando un frente madura, escribimos un <strong>escenario PRISM</strong>: una historia concreta y fechada de cómo podría desarrollarse, con su probabilidad y —esto es lo importante— con su <strong>certificado de defunción</strong> anticipado.</p>
+
+    <h3>05 · El pronóstico para tu campo</h3>
+    <p>El servicio meteorológico dice "70% de lluvia en la región". Útil, gratis, para todos. Pero si tenés 400 hectáreas de soja a punto de cosecha, lo que necesitás es otra cosa: <em>¿cosecho hoy o espero?</em></p>
+    <p>Eso es la <strong>proyección sectorial</strong>: los escenarios generales aplicados a tu empresa, tu gobierno o tu comunidad, con las decisiones que tenés que tomar y las fechas límite para tomarlas. Es el único producto que se cobra.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wide">
+    <p class="stage-eyebrow">El instrumento</p>
+    <h2>Dos preguntas que no hay que mezclar</h2>
+  </div>
+  <div class="wrap">
+    <p>Casi todos los sistemas de vigilancia cometen el mismo error: puntúan cada señal con un solo número, mezclando cosas que no se pueden mezclar. Nosotros hacemos <strong>dos preguntas separadas</strong>, y sale un punto en una pantalla de radar.</p>
+    <p><strong>Primera: ¿qué tan sólido es esto?</strong> ¿La fuente es buena? ¿Hay más de una, de verdad independiente? ¿Se está acelerando? Eso es el <span class="num">IES</span>, el índice de evidencia.</p>
+    <p><strong>Segunda: si pasa, ¿cuánto mueve el tablero?</strong> ¿Cambia una práctica o cambia las reglas del juego? ¿Habilita otras cosas? ¿Se puede volver atrás? Eso es el <span class="num">PS</span>, el peso sistémico.</p>
+    <p>Son preguntas independientes, y por eso van en ejes distintos. Un rumor sobre algo enorme y un hecho confirmado sobre algo menor no son "más o menos parecidos": están en esquinas opuestas del radar.</p>
+  </div>
+
+  <div class="wide">
+    <figure>
+      <svg viewBox="0 0 720 520" role="img" aria-labelledby="t-radar">
+        <title id="t-radar">Matriz de evidencia contra peso sistémico, con cuatro cuadrantes</title>
+        <defs>
+          <clipPath id="scr"><rect x="110" y="40" width="440" height="380"/></clipPath>
+        </defs>
+
+        <!-- screen -->
+        <rect x="110" y="40" width="440" height="380" fill="#16232E"/>
+        <g clip-path="url(#scr)" opacity=".5">
+          <g fill="none" stroke="#3A5468" stroke-width="1">
+            <circle cx="110" cy="420" r="120"/><circle cx="110" cy="420" r="220"/>
+            <circle cx="110" cy="420" r="320"/><circle cx="110" cy="420" r="420"/>
+          </g>
+        </g>
+
+        <!-- Q2 highlight -->
+        <rect x="110" y="40" width="220" height="190" fill="#E08A1E" opacity=".13"/>
+
+        <!-- quadrant divider -->
+        <g stroke="#8FA6B8" stroke-width="1" stroke-dasharray="4 4">
+          <line x1="330" y1="40" x2="330" y2="420"/>
+          <line x1="110" y1="230" x2="550" y2="230"/>
+        </g>
+
+        <g font-family="IBM Plex Mono, monospace">
+          <!-- Q2 -->
+          <text x="128" y="70" font-size="10" fill="#E08A1E" letter-spacing="1.4">Q2</text>
+          <text x="128" y="94" font-size="17" font-weight="600" fill="#E08A1E" font-family="IBM Plex Sans Condensed, sans-serif">CARTA SALVAJE</text>
+          <text x="128" y="114" font-size="10" fill="#C9A268">poca evidencia · peso enorme</text>
+          <text x="128" y="132" font-size="10" fill="#C9A268">→ vigilancia intensiva</text>
+          <text x="128" y="148" font-size="10" fill="#C9A268">→ no se publica todavía</text>
+          <g transform="translate(240,190)">
+            <circle r="17" fill="none" stroke="#E08A1E" stroke-width="1" opacity=".45"/>
+            <circle r="26" fill="none" stroke="#E08A1E" stroke-width="1" opacity=".22"/>
+            <circle r="5" fill="#E08A1E"/>
+          </g>
+
+          <!-- Q1 -->
+          <text x="350" y="70" font-size="10" fill="#8FA6B8" letter-spacing="1.4">Q1</text>
+          <text x="350" y="94" font-size="17" font-weight="600" fill="#FFFFFF" font-family="IBM Plex Sans Condensed, sans-serif">DRIVER ACTIVO</text>
+          <text x="350" y="114" font-size="10" fill="#8FA6B8">sólido · peso enorme</text>
+          <text x="350" y="132" font-size="10" fill="#8FA6B8">→ eje de escenario</text>
+          <text x="350" y="148" font-size="10" fill="#8FA6B8">→ publicable</text>
+          <g fill="#7FC8E8"><circle cx="430" cy="185" r="4.5"/><circle cx="470" cy="200" r="4.5"/><circle cx="500" cy="170" r="4.5"/></g>
+
+          <!-- Q4 -->
+          <text x="128" y="262" font-size="10" fill="#5C7387" letter-spacing="1.4">Q4</text>
+          <text x="128" y="286" font-size="17" font-weight="600" fill="#5C7387" font-family="IBM Plex Sans Condensed, sans-serif">DESCARTE</text>
+          <text x="128" y="306" font-size="10" fill="#4A6072">ruido</text>
+          <g fill="#3A5468"><circle cx="180" cy="360" r="3.5"/><circle cx="230" cy="390" r="3.5"/><circle cx="270" cy="345" r="3.5"/><circle cx="150" cy="400" r="3.5"/><circle cx="300" cy="395" r="3.5"/></g>
+
+          <!-- Q3 -->
+          <text x="350" y="262" font-size="10" fill="#5C7387" letter-spacing="1.4">Q3</text>
+          <text x="350" y="286" font-size="17" font-weight="600" fill="#8FA6B8" font-family="IBM Plex Sans Condensed, sans-serif">RUIDO CONFIRMADO</text>
+          <text x="350" y="306" font-size="10" fill="#5C7387">cierto pero intrascendente</text>
+          <text x="350" y="324" font-size="10" fill="#5C7387">→ archivo</text>
+          <g fill="#5C7387"><circle cx="440" cy="370" r="3.5"/><circle cx="490" cy="345" r="3.5"/><circle cx="520" cy="390" r="3.5"/></g>
+
+          <!-- axes -->
+          <text x="330" y="452" font-size="11" fill="#16232E" text-anchor="middle" letter-spacing="1.6">EVIDENCIA · IES →</text>
+          <text x="122" y="440" font-size="9" fill="#42576A">0</text>
+          <text x="322" y="440" font-size="9" fill="#42576A">60</text>
+          <text x="540" y="440" font-size="9" fill="#42576A">100</text>
+          <g transform="translate(88,230) rotate(-90)">
+            <text x="0" y="0" font-size="11" fill="#16232E" text-anchor="middle" letter-spacing="1.6">PESO SISTÉMICO · PS →</text>
+          </g>
+          <text x="96" y="418" font-size="9" fill="#42576A" text-anchor="end">0</text>
+          <text x="96" y="234" font-size="9" fill="#42576A" text-anchor="end">60</text>
+          <text x="96" y="50" font-size="9" fill="#42576A" text-anchor="end">100</text>
+
+          <text x="110" y="494" font-size="11" fill="#42576A">Cualquiera lee Q1 en el diario de mañana.</text>
+          <text x="110" y="510" font-size="11" fill="#E08A1E" font-weight="500">Detectar Q2 dos años antes es el producto.</text>
+        </g>
+      </svg>
+      <figcaption>Cada punto es una señal. El cuadrante define qué se hace con ella — no hay decisiones a ojo.</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <div class="pull">
+      <p><strong>El cuadrante que justifica todo esto es el ámbar.</strong></p>
+      <p>Una señal con poca evidencia y peso enorme es incómoda: no la podés publicar, no la podés probar, y suena a especulación. La tentación de archivarla es enorme. Pero ese es exactamente el lugar donde vive todo lo que después cambia el mundo: cuando la evidencia sea sólida, ya salió en el diario y ya es tarde para vos.</p>
+      <p>Por eso <em>poca evidencia</em> en FUTURIA no es un demérito. Es una coordenada.</p>
+    </div>
+
+    <div class="note">
+      <span class="tag">Regla anti-eco</span>
+      <p>Si cinco medios publican la misma noticia porque los cinco recibieron el mismo comunicado de prensa, eso <strong>no</strong> son cinco fuentes: es una. Contamos orígenes independientes, no links. Parece obvio y casi ningún sistema lo hace — por eso el ruido se confunde tan seguido con consenso.</p>
+    </div>
+
+    <div class="note">
+      <span class="tag">Un anuncio no es un hecho</span>
+      <p>Cuando la señal es una promesa, un target o un anuncio, la ficha exige una pregunta más: <em>de cosas así anunciadas antes, ¿cuántas se cumplieron?</em> Si no ponés ese número, la velocidad se termina puntuando por entusiasmo. Es la diferencia entre un analista y un fan.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tinted">
+  <div class="wide">
+    <p class="stage-eyebrow">El pronóstico</p>
+    <h2>Los escenarios no nacen de lo importante.<br>Nacen de lo incierto.</h2>
+  </div>
+  <div class="wrap">
+    <p>Acá hay una idea contraintuitiva que vale toda la metodología.</p>
+    <p>Cuando uno estudia un negocio, aparecen muchas variables importantes. La tentación es armar los escenarios con las más importantes. Es un error.</p>
+    <p>Pensalo así: que la población argentina va a estar más envejecida en 2035 es importantísimo para una obra social. Pero <strong>no genera escenarios</strong>, porque no es incierto: la gente que va a tener 70 años en 2035 ya nació. Eso no es un pronóstico, es una cuenta. Va idéntico en todos los escenarios.</p>
+    <p>Lo que genera escenarios es lo que es <em>importante</em> <strong>y además</strong> <em>incierto</em>. Si a una IA se le reconoce personalidad jurídica o no, eso sí está genuinamente abierto — y cambia todo según cómo caiga.</p>
+    <p>Entonces: se miden las dos cosas por separado, y los <strong>dos ejes</strong> del escenario salen de las dos incertidumbres más críticas e independientes entre sí. Cruzarlas da cuatro futuros.</p>
+  </div>
+
+  <div class="wide">
+    <figure>
+      <svg viewBox="0 0 760 470" role="img" aria-labelledby="t-ejes">
+        <title id="t-ejes">Cómo dos incertidumbres críticas generan cuatro escenarios</title>
+        <g font-family="IBM Plex Mono, monospace">
+          <!-- filter panel -->
+          <rect x="0" y="46" width="250" height="330" fill="#FFFFFF" stroke="#CBD8E1"/>
+          <text x="18" y="72" font-size="10" fill="#0B4F6C" letter-spacing="1.4">PASO 1 · CLASIFICAR</text>
+
+          <line x1="18" y1="88" x2="232" y2="88" stroke="#CBD8E1"/>
+          <text x="18" y="112" font-size="10.5" fill="#42576A">importante + SEGURO</text>
+          <text x="18" y="130" font-size="12" font-weight="600" fill="#16232E" font-family="IBM Plex Sans Condensed, sans-serif">PREDETERMINADO</text>
+          <text x="18" y="148" font-size="9.5" fill="#8FA6B8">va igual en los 4 · no es eje</text>
+          <text x="18" y="166" font-size="9.5" fill="#8FA6B8" font-style="italic">ej: envejecimiento poblacional</text>
+
+          <line x1="18" y1="184" x2="232" y2="184" stroke="#CBD8E1"/>
+          <text x="18" y="208" font-size="10.5" fill="#E08A1E">importante + INCIERTO</text>
+          <text x="18" y="226" font-size="12" font-weight="600" fill="#E08A1E" font-family="IBM Plex Sans Condensed, sans-serif">INCERTIDUMBRE CRÍTICA</text>
+          <text x="18" y="244" font-size="9.5" fill="#C9A268">→ candidata a EJE</text>
+          <text x="18" y="262" font-size="9.5" fill="#C9A268" font-style="italic">ej: personalidad jurídica de la IA</text>
+
+          <line x1="18" y1="280" x2="232" y2="280" stroke="#CBD8E1"/>
+          <text x="18" y="304" font-size="10.5" fill="#8FA6B8">poco importante</text>
+          <text x="18" y="322" font-size="12" font-weight="600" fill="#8FA6B8" font-family="IBM Plex Sans Condensed, sans-serif">CONTEXTO</text>
+          <text x="18" y="340" font-size="9.5" fill="#8FA6B8">→ fuera del eje</text>
+
+          <path d="M256,210 L292,210" stroke="#8FA6B8" stroke-width="1.5" marker-end="url(#ar2)"/>
+          <defs><marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,1 L7,4.5 L0,8 z" fill="#8FA6B8"/></marker></defs>
+
+          <!-- 2x2 -->
+          <text x="310" y="30" font-size="10" fill="#0B4F6C" letter-spacing="1.4">PASO 2 · CRUZAR LAS DOS MÁS CRÍTICAS</text>
+
+          <rect x="380" y="46" width="180" height="150" fill="#FFFFFF" stroke="#16232E" stroke-width="1.2"/>
+          <rect x="560" y="46" width="180" height="150" fill="#FFFFFF" stroke="#16232E" stroke-width="1.2"/>
+          <rect x="380" y="196" width="180" height="150" fill="#FFFFFF" stroke="#16232E" stroke-width="1.2"/>
+          <rect x="560" y="196" width="180" height="150" fill="#FFFFFF" stroke="#16232E" stroke-width="1.2"/>
+
+          <g font-family="IBM Plex Sans Condensed, sans-serif" font-weight="600" font-size="14" fill="#16232E">
+            <text x="396" y="112">ESCENARIO A</text>
+            <text x="576" y="112">ESCENARIO B</text>
+            <text x="396" y="262">ESCENARIO C</text>
+            <text x="576" y="262">ESCENARIO D</text>
+          </g>
+          <g font-size="9.5" fill="#8FA6B8">
+            <text x="396" y="132">nombre memorable,</text><text x="396" y="146">no una letra</text>
+            <text x="576" y="132">cada uno con su</text><text x="576" y="146">criterio de defunción</text>
+            <text x="396" y="282">el predeterminado</text><text x="396" y="296">aparece en los cuatro</text>
+            <text x="576" y="282">si no distinguís A de B</text><text x="576" y="296">en una oración: mal eje</text>
+          </g>
+
+          <!-- axis labels -->
+          <line x1="380" y1="366" x2="740" y2="366" stroke="#E08A1E" stroke-width="1.5"/>
+          <text x="560" y="386" font-size="10.5" fill="#E08A1E" text-anchor="middle" letter-spacing="1.2">EJE 1 · INCERTIDUMBRE CRÍTICA</text>
+          <text x="384" y="386" font-size="9" fill="#42576A">polo ←</text>
+          <text x="736" y="386" font-size="9" fill="#42576A" text-anchor="end">→ polo</text>
+
+          <line x1="366" y1="46" x2="366" y2="346" stroke="#E08A1E" stroke-width="1.5"/>
+          <g transform="translate(348,196) rotate(-90)">
+            <text x="0" y="0" font-size="10.5" fill="#E08A1E" text-anchor="middle" letter-spacing="1.2">EJE 2 · INCERTIDUMBRE CRÍTICA</text>
+          </g>
+
+          <text x="380" y="426" font-size="10.5" fill="#42576A">Los dos ejes tienen que ser independientes entre sí.</text>
+          <text x="380" y="444" font-size="10.5" fill="#42576A">Si se mueven juntos, los cuatro cuadrantes colapsan en dos</text>
+          <text x="380" y="462" font-size="10.5" fill="#42576A">y creés que tenés cuatro futuros cuando tenés uno y su opuesto.</text>
+        </g>
+      </svg>
+      <figcaption>Método de ejes por incertidumbres críticas — adoptado de la escuela Shell / Global Business Network. No es invención nuestra, y lo decimos.</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <div class="note">
+      <span class="tag">El certificado de defunción</span>
+      <p>Cada escenario nuestro se publica con una cláusula incómoda: <em>qué observación concreta, con fecha, lo mataría</em>. Por ejemplo: "si al 31/12/2028 ningún país fuera de EE.UU., China o la UE tiene un clúster de cómputo soberano <strong>funcionando</strong> —no anunciado—, este escenario se declara muerto y se reescribe."</p>
+      <p>Un escenario que no se puede matar no es una hipótesis: es una creencia. Y las creencias no se le venden a un gobierno.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wide">
+    <p class="stage-eyebrow">La honestidad</p>
+    <h2>Cómo sabés que no te estamos vendiendo humo</h2>
+  </div>
+  <div class="wrap">
+    <p>Esta es la parte donde la analogía meteorológica se vuelve más útil, porque contesta la pregunta que todo el mundo tiene y casi nadie hace en voz alta: <em>¿y si le erran?</em></p>
+    <p>Cuando el pronóstico dice 70% de lluvia y no llueve, nadie acusa al meteorólogo de mentir. Todos entendemos intuitivamente que 70% no es una promesa. Lo que sí se puede exigir es que, <strong>de todas las veces que dijo 70%, haya llovido cerca de 7 de cada 10</strong>. A eso se le llama estar calibrado, y es lo único que separa a un pronosticador de un chanta.</p>
+    <p>Entonces FUTURIA se somete a la misma vara:</p>
+    <p>Toda predicción nuestra lleva un <strong>número</strong> y una <strong>fecha</strong>. Nunca "es probable que"; siempre "70%, y lo sabremos el 31/12/2028". Cuando llega la fecha, se anota si pasó o no pasó. Sin excusas retrospectivas, sin explicar por qué en realidad casi acertamos.</p>
+    <p>Y una vez por año publicamos la tabla completa: qué dijimos, con qué probabilidad, qué pasó. Incluidos los errores. <strong>Especialmente los errores.</strong></p>
+    <div class="pull">
+      <p>Es el activo más difícil de copiar que existe en este oficio, y la razón es simple: cualquiera puede escribir un informe que suene inteligente. Muy pocos se animan a publicar el marcador.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tinted">
+  <div class="wide">
+    <p class="stage-eyebrow">La letra chica</p>
+    <h2>Dónde la analogía se rompe</h2>
+  </div>
+  <div class="wrap">
+    <p>Toda analogía miente en algún lado. Decir dónde es lo que la vuelve honesta, así que acá va.</p>
+    <p><strong>Un huracán no cambia de rumbo porque vos lo pronosticaste. Una empresa sí.</strong></p>
+    <p>El clima obedece a la física y le da exactamente lo mismo lo que digamos de él. El futuro tecnológico y regulatorio, no: está hecho de decisiones humanas, y las decisiones humanas <em>reaccionan al pronóstico</em>. Si diez aseguradoras leen que la regulación va hacia cierto lado, se mueven, y con eso cambian hacia dónde va la regulación.</p>
+    <p>Esto tiene dos consecuencias que conviene tener presentes:</p>
+    <p>La primera es que un escenario que no se cumple <strong>no siempre es un escenario fallido</strong>. A veces no se cumplió precisamente porque alguien lo leyó a tiempo y actuó. Es el mismo problema del ingeniero que arregla el puente antes de que se caiga: nadie le agradece por el derrumbe que no pasó.</p>
+    <p>La segunda es más incómoda, y es la razón por la que el certificado de defunción existe: como el sistema reacciona, la tentación de reinterpretar cualquier resultado como una confirmación es enorme. Por eso el criterio de muerte se escribe <em>antes</em>, y con fecha.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wide">
+    <p class="stage-eyebrow">El entregable</p>
+    <h2>Por qué nuestros informes se leen como historias</h2>
+  </div>
+  <div class="wrap">
+    <p>Un informe de prospectiva que nadie termina de leer no sirve para nada, por riguroso que sea. Pero simplificarlo tampoco es la respuesta: un cliente que va a tomar una decisión de millones necesita poder auditar el razonamiento.</p>
+    <p>La solución no es simplificar. Es <strong>separar en capas</strong>.</p>
+  </div>
+
+  <div class="wide">
+    <figure>
+      <svg viewBox="0 0 720 300" role="img" aria-labelledby="t-capas">
+        <title id="t-capas">Arquitectura de dos capas: relato y aparato</title>
+        <g font-family="IBM Plex Mono, monospace">
+          <rect x="20" y="20" width="680" height="115" fill="#FFFFFF" stroke="#16232E" stroke-width="1.5"/>
+          <text x="42" y="48" font-size="10" fill="#E08A1E" letter-spacing="1.5">CAPA 1</text>
+          <text x="42" y="76" font-size="21" font-weight="700" fill="#16232E" font-family="IBM Plex Sans Condensed, sans-serif">EL RELATO</text>
+          <text x="42" y="100" font-size="11" fill="#42576A">Una historia en presente, con fechas y nombres. Cero tablas.</text>
+          <text x="42" y="118" font-size="11" fill="#42576A">La lee tu directorio, un ministro, un periodista.</text>
+          <g transform="translate(600,78)" fill="none" stroke="#CBD8E1" stroke-width="1.4">
+            <path d="M-26,16 L-26,-14 L26,-14 L26,16 Z"/>
+            <g stroke="#8FA6B8"><line x1="-16" y1="-4" x2="16" y2="-4"/><line x1="-16" y1="4" x2="16" y2="4"/><line x1="-16" y1="-12" x2="4" y2="-12" opacity="0"/></g>
+          </g>
+
+          <g stroke="#8FA6B8" stroke-width="1.5" stroke-dasharray="3 3">
+            <line x1="360" y1="135" x2="360" y2="165"/>
+          </g>
+          <text x="374" y="156" font-size="10" fill="#8FA6B8">enlace, no interrupción</text>
+
+          <rect x="20" y="165" width="680" height="115" fill="#16232E"/>
+          <text x="42" y="193" font-size="10" fill="#E08A1E" letter-spacing="1.5">CAPA 2</text>
+          <text x="42" y="221" font-size="21" font-weight="700" fill="#FFFFFF" font-family="IBM Plex Sans Condensed, sans-serif">EL APARATO</text>
+          <text x="42" y="245" font-size="11" fill="#8FA6B8">Puntajes, matrices, fuentes, probabilidades, rúbricas.</text>
+          <text x="42" y="263" font-size="11" fill="#8FA6B8">Lo abre quien quiere auditarnos. Está siempre disponible.</text>
+          <g transform="translate(600,223)" fill="none" stroke="#3A5468" stroke-width="1.4">
+            <rect x="-26" y="-16" width="52" height="32"/>
+            <g stroke="#5C7387"><line x1="-26" y1="-6" x2="26" y2="-6"/><line x1="-26" y1="4" x2="26" y2="4"/><line x1="-9" y1="-16" x2="-9" y2="16"/><line x1="9" y1="-16" x2="9" y2="16"/></g>
+          </g>
+        </g>
+      </svg>
+      <figcaption>El rigor tiene que estar <em>disponible</em>, no <em>en el camino</em>.</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <p>Arriba va el relato: qué pasa, cuándo, con quién. Se lee de corrido, como una nota larga de domingo. Abajo va todo el aparato: los puntajes, las matrices, las fuentes, las probabilidades. Enlazado, nunca interrumpiendo.</p>
+    <p>Y hay una regla de oficio detrás de esto: <strong>el que analiza no es el que escribe.</strong> Igual que el que redacta no es el que verifica. Un analista enamorado de su propio razonamiento no puede juzgar si se entiende, del mismo modo que no puede auditar si es cierto.</p>
+  </div>
+</section>
+
+<section class="tinted">
+  <div class="wrap">
+    <p class="stage-eyebrow">Glosario</p>
+    <dl class="gloss">
+      <div><dt>Señal</dt><dd>Un hecho verificable que podría indicar un cambio. Una gota, no la tormenta.</dd></div>
+      <div><dt>Contra-señal</dt><dd>La evidencia que apunta en contra. Campo obligatorio: sin ella, la ficha está incompleta.</dd></div>
+      <div><dt>IES</dt><dd>Índice de evidencia. Qué tan sólido y qué tan vivo es lo que vemos.</dd></div>
+      <div><dt>PS</dt><dd>Peso sistémico. Cuánto mueve el tablero si llega a pasar.</dd></div>
+      <div><dt>Carta salvaje</dt><dd>Poca evidencia, peso enorme. El cuadrante donde vive lo que después cambia todo.</dd></div>
+      <div><dt>Predeterminado</dt><dd>Importante pero no incierto. Va igual en todos los escenarios. No genera futuros.</dd></div>
+      <div><dt>Incertidumbre crítica</dt><dd>Importante <em>y</em> abierto. De acá salen los ejes de los escenarios.</dd></div>
+      <div><dt>PRISM</dt><dd>Nuestro formato de escenario. Once componentes, incluido su certificado de defunción.</dd></div>
+      <div><dt>Calibración</dt><dd>Que cuando decimos 70%, pase 7 de cada 10 veces. Se publica una vez al año.</dd></div>
+      <div><dt>Proyección sectorial</dt><dd>El pronóstico hecho para tu campo. El único producto que se cobra.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>FUTURIA INSTITUTE</strong><br>
+    Observatorio de Vigilancia Estratégica · Metodología PRISM v1.0</p>
+    <p style="margin-top:1.5rem">Versión divulgativa. El aparato metodológico completo —rúbricas, fórmulas,<br>matrices y protocolo de validación— está disponible para auditoría.</p>
+    <p style="margin-top:1.5rem;color:#5C7387">Julio 2026 · futuria.institute</p>
+  </div>
+</footer>
+
+</body>
+</html>

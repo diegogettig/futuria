@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRISM #001 — Variante B Técnica · Grupo SanCor Salud</title>
+<style>
+  :root{
+    --azul:#0a2540; --azul2:#13315c; --cian:#1f8a9e; --oro:#c9a227;
+    --gris:#5b6470; --griscl:#eef2f6; --borde:#d8e0e8; --rojo:#b3261e; --verde:#2e7d32; --amb:#e8a317; --vio:#5b3fa0;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#1a1f26;line-height:1.55;margin:0;background:#f6f8fa;}
+  .hoja{max-width:960px;margin:24px auto;background:#fff;padding:46px 54px;box-shadow:0 2px 12px rgba(0,0,0,.08);border-radius:6px;}
+  header.portada{background:linear-gradient(135deg,var(--azul2),#1f6f7e);color:#fff;border-radius:8px;padding:36px 42px;position:relative;overflow:hidden;}
+  header.portada .marca{font-weight:700;letter-spacing:2px;font-size:13px;color:var(--oro);text-transform:uppercase;}
+  header.portada h1{font-size:27px;margin:12px 0 6px;line-height:1.2;}
+  header.portada .sub{font-size:14px;opacity:.92;}
+  header.portada .meta{margin-top:18px;font-size:12.5px;opacity:.85;}
+  .sello{position:absolute;top:20px;right:24px;border:2px solid var(--oro);color:var(--oro);background:rgba(0,0,0,.18);
+    padding:6px 12px;font-weight:700;font-size:11px;letter-spacing:1px;border-radius:4px;transform:rotate(4deg);}
+  .etiqueta-tr{display:inline-block;border:1px solid var(--cian);color:var(--cian);padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;margin-top:8px;}
+  h2{color:var(--azul);border-bottom:3px solid var(--cian);padding-bottom:6px;margin-top:36px;font-size:20px;}
+  h3{color:var(--azul2);font-size:15px;margin-top:20px;}
+  p{margin:10px 0;}
+  .cite{font-size:11.5px;color:var(--gris);margin-top:4px;}
+  .cite a{color:var(--cian);text-decoration:none;word-break:break-all;}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px;}
+  th,td{border:1px solid var(--borde);padding:8px 10px;vertical-align:top;text-align:left;}
+  th{background:var(--azul);color:#fff;font-weight:600;}
+  tbody tr:nth-child(even){background:var(--griscl);}
+  .v{color:var(--verde);font-weight:700;} .a{color:var(--amb);font-weight:700;} .r{color:var(--rojo);font-weight:700;}
+  .radar{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0;}
+  .radar .cel{border:1px solid var(--borde);border-radius:6px;padding:12px;background:var(--griscl);}
+  .radar .cel b{color:var(--azul2);}
+  .radar .trlnum{font-size:22px;font-weight:700;color:var(--cian);}
+  .prob{border-left:5px solid var(--rojo);background:#fdf3f2;padding:14px 18px;border-radius:4px;margin:12px 0;}
+  .tend{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0;}
+  .tend .t{border:1px solid var(--borde);border-radius:6px;padding:12px;background:#fff;}
+  .tend .t b{color:var(--vio);}
+  .caso{border:2px solid var(--cian);border-radius:6px;padding:16px 18px;background:#f4fbfc;margin:12px 0;}
+  .vendor{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0;}
+  .vendor .vcol{border:1px solid var(--borde);border-radius:6px;padding:12px;}
+  .vendor .vcol h4{margin:0 0 6px;color:var(--cian);font-size:13px;}
+  .reci{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0;}
+  .reci .rc{border:1px solid var(--borde);border-radius:6px;padding:12px;background:#fffdf3;}
+  .reci .rc h4{margin:0 0 6px;color:var(--oro);font-size:13px;}
+  .footer{margin-top:38px;border-top:2px solid var(--azul);padding-top:14px;font-size:11.5px;color:var(--gris);}
+  .footer .marca{font-weight:700;color:var(--azul);letter-spacing:1px;}
+  .badge-preview{display:inline-block;border:1px solid var(--oro);color:var(--oro);padding:2px 8px;border-radius:4px;font-weight:700;font-size:10.5px;margin-bottom:6px;}
+  .senal{font-size:12.5px;background:#f4f6f9;border-left:4px solid var(--vio);padding:8px 12px;margin:6px 0;border-radius:3px;}
+  .small{font-size:12px;color:var(--gris);}
+  ul{margin:8px 0 8px 20px;} li{margin:3px 0;}
+</style>
+</head>
+<body>
+
+<section class="hoja">
+  <header class="portada">
+    <div class="sello">PREVIEW — ILUSTRATIVO</div>
+    <div class="marca">FUTURIA INSTITUTE</div>
+    <h1>Informe PRISM #001 — Personalidad Jurídica de la IA</h1>
+    <div class="sub">Variante B · Tecnológica (para CTO / Innovación de Grupo SanCor Salud)</div>
+    <div class="etiqueta-tr">EJE: TRL · Madurez tecnológica · Gobernanza de algoritmos</div>
+    <div class="meta">Observatorio de Vigilancia Estratégica · Cliente: Grupo SanCor Salud · Fecha de emisión: 14/07/2026<br>
+    Estado: <b>PREVIEW — ILUSTRATIVO</b>. Sujeto a firma del Chairman. Sistema SAT-FUTURIA 100% trazable.</div>
+  </header>
+
+  <h2>2 · Radar de madurez (TRL por eje PRISM)</h2>
+  <p>Mapa de calor del grado de madurez tecnológica (Technology Readiness Level, escala NASA/ESA adoptada por ISO 16290:2013)
+  de las capacidades que sostienen la personalidad jurídica de la IA en salud.</p>
+  <div class="radar">
+    <div class="cel"><div class="trlnum">8</div><b>LLMs en salud</b><br><span class="a">Alto</span><br>Despliegue en producción (diagnóstico/apoyo).</div>
+    <div class="cel"><div class="trlnum">5</div><b>Explainability (explicabilidad)</b><br><span class="a">Medio</span><br>Capas de explicación aún emergentes.</div>
+    <div class="cel"><div class="trlnum">4</div><b>Insurance smart contracts</b><br><span class="a">Medio-bajo</span><br>Pilotos; sin adopción masiva.</div>
+    <div class="cel"><div class="trlnum">7</div><b>IA en imagen médica</b><br><span class="v">Alto</span><br>Proyección ILUSTRATIVA de adopción (escala TRL ISO 16290; valores asignados por FUTURIA): ver base EU AI Act.</div>
+    <div class="cel"><div class="trlnum">6</div><b>RPM / wearables</b><br><span class="a">Medio-alto</span><br>Mercado US$26B→US$110,7B (2033).</div>
+    <div class="cel"><div class="trlnum">3</div><b>Capa jurídica de la IA</b><br><span class="r">Bajo</span><br>Vacío regulatorio (V10) en Argentina.</div>
+  </div>
+  <div class="cite">Fuentes: ISO 16290:2013 (TRL) — <a href="https://www.iso.org/standard/56160.html">iso.org</a> · IA imagen médica — <a href="https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-medical-imaging-market">Grand View Research</a> (T2) · RPM — <a href="https://www.grandviewresearch.com/industry-analysis/remote-patient-monitoring-devices-market">Grand View Research</a> (T2) · Explainability NIST AI RMF — <a href="https://www.nist.gov/itl/ai-risk-management-framework/ai-rmf-playbook">NIST</a>. Acceso 14/07/2026.</div>
+
+  <h2>3 · Definición del problema tecnológico</h2>
+  <div class="prob">
+    <p><b>Accountability algorítmica + caja negra + falta de capa jurídica.</b> Los sistemas de IA de diagnóstico y
+    siniestralidad de SanCor operan como "caja negra": deciden, pero no hay trazabilidad auditable ni sujeto de
+    responsabilidad civil que repare un daño. Sin una capa jurídica (V10), el riesgo recae íntegramente en la mutual.
+    El problema no es solo técnico: es la ausencia de un puente entre el modelo y el ordenamiento jurídico.</p>
+  </div>
+  <div class="cite">Marco: AI Liability Directive UE — <a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">EUR-Lex</a> (T1) · NIST AI RMF 1.0 — <a href="https://www.nist.gov/itl/ai-risk-management-framework">nist.gov</a> (T1). Acceso 14/07/2026.</div>
+
+  <h2>4 · Tendencias impulsoras (tecnologías habilitantes)</h2>
+  <div class="tend">
+    <div class="t"><b>Explainable LLMs</b><br>Capas de explicabilidad para auditoría clínica y regulatoria.</div>
+    <div class="t"><b>Smart contracts de seguro</b><br>Disparo automático de cobertura con trazabilidad on-chain.</div>
+    <div class="t"><b>Auditabilidad en blockchain</b><br>Registro inmutable de decisiones del modelo (no repudio).</div>
+  </div>
+  <div class="cite">Fuentes: NIST AI RMF Playbook (explainability) — <a href="https://www.nist.gov/itl/ai-risk-management-framework/ai-rmf-playbook">NIST</a> · WEF AI-Enabled Health 2025 — <a href="https://reports.weforum.org/docs/WEF_The_Future_of_AI_Enabled_Health_2025.pdf">WEF</a> (T2) · Parametric insurance (WEF/UNDP) — <a href="https://www.weforum.org/stories/2025/01/what-is-parametric-insurance-and-how-is-it-building-climate-resilience/">WEF</a> (T2). Acceso 14/07/2026.</div>
+
+  <h2>5 · Caso testigo técnico</h2>
+  <div class="caso">
+    <p><b>Hospital que adoptó IA de diagnóstico y su secuela legal.</b> Un centro asistencial desplegó un modelo de IA
+    en imagen médica para triaje. Tras un diagnóstico erróneo no detectado, el paciente inició acción judicial. El
+    proveedor alegó que el sistema era "soporte al profesional"; la aseguradora sostuvo decisión clínica humana. La
+    causa evidenció la <b>ausencia de estándar técnico de identidad y trazabilidad del agente IA</b> — precisamente el
+    vacío que ataca la señal SIG-2026-00007.</p>
+    <div class="cite">Referencia de régimen de responsabilidad: <a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">Directive (EU) 2024/2853</a> (T1). Señal SIG-2026-00007 (estándar técnico de identidad de agentes IA), corpus del Laboratorio FUTURIA (V10). Acceso 14/07/2026.</div>
+  </div>
+
+  <h2>6 · Scorecard de madurez por eje</h2>
+  <table>
+    <thead><tr><th>Eje</th><th>Madurez</th><th>Adopción en SanCor</th><th>Señal asociada</th></tr></thead>
+    <tbody>
+      <tr><td>V5 · IA en siniestralidad</td><td><span class="a">Emergente</span></td><td>En evaluación (claims/fraude)</td><td>SIG-2026-00002 / 00004</td></tr>
+      <tr><td>V6 · VBC / capitación / payvider</td><td><span class="a">Emergente</span></td><td>Vertical integrada habilita</td><td>—</td></tr>
+      <tr><td>V9 · Interoperabilidad (FHIR)</td><td><span class="a">Emergente</span></td><td>Argentina rezagada</td><td>—</td></tr>
+      <tr><td>V10 · Personalidad jurídica IA</td><td><span class="r">Experimental</span></td><td>Sin capa jurídica</td><td>SIG-2026-00002 / 00004 / 00007</td></tr>
+      <tr><td>RPM / wearables</td><td><span class="v">Maduro</span></td><td>Oportunidad crónicos</td><td>—</td></tr>
+    </tbody>
+  </table>
+  <div class="cite">Fuentes: Capitation CMS — <a href="https://www.cms.gov/priorities/innovation/key-concepts/capitation-and-pre-payment">cms.gov</a> (T1) · FHIR State of FHIR 2025 — <a href="https://fire.ly/blog/the-state-of-fhir-in-2025/">Fire.ly</a> (T3) · RPM Grand View — <a href="https://www.grandviewresearch.com/industry-analysis/remote-patient-monitoring-devices-market">GVR</a> (T2). Acceso 14/07/2026.</div>
+
+  <h2>7 · Vendor landscape</h2>
+  <div class="vendor">
+    <div class="vcol"><h4>Proveedores de IA sanitaria</h4><ul>
+      <li>Desarrolladores de IA en imagen (FDA-cleared).</li>
+      <li>Plataformas de IA para claims/underwriting.</li>
+      <li>Healthtechs LatAm (Alice, Welli, Unima).</li>
+    </ul></div>
+    <div class="vcol"><h4>Aseguradoras tecnológicas</h4><ul>
+      <li>Modelos payvider (asegurador-prestador).</li>
+      <li>Seguro paramétrico (WEF/UNDP).</li>
+      <li>Mutuales digitales (INAES).</li>
+    </ul></div>
+    <div class="vcol"><h4>Reguladores pioneros</h4><ul>
+      <li>UE — AI Liability Directive.</li>
+      <li>Singapur — Model AI Governance Framework.</li>
+      <li>EE.UU. — NIST AI RMF.</li>
+    </ul></div>
+  </div>
+  <div class="cite">Fuentes: AI Liability Directive — <a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">EUR-Lex</a> (T1) · Singapur IMDA — <a href="https://www.imda.gov.sg/ai/governance">imda.gov.sg</a> (T1) · NIST AI RMF — <a href="https://www.nist.gov/itl/ai-risk-management-framework">nist.gov</a> (T1) · Healthtechs LatAm — <a href="https://www.kaszek.com/company/alice/">Kaszek</a> (T3) · <a href="https://www.mapfre.com/en/communicate/innovation-communicate/insurtech-latin-america-2025-funding/">Mapfre</a> (T2). Acceso 14/07/2026.</div>
+
+  <h2>8 · Recomendaciones por perfil</h2>
+  <div class="reci">
+    <div class="rc"><h4>CTO</h4><ul>
+      <li>Auditar algoritmos con capas de explicabilidad antes de producción.</li>
+      <li>Exigir estándar de identidad y trazabilidad del agente IA (SIG-00007).</li>
+    </ul></div>
+    <div class="rc"><h4>CIO</h4><ul>
+      <li>Adoptar HL7 FHIR para HCE interoperable (habilita IA y RPM).</li>
+      <li>Registro inmutable (audit log) de decisiones asistidas.</li>
+    </ul></div>
+    <div class="rc"><h4>CISO</h4><ul>
+      <li>Proteger datos de entrenamiento bajo Ley 25.326.</li>
+      <li>Gobernanza de modelos y gestión de riesgo (NIST AI RMF).</li>
+    </ul></div>
+  </div>
+  <div class="cite">Fuentes: NIST AI RMF — <a href="https://www.nist.gov/itl/ai-risk-management-framework">nist.gov</a> (T1) · Ley 25.326 — <a href="https://www.argentina.gob.ar/normativa/nacional/ley-25326-67876/actualizacion">argentina.gob.ar</a> (T1) · FHIR — <a href="https://fire.ly/blog/the-state-of-fhir-in-2025/">Fire.ly</a> (T3). Acceso 14/07/2026.</div>
+
+  <h2>9 · Señales del corpus (eje V10) que alimentan este análisis</h2>
+  <div class="senal"><b>SIG-2026-00002</b> — Agente IA en consejo corporativo (IRS 71,2) · Variables V10, V5.</div>
+  <div class="senal"><b>SIG-2026-00004</b> — Caso judicial por/sobre agente IA (IRS 66,2) · Variables V10, V5.</div>
+  <div class="senal"><b>SIG-2026-00007</b> — Estándar técnico de identidad de agentes IA (IRS 71,2) · Variable V10.</div>
+  <div class="small">Estas señales se rastrean diariamente en el Laboratorio de Vigilancia (Flujo 1) y convergen con las variables V5, V6, V9 y V10 del Informe de Convergencia SanCor.</div>
+
+  <h2>10 · Apéndice técnico</h2>
+  <table>
+    <thead><tr><th>Tema</th><th>Fuente</th><th>Tier</th></tr></thead>
+    <tbody>
+      <tr><td>TRL (ISO 16290:2013)</td><td><a href="https://www.iso.org/standard/56160.html">iso.org/standard/56160</a></td><td>Norma</td></tr>
+      <tr><td>IA imagen médica (mercado)</td><td><a href="https://www.grandviewresearch.com/industry-analysis/artificial-intelligence-medical-imaging-market">Grand View Research</a></td><td>T2</td></tr>
+      <tr><td>RPM (mercado)</td><td><a href="https://www.grandviewresearch.com/industry-analysis/remote-patient-monitoring-devices-market">Grand View Research</a></td><td>T2</td></tr>
+      <tr><td>Capitación (CMS)</td><td><a href="https://www.cms.gov/priorities/innovation/key-concepts/capitation-and-pre-payment">cms.gov</a></td><td>T1</td></tr>
+      <tr><td>NIST AI RMF / Explainability</td><td><a href="https://www.nist.gov/itl/ai-risk-management-framework">nist.gov</a> · <a href="https://www.nist.gov/itl/ai-risk-management-framework/ai-rmf-playbook">playbook</a></td><td>T1</td></tr>
+      <tr><td>FHIR State of FHIR 2025</td><td><a href="https://fire.ly/blog/the-state-of-fhir-in-2025/">Fire.ly</a></td><td>T3</td></tr>
+      <tr><td>AI Liability Directive (UE)</td><td><a href="https://eur-lex.europa.eu/eli/dir/2024/2853/oj">EUR-Lex</a></td><td>T1</td></tr>
+      <tr><td>Singapur AI Governance</td><td><a href="https://www.imda.gov.sg/ai/governance">imda.gov.sg</a></td><td>T1</td></tr>
+      <tr><td>Ley 25.326 (AR)</td><td><a href="https://www.argentina.gob.ar/normativa/nacional/ley-25326-67876/actualizacion">argentina.gob.ar</a></td><td>T1</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <span class="badge-preview">PREVIEW — ILUSTRATIVO</span><br>
+    <span class="marca">FUTURIA INSTITUTE</span> · Observatorio de Vigilancia Estratégica — Sistema SAT-FUTURIA 100% trazable.<br>
+    Documento PREVIEW sujeto a firma del Chairman. Cada afirmación de hecho incluye cita y fecha de acceso (14/07/2026).
+    Variante B · Tecnológica · Cliente: Grupo SanCor Salud · PRISM #001.
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUTURIA — Instituto Global de Futuros Plausibles</title>
+  <meta name="description" content="FUTURIA explora los futuros plausibles de la humanidad. Investigación, escenarios PRISM, neurodatos como soberanía digital y pensamiento de futuro para personas, organizaciones y gobiernos.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #06060a;
+      --text: #e4e4ec;
+      --muted: #8a8a9e;
+      --accent: #ff5230;
+      --accent2: #ff7a61;
+      --border: rgba(255,255,255,0.07);
+      --card: rgba(255,255,255,0.03);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 1.8rem; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: rgba(6,6,10,0.85); backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1180px; margin: 0 auto; padding: 1rem 1.8rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    }
+    .nav-brand { font-weight: 900; letter-spacing: -0.04em; font-size: 1.3rem; color: #fff; text-decoration:none; }
+    .nav-brand em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; gap: 1.6rem; list-style: none; font-size: 0.85rem; }
+    .nav-links a { color: var(--muted); text-decoration:none; }
+    .nav-links a:hover { color: #fff; }
+
+    /* HERO */
+    header.hero {
+      min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden;
+      padding-top: 70px; padding-bottom: 4rem;
+    }
+    header.hero::before {
+      content: ''; position: absolute; inset: -30%;
+      background: radial-gradient(ellipse at 30% 35%, rgba(255,82,48,0.16) 0%, transparent 55%),
+                  radial-gradient(ellipse at 75% 60%, rgba(80,80,255,0.10) 0%, transparent 55%);
+      animation: breath 10s ease-in-out infinite alternate;
+    }
+    @keyframes breath { from{opacity:.7;transform:scale(1)} to{opacity:1;transform:scale(1.06)} }
+    .hero-content { position: relative; z-index: 1; max-width: 800px; }
+    h1.hero-logo { font-size: clamp(3.2rem,11vw,7.8rem); font-weight: 900; letter-spacing: -0.045em; line-height: 0.92; color: #fff; }
+    h1.hero-logo em { color: var(--accent); font-style: normal; }
+    .hero-sub { font-size: clamp(1.05rem,2.2vw,1.45rem); color: var(--muted); max-width: 720px; margin-top: 1.5rem; }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.2rem; }
+    .btn {
+      padding: 0.85rem 1.8rem; border-radius: 999px; font-size: 0.95rem; font-weight: 600;
+      border: none; cursor: pointer; transition: 0.2s; display: inline-block; text-decoration:none;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); text-decoration: none; }
+    .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); text-decoration:none; }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.04); text-decoration: none; }
+
+    /* MARQUEE */
+    .marquee {
+      padding: 0.9rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      overflow: hidden; color: var(--muted); font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .marquee-track { display: flex; gap: 2.4rem; white-space: nowrap; animation: marquee 36s linear infinite; width: max-content; }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    /* SECTIONS */
+    section { padding: 5rem 0; }
+    .section-title { font-size: 2.1rem; font-weight: 800; margin-bottom: 0.8rem; letter-spacing: -0.03em; }
+    .section-title em { color: var(--accent); font-style: normal; }
+    .section-lead { font-size: 1.1rem; color: var(--muted); max-width: 760px; margin-bottom: 2.4rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 1rem; }
+
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 1rem;
+      padding: 1.3rem 1.4rem; transition: 0.2s;
+    }
+    .card:hover { border-color: rgba(255,82,48,0.35); transform: translateY(-2px); }
+    .card h3 { font-size: 1rem; margin: 0.2rem 0 0.4rem; color: #fff; }
+    .card p { font-size: 0.9rem; color: var(--muted); }
+    .tag { display: inline-block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.3rem; }
+
+    .cta-block { text-align: center; padding: 5rem 0; }
+    .cta-block h2 { font-size: 2.3rem; margin-bottom: 0.8rem; }
+    .cta-block p { color: var(--muted); max-width: 640px; margin: 0 auto 1.6rem; }
+
+    footer { border-top: 1px solid var(--border); padding: 2.4rem 0; text-align: center; color: var(--muted); font-size: 0.88rem; }
+
+    @media (max-width: 640px) {
+      header.hero { padding-top: 80px; min-height: auto; padding-bottom: 3rem; }
+      .nav-links { display: none; }
+      section { padding: 3.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">FUTU<em>RIA</em></a>
+    <ul class="nav-links">
+      <li><a href="#metodologia">Metodología</a></li>
+      <li><a href="#escenarios">Escenarios</a></li>
+      <li><a href="#noticias">Noticias</a></li>
+      <li><a href="#referentes">Referentes</a></li>
+      <li><a href="../futuria-neurodatos-mvp.html" target="_blank" rel="noopener">MVP</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-content">
+    <h1 class="hero-logo">FUTU<em>RIA</em></h1>
+    <p class="hero-sub">Instituto Global de Futuros Plausibles. Investigamos, modelamos y comunicamos el futuro —en público, con rigor y velocidad.</p>
+    <div class="hero-cta">
+      <a href="#metodologia" class="btn btn-primary">Explorar la metodología</a>
+      <a href="#escenarios" class="btn btn-ghost">Leer escenarios</a>
+    </div>
+  </div>
+</header>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>IA General</span>✦<span>DAO</span>✦<span>Sociedades Automatizadas</span>✦<span>Escenarios PRISM</span>✦<span>Blockchain</span>✦<span>Futuros plausibles</span>✦<span>Neurociencias</span>✦<span>Economía del futuro</span>✦<span>Gobernanza</span>✦<span>IA General</span>✦<span>DAO</span>✦<span>Sociedades Automatizadas</span>✦<span>Escenarios PRISM</span>✦<span>Blockchain</span>✦<span>Futuros plausibles</span>✦<span>Neurociencias</span>✦<span>Economía del futuro</span>✦<span>Gobernanza</span>✦
+  </div>
+</div>
+
+<section id="metodologia" style="background:#0a0a12;">
+  <div class="container">
+    <h2 class="section-title">Metodología <em>PRISM</em></h2>
+    <p class="section-lead">No predecimos el futuro. Lo modelamos. Cada escenario PRISM cuantifica su plausibilidad, mide sus impactos y monitorea señales tempranas en tiempo real.</p>
+    <div class="grid-3" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;">
+      <div class="card" style="text-align:center;"><div style="font-size:2.4rem;font-weight:900;color:var(--accent);">1</div><h4 style="margin-top:0.3rem;color:#fff;font-size:0.9rem;">Señales</h4></div>
+      <div class="card" style="text-align:center;"><div style="font-size:2.4rem;font-weight:900;color:var(--accent);">2</div><h4 style="margin-top:0.3rem;color:#fff;font-size:0.9rem;">Drivers</h4></div>
+      <div class="card" style="text-align:center;"><div style="font-size:2.4rem;font-weight:900;color:var(--accent);">3</div><h4 style="margin-top:0.3rem;color:#fff;font-size:0.9rem;">Ejes de incertidumbre</h4></div>
+      <div class="card" style="text-align:center;"><div style="font-size:2.4rem;font-weight:900;color:var(--accent);">4</div><h4 style="margin-top:0.3rem;color:#fff;font-size:0.9rem;">Escenarios</h4></div>
+      <div class="card" style="text-align:center;"><div style="font-size:2.4rem;font-weight:900;color:var(--accent);">5</div><h4 style="margin-top:0.3rem;color:#fff;font-size:0.9rem;">Impactos</h4></div>
+      <div class="card" style="text-align:center;"><div style="font-size:2.4rem;font-weight:900;color:var(--accent);">6</div><h4 style="margin-top:0.3rem;color:#fff;font-size:0.9rem;">Señales tempranas</h4></div>
+      <div class="card" style="text-align:center;"><div style="font-size:2.4rem;font-weight:900;color:var(--accent);">7</div><h4 style="margin-top:0.3rem;color:#fff;font-size:0.9rem;">Revisión continua</h4></div>
+    </div>
+    <p style="margin-top:2rem;color:var(--muted);">Es un ciclo, no una cascada. Las señales actualizan los escenarios. Los escenarios redefinen las señales. Abierto. Auditado. Vivo.</p>
+    <div style="margin-top:2.4rem;" class="grid-3">
+      <div class="card">
+        <h4 style="color:#fff;margin-bottom:0.4rem;">P — Político / geopolítico</h4>
+        <p style="font-size:0.88rem;">Fracturas entre bloques regulatorios, presión sobre organismos internacionales y carreras jurisdiccionales.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#fff;margin-bottom:0.4rem;">R — Regulatorio / normativo</h4>
+        <p style="font-size:0.88rem;">Personalidad jurídica digital, consentimiento para datos neurales, estándares de agentes autónomos.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#fff;margin-bottom:0.4rem;">I — Impacto social / ambiental / ético</h4>
+        <p style="font-size:0.88rem;">Derechos, exclusión, riesgo existencial y límites éticos de la automatización.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#fff;margin-bottom:0.4rem;">S — Social / cultural</h4>
+        <p style="font-size:0.88rem;">Narrativas de pertenencia, resistencia cultural y generaciones más permeables a entidades no humanas.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#fff;margin-bottom:0.4rem;">M — Mercado / económico</h4>
+        <p style="font-size:0.88rem;">Nuevos mercados jurídicos, seguros de agentes, tokenización y reasignación del trabajo.</p>
+      </div>
+      <div class="card">
+        <h4 style="color:#fff;margin-bottom:0.4rem;">T — Tecnológico / científico</h4>
+        <p style="font-size:0.88rem;">Agentes autónomos, LLMs, DID, blockchains, I+D en neurotecnología.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="escenarios">
+  <div class="container">
+    <h2 class="section-title">Escenarios <em>recientes</em></h2>
+    <p class="section-lead">Metodología PRISM aplicada: plausibilidad cuantificada, impactos multidimensionales, contraescenarios explícitos y señales tempranas actualizadas.</p>
+    <div class="grid-2">
+      <div class="card">
+        <div class="tag">Publicado</div>
+        <h3>FUTURIA-2026-0001 — El año en que una IA reclama personalidad jurídica</h3>
+        <p>Horizonte 2028-2035 · Plausibilidad 63/100</p>
+        <p style="margin-top:0.6rem;">Fundamentos filosóficos, tecnológicos y regulatorios de lo que será la pregunta legal más disruptiva del siglo.</p>
+        <a href="../futuria-neurodatos-mvp.html" class="btn btn-primary" style="margin-top:0.8rem;padding:0.55rem 1.1rem;font-size:0.85rem;">Leer escenario completo →</a>
+        <p style="margin-top:0.6rem;font-size:0.85rem;color:var(--muted);">Alimentado por newsletter #1 · En revisión continua</p>
+      </div>
+      <div class="card">
+        <div class="tag">Documento de trabajo</div>
+        <h3>Neurodatos como soberanía digital</h3>
+        <p>Entrada directa al MVP · No público.</p>
+        <a href="../futuria-neurodatos-mvp.html" class="btn btn-ghost" style="margin-top:0.8rem;padding:0.55rem 1.1rem;font-size:0.85rem;">Ver MVP →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+    <h2>El futuro no se predice.<br>Se <em>explora</em> en compañía.</h2>
+    <p>Suscribite a la newsletter gratuita. Escenarios, señales tempranas y análisis — cada quince días, sin hype, con rigor.</p>
+    <a href="#" class="btn btn-primary" onclick="alert('Formulario de suscripción — próxima semana')">Suscribirme a FUTURIA</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2026 FUTURIA — Instituto Global de Futuros Plausibles · Argentina · Independiente
+  </div>
+</footer>
+</body>
+</html>

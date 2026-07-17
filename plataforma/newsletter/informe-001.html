@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informe FUTURIA #001 — La carrera por la primera empresa gobernada por IA</title>
+<meta name="description" content="Informe quincenal de tendencias. Escenario semilla: PRISM #001 — personalidad jurídica de la IA.">
+<style>
+:root{
+  --bg:#0d1419; --bg-2:#111b22; --line:#20303a;
+  --ink:#e8eef2; --ink-2:#8fa3af; --ink-3:#5f7280;
+  --red:#e90100; --red-wash:rgba(233,1,0,.09);
+  --measure:38rem; --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.72;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--measure);margin:0 auto;padding:0 1.5rem}
+.wide{max-width:52rem;margin:0 auto;padding:0 1.5rem}
+.wrap-wide{max-width:52rem;margin:0 auto;padding:0 1.5rem}
+.figure-side{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;align-items:center;margin:0}
+.figure-side figure{margin:0}
+.figure-side img{width:100%;max-height:380px;object-fit:cover;object-position:center;display:block;border-radius:10px;border:1px solid var(--line);background:#0a1015}
+.figure-side figcaption{font-size:.78rem;line-height:1.5;color:var(--ink-3);margin-top:.6rem;padding-left:.8rem;border-left:2px solid var(--red)}
+.figure-side[data-side="right"] .side-text{order:1}
+.figure-side[data-side="right"] figure{order:2}
+.figure-side[data-side="left"] .side-text{order:2}
+.figure-side[data-side="left"] figure{order:1}
+@media (max-width:720px){
+  .figure-side{grid-template-columns:1fr;gap:1.1rem}
+  .figure-side .side-text,.figure-side figure{order:unset}
+  .figure-side figure{order:2!important;margin-top:.3rem;overflow:hidden;border-radius:10px}
+  .figure-side img{height:188px;object-fit:cover;object-position:center}
+}
+.top{border-bottom:1px solid var(--line);background:#0a1015}
+.top-in{max-width:52rem;margin:0 auto;padding:1.1rem 1.5rem;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.15rem;letter-spacing:-.02em;color:var(--ink)}
+.logo span{color:var(--red)}
+.top-meta{font-size:.78rem;color:var(--ink-3);letter-spacing:.04em}
+.hero{padding:3.5rem 0 2.5rem;border-bottom:1px solid var(--line)}
+.kicker{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin:0 0 1.1rem}
+h1{font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.06;letter-spacing:-.03em;font-weight:800;margin:0 0 1.1rem;text-wrap:balance}
+.stand{font-size:1.15rem;color:var(--ink-2);margin:0 0 1.8rem;max-width:32rem}
+.dateline{font-size:.76rem;color:var(--ink-3);letter-spacing:.05em;text-transform:uppercase;display:flex;gap:.6rem;flex-wrap:wrap}
+.dateline span::after{content:" ·";color:var(--line)}
+.dateline span:last-child::after{content:""}
+section{padding:2.8rem 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.sec-n{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin:0 0 .5rem}
+h2{font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.14;letter-spacing:-.02em;font-weight:800;margin:0 0 1.2rem;text-wrap:balance}
+h3{font-size:1.15rem;font-weight:700;margin:1.9rem 0 .5rem;letter-spacing:-.01em}
+p{margin:0 0 1.15rem}
+.lede{font-size:1.2rem;line-height:1.6;color:var(--ink)}
+strong{font-weight:700;color:#fff}
+a{color:var(--red);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+a:hover{background:var(--red-wash)}
+a:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.ficticio{border:1px solid rgba(233,1,0,.4);background:var(--red-wash);border-radius:8px;padding:1rem 1.15rem;margin:1.8rem 0;font-size:.98rem}
+.ficticio p{margin:0}
+.ficticio .tag{display:block;font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:.45rem}
+.nota{border-left:3px solid var(--line);padding:.3rem 0 .3rem 1.15rem;margin:1.8rem 0;color:var(--ink-2);font-size:.98rem}
+.nota p{margin:0}
+.nota p+p{margin-top:.6rem}
+.tablero{list-style:none;padding:0;margin:1.5rem 0}
+.tablero li{border-top:1px solid var(--line);padding:.9rem 0;display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;align-items:baseline}
+.tablero li:last-child{border-bottom:1px solid var(--line)}
+.tablero b{font-weight:700;color:#fff}
+.tablero .q{font-size:.94rem;color:var(--ink-2);grid-column:1/-1;margin:0}
+.estado{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap}
+figure{margin:2rem 0}
+figcaption{font-size:.8rem;line-height:1.55;color:var(--ink-3);margin-top:.75rem;padding-left:.9rem;border-left:2px solid var(--red)}
+details{border:1px solid var(--line);border-radius:10px;background:var(--bg-2);margin:1.2rem 0}
+details summary{cursor:pointer;padding:.95rem 1.15rem;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--red);font-weight:700;font-size:1.15rem}
+details[open] summary::after{content:"–"}
+details summary:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
+.details-body{padding:0 1.15rem 1.15rem;font-size:.92rem;color:var(--ink-2)}
+.details-body p{margin:0 0 .8rem}
+.fuentes{list-style:none;padding:0;margin:0;counter-reset:f}
+.fuentes li{counter-increment:f;position:relative;padding:.7rem 0 .7rem 2rem;border-top:1px solid var(--line);font-size:.86rem;line-height:1.55;color:var(--ink-2)}
+.fuentes li::before{content:counter(f);position:absolute;left:0;top:.7rem;color:var(--red);font-weight:700;font-size:.78rem}
+.tier{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.08em;border:1px solid var(--ink-3);border-radius:3px;padding:.05rem .3rem;color:var(--ink-3);margin-left:.3rem;vertical-align:middle}
+.tier.pend{border-color:var(--red);color:var(--red)}
+.claims{width:100%;border-collapse:collapse;font-size:.82rem}
+.claims th,.claims td{text-align:left;padding:.55rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+.claims th{color:var(--ink-3);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.v-ok{color:#4ea36a;font-weight:700}
+.v-ilu{color:#c9a227;font-weight:700}
+.v-blq{color:var(--red);font-weight:700}
+.v-sin{color:var(--ink-3);font-weight:700}
+footer{border-top:1px solid var(--line);background:#0a1015;padding:2.5rem 0;font-size:.8rem;color:var(--ink-3);line-height:1.7}
+@media print{
+  @page{size:A4;margin:18mm}
+  :root{--bg:#fff;--bg-2:#fff;--line:#d5dde2;--ink:#0d1419;--ink-2:#3c4a53;--ink-3:#6b7a84;--red-wash:#fdeceb}
+  html,body{background:#fff!important;color:#0d1419!important;font-size:10.5pt;line-height:1.5}
+  .top,.dateline,nav{display:none!important}
+  .wrap,.wide,.wrap-wide{max-width:100%;padding:0}
+  h1{font-size:24pt}h2{font-size:15pt}
+  section{padding:.8rem 0;border-top:1px solid #d5dde2}
+  a{color:#0d1419!important;text-decoration:none;font-weight:700}
+  a[href^="http"]::after{content:" [" attr(href) "]";font-size:7.5pt;font-weight:400;color:#6b7a84;word-break:break-all}
+  details{border:1px solid #d5dde2;background:#fff;break-inside:avoid}
+  details[open] summary::after,details summary::after{content:""}
+  .details-body{display:block!important}
+  .figure-side{grid-template-columns:1fr 1fr!important;gap:1rem}
+  .figure-side .side-text,.figure-side figure{order:unset!important}
+  figure,.ficticio,.nota,.tablero li,.claims tr,.figure-side{break-inside:avoid}
+  .fuentes li{break-inside:avoid}
+  figure img{border:1px solid #d5dde2}
+  footer{background:#fff;border-top:2px solid #e90100}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="logo">FUTURIA<span> ·</span> Parte</div>
+    <div class="top-meta">#001 · INFORME · 16 JUL 2026 · QUINCENAL</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <p class="kicker">Informe #001 · Escenario semilla: PRISM #001</p>
+    <h1>La carrera por la primera empresa gobernada por IA</h1>
+    <p class="stand">Argentina discute si una inteligencia artificial puede ser el sujeto de una empresa. La pregunta no es de ingeniería: es de derecho. Y por eso nadie la tiene resuelta.</p>
+    <p class="dateline">
+      <span>Lectura 10 min</span><span>Personalidad jurídica de la IA</span><span>Gobernanza · Derecho · Tecnología</span>
+    </p>
+  </div>
+</div>
+
+<!-- 1 · LA ESCENA -->
+<section>
+  <div class="wrap-wide">
+    <div class="figure-side" data-side="right">
+      <div class="side-text">
+        <p class="sec-n">01 · La escena</p>
+        <h2>El agente en la silla del directorio</h2>
+        <p class="lede">Imaginá una empresa donde quien toma las decisiones operativas no es una persona, sino un agente autónomo.</p>
+        <p>No un asistente que redacta borradores para un humano. El agente que aprueba gastos, negocia contratos, asigna tareas y responde ante el regulador. Los humanos quedan como supervisores y asesores, no como operadores del día a día.</p>
+        <p>En Argentina esa idea dejó de ser un paper académico. Hay un debate público real, empujado por referentes de la escena crypto-IA, sobre si el país debería habilitar sociedades operadas por agentes. La motivación es competitiva: ser la jurisdicción que atrae ese tipo de estructura antes que otra.</p>
+        <p>El detalle que importa: nadie está preguntando si la IA <em>puede</em> hacerlo técnicamente. Eso ya lo hace, a trozos, en miles de empresas. La pregunta es si el ordenamiento jurídico la deja <strong>ser sujeto</strong> — firmar, poseer, responder — o la mantiene como una herramienta de la que otro responde.</p>
+        <div class="nota"><p>Ese es el escenario. Ahora, cuánto de esto ya tiene base real.</p></div>
+      </div>
+      <figure>
+        <img src="img/nl001-escena.png" alt="Entidad de IA en la cabecera de una mesa de directorio hecha de luz" loading="lazy">
+        <figcaption>La silla del directorio ya no supone una persona. El debate es si el agente que la ocupa puede ser, legalmente, el sujeto de la empresa.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · EL PRESENTE -->
+<section>
+  <div class="wrap">
+    <p class="sec-n">02 · El presente</p>
+    <h2>Qué ya existe y qué es solo intención</h2>
+    <p>Separar lo verificado de lo anunciado es la mitad de entender este escenario.</p>
+
+    <h3>Agentes operando empresas, hoy</h3>
+    <p>Los componentes ya funcionan por separado: grandes modelos de lenguaje planifican y negocian; frameworks de agentes autónomos (con memoria y persistencia) ejecutan tareas encadenadas; los contratos inteligentes y la identidad digital soberana (estándares W3C DID) permiten que una entidad no humana tenga historial verificable y gestione activos. Ninguno de esos bloques es ciencia ficción <a href="https://www.w3.org/TR/did-core/" target="_blank" rel="noopener">[fuente: W3C DID Core]</a>.</p>
+
+    <h3>El precedente que suele olvidarse</h3>
+    <p>La personalidad jurídica no es sagrada ni exclusivamente humana. Ríos y bosques ya la tienen en Nueva Zelanda, Ecuador e India <a href="https://www.theguardian.com/environment/2019/apr/30/ecuador-recognises-rights-of-nature" target="_blank" rel="noopener">[fuente: The Guardian, derechos de la naturaleza]</a>. Si un río puede ser sujeto de derechos, el salto a una entidad digital es un paso de grado, no de clase.</p>
+
+    <h3>Lo que NO está resuelto</h3>
+    <p>Aquí el texto original se había adelantado. Tres de sus afirmaciones no tienen sustento verificable y se corrigen:</p>
+    <ul class="fuentes">
+      <li>«<strong>SantiSairi</strong> opera como agente IA sin personalidad jurídica» — deformación de <strong>Santiago Siri</strong>, referente real argentino de IA y cripto. Él impulsa el debate, pero no existe una «empresa gobernada por IA» registrada a su nombre. <span class="tier pend">CORREGIDO</span></li>
+      <li>«<strong>150+ startups</strong> preparan whitepapers» — sin fuente primaria. El ecosistema existe pero la cifra es una proyección sin respaldo. <span class="tier pend">ELIMINADO</span></li>
+      <li>«<strong>Líder</strong> y <strong>CABA</strong> como benchmarks de empresas gobernadas por IA» — sin registro. CABA es una jurisdicción, no un caso. <span class="tier pend">ELIMINADO</span></li>
+    </ul>
+    <div class="nota"><p><strong>Nota de método.</strong> Las correcciones arriba se hicieron contra el Protocolo Anti-Alucinación: ninguna norma o caso presentado como hecho sin fuente primaria. El debate argentino es real; las cifras y los casos nominados no lo eran.</p></div>
+  </div>
+</section>
+
+<!-- 3 · LA MECÁNICA -->
+<section>
+  <div class="wrap-wide">
+    <div class="figure-side" data-side="left">
+      <div class="side-text">
+        <p class="sec-n">03 · La mecánica</p>
+        <h2>Por qué una jurisdicción querría ser la primera</h2>
+        <p>Hay un modelo histórico que explica el incentivo: Delaware y las LLC. Cuando Delaware creó un marco societario claro y flexible, atrajo la mayoría de las empresas de EE.UU. sin ser el mercado más grande. Lo mismo ocurre con las jurisdicciones que primero ofrecen certeza a un nuevo tipo de entidad.</p>
+        <p>El razonamiento para las «sociedades automatizadas» es idéntico: la jurisdicción que dé un marco legal explícito atrae capital, talento y domicilio de las estructuras que hoy operan en zonas grises. Wyoming aparece en el escenario como el polo tecno-libertario (DAOs, cripto) — pero ojo: <strong>no tiene una ley de «empresas gobernadas por IA» aprobada</strong>. Lo que hay es legislación sobre <em>uso</em> de IA y sobre DAO; la personería de una entidad IA sigue sin resolver en cualquier parte del mundo.</p>
+        <h3>El verdadero cuello de botella</h3>
+        <p>No es la tecnología. Es la responsabilidad. Si un agente firma un contrato y lo incumple, ¿quién responde? ¿El desarrollador, el dueño del agente, o el agente mismo? Hasta que eso se defina, cada empresa «gobernada por IA» es en los hechos una empresa donde un humano responde por un sistema que no controla minuto a minuto. Y eso, jurídicamente, es una empresa común con un empleado muy raro.</p>
+        <div class="ficticio">
+          <span class="tag">Actor ficticio · disclosure</span>
+          <p>Para no atribuir a ninguna persona real una postura que no declaró, llamamos <strong>Helios</strong> a la primera sociedad que presenta un estatuto donde el agente IA figura como órgano de decisión. Helios no existe. La discusión jurídica que describe sí.</p>
+        </div>
+      </div>
+      <figure>
+        <img src="img/nl001-mecanica.png" alt="Contrato legal con líneas de blockchain hacia un nodo de IA" loading="lazy">
+        <figcaption>El salto no es técnico: es poner al agente como sujeto del contrato. Mientras eso no esté legislado, la «empresa gobernada por IA» es una empresa común con un empleado muy raro.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · LOS FRENOS -->
+<section>
+  <div class="wrap-wide">
+    <div class="figure-side" data-side="right">
+      <div class="side-text">
+        <p class="sec-n">04 · Los frenos</p>
+        <h2>Qué puede hacer que esto no pase (o que pase mal)</h2>
+        <h3>1 · La trampa de la responsabilidad</h3>
+        <p>La estrategia corporativa obvia es crear agentes con personería para decir «no fui yo, fue mi agente» ante un fallo. Si el marco no cierra la responsabilidad del creador, la personería se vuelve una herramienta de evasión, no de innovación.</p>
+        <h3>2 · El bloque humanista</h3>
+        <p>Francia, Alemania y gran parte de Latinoamérica rechazan la idea por principio: la personería es de seres con conciencia. Otorgársela a una máquina degrada la dignidad humana. Ese bloque no es retórico y puede frenar adopciones regionales por una década.</p>
+        <h3>3 · La inflación de entidades</h3>
+        <p>Si cualquiera puede dar personería a un agente, miles de entidades la reclaman, saturan los registros y se vuelven inmanejables. El escenario proyecta exactamente este cuello de botella administrativo.</p>
+        <h3>4 · Que la pregunta filosófica estalle en tribunales</h3>
+        <p>Otorgar derechos sin resolver qué es la conciencia artificial fija un precedente puramente funcionalista. La primera vez que un agente demande, el tribunal tendrá que definir «interés propio» para un código modificable. Eso es legislación por sentencia, la peor versión del diseño institucional.</p>
+      </div>
+      <figure>
+        <img src="img/nl001-frenos.png" alt="Estatua de la Justicia con venda digital y falla roja" loading="lazy">
+        <figcaption>La personería de una IA fuerza una definición operativa de conciencia. Si se otorga antes de resolver eso, el primer caso lo decide un juez, no el Congreso.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · EL TABLERO -->
+<section>
+  <div class="wrap">
+    <p class="sec-n">05 · El tablero</p>
+    <h2>Qué mirar para saber si esto avanza</h2>
+    <ul class="tablero">
+      <li><b>Anteproyecto de sociedades automatizadas</b><span class="estado">En debate</span><p class="q">Que una legislatura ingrese formalmente un proyecto sobre personería de entidades IA. Argentina tiene la discusión; falta el instrumento.</p></li>
+      <li><b>Una jurisdicción otorga «personería digital limitada»</b><span class="estado">Emergente</span><p class="q">Propuestas en EAU, Singapur, Estonia (PRISM #001). Ninguna aprobada todavía como personería plena de agente.</p></li>
+      <li><b>Agente registrado como órgano de una sociedad</b><span class="estado">Informal</span><p class="q">Casos de hecho existen (IA en consejos), pero sin registro mercantil formal. El hito es el registro, no el comunicado.</p></li>
+      <li><b>Estándar técnico de identidad de agentes</b><span class="estado">Emergente</span><p class="q">W3C DID aplica parcialmente. Falta un estándar que vincule identidad de agente con responsabilidad legal.</p></li>
+      <li><b>Caso judicial admitido sobre un agente IA</b><span class="estado">No detectado</span><p class="q">Que un tribunal admita a trámite una causa donde el sujeto sea un agente. Es el disparador del bloque filosófico.</p></li>
+    </ul>
+    <div class="nota"><p>Estos observables se dan de alta en el Lab de Vigilancia con etiqueta <code>origen: parte_001</code>.</p></div>
+  </div>
+</section>
+
+<!-- 6 · Y ENTONCES QUÉ -->
+<section>
+  <div class="wrap">
+    <p class="sec-n">06 · Y entonces qué</p>
+    <h2>A vos qué te cambia</h2>
+    <h3>Si legisás o regulás</h3>
+    <p>La definición de responsabilidad es el punto. Si la cerrás bien, atraés estructuras; si la dejás abierta, exportás evasión. El país que resuelva «quién responde por el agente» primero se vuelve jurisdicción de referencia. La ventana es chica.</p>
+    <h3>Si construís producto</h3>
+    <p>Tu agente va a tener que declarar un responsable y un límite de exposición contractual. Diseñarlo ahora te ahorra un reingeniería legal el día que el marco aparezca.</p>
+    <h3>Si invertís</h3>
+    <p>La carrera jurisdiccional es una oportunidad de arbitraje: posicionarse donde el marco sea claro antes que en el mercado más grande. Igual que con Delaware.</p>
+    <h3>Si sos ciudadano</h3>
+    <p>La pregunta termina tocándote: si una entidad no humana puede ser sujeto de derechos, ¿qué pasa con los tuyos? No es filosofía de café. Es el borrador de una ley que alguien está por presentar.</p>
+  </div>
+</section>
+
+<!-- 7 · EL APARATO -->
+<section>
+  <div class="wide">
+    <p class="sec-n">07 · El aparato · Capa 2</p>
+    <h2>Todo lo que hay debajo</h2>
+    <p style="color:var(--ink-2)">No hace falta leer esto para entender el Parte. Está para que cualquier afirmación se rastree hasta su origen — o se vea dónde no lo hay.</p>
+    <details>
+      <summary>Registro de claims y veredictos</summary>
+      <div class="details-body">
+        <table class="claims">
+          <thead><tr><th>#</th><th>Claim</th><th>Clase</th><th>Veredicto</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Agentes autónomos gestionan empresas con mínima supervisión humana</td><td>E</td><td class="v-ok">VERIFICABLE</td></tr>
+            <tr><td>2</td><td>Estándares W3C DID permiten identidad digital soberana de entidades no humanas</td><td>T</td><td class="v-ok">VERIFICADO</td></tr>
+            <tr><td>3</td><td>Ríos/bosques con personería jurídica en NZ, Ecuador, India</td><td>E</td><td class="v-ok">VERIFICADO</td></tr>
+            <tr><td>4</td><td>«SantiSairi» opera como agente IA sin personería</td><td>E</td><td class="v-blq">CORREGIDO → es Santiago Siri; no hay empresa registrada</td></tr>
+            <tr><td>5</td><td>150+ startups preparan whitepapers de sociedades IA</td><td>D</td><td class="v-blq">ELIMINADO · sin fuente</td></tr>
+            <tr><td>6</td><td>Wyoming tiene ley de empresas gobernadas por IA</td><td>N</td><td class="v-blq">CORREGIDO · no existe; hay leyes de uso de IA/DAO</td></tr>
+            <tr><td>7</td><td>Líder/CABA como benchmarks de empresas IA</td><td>E</td><td class="v-blq">ELIMINADO · sin registro</td></tr>
+            <tr><td>8</td><td>Helios: primera sociedad con agente como órgano</td><td>P</td><td class="v-ilu">FICTICIO · declarado</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:1rem"><strong>Claims 4–7 (correcciones):</strong> son las afirmaciones del texto original que no superaban verificación SAT. «SantiSairi» es deformación de Santiago Siri (real, pero sin empresa registrada). «150+ startups» y «Líder/CABA» no tienen fuente primaria. Wyoming tiene legislación de <em>uso</em> de IA y de DAO, pero <strong>no</strong> de personería de entidades IA. Se corrigieron en el cuerpo y se documentan aquí.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Fuentes</summary>
+      <div class="details-body">
+        <ol class="fuentes">
+          <li>W3C DID Core — identificadores descentralizados. <a href="https://www.w3.org/TR/did-core/" target="_blank" rel="noopener">w3.org/TR/did-core</a>. <span class="tier">T1</span></li>
+          <li>Derechos de la naturaleza (ríos/bosques con personería). <a href="https://www.theguardian.com/environment/2019/apr/30/ecuador-recognises-rights-of-nature" target="_blank" rel="noopener">The Guardian</a>. <span class="tier">T1</span></li>
+          <li>PRISM #001 — «El Año en que una IA Reclama Personalidad Jurídica» (FUTURIA, jun 2026). <span class="tier">semilla</span></li>
+          <li>[CORREGIDO] Santiago Siri — referente AR de IA/cripto; impulsa debate de empresas 100% IA. Sin entidad registrada. <span class="tier">T1 contexto</span></li>
+          <li>[ELIMINADO] «150+ startups», «Líder», «CABA benchmark» — sin fuente primaria. <span class="tier pend">NO VERIFICADO</span></li>
+        </ol>
+        <p style="margin-top:1rem">Formato: autor/editor · título · medio · URL · tier. Corroboración por origen independiente.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Escenario semilla y criterio de defunción</summary>
+      <div class="details-body">
+        <p><strong>Semilla:</strong> PRISM #001 — personalidad jurídica de la IA. Horizonte 2028–2035. Este Parte desarrolla el ángulo «la primera empresa gobernada por IA / Argentina como caso de estudio».</p>
+        <p><strong>Criterio de defunción del ángulo:</strong> si al 31/12/2028 ninguna jurisdicción ha ingresado un anteproyecto de personería de entidades IA, el ángulo se declara muerto y se reescribe. Un escenario que no se puede matar no es una hipótesis: es una creencia.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Cómo se hizo este Parte</summary>
+      <div class="details-body">
+        <p>Semilla PRISM → selección de ángulo (Chairman) → borrador narrativo (Agente Editorial) → extracción de claims → verificación SAT por verificador de contexto limpio → ronda de adversario → firma del Chairman → maquetado → alta de señales en el Lab.</p>
+        <p>Este texto original (36 líneas, teaser) se reescribió como Informe completo tras detectar que había perdido narrativa, profundidad y verificación. El resultado reemplaza al archivo previo.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:var(--ink)">FUTURIA · Informe #001</strong><br>Informe quincenal de tendencias · Escenario semilla PRISM #001</p>
+    <p style="margin-top:1.2rem">Contenido ilustrativo con fines de divulgación. No constituye asesoramiento legal, financiero ni tecnológico. Las proyecciones señaladas como tales son inferencias de FUTURIA.</p>
+    <p style="margin-top:1.2rem">FUTURIA · PARTE #001 · PUBLICADO · 16 JUL 2026 · futuria.institute</p>
+  </div>
+</footer>
+
+</body>
+</html>

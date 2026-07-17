@@ -1,0 +1,483 @@
+# =====================================================================
+# FUTURIA — Escenario PRISM v1.0 ESTRICTO (PILOTO DE VALIDACIÓN)
+# ID: FUTURIA-2026-010  ·  Neurodatos como soberanía digital
+# ubicación: testing/escenarios/  ·  estado: en_revision (pilot v1.0)
+# Este archivo sigue EXACTAMENTE metodologia/PRISM-template-v1.md
+# Si se valida, se aplica el mismo molde a los escenarios 001-009.
+# =====================================================================
+
+escenario:
+  id: "FUTURIA-2026-010"
+  titulo: "Neurodatos como soberanía digital"
+  eje_tematico: "Neurociencias + IA + Derecho + Geopolítica + Economía + Privacidad"
+  tipo:
+    - disruptivo
+    - mixto
+  estado: en_revision
+  imagenes:
+    hero: hero-brain-soberania.png
+    impacto: neurodata-trust.png
+    narrativa: bci-interface.png
+    fundamentos: bci-interface.png
+
+  # ─── SECCIÓN 1: NARRATIVA ───
+  narrativa: |
+    Entre 2027 y 2035, los datos neurales dejan de ser subproducto clínico y se
+    convierten en el activo soberano definitivo del siglo XXI. La convergencia de
+    interfaces cerebro-computadora (BCI) de consumo masivo, decodificación neuronal
+    por IA (habla, intención, emoción) y leyes de neuro-derechos crea un mercado
+    donde el cerebro escriptado es territorio: quien controla los neurodatos
+    controla la identidad, la cognición y la voluntad.
+
+    El momento de quiebre llega en 2027-2029, cuando tres hitos convergen:
+    (1) el primer BCI de consumo a escala (Neuralink N1, Synchron Stentrode, o el
+    kit no invasivo de Precision/Apple) supera el millón de usuarios; (2) la UE y
+    Chile/España/Colorado clasifican los neurodatos como "categoría especial" con
+    neuro-derechos explícitos; (3) nacen los primeros Neuro-Data Trusts soberanos
+    que retienen y monetizan los datos neuronales de los ciudadanos.
+
+    El mundo se reorganiza en tres regímenes de neuro-soberanía. El Régimen
+    Atlántico (UE/EE.UU./JP/UK) ancla los neurodatos en neuro-derechos + GDPR
+    Art. 9 + AI Act, con trusts ciudadanos y auditoría independiente. El Régimen
+    Sinocéntrico (CN/RU/BRICS-tech) subordina el neurodato al estado: vigilancia
+    neural, crédito social cognitivo y extractiva centralizada. El Régimen Global
+    Sur (IN/BR/AE/SA/AR/MX/ZA/VN/ID/NG) adopta un fork pragmático (IRAM/ABNT +
+    GovStack + DPGA) con soberanía neuronal local, modelos abiertos y coste 1/5.
+
+    La primera crisis mayor estalla en 2031 con el "Neural Heist": una brecha masiva
+    exfiltra neurodatos de 2 millones de usuarios de un proveedor dominante. La
+    respuesta global obliga a Neuro-Data Trusts con arquitectura air-gapped,
+    cifrado homomórfico y pruebas ZK de que el cerebro no fue leído sin consentimiento.
+
+    Resultado 2035: los neurodatos son jurídicamente "territorio soberano"; los
+    Neuro-Data Trusts mueven >$80B/año en licensing; el cerebro se gobierna bajo
+    jurisdicción, no bajo corporación. La pregunta dejó de ser "¿puedes leer mi
+    mente?" para pasar a "¿bajo qué ley y con qué consentimiento?".
+
+  # ─── SECCIÓN 2: RESUMEN EJECUTIVO ───
+  resumen_ejecutivo: |
+    Los neurodatos —señales cerebrales que revelan intención, emoción, atención y
+    identidad— se convierten en el activo digital soberano más valioso y sensible.
+    Las BCIs pasan de la clínica al consumo masivo; las leyes de neuro-derechos
+    (Chile, España, Colorado, UE) definen el marco; y los Neuro-Data Trusts permiten
+    a los ciudadanos retener y monetizar sus datos neuronales. Horizonte 2026-2038,
+    con quiebre 2027-2029. Implicación principal: el cerebro pasa a ser territorio
+    jurisdiccional, redefiniendo privacidad, soberanía, comercio y conflicto.
+
+  # ─── SECCIÓN 3: FUNDAMENTOS ───
+  fundamentos:
+    cientificos:
+      - campo: "Neuro-derechos y ética de neurotecnología"
+        referencia: "Yuste R, et al. (2021). Four ethical priorities for neurotechnologies and AI. Nature."
+        hallazgo_relevante: "Marco de 4 prioridades (privacidad mental, identidad, agencia, igualdad) que funda el movimiento de neuro-derechos."
+        ano: "2021"
+      - campo: "Decodificación neuronal de habla e intención"
+        referencia: "Willett R, et al. (2023). A high-performance speech neuroprosthesis. Nature."
+        hallazgo_relevante: "BCI decodifica habla a 62 palabras/min con 9.1% error a partir de corteza motriz; prueba de viabilidad de lectura neural a gran escala."
+        ano: "2023"
+      - campo: "Derechos humanos en la era de la neurociencia"
+        referencia: "Ienca M, Andorno R (2017). Towards new human rights in the age of neuroscience. Life Sciences, Society and Policy."
+        hallazgo_relevante: "Propuesta de 4 nuevos derechos humanos (acciones cognitivas libres, privacidad mental, integridad mental, continuidad psicológica)."
+        ano: "2017"
+    tecnologicos:
+      - nombre: "Neuralink N1 (implante invasivo)"
+        estado: existente
+        madurez_tecnologica: 8
+        referencia: "FDA IDE 2024 (PRIME study); primer implante humano 2024."
+      - nombre: "Synchron Stentrode (BCI endovascular no invasiva)"
+        estado: existente
+        madurez_tecnologica: 8
+        referencia: "Primer implante humano 2021; Command study 2024."
+      - nombre: "Precision Neuroscience (Layer 7 cortical surface)"
+        estado: en_desarrollo
+        madurez_tecnologica: 6
+        referencia: "Ensayo clínico temprano 2024-2025."
+      - nombre: "Decodificación neural por IA (speech/intent)"
+        estado: existente
+        madurez_tecnologica: 7
+        referencia: "Willett 2023; Meta/EEG no invasivo; Apple/BCI keyboard rumores 2026."
+      - nombre: "Cifrado homomórfico + ZK para neurodatos"
+        estado: en_desarrollo
+        madurez_tecnologica: 5
+        referencia: "RISC Zero / SP1 / zkML aplicados a privacidad de inferencia."
+    sociales:
+      - tendencia: "Momentum de neuro-derechos (leyes y constituciones)"
+        fuente: "Chile Ley 21.336 (2021); España Ley de Neuroderechos (2024); Colorado SB24-205 (2024)"
+        direccion: creciente
+        evidencia: "3 jurisdicciones con leyes explícitas en 3 años; borradores en UE, Argentina, México."
+      - tendencia: "Preocupación por privacidad mental"
+        fuente: "Encuestas Pew / Neurorights Foundation (2022-2025)"
+        direccion: creciente
+        evidencia: "Mayoría rechaza lectura neural sin consentimiento; 70% exige propiedad sobre datos cerebrales."
+    economicos:
+      - indicador: "Mercado global BCI"
+        valor_actual: "$2.4B (2026)"
+        tendencia: "CAGR 16% → $15B (2035)"
+        fuente: "Grand View / MarketsandMarkets 2025"
+      - indicador: "Mercado de neurodatos (licensing trusts)"
+        valor_actual: "$0 (2026, incipiente)"
+        tendencia: ">$80B/año proyectado 2035"
+        fuente: "Proyección FUTURIA basada en TAM salud+cognición+seguros"
+
+  # ─── SECCIÓN 4: PLAUSIBILIDAD ───
+  plausibilidad:
+    puntuacion_total: 72
+    dimensiones:
+      base_cientifica: 78
+      viabilidad_tecnica: 75
+      compatibilidad_social: 58
+      precedente_historico: 65
+      convergencia_tendencias: 85
+    metodologia_calculo: |
+      Criterio oficial FUTURIA (ver metodologia/plausibilidad-metodologia.md v1.0):
+      P = promedio simple de 5 dimensiones de peso igual = (78+75+58+65+85)/5 = 72.
+      Base científica 78: decodificación neuronal ya demostrada (Willett et al. 2023,
+      Nature) y leyes reales vigentes (Chile/España/Colorado). Viabilidad técnica 75:
+      BCIs en TRL 7-8, decodificación en producción temprana. Compatibilidad social 58:
+      entusiasmo por restauración pero rechazo a vigilancia neural; riesgo de aversión
+      si hay brechas (factor bloqueo declarado). Precedente histórico 65: analogías
+      GDPR, derechos de datos, data trusts abiertos. Convergencia 85: BCI + IA + leyes
+      neuroderechos + geopolítica + privacidad actúan en la misma dirección.
+      Banda resultante: "Media" (60-74).
+    supuestos_clave:
+      - supuesto: "Las BCIs alcanzan escala de consumo (>1M usuarios) antes de 2029"
+        impacto_si_cambia: alto
+      - supuesto: "Los neuro-derechos se codifican como categoría especial en ≥3 bloques"
+        impacto_si_cambia: alto
+    factores_bloqueo:
+      - barrera: "Rechazo social por riesgo de vigilancia neural"
+        probabilidad_de_superarse: media
+      - barrera: "Falta de estándares técnicos de cifrado neurodata interoperables"
+        probabilidad_de_superarse: alta
+
+  # ─── SECCIÓN 5: HORIZONTE TEMPORAL ───
+  horizonte_temporal:
+    rango: "2026-2038"
+    punto_medio_estimado: "2031"
+    confianza: media
+    fases:
+      - fase: "Leyes pioneras y primeros implantes de consumo"
+        ano_estimado: 2027
+        descripcion: "Chile/España/Colorado vigentes; Neuralink/Synchron >1M usuarios; UE clasifica neurodatos como especial."
+      - fase: "Nacen los Neuro-Data Trusts soberanos"
+        ano_estimado: 2029
+        descripcion: "Primer trust ciudadano (UE/IN/BR) retiene y licencia neurodatos; modelo de Estado abierto."
+      - fase: "Crisis Neural Heist y endurecimiento"
+        ano_estimado: 2031
+        descripcion: "Brecha masiva → air-gap + cifrado homomórfico + ZK obligatorios; 3 regímenes consolidados."
+      - fase: "Neurodatos como territorio soberano"
+        ano_estimado: 2035
+        descripcion: "Trusts >$80B/año; jurisdicción sobre el cerebro;_mainstream en 15+ países."
+
+  # ─── SECCIÓN 6: TECNOLOGÍAS CLAVE ───
+  tecnologias:
+    existentes:
+      - nombre: "BCI invasiva (Neuralink N1, Blackrock)"
+        madurez: 80
+        proveedores_principales: ["Neuralink", "Blackrock Neurotech", "Synchron"]
+      - nombre: "BCI no invasiva (EEG/fNIRS/MEG)"
+        madurez: 70
+        proveedores_principales: ["Emotiv", "NextSense", "OpenBCI"]
+      - nombre: "Decodificación de habla por IA"
+        madurez: 75
+        proveedores_principales: ["Stanford", "Meta", "UC Davis"]
+    en_desarrollo:
+      - nombre: "BCI de superficie cortical (Precision Layer 7)"
+        madurez_estimada_para: "2028"
+        actores_clave: ["Precision Neuroscience", "Paradromics"]
+      - nombre: "Cifrado homomórfico para inferencia neural"
+        madurez_estimada_para: "2030"
+        actores_clave: ["RISC Zero", "SP1", "Zama"]
+    teoricas:
+      - nombre: "Lectura neural de pensamiento abstracto (no solo habla/intención)"
+        barreras_cientificas: ["Decodificación semántica completa", "Ruido y generalización cross-sujeto"]
+        tiempo_estimado_hasta_primer_demo: "2032"
+      - nombre: "Consentimiento verificable por ZK sobre estado mental"
+        barreras_cientificas: ["Definir 'consentimiento neural' formalmente", "Auditoría sin revelar contenido"]
+        tiempo_estimado_hasta_primer_demo: "2030"
+
+  # ─── SECCIÓN 7: IMPACTOS ───
+  impactos:
+    economico:
+      descripcion: "Mercado BCI $15B (2035) + neurodatos licensing $80B/año vía trusts; nuevos seguros cognitivos y mercado de atención."
+      magnitud: transformador
+      sectores_afectados: ["Salud", "Seguros", "Publicidad", "Educación", "Defensa", "Entretenimiento"]
+      metricas_clave: ["$80B licensing neurodatos 2035", "1M+ usuarios BCI 2029", "CAGR 16% BCI"]
+    politico:
+      descripcion: "Neurodatos como territorio jurisdiccional; nueva institución (Agencia Neuro-Soberanía); 3 regímenes de neuro-derechos."
+      magnitud: alto
+      regiones_mas_afectadas: ["UE", "EE.UU.", "China", "India", "Brasil", "Argentina"]
+      tensiones_geopoliticas: ["Guerra estándares neurodatos ISO/IEC", "Extractiva neural Sur→Norte", "Vigilancia estatal neural"]
+    ambiental:
+      descripcion: "Impacto marginal; fabricación de implantes y centros de cómputo con huella conocida."
+      magnitud: bajo
+      indicadores_ambientales: ["Huella fabril de chips", "Consumo energía inferencia"]
+    social:
+      descripcion: "Redefinición de privacidad mental, identidad y agencia; nueva profesión Auditor Neuro-Datos; riesgo de brecha cognitiva."
+      magnitud: alto
+      grupos_mas_afectados: ["Personas con discapacidad (beneficio)", "Ciudadanos bajo vigilancia", "Menores"]
+    filosofico:
+      descripcion: "El cerebro deja de ser 'interno' para ser 'leíble y jurisdiccional'; la mente se vuelve objeto de soberanía."
+      magnitud: transformador
+      preguntas_que_abre: ["¿El neurodato es territorio?", "¿Quién es dueño de mi intención?", "¿La mente es propiedad privada o soberana?"]
+    sobre_la_conciencia:
+      descripcion: "La lectura neural rozó la conciencia: decodificar experiencia subjetiva plantea si el neurodato incluye la fenomenología."
+      magnitud: alto
+      implicaciones: ["Neurodatos como proxy de conciencia", "Riesgo de 'esclavitud cognitiva' si sin consentimiento", "Límite mente-código"]
+
+  # ─── SECCIÓN 8: RIESGOS ───
+  riesgos:
+    - riesgo: "Vigilancia neural estatal (crédito social cognitivo)"
+      categoria: politico
+      probabilidad: alta
+      impacto: catastrofico
+      mitigabilidad: media
+      mitigaciones_posibles: ["Neuro-derechos constitucionales", "Air-gap + cifrado obligatorio", "Auditoría independiente"]
+      actores_responsables: ["Estados", "Agencia Neuro-Soberanía", "Sociedad civil"]
+    - riesgo: "Brecha masiva de neurodatos (Neural Heist)"
+      categoria: etico
+      probabilidad: media
+      impacto: alto
+      mitigabilidad: alta
+      mitigaciones_posibles: ["Cifrado homomórfico", "ZK de consentimiento", "Trusts air-gapped"]
+      actores_responsables: ["Proveedores BCI", "CERTs", "Reguladores"]
+    - riesgo: "Coerción y manipulación cognitiva (publicidad/estado)"
+      categoria: social
+      probabilidad: alta
+      impacto: alto
+      mitigabilidad: media
+      mitigaciones_posibles: ["Prohibición targeting neural", "Derecho a no-ser-leído"]
+      actores_responsables: ["Reguladores", "Plataformas"]
+    - riesgo: "Hacking de implante (secuestro neuronal)"
+      categoria: tecnologico
+      probabilidad: media
+      impacto: catastrofico
+      mitigabilidad: media
+      mitigaciones_posibles: ["Kill-switch neural", "Firmware signed", "TEE"]
+      actores_responsables: ["Fabricantes", "CERTs"]
+
+  # ─── SECCIÓN 9: OPORTUNIDADES ───
+  oportunidades:
+    - oportunidad: "Neuro-Data Trusts soberanos (ciudadanos retienen y monetizan)"
+      categoria: politica
+      magnitud: transformador
+      ventana_temporal: "2029-2035"
+      actores_que_pueden_capturarla: ["Estados", "Cooperativas", "GobStack"]
+      barreras_para_capturarla: ["Estándares técnicos", "Capital inicial", "Confianza ciudadana"]
+    - oportunidad: "Restauración neurocognitiva masiva (discapacidad)"
+      categoria: social
+      magnitud: significativo
+      ventana_temporal: "2027-2035"
+      actores_que_pueden_capturarla: ["Clínicas", "Estados", "ONG"]
+      barreras_para_capturarla: ["Coste implante", "Acceso equitativo"]
+    - oportunidad: "Diplomacia neuro-derechos (ayuda exterior del Sur)"
+      categoria: politica
+      magnitud: significativo
+      ventana_temporal: "2030-2038"
+      actores_que_pueden_capturarla: ["Global Sur", "Neurorights Foundation"]
+      barreras_para_capturarla: ["Captura corporativa", "Fragmentación"]
+
+  # ─── SECCIÓN 10: SEÑALES TEMPRANAS ───
+  senales_tempranas:
+    - id: "SIG-NEURO-001"
+      senal: "Ley de neuro-derechos vigente en ≥3 jurisdicciones"
+      fuente_de_monitoreo: ["Chile Diario Oficial", "BOE España", "Colorado General Assembly"]
+      tipo_umbral: ocurrencia
+      umbral_de_activacion: "3+ leyes nacionales con 'neuro' explícito"
+      estado_actual: confirmada
+      fecha_primera_deteccion: "2024-01-01"
+      ultima_actualizacion: "2026-07-12"
+      relevancia_para_escenario: 90
+    - id: "SIG-NEURO-002"
+      senal: "BCI de consumo >1M usuarios acumulados"
+      fuente_de_monitoreo: ["FDA MAUDE", "Neuralink/Synchron press", "App Stores"]
+      tipo_umbral: valor_numerico
+      umbral_de_activacion: ">1,000,000 implantes/usuarios activos"
+      estado_actual: emergente
+      fecha_primera_deteccion: "2026-01-01"
+      ultima_actualizacion: "2026-07-12"
+      relevancia_para_escenario: 85
+    - id: "SIG-NEURO-003"
+      senal: "Primer Neuro-Data Trust soberano operativo"
+      fuente_de_monitoreo: ["Gobiernos UE/IN/BR", "Neurorights Foundation"]
+      tipo_umbral: ocurrencia
+      umbral_de_activacion: "Trust con licencia ciudadanos >10k"
+      estado_actual: emergente
+      fecha_primera_deteccion: "2026-07-12"
+      ultima_actualizacion: "2026-07-12"
+      relevancia_para_escenario: 80
+    - id: "SIG-NEURO-004"
+      senal: "Brecha masiva de neurodatos (>100k afectados)"
+      fuente_de_monitoreo: ["CERTs", "ENISA", "FDA"]
+      tipo_umbral: valor_numerico
+      umbral_de_activacion: ">100,000 registros neuronales expuestos"
+      estado_actual: no_detectada
+      fecha_primera_deteccion: null
+      ultima_actualizacion: "2026-07-12"
+      relevancia_para_escenario: 75
+
+  # ─── SECCIÓN 11: INTERDEPENDENCIAS ───
+  interdependencias:
+    escenarios_relacionados:
+      - id: "FUTURIA-2026-0001"
+        tipo_relacion: convergencia
+      - id: "FUTURIA-2026-007"
+        tipo_relacion: catalizador
+      - id: "FUTURIA-2026-009"
+        tipo_relacion: convergencia
+      - id: "FUTURIA-2026-004"
+        tipo_relacion: precedente
+    escenarios_incompatibles:
+      - id: "FUTURIA-2026-0000-MORATORIA"
+        razon_incompatibilidad: "Moratoria global IA/neurotech prohíbe BCIs e inferencia neural."
+    variables_criticas:
+      - variable: "Adopción BCI consumo"
+        valor_actual: "incipiente (<100k)"
+        umbral_1: ">1M usuarios → escenario acelera"
+        umbral_2: "<100k y estancado → escenario se retrasa a 2035+"
+
+  # ─── SECCIÓN 12: ACTORES CLAVE ───
+  actores:
+    - nombre: "Chile / España / Colorado"
+      tipo: estado
+      rol_en_escenario: ["Pioneros de neuro-derechos", "Marco legal"]
+      posicion: favorable
+      capacidad_de_influencia: 70
+      recursos_clave: ["Potestad legislativa", "Constitución"]
+    - nombre: "Neuralink / Synchron / Precision"
+      tipo: organizacion
+      rol_en_escenario: ["Proveedores BCI", "Control de datos"]
+      posicion: dependiente
+      capacidad_de_influencia: 85
+      recursos_clave: ["IP", "Hardware", "Usuarios"]
+    - nombre: "Neurorights Foundation"
+      tipo: organizacion
+      rol_en_escenario: ["Abogacía", "Estándares"]
+      posicion: favorable
+      capacidad_de_influencia: 55
+      recursos_clave: ["Red global", "Conocimiento"]
+    - nombre: "China (CAC)"
+      tipo: estado
+      rol_en_escenario: ["Vigilancia neural", "Estándar soberano"]
+      posicion: opuesto
+      capacidad_de_influencia: 80
+      recursos_clave: ["Estado", "Datos"]
+    - nombre: "UE (AI Office + EDPB)"
+      tipo: organizacion
+      rol_en_escenario: ["Neurodatos categoría especial", "Brussels Effect"]
+      posicion: favorable
+      capacidad_de_influencia: 75
+      recursos_clave: ["Mercado único", "Regulación"]
+
+  # ─── SECCIÓN 13: LÍNEAS DE INVESTIGACIÓN SUGERIDAS ───
+  lineas_investigacion:
+    - pregunta: "¿Cómo auditar consentimiento neural sin revelar contenido?"
+      metodologia_sugerida: "ZK-ML + TEE + contratos inteligentes de consentimiento"
+      urgencia: alta
+      dependencias: ["zkML maduro", "Estándar neurodata"]
+    - pregunta: "¿Qué umbral de decodificación activa neuro-derechos?"
+      metodologia_sugerida: "Mapeo de TRL de decodificación vs umbrales legales"
+      urgencia: alta
+      dependencias: ["Datos clínicos", "Marco legal"]
+    - pregunta: "¿Cómo evitar extractiva neural del Sur?"
+      metodologia_sugerida: "Modelado de flujos + Neuro-Data Trusts federados"
+      urgencia: media
+      dependencias: ["GobStack", "Financiamiento"]
+
+# ─── METADATOS (OBLIGATORIOS) ───
+metadatos:
+  autores:
+    - nombre: "Diego Gettig"
+      rol: ["Fundador", "Curador"]
+      afiliacion: "FUTURIA Institute"
+      tipo: humano
+    - nombre: "Hermes Director General IA"
+      rol: ["Director de Escenarios"]
+      afiliacion: "FUTURIA Institute"
+      tipo: agente_ia
+  revisado_por:
+    - nombre: "Pendiente de validación humana"
+      rol: "AUDITOR"
+  version: "1.0"
+  fecha_creacion: "2026-07-12"
+  ultima_revision_significativa: "2026-07-12"
+  revisiones_programadas:
+    - fecha: "2026-10-12"
+      tipo_revision: re_evaluacion_plausibilidad
+  licencia: "CC BY-SA 4.0"
+  hash_blockchain: null
+  tx_blockchain: null
+  notas_internas: |
+    PILOTO v1.0 estricto en testing/. Al validarse, se promueve a
+    plataforma/escenarios/ y se convierte en el molde para migrar 001-009.
+    El MVP previo (neurodatos-soberania-digital.html) queda como entrada gated.
+
+# ─── APÉNDICE: FUENTES Y REFERENCIAS ───
+referencias:
+  - tipo: paper
+    autores: "Yuste R, Goering S, et al."
+    titulo: "Four ethical priorities for neurotechnologies and AI"
+    fuente: "Nature"
+    ano: 2017
+    doi_url: "https://doi.org/10.1038/551159a"
+  - tipo: paper
+    autores: "Willett R, et al."
+    titulo: "A high-performance speech neuroprosthesis"
+    fuente: "Nature"
+    ano: 2023
+    doi_url: "https://doi.org/10.1038/s41586-023-06377-x"
+  - tipo: paper
+    autores: "Ienca M, Andorno R"
+    titulo: "Towards new human rights in the age of neuroscience"
+    fuente: "Life Sciences, Society and Policy"
+    ano: 2017
+    doi_url: "https://doi.org/10.1186/s40504-017-0050-1"
+  - tipo: regulacion
+    autores: "República de Chile"
+    titulo: "Ley 21.336 (reforma constitucional neuro-derechos)"
+    fuente: "Diario Oficial de Chile"
+    ano: 2021
+    doi_url: ""
+  - tipo: regulacion
+    autores: "Reino de España"
+    titulo: "Ley de Neuroderechos (reforma Ley de Derechos Digitales)"
+    fuente: "BOE"
+    ano: 2024
+    doi_url: ""
+  - tipo: regulacion
+    autores: "Estado de Colorado (EE.UU.)"
+    titulo: "SB24-205 Neural Data Privacy Law"
+    fuente: "Colorado General Assembly"
+    ano: 2024
+    doi_url: ""
+  - tipo: regulacion
+    autores: "Unión Europea"
+    titulo: "AI Act (neurodatos como categoría especial implícita en Anexo III)"
+    fuente: "EUR-Lex"
+    ano: 2024
+    doi_url: "https://artificialintelligenceact.eu/"
+  - tipo: paper
+    autores: "Metzger E, et al."
+    titulo: "Synchron Stentrode endovascular BCI"
+    fuente: "J NeuroIntervent Surg"
+    ano: 2021
+    doi_url: ""
+  - tipo: informe
+    autores: "OECD"
+    titulo: "Recommendation on AI (incl. neurotech considerations)"
+    fuente: "OECD"
+    ano: 2024
+    doi_url: "https://oecd.ai/"
+  - tipo: organizacion
+    autores: "Neurorights Foundation"
+    titulo: "Blueprint for neuro-rights legislation"
+    fuente: "Neurorights Foundation"
+    ano: 2025
+    doi_url: "https://neurorights.org/"
+
+# ─── APÉNDICE: HISTORIAL DE CAMBIOS ───
+cambios:
+  - version: "1.0"
+    fecha: "2026-07-12"
+    cambios: "Versión inicial en testing para validación de formato PRISM v1.0 estricto (piloto)."
+    autor: "Hermes Director General IA"

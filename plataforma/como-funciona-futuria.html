@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo funciona FUTURIA — Un servicio meteorológico para el futuro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0A0D;
+    --bg-deep:#07070A;
+    --card:#131317;
+    --card-2:#0F0F13;
+    --line:#26262D;
+    --line-soft:#1B1B21;
+    --white:#FFFFFF;
+    --muted:#94949F;
+    --muted-2:#6B6B77;
+    --red:#FF1240;
+    --red-dim:#C40E31;
+    --red-wash:rgba(255,18,64,.09);
+    --blue:#4A90D9;
+    --blue-wash:rgba(74,144,217,.12);
+    --measure:40rem;
+    --disp:"Archivo",system-ui,sans-serif;
+    --body:"Lato",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{
+    margin:0;background:var(--bg);color:var(--muted);
+    font-family:var(--body);font-size:1.0625rem;line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--measure);margin:0 auto;padding:0 1.5rem}
+  .wide{max-width:66rem;margin:0 auto;padding:0 1.5rem}
+
+  /* ---------- topbar ---------- */
+  .topbar{
+    position:relative;z-index:5;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1.4rem 2rem;border-bottom:1px solid var(--line-soft);
+    background:var(--bg-deep);
+  }
+  .logo-link{display:flex;align-items:center;text-decoration:none}
+  .logo-img{height:30px;width:auto;margin-right:.6rem;display:block}
+  .mark{
+    font-family:var(--disp);font-weight:900;font-size:1.35rem;
+    letter-spacing:-.02em;color:var(--white);text-decoration:none;
+  }
+  .mark span{color:var(--red)}
+  .topnav{display:flex;gap:1.9rem}
+  .topnav a{color:var(--muted);text-decoration:none;font-size:.95rem}
+  .topnav a:hover{color:var(--white)}
+  @media(max-width:44rem){.topnav{display:none}.topbar{padding:1.2rem 1.5rem}}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;padding:7rem 0 6rem;
+    background:
+      radial-gradient(ellipse 85% 65% at 12% -5%, rgba(150,12,40,.50), transparent 62%),
+      radial-gradient(ellipse 75% 75% at 72% 105%, rgba(66,28,120,.38), transparent 60%),
+      var(--bg-deep);
+  }
+  .hero .iso{position:absolute;inset:0;width:100%;height:100%;opacity:.22;pointer-events:none}
+  .hero .wrap{position:relative;z-index:2}
+  .eyebrow{
+    font-family:var(--body);font-weight:700;font-size:.72rem;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--red);
+    margin:0 0 1.5rem;
+  }
+  .hero h1{
+    font-family:var(--disp);font-weight:900;
+    font-size:clamp(2.6rem,7.5vw,4.6rem);line-height:.98;
+    letter-spacing:-.035em;color:var(--white);margin:0 0 1.75rem;text-wrap:balance;
+  }
+  .hero h1 em{font-style:normal;color:var(--red)}
+  .hero .stand{font-size:1.15rem;color:var(--muted);margin:0;max-width:33rem}
+  .hero .sig{
+    font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted-2);margin-top:3.5rem;
+  }
+
+  /* ---------- pill nav ---------- */
+  .pills{
+    position:sticky;top:0;z-index:4;
+    background:rgba(10,10,13,.92);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-soft);
+    padding:.85rem 0;
+  }
+  .pills-inner{
+    max-width:66rem;margin:0 auto;padding:0 1.5rem;
+    display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:thin;
+  }
+  .pills-inner::-webkit-scrollbar{height:3px}
+  .pills-inner::-webkit-scrollbar-thumb{background:var(--line)}
+  .pills a{
+    flex:0 0 auto;
+    font-size:.8rem;color:var(--muted);text-decoration:none;
+    padding:.42rem 1rem;border:1px solid var(--line);border-radius:999px;
+    white-space:nowrap;transition:.15s;
+  }
+  .pills a:hover{color:var(--white);border-color:var(--muted-2)}
+
+  /* ---------- sections ---------- */
+  section{padding:4.5rem 0;border-top:1px solid var(--line-soft)}
+  section:first-of-type{border-top:0}
+  h2{
+    font-family:var(--disp);font-weight:800;
+    font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.06;
+    letter-spacing:-.028em;color:var(--white);margin:0 0 1.4rem;text-wrap:balance;
+  }
+  h2 em{font-style:normal;color:var(--red)}
+  h3{
+    font-family:var(--disp);font-weight:700;font-size:1.25rem;
+    letter-spacing:-.012em;color:var(--white);margin:2.4rem 0 .6rem;
+  }
+  p{margin:0 0 1.15rem}
+  .lede{font-size:1.22rem;line-height:1.6;color:var(--white);font-style:italic;font-weight:400}
+  strong{color:var(--white);font-weight:700}
+  em{color:inherit}
+  .kbd{
+    font-family:var(--disp);font-weight:700;font-size:.92em;
+    color:var(--white);letter-spacing:.01em;
+  }
+  .sec-eyebrow{
+    font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--red);margin:0 0 .85rem;
+  }
+
+  /* ---------- figures ---------- */
+  figure{margin:2.75rem 0}
+  figure svg{width:100%;height:auto;display:block}
+  figcaption{
+    font-size:.82rem;line-height:1.6;color:var(--muted-2);
+    margin-top:1.1rem;padding-left:1rem;border-left:2px solid var(--red);
+  }
+
+  /* ---------- cards ---------- */
+  .pull{
+    border:1px solid rgba(255,18,64,.3);background:var(--red-wash);
+    border-radius:12px;padding:1.4rem 1.5rem;margin:2.25rem 0;
+  }
+  .pull p{margin:0;color:#D9D9E0}
+  .pull p + p{margin-top:.8rem}
+
+  .note{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:1.4rem 1.5rem;margin:2.25rem 0;
+  }
+  .note .tag{
+    font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--red);display:block;margin-bottom:.65rem;
+  }
+  .note p{margin:0;font-size:1rem}
+  .note p + p{margin-top:.7rem}
+
+  .note.cool{border-color:rgba(74,144,217,.28)}
+  .note.cool .tag{color:var(--blue)}
+
+  /* ---------- glossary ---------- */
+  .gloss{margin:1.5rem 0 0;border-top:1px solid var(--line)}
+  .gloss div{
+    display:grid;grid-template-columns:11rem 1fr;gap:1.5rem;
+    padding:1rem 0;border-bottom:1px solid var(--line-soft);
+  }
+  .gloss dt{
+    font-family:var(--disp);font-weight:700;font-size:.92rem;
+    color:var(--red);line-height:1.5;
+  }
+  .gloss dd{margin:0;font-size:.98rem}
+  @media(max-width:34rem){.gloss div{grid-template-columns:1fr;gap:.25rem}}
+
+  /* ---------- footer ---------- */
+  footer{
+    background:var(--bg-deep);border-top:1px solid var(--line-soft);
+    padding:3.5rem 0;font-size:.85rem;line-height:1.8;color:var(--muted-2);
+  }
+  footer .fmark{
+    font-family:var(--disp);font-weight:900;font-size:1.15rem;
+    color:var(--white);letter-spacing:-.02em;
+  }
+  footer .fmark span{color:var(--red)}
+
+  a{color:var(--red)}
+  a:focus-visible,summary:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="logo-link">
+    <img class="logo-img" src="assets/logo-futuria-web.png" alt="FUTURIA Institute" width="30" height="30">
+    <span class="mark">FUTURIA <span>Institute</span></span>
+  </a>
+  <nav class="topnav">
+    <a href="../#newsletter">Newsletter</a><a href="../#escenarios">Escenarios</a><a href="../#noticias">Noticias</a><a href="../#referentes">Referentes</a>
+  </nav>
+</div>
+
+<header class="hero">
+  <svg class="iso" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="#FF1240" stroke-width="1" opacity=".55">
+      <path d="M-50,90 C180,30 340,150 540,110 C740,70 900,160 1250,100"/>
+      <path d="M-50,145 C180,85 340,205 540,165 C740,125 900,215 1250,155"/>
+      <path d="M-50,200 C180,140 340,260 540,220 C740,180 900,270 1250,210"/>
+    </g>
+    <g fill="none" stroke="#8B6BD9" stroke-width="1" opacity=".45">
+      <path d="M-50,265 C200,205 360,325 560,285 C760,245 920,335 1250,275"/>
+      <path d="M-50,330 C200,270 360,390 560,350 C760,310 920,400 1250,340"/>
+      <path d="M-50,395 C200,335 360,455 560,415 C760,375 920,465 1250,405"/>
+    </g>
+    <g fill="#FF1240"><circle cx="540" cy="110" r="3.5"/><circle cx="900" cy="160" r="3.5"/><circle cx="180" cy="140" r="3.5"/></g>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow">FUTURIA Institute · Metodología PRISM</p>
+    <h1>Un servicio meteorológico<br>para el <em>futuro</em></h1>
+    <p class="stand">Cómo convertimos miles de hechos sueltos en escenarios que sirven para decidir. Sin bola de cristal y sin humo: con instrumentos, mediciones y una forma pública de saber cuándo nos equivocamos.</p>
+    <p class="sig">Lectura ~10 min · Versión divulgativa · Julio 2026</p>
+  </div>
+</header>
+
+<nav class="pills" aria-label="Secciones">
+  <div class="pills-inner">
+    <a href="#estacion">01 La estación</a>
+    <a href="#instrumento">02 El instrumento</a>
+    <a href="#pronostico">03 El pronóstico</a>
+    <a href="#honestidad">04 La honestidad</a>
+    <a href="#letra-chica">05 La letra chica</a>
+    <a href="#entregable">06 El entregable</a>
+    <a href="#glosario">Glosario</a>
+  </div>
+</nav>
+
+<section>
+  <div class="wrap">
+    <p class="lede">Nadie le pide al meteorólogo que adivine. Le pide que mire los instrumentos y diga, con honestidad, qué tan probable es que llueva mañana.</p>
+    <p>Eso es exactamente lo que hace FUTURIA, pero con el futuro tecnológico, económico y regulatorio en lugar del clima. Y la analogía no es un adorno para explicarlo fácil: es literal en un punto que casi nadie conoce.</p>
+    <p>El puntaje que usamos para calificar nuestros propios pronósticos —el <span class="kbd">Brier score</span>— lo inventó Glenn Brier en 1950, en la revista <em>Monthly Weather Review</em>, para medir si los pronósticos del tiempo eran buenos. La herramienta con la que nos autoevaluamos nació, literalmente, en un servicio meteorológico.</p>
+    <p>Así que usemos la analogía en serio. Un servicio meteorológico tiene cinco cosas: sensores, mediciones, mapas, pronóstico y un consejo para tu campo. FUTURIA también.</p>
+  </div>
+</section>
+
+<section id="estacion">
+  <div class="wide">
+    <p class="sec-eyebrow">01 · La estación completa</p>
+    <h2>De la gota al consejo, en <em>cinco pasos</em></h2>
+  </div>
+  <div class="wide">
+    <figure>
+      <svg viewBox="0 0 1000 300" role="img" aria-labelledby="t-pipe">
+        <title id="t-pipe">Las cinco etapas: captación, calificación, correlación, construcción y proyección</title>
+        <defs>
+          <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0,1 L7,4.5 L0,8 z" fill="#4A4A56"/>
+          </marker>
+        </defs>
+        <g font-family="Lato, sans-serif">
+          <g stroke="#4A4A56" stroke-width="1.5" marker-end="url(#ar)">
+            <line x1="182" y1="140" x2="212" y2="140"/>
+            <line x1="366" y1="140" x2="396" y2="140"/>
+            <line x1="550" y1="140" x2="580" y2="140"/>
+            <line x1="734" y1="140" x2="764" y2="140"/>
+          </g>
+
+          <!-- 01 -->
+          <rect x="10" y="70" width="172" height="140" rx="11" fill="#131317" stroke="#26262D"/>
+          <text x="26" y="96" font-size="10.5" font-weight="700" fill="#FF1240" letter-spacing="1.6">01</text>
+          <text x="26" y="120" font-size="15" font-weight="800" fill="#FFFFFF" font-family="Archivo, sans-serif" letter-spacing="-.3">CAPTACIÓN</text>
+          <g transform="translate(96,160)" stroke="#94949F" stroke-width="1.5" fill="none">
+            <line x1="0" y1="22" x2="0" y2="-6"/><line x1="-14" y1="22" x2="14" y2="22"/>
+            <circle cx="0" cy="-11" r="5" fill="#FF1240" stroke="none"/>
+            <path d="M-11,-16 A15,15 0 0,1 11,-16" opacity=".5"/>
+            <path d="M-18,-23 A24,24 0 0,1 18,-23" opacity=".25"/>
+          </g>
+          <text x="96" y="200" font-size="9.5" fill="#6B6B77" text-anchor="middle">los sensores</text>
+
+          <!-- 02 -->
+          <rect x="194" y="70" width="172" height="140" rx="11" fill="#131317" stroke="#26262D"/>
+          <text x="210" y="96" font-size="10.5" font-weight="700" fill="#FF1240" letter-spacing="1.6">02</text>
+          <text x="210" y="120" font-size="15" font-weight="800" fill="#FFFFFF" font-family="Archivo, sans-serif" letter-spacing="-.3">CALIFICACIÓN</text>
+          <g transform="translate(280,162)">
+            <circle cx="0" cy="0" r="21" fill="none" stroke="#94949F" stroke-width="1.5"/>
+            <path d="M0,0 L13,-13" stroke="#FF1240" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="0" cy="0" r="2.5" fill="#FFFFFF"/>
+            <path d="M-15,-15 A21,21 0 0,1 15,-15" fill="none" stroke="#4A4A56" stroke-width="1"/>
+          </g>
+          <text x="280" y="200" font-size="9.5" fill="#6B6B77" text-anchor="middle">el barómetro</text>
+
+          <!-- 03 -->
+          <rect x="378" y="70" width="172" height="140" rx="11" fill="#131317" stroke="#26262D"/>
+          <text x="394" y="96" font-size="10.5" font-weight="700" fill="#FF1240" letter-spacing="1.6">03</text>
+          <text x="394" y="120" font-size="15" font-weight="800" fill="#FFFFFF" font-family="Archivo, sans-serif" letter-spacing="-.3">CORRELACIÓN</text>
+          <g transform="translate(464,160)" fill="none" stroke="#94949F" stroke-width="1.4">
+            <path d="M-26,10 C-14,-8 6,16 26,-4" opacity=".45"/>
+            <path d="M-26,2 C-14,-16 6,8 26,-12" opacity=".7"/>
+            <path d="M-26,18 C-14,0 6,24 26,4" opacity=".3"/>
+            <circle cx="0" cy="4" r="3.5" fill="#FF1240" stroke="none"/>
+          </g>
+          <text x="464" y="200" font-size="9.5" fill="#6B6B77" text-anchor="middle">el frente de tormenta</text>
+
+          <!-- 04 -->
+          <rect x="562" y="70" width="172" height="140" rx="11" fill="#131317" stroke="#26262D"/>
+          <text x="578" y="96" font-size="10.5" font-weight="700" fill="#FF1240" letter-spacing="1.6">04</text>
+          <text x="578" y="120" font-size="15" font-weight="800" fill="#FFFFFF" font-family="Archivo, sans-serif" letter-spacing="-.3">CONSTRUCCIÓN</text>
+          <g transform="translate(648,154)">
+            <path d="M-20,6 A11,11 0 0,1 -12,-12 A14,14 0 0,1 14,-8 A9,9 0 0,1 16,6 Z" fill="#26262D" stroke="#94949F" stroke-width="1.4"/>
+            <g stroke="#FF1240" stroke-width="1.5" stroke-linecap="round" opacity=".85">
+              <line x1="-11" y1="14" x2="-14" y2="22"/><line x1="0" y1="14" x2="-3" y2="22"/><line x1="11" y1="14" x2="8" y2="22"/>
+            </g>
+          </g>
+          <text x="648" y="200" font-size="9.5" fill="#6B6B77" text-anchor="middle">el pronóstico</text>
+
+          <!-- 05 -->
+          <rect x="746" y="70" width="172" height="140" rx="11" fill="rgba(255,18,64,.09)" stroke="#FF1240"/>
+          <text x="762" y="96" font-size="10.5" font-weight="700" fill="#FF1240" letter-spacing="1.6">05</text>
+          <text x="762" y="120" font-size="15" font-weight="800" fill="#FFFFFF" font-family="Archivo, sans-serif" letter-spacing="-.3">PROYECCIÓN</text>
+          <g transform="translate(832,160)" stroke="#FF1240" stroke-width="1.6" fill="none">
+            <path d="M-22,16 L-22,0 L0,-16 L22,0 L22,16 Z"/>
+            <path d="M-8,16 L-8,4 L8,4 L8,16" stroke="#94949F"/>
+          </g>
+          <text x="832" y="200" font-size="9.5" fill="#94949F" text-anchor="middle">tu campo</text>
+
+          <g font-size="10.5" fill="#6B6B77">
+            <text x="10" y="252">diario</text><text x="194" y="252">diario</text>
+            <text x="378" y="252">semanal</text><text x="562" y="252">quincenal</text>
+          </g>
+          <text x="746" y="252" font-size="10.5" font-weight="700" fill="#FF1240">por encargo · producto</text>
+        </g>
+      </svg>
+      <figcaption>Las etapas 1 y 2 corren todos los días. La 5 es la única que se cobra: es el pronóstico hecho para tu campo, no para la región.</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <h3>01 · Los sensores</h3>
+    <p>Todos los días rastreamos el mundo buscando <strong>señales</strong>: un paper, una patente, una ley, un anuncio, un cambio cultural. Una señal es una gota. No es la tormenta, no anuncia nada por sí sola, y la mayoría no significa nada.</p>
+    <p>Cada gota entra a la biblioteca con su origen anotado y un dato obligatorio: la <strong>contra-señal</strong>, o sea, la evidencia que apunta en dirección contraria. Sin ese campo, la ficha está incompleta. Es nuestra defensa contra el vicio más común del oficio: enamorarse de la propia tendencia.</p>
+
+    <h3>02 · El barómetro</h3>
+    <p>Después medimos. Le hacemos a cada señal dos preguntas distintas —y esa distinción es el corazón del método—. Va abajo, en detalle.</p>
+
+    <h3>03 · El frente de tormenta</h3>
+    <p>Una gota no es nada; mil gotas con una dirección común son un frente. Acá agrupamos las señales y buscamos cuáles se empujan entre sí. La pregunta que ordena todo: <em>si esto pasa, ¿qué otra cosa se vuelve más probable?</em></p>
+    <p>De ahí sale la distinción que separa a un analista de un opinólogo: cuál señal es <strong>causa</strong> y cuál es <strong>síntoma</strong>. Narrar el síntoma como si fuera la causa es el error más común de la prospectiva amateur.</p>
+
+    <h3>04 · El pronóstico</h3>
+    <p>Cuando un frente madura, escribimos un <strong>escenario PRISM</strong>: una historia concreta y fechada de cómo podría desarrollarse, con su probabilidad y —esto es lo importante— con su <strong>certificado de defunción</strong> anticipado.</p>
+
+    <h3>05 · El pronóstico para tu campo</h3>
+    <p>El servicio meteorológico dice "70% de lluvia en la región". Útil, gratis, para todos. Pero si tenés 400 hectáreas de soja a punto de cosecha, lo que necesitás es otra cosa: <em>¿cosecho hoy o espero?</em></p>
+    <p>Eso es la <strong>proyección sectorial</strong>: los escenarios generales aplicados a tu empresa, tu gobierno o tu comunidad, con las decisiones que tenés que tomar y las fechas límite para tomarlas. Es el único producto que se cobra.</p>
+  </div>
+</section>
+
+<section id="instrumento">
+  <div class="wide">
+    <p class="sec-eyebrow">02 · El instrumento</p>
+    <h2>Dos preguntas que <em>no hay que mezclar</em></h2>
+  </div>
+  <div class="wrap">
+    <p>Casi todos los sistemas de vigilancia cometen el mismo error: puntúan cada señal con un solo número, mezclando cosas que no se pueden mezclar. Nosotros hacemos <strong>dos preguntas separadas</strong>, y sale un punto en una pantalla de radar.</p>
+    <p><strong>Primera: ¿qué tan sólido es esto?</strong> ¿La fuente es buena? ¿Hay más de una, de verdad independiente? ¿Se está acelerando? Eso es el <span class="kbd">IES</span>, el índice de evidencia.</p>
+    <p><strong>Segunda: si pasa, ¿cuánto mueve el tablero?</strong> ¿Cambia una práctica o cambia las reglas del juego? ¿Habilita otras cosas? ¿Se puede volver atrás? Eso es el <span class="kbd">PS</span>, el peso sistémico.</p>
+    <p>Son preguntas independientes, y por eso van en ejes distintos. Un rumor sobre algo enorme y un hecho confirmado sobre algo menor no son "más o menos parecidos": están en esquinas opuestas del radar.</p>
+  </div>
+
+  <div class="wide">
+    <figure>
+      <svg viewBox="0 0 720 520" role="img" aria-labelledby="t-radar">
+        <title id="t-radar">Matriz de evidencia contra peso sistémico, con cuatro cuadrantes</title>
+        <defs>
+          <clipPath id="scr"><rect x="110" y="40" width="440" height="380" rx="12"/></clipPath>
+        </defs>
+
+        <rect x="110" y="40" width="440" height="380" rx="12" fill="#0F0F13" stroke="#26262D"/>
+        <g clip-path="url(#scr)">
+          <g fill="none" stroke="#26262D" stroke-width="1">
+            <circle cx="110" cy="420" r="120"/><circle cx="110" cy="420" r="220"/>
+            <circle cx="110" cy="420" r="320"/><circle cx="110" cy="420" r="420"/>
+          </g>
+          <rect x="110" y="40" width="220" height="190" fill="#FF1240" opacity=".1"/>
+        </g>
+
+        <g stroke="#3A3A44" stroke-width="1" stroke-dasharray="4 4">
+          <line x1="330" y1="40" x2="330" y2="420"/>
+          <line x1="110" y1="230" x2="550" y2="230"/>
+        </g>
+
+        <g font-family="Lato, sans-serif">
+          <!-- Q2 -->
+          <text x="130" y="72" font-size="10" font-weight="700" fill="#FF1240" letter-spacing="1.5">Q2</text>
+          <text x="130" y="97" font-size="17" font-weight="800" fill="#FF1240" font-family="Archivo, sans-serif" letter-spacing="-.4">CARTA SALVAJE</text>
+          <text x="130" y="118" font-size="10.5" fill="#B5808F">poca evidencia · peso enorme</text>
+          <text x="130" y="136" font-size="10.5" fill="#B5808F">→ vigilancia intensiva</text>
+          <text x="130" y="154" font-size="10.5" fill="#B5808F">→ no se publica todavía</text>
+          <g transform="translate(243,193)">
+            <circle r="17" fill="none" stroke="#FF1240" stroke-width="1" opacity=".5"/>
+            <circle r="27" fill="none" stroke="#FF1240" stroke-width="1" opacity=".22"/>
+            <circle r="5" fill="#FF1240"/>
+          </g>
+
+          <!-- Q1 -->
+          <text x="352" y="72" font-size="10" font-weight="700" fill="#6B6B77" letter-spacing="1.5">Q1</text>
+          <text x="352" y="97" font-size="17" font-weight="800" fill="#FFFFFF" font-family="Archivo, sans-serif" letter-spacing="-.4">DRIVER ACTIVO</text>
+          <text x="352" y="118" font-size="10.5" fill="#94949F">sólido · peso enorme</text>
+          <text x="352" y="136" font-size="10.5" fill="#94949F">→ eje de escenario</text>
+          <text x="352" y="154" font-size="10.5" fill="#94949F">→ publicable</text>
+          <g fill="#4A90D9"><circle cx="430" cy="188" r="4.5"/><circle cx="472" cy="202" r="4.5"/><circle cx="502" cy="172" r="4.5"/></g>
+
+          <!-- Q4 -->
+          <text x="130" y="264" font-size="10" font-weight="700" fill="#4A4A56" letter-spacing="1.5">Q4</text>
+          <text x="130" y="289" font-size="17" font-weight="800" fill="#4A4A56" font-family="Archivo, sans-serif" letter-spacing="-.4">DESCARTE</text>
+          <text x="130" y="310" font-size="10.5" fill="#3A3A44">ruido</text>
+          <g fill="#2E2E38"><circle cx="182" cy="362" r="3.5"/><circle cx="232" cy="392" r="3.5"/><circle cx="272" cy="347" r="3.5"/><circle cx="152" cy="400" r="3.5"/><circle cx="300" cy="394" r="3.5"/></g>
+
+          <!-- Q3 -->
+          <text x="352" y="264" font-size="10" font-weight="700" fill="#4A4A56" letter-spacing="1.5">Q3</text>
+          <text x="352" y="289" font-size="17" font-weight="800" fill="#6B6B77" font-family="Archivo, sans-serif" letter-spacing="-.4">RUIDO CONFIRMADO</text>
+          <text x="352" y="310" font-size="10.5" fill="#4A4A56">cierto pero intrascendente</text>
+          <text x="352" y="328" font-size="10.5" fill="#4A4A56">→ archivo</text>
+          <g fill="#4A4A56"><circle cx="442" cy="370" r="3.5"/><circle cx="492" cy="346" r="3.5"/><circle cx="520" cy="390" r="3.5"/></g>
+
+          <!-- axes -->
+          <text x="330" y="452" font-size="10.5" font-weight="700" fill="#94949F" text-anchor="middle" letter-spacing="1.8">EVIDENCIA · IES →</text>
+          <g font-size="9" fill="#4A4A56">
+            <text x="122" y="440">0</text><text x="322" y="440">60</text><text x="538" y="440">100</text>
+            <text x="96" y="418" text-anchor="end">0</text><text x="96" y="234" text-anchor="end">60</text><text x="96" y="50" text-anchor="end">100</text>
+          </g>
+          <g transform="translate(86,230) rotate(-90)">
+            <text x="0" y="0" font-size="10.5" font-weight="700" fill="#94949F" text-anchor="middle" letter-spacing="1.8">PESO SISTÉMICO · PS →</text>
+          </g>
+
+          <text x="110" y="494" font-size="11.5" fill="#6B6B77">Cualquiera lee Q1 en el diario de mañana.</text>
+          <text x="110" y="511" font-size="11.5" font-weight="700" fill="#FF1240">Detectar Q2 dos años antes es el producto.</text>
+        </g>
+      </svg>
+      <figcaption>Cada punto es una señal. El cuadrante define qué se hace con ella — no hay decisiones a ojo.</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <div class="pull">
+      <p><strong>El cuadrante que justifica todo esto es el rojo.</strong></p>
+      <p>Una señal con poca evidencia y peso enorme es incómoda: no la podés publicar, no la podés probar, y suena a especulación. La tentación de archivarla es enorme. Pero ese es exactamente el lugar donde vive todo lo que después cambia el mundo: cuando la evidencia sea sólida, ya salió en el diario y ya es tarde para vos.</p>
+      <p>Por eso <em>poca evidencia</em> en FUTURIA no es un demérito. Es una coordenada.</p>
+    </div>
+
+    <div class="note cool">
+      <span class="tag">Regla anti-eco</span>
+      <p>Si cinco medios publican la misma noticia porque los cinco recibieron el mismo comunicado de prensa, eso <strong>no</strong> son cinco fuentes: es una. Contamos orígenes independientes, no links. Parece obvio y casi ningún sistema lo hace — por eso el ruido se confunde tan seguido con consenso.</p>
+    </div>
+
+    <div class="note cool">
+      <span class="tag">Un anuncio no es un hecho</span>
+      <p>Cuando la señal es una promesa, un target o un anuncio, la ficha exige una pregunta más: <em>de cosas así anunciadas antes, ¿cuántas se cumplieron?</em> Si no ponés ese número, la velocidad se termina puntuando por entusiasmo. Es la diferencia entre un analista y un fan.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pronostico">
+  <div class="wide">
+    <p class="sec-eyebrow">03 · El pronóstico</p>
+    <h2>Los escenarios no nacen de lo importante.<br>Nacen de lo <em>incierto</em>.</h2>
+  </div>
+  <div class="wrap">
+    <p>Acá hay una idea contraintuitiva que vale toda la metodología.</p>
+    <p>Cuando uno estudia un negocio, aparecen muchas variables importantes. La tentación es armar los escenarios con las más importantes. Es un error.</p>
+    <p>Pensalo así: que la población argentina va a estar más envejecida en 2035 es importantísimo para una obra social. Pero <strong>no genera escenarios</strong>, porque no es incierto: la gente que va a tener 70 años en 2035 ya nació. Eso no es un pronóstico, es una cuenta. Va idéntico en todos los escenarios.</p>
+    <p>Lo que genera escenarios es lo que es <em>importante</em> <strong>y además</strong> <em>incierto</em>. Si a una IA se le reconoce personalidad jurídica o no, eso sí está genuinamente abierto — y cambia todo según cómo caiga.</p>
+    <p>Entonces: se miden las dos cosas por separado, y los <strong>dos ejes</strong> del escenario salen de las dos incertidumbres más críticas e independientes entre sí. Cruzarlas da cuatro futuros.</p>
+  </div>
+
+  <div class="wide">
+    <figure>
+      <svg viewBox="0 0 760 480" role="img" aria-labelledby="t-ejes">
+        <title id="t-ejes">Cómo dos incertidumbres críticas generan cuatro escenarios</title>
+        <defs><marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,1 L7,4.5 L0,8 z" fill="#4A4A56"/></marker></defs>
+        <g font-family="Lato, sans-serif">
+          <rect x="0" y="46" width="250" height="330" rx="11" fill="#131317" stroke="#26262D"/>
+          <text x="20" y="74" font-size="10" font-weight="700" fill="#FF1240" letter-spacing="1.5">PASO 1 · CLASIFICAR</text>
+
+          <line x1="20" y1="90" x2="230" y2="90" stroke="#26262D"/>
+          <text x="20" y="114" font-size="10.5" fill="#6B6B77">importante + SEGURO</text>
+          <text x="20" y="134" font-size="12.5" font-weight="800" fill="#FFFFFF" font-family="Archivo, sans-serif" letter-spacing="-.3">PREDETERMINADO</text>
+          <text x="20" y="152" font-size="9.5" fill="#6B6B77">va igual en los 4 · no es eje</text>
+          <text x="20" y="169" font-size="9.5" fill="#4A4A56" font-style="italic">ej: envejecimiento poblacional</text>
+
+          <line x1="20" y1="187" x2="230" y2="187" stroke="#26262D"/>
+          <text x="20" y="211" font-size="10.5" fill="#FF1240">importante + INCIERTO</text>
+          <text x="20" y="231" font-size="12.5" font-weight="800" fill="#FF1240" font-family="Archivo, sans-serif" letter-spacing="-.3">INCERTIDUMBRE CRÍTICA</text>
+          <text x="20" y="249" font-size="9.5" fill="#B5808F">→ candidata a EJE</text>
+          <text x="20" y="266" font-size="9.5" fill="#8A5F6B" font-style="italic">ej: personalidad jurídica de la IA</text>
+
+          <line x1="20" y1="284" x2="230" y2="284" stroke="#26262D"/>
+          <text x="20" y="308" font-size="10.5" fill="#6B6B77">poco importante</text>
+          <text x="20" y="328" font-size="12.5" font-weight="800" fill="#6B6B77" font-family="Archivo, sans-serif" letter-spacing="-.3">CONTEXTO</text>
+          <text x="20" y="346" font-size="9.5" fill="#4A4A56">→ fuera del eje</text>
+
+          <line x1="258" y1="210" x2="292" y2="210" stroke="#4A4A56" stroke-width="1.5" marker-end="url(#ar2)"/>
+
+          <text x="312" y="32" font-size="10" font-weight="700" fill="#FF1240" letter-spacing="1.5">PASO 2 · CRUZAR LAS DOS MÁS CRÍTICAS</text>
+
+          <rect x="382" y="48" width="176" height="146" rx="10" fill="#131317" stroke="#26262D"/>
+          <rect x="564" y="48" width="176" height="146" rx="10" fill="#131317" stroke="#26262D"/>
+          <rect x="382" y="200" width="176" height="146" rx="10" fill="#131317" stroke="#26262D"/>
+          <rect x="564" y="200" width="176" height="146" rx="10" fill="#131317" stroke="#26262D"/>
+
+          <g font-family="Archivo, sans-serif" font-weight="800" font-size="14" fill="#FFFFFF" letter-spacing="-.3">
+            <text x="400" y="114">ESCENARIO A</text><text x="582" y="114">ESCENARIO B</text>
+            <text x="400" y="266">ESCENARIO C</text><text x="582" y="266">ESCENARIO D</text>
+          </g>
+          <g font-size="9.5" fill="#6B6B77">
+            <text x="400" y="135">nombre memorable,</text><text x="400" y="150">no una letra</text>
+            <text x="582" y="135">cada uno con su</text><text x="582" y="150">criterio de defunción</text>
+            <text x="400" y="287">el predeterminado</text><text x="400" y="302">aparece en los cuatro</text>
+            <text x="582" y="287">si no distinguís A de B</text><text x="582" y="302">en una oración: mal eje</text>
+          </g>
+
+          <line x1="382" y1="368" x2="740" y2="368" stroke="#FF1240" stroke-width="1.5"/>
+          <text x="561" y="388" font-size="10" font-weight="700" fill="#FF1240" text-anchor="middle" letter-spacing="1.4">EJE 1 · INCERTIDUMBRE CRÍTICA</text>
+          <text x="386" y="388" font-size="9" fill="#4A4A56">polo ←</text>
+          <text x="736" y="388" font-size="9" fill="#4A4A56" text-anchor="end">→ polo</text>
+
+          <line x1="368" y1="48" x2="368" y2="346" stroke="#FF1240" stroke-width="1.5"/>
+          <g transform="translate(350,197) rotate(-90)">
+            <text x="0" y="0" font-size="10" font-weight="700" fill="#FF1240" text-anchor="middle" letter-spacing="1.4">EJE 2 · INCERTIDUMBRE CRÍTICA</text>
+          </g>
+
+          <g font-size="10.5" fill="#6B6B77">
+            <text x="382" y="430">Los dos ejes tienen que ser independientes entre sí.</text>
+            <text x="382" y="449">Si se mueven juntos, los cuatro cuadrantes colapsan en dos</text>
+            <text x="382" y="468">y creés que tenés cuatro futuros cuando tenés uno y su opuesto.</text>
+          </g>
+        </g>
+      </svg>
+      <figcaption>Método de ejes por incertidumbres críticas — adoptado de la escuela Shell / Global Business Network. No es invención nuestra, y lo decimos.</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <div class="note">
+      <span class="tag">El certificado de defunción</span>
+      <p>Cada escenario nuestro se publica con una cláusula incómoda: <em>qué observación concreta, con fecha, lo mataría</em>. Por ejemplo: "si al 31/12/2028 ningún país fuera de EE.UU., China o la UE tiene un clúster de cómputo soberano <strong>funcionando</strong> —no anunciado—, este escenario se declara muerto y se reescribe."</p>
+      <p>Un escenario que no se puede matar no es una hipótesis: es una creencia. Y las creencias no se le venden a un gobierno.</p>
+    </div>
+  </div>
+</section>
+
+<section id="honestidad">
+  <div class="wide">
+    <p class="sec-eyebrow">04 · La honestidad</p>
+    <h2>Cómo sabés que <em>no te estamos vendiendo humo</em></h2>
+  </div>
+  <div class="wrap">
+    <p>Esta es la parte donde la analogía meteorológica se vuelve más útil, porque contesta la pregunta que todo el mundo tiene y casi nadie hace en voz alta: <em>¿y si le erran?</em></p>
+    <p>Cuando el pronóstico dice 70% de lluvia y no llueve, nadie acusa al meteorólogo de mentir. Todos entendemos intuitivamente que 70% no es una promesa. Lo que sí se puede exigir es que, <strong>de todas las veces que dijo 70%, haya llovido cerca de 7 de cada 10</strong>. A eso se le llama estar calibrado, y es lo único que separa a un pronosticador de un chanta.</p>
+    <p>Entonces FUTURIA se somete a la misma vara:</p>
+    <p>Toda predicción nuestra lleva un <strong>número</strong> y una <strong>fecha</strong>. Nunca "es probable que"; siempre "70%, y lo sabremos el 31/12/2028". Cuando llega la fecha, se anota si pasó o no pasó. Sin excusas retrospectivas, sin explicar por qué en realidad casi acertamos.</p>
+    <p>Y una vez por año publicamos la tabla completa: qué dijimos, con qué probabilidad, qué pasó. Incluidos los errores. <strong>Especialmente los errores.</strong></p>
+    <div class="pull">
+      <p>Es el activo más difícil de copiar que existe en este oficio, y la razón es simple: cualquiera puede escribir un informe que suene inteligente. Muy pocos se animan a publicar el marcador.</p>
+    </div>
+  </div>
+</section>
+
+<section id="letra-chica">
+  <div class="wide">
+    <p class="sec-eyebrow">05 · La letra chica</p>
+    <h2>Dónde la analogía <em>se rompe</em></h2>
+  </div>
+  <div class="wrap">
+    <p>Toda analogía miente en algún lado. Decir dónde es lo que la vuelve honesta, así que acá va.</p>
+    <p><strong>Un huracán no cambia de rumbo porque vos lo pronosticaste. Una empresa sí.</strong></p>
+    <p>El clima obedece a la física y le da exactamente lo mismo lo que digamos de él. El futuro tecnológico y regulatorio, no: está hecho de decisiones humanas, y las decisiones humanas <em>reaccionan al pronóstico</em>. Si diez aseguradoras leen que la regulación va hacia cierto lado, se mueven, y con eso cambian hacia dónde va la regulación.</p>
+    <p>Esto tiene dos consecuencias que conviene tener presentes:</p>
+    <p>La primera es que un escenario que no se cumple <strong>no siempre es un escenario fallido</strong>. A veces no se cumplió precisamente porque alguien lo leyó a tiempo y actuó. Es el mismo problema del ingeniero que arregla el puente antes de que se caiga: nadie le agradece por el derrumbe que no pasó.</p>
+    <p>La segunda es más incómoda, y es la razón por la que el certificado de defunción existe: como el sistema reacciona, la tentación de reinterpretar cualquier resultado como una confirmación es enorme. Por eso el criterio de muerte se escribe <em>antes</em>, y con fecha.</p>
+  </div>
+</section>
+
+<section id="entregable">
+  <div class="wide">
+    <p class="sec-eyebrow">06 · El entregable</p>
+    <h2>Por qué nuestros informes <em>se leen como historias</em></h2>
+  </div>
+  <div class="wrap">
+    <p>Un informe de prospectiva que nadie termina de leer no sirve para nada, por riguroso que sea. Pero simplificarlo tampoco es la respuesta: un cliente que va a tomar una decisión de millones necesita poder auditar el razonamiento.</p>
+    <p>La solución no es simplificar. Es <strong>separar en capas</strong>.</p>
+  </div>
+
+  <div class="wide">
+    <figure>
+      <svg viewBox="0 0 720 300" role="img" aria-labelledby="t-capas">
+        <title id="t-capas">Arquitectura de dos capas: relato y aparato</title>
+        <g font-family="Lato, sans-serif">
+          <rect x="20" y="20" width="680" height="115" rx="12" fill="rgba(255,18,64,.07)" stroke="#FF1240"/>
+          <text x="44" y="50" font-size="10" font-weight="700" fill="#FF1240" letter-spacing="1.6">CAPA 1</text>
+          <text x="44" y="80" font-size="22" font-weight="900" fill="#FFFFFF" font-family="Archivo, sans-serif" letter-spacing="-.6">EL RELATO</text>
+          <text x="44" y="102" font-size="11" fill="#94949F">Una historia en presente, con fechas y nombres. Cero tablas.</text>
+          <text x="44" y="120" font-size="11" fill="#94949F">La lee tu directorio, un ministro, un periodista.</text>
+          <g transform="translate(618,78)" fill="none" stroke="#FF1240" stroke-width="1.4" opacity=".65">
+            <path d="M-26,16 L-26,-14 L26,-14 L26,16 Z"/>
+            <line x1="-16" y1="-4" x2="16" y2="-4"/><line x1="-16" y1="5" x2="16" y2="5"/>
+          </g>
+
+          <line x1="360" y1="135" x2="360" y2="165" stroke="#4A4A56" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <text x="374" y="156" font-size="10" fill="#6B6B77">enlace, no interrupción</text>
+
+          <rect x="20" y="165" width="680" height="115" rx="12" fill="#0F0F13" stroke="#26262D"/>
+          <text x="44" y="195" font-size="10" font-weight="700" fill="#4A90D9" letter-spacing="1.6">CAPA 2</text>
+          <text x="44" y="225" font-size="22" font-weight="900" fill="#94949F" font-family="Archivo, sans-serif" letter-spacing="-.6">EL APARATO</text>
+          <text x="44" y="247" font-size="11" fill="#6B6B77">Puntajes, matrices, fuentes, probabilidades, rúbricas.</text>
+          <text x="44" y="265" font-size="11" fill="#6B6B77">Lo abre quien quiere auditarnos. Está siempre disponible.</text>
+          <g transform="translate(618,223)" fill="none" stroke="#4A90D9" stroke-width="1.4" opacity=".5">
+            <rect x="-26" y="-16" width="52" height="32"/>
+            <line x1="-26" y1="-6" x2="26" y2="-6"/><line x1="-26" y1="4" x2="26" y2="4"/>
+            <line x1="-9" y1="-16" x2="-9" y2="16"/><line x1="9" y1="-16" x2="9" y2="16"/>
+          </g>
+        </g>
+      </svg>
+      <figcaption>El rigor tiene que estar <em>disponible</em>, no <em>en el camino</em>.</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <p>Arriba va el relato: qué pasa, cuándo, con quién. Se lee de corrido, como una nota larga de domingo. Abajo va todo el aparato: los puntajes, las matrices, las fuentes, las probabilidades. Enlazado, nunca interrumpiendo.</p>
+    <p>Y hay una regla de oficio detrás de esto: <strong>el que analiza no es el que escribe.</strong> Igual que el que redacta no es el que verifica. Un analista enamorado de su propio razonamiento no puede juzgar si se entiende, del mismo modo que no puede auditar si es cierto.</p>
+  </div>
+</section>
+
+<section id="glosario">
+  <div class="wrap">
+    <p class="sec-eyebrow">Glosario</p>
+    <h2>Diez palabras <em>y listo</em></h2>
+    <dl class="gloss">
+      <div><dt>Señal</dt><dd>Un hecho verificable que podría indicar un cambio. Una gota, no la tormenta.</dd></div>
+      <div><dt>Contra-señal</dt><dd>La evidencia que apunta en contra. Campo obligatorio: sin ella, la ficha está incompleta.</dd></div>
+      <div><dt>IES</dt><dd>Índice de evidencia. Qué tan sólido y qué tan vivo es lo que vemos.</dd></div>
+      <div><dt>PS</dt><dd>Peso sistémico. Cuánto mueve el tablero si llega a pasar.</dd></div>
+      <div><dt>Carta salvaje</dt><dd>Poca evidencia, peso enorme. El cuadrante donde vive lo que después cambia todo.</dd></div>
+      <div><dt>Predeterminado</dt><dd>Importante pero no incierto. Va igual en todos los escenarios. No genera futuros.</dd></div>
+      <div><dt>Incertidumbre crítica</dt><dd>Importante <em>y</em> abierto. De acá salen los ejes de los escenarios.</dd></div>
+      <div><dt>PRISM</dt><dd>Nuestro formato de escenario. Once componentes, incluido su certificado de defunción.</dd></div>
+      <div><dt>Calibración</dt><dd>Que cuando decimos 70%, pase 7 de cada 10 veces. Se publica una vez al año.</dd></div>
+      <div><dt>Proyección sectorial</dt><dd>El pronóstico hecho para tu campo. El único producto que se cobra.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="fmark">FUTURIA <span>Institute</span></p>
+    <p style="margin-top:.6rem">Observatorio de Vigilancia Estratégica · Metodología PRISM v1.0</p>
+    <p style="margin-top:1.6rem">Versión divulgativa. El aparato metodológico completo —rúbricas, fórmulas,<br>matrices y protocolo de validación— está disponible para auditoría.</p>
+    <p style="margin-top:1.6rem;color:#4A4A56">Julio 2026 · futuria.institute</p>
+  </div>
+</footer>
+
+</body>
+</html>

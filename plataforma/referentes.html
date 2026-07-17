@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUTURIA — Referentes</title>
+  <style>
+    :root { --bg:#06060a; --text:#e4e4ec; --muted:#8a8a9e; --accent:#ff5230; --border:rgba(255,255,255,0.07); --card:rgba(255,255,255,0.03); }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background:var(--bg); color:var(--text); line-height:1.75; }
+    a { color: var(--accent); text-decoration: none; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 1.8rem; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(6,6,10,0.85); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1180px; margin: 0 auto; padding: 1rem 1.8rem; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { font-weight: 900; letter-spacing: -0.04em; font-size: 1.3rem; color: #fff; text-decoration:none; }
+    .nav-brand em { color: var(--accent); font-style: normal; }
+    .back { color: var(--muted); font-size: 0.9rem; margin-top: 3.2rem; display: inline-block; }
+    .section-title { font-size: 2.1rem; font-weight: 800; margin-top: 3.2rem; letter-spacing: -0.03em; }
+    .section-title em { color: var(--accent); font-style: normal; }
+    .section-lead { color: var(--muted); font-size: 1.1rem; max-width: 760px; margin-top: 0.6rem; margin-bottom: 2rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 1rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 1rem; padding: 1.3rem 1.4rem; }
+    .card h3 { color:#fff; font-size:1rem; margin-bottom:0.4rem; }
+    .card p { color:var(--muted); font-size:0.92rem; }
+    .card a { font-size:0.88rem; }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">FUTU<em>RIA</em></a>
+    <a href="/" class="back">← Volver</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="section-title">Referentes <em>del campo</em></div>
+  <p class="section-lead">Estudios, institutos y voces que usamos como benchmark y diálogo permanente.</p>
+  <div class="grid-3">
+    <div class="card">
+      <h3>World Futures Studies Federation</h3>
+      <p>Referente global en metodología de futuros.</p>
+      <a href="https://www.wfsf.org/" target="_blank" rel="noopener">wfsf.org →</a>
+    </div>
+    <div class="card">
+      <h3>Institute for the Future (IFTF)</h3>
+      <p>Reportes de escenarios y señales tempranas.</p>
+      <a href="https://www.iftf.org/" target="_blank" rel="noopener">iftf.org →</a>
+    </div>
+    <div class="card">
+      <h3>Long Now Foundation</h3>
+      <p>Pensamiento a largo plazo y narrativa.</p>
+      <a href="https://longnow.org/" target="_blank" rel="noopener">longnow.org →</a>
+    </div>
+    <div class="card">
+      <h3>RAND — Futures</h3>
+      <p>Escenarios para policy y defensa.</p>
+      <a href="https://www.rand.org/topics/futures.html" target="_blank" rel="noopener">rand.org →</a>
+    </div>
+    <div class="card">
+      <h3>Future of Humanity Institute (Oxford)</h3>
+      <p>Riesgo existencial, IA y gobernanza.</p>
+      <a href="https://www.fhi.ox.ac.uk/" target="_blank" rel="noopener">fhi.ox.ac.uk →</a>
+    </div>
+    <div class="card">
+      <h3>MIT Technology Review</h3>
+      <p>Periodismo tecnológico con foco en impacto.</p>
+      <a href="https://www.technologyreview.com/" target="_blank" rel="noopener">technologyreview.com →</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

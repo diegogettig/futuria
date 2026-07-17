@@ -1,0 +1,18 @@
+{
+  "registro": "Calibracion del Observatorio FUTURIA — historial de predicciones (disciplina Superforecasting, Manual §8)",
+  "regla": "Toda prediccion lleva probabilidad numerica y fecha de resolucion. Al vencer se marca resuelto=1 (ocurrio) o 0 (no) y se calcula Brier = (prob - resultado)^2. Objetivo: Brier promedio < 0.20.",
+  "generado": "2026-07-13",
+  "estado": "BORRADOR — probabilidades preliminares del agente; el Chairman fija las definitivas antes de registrar.",
+  "predicciones": [
+    {"id": "PRED-2026-001", "enunciado": "Se anuncia oficialmente (con decreto o capex comprometido) un primer cluster GPU soberano >=10k H100-equivalente fuera de EE.UU./CN/UE.", "escenario": "FUTURIA-2026-0009", "senal": "SIG-2026-00068", "probabilidad": 0.55, "fecha_resolucion": "2028-12-31", "resuelto": null, "brier": null},
+    {"id": "PRED-2026-002", "enunciado": "La FDA aprueba un corazon artificial total (TAH) con wireless power + OTA + kill-switch.", "escenario": "FUTURIA-2026-0006", "senal": null, "probabilidad": 0.45, "fecha_resolucion": "2029-12-31", "resuelto": null, "brier": null},
+    {"id": "PRED-2026-003", "enunciado": "Se emite la primera Heart-Backed Security (o instrumento titulizado de flujos CaaS medicos) por >=USD 500M.", "escenario": "FUTURIA-2026-0006", "senal": null, "probabilidad": 0.35, "fecha_resolucion": "2029-12-31", "resuelto": null, "brier": null},
+    {"id": "PRED-2026-004", "enunciado": "Un sistema de IA supera simultaneamente PCI-sim >0.31 + Ignition >0.6 + MCI >0.5 en un preprint con replica independiente.", "escenario": "FUTURIA-2026-0007", "senal": null, "probabilidad": 0.30, "fecha_resolucion": "2029-12-31", "resuelto": null, "brier": null},
+    {"id": "PRED-2026-005", "enunciado": "Una jurisdiccion otorga alguna forma de personalidad juridica limitada a una entidad de IA.", "escenario": "FUTURIA-2026-0001", "senal": null, "probabilidad": 0.40, "fecha_resolucion": "2030-12-31", "resuelto": null, "brier": null},
+    {"id": "PRED-2026-006", "enunciado": "Se implanta con exito un rinon bioimpreso autologo en un hospital regional (fuera de un hub central de investigacion).", "escenario": "FUTURIA-2026-0008", "senal": null, "probabilidad": 0.30, "fecha_resolucion": "2031-12-31", "resuelto": null, "brier": null},
+    {"id": "PRED-2026-007", "enunciado": "ASML realiza >10 envios/ano de escaneres High-NA EUV.", "escenario": "FUTURIA-2026-0004", "senal": "SIG-2026-00024", "probabilidad": 0.60, "fecha_resolucion": "2028-12-31", "resuelto": null, "brier": null},
+    {"id": "PRED-2026-008", "enunciado": "Se crea una Agencia de Auditoria Algoritmica (AAI) con poder de veto y presupuesto propio en al menos un pais.", "escenario": "FUTURIA-2026-0005", "senal": null, "probabilidad": 0.35, "fecha_resolucion": "2030-12-31", "resuelto": null, "brier": null},
+    {"id": "PRED-2026-009", "enunciado": "Se firma el primer tratado tipo 'Data Embassy' para IA (datos soberanos alojados en infraestructura extranjera bajo jurisdiccion de origen).", "escenario": "FUTURIA-2026-0009", "senal": "SIG-2026-00069", "probabilidad": 0.40, "fecha_resolucion": "2029-12-31", "resuelto": null, "brier": null},
+    {"id": "PRED-2026-010", "enunciado": "Se inscribe la primera sociedad con estructura de gobernanza automatizada (SAUT o equivalente) reconocida legalmente.", "escenario": "FUTURIA-2026-0002", "senal": null, "probabilidad": 0.45, "fecha_resolucion": "2030-12-31", "resuelto": null, "brier": null}
+  ]
+}

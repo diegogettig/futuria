@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUTURIA — Escenario PRISM detalle</title>
+  <style>
+    :root {
+      --bg: #06060a;
+      --text: #e4e4ec;
+      --muted: #8a8a9e;
+      --accent: #ff5230;
+      --accent2: #ff7a61;
+      --border: rgba(255,255,255,0.07);
+      --card: rgba(255,255,255,0.03);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 1.8rem; }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: rgba(6,6,10,0.85); backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1180px; margin: 0 auto; padding: 1rem 1.8rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-brand { font-weight: 900; letter-spacing: -0.04em; font-size: 1.3rem; color: #fff; text-decoration:none; }
+    .nav-brand em { color: var(--accent); font-style: normal; }
+    .back { color: var(--muted); font-size: 0.9rem; margin-top: 1.2rem; display: inline-block; }
+    .meta { color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em; margin-top: 3.2rem; margin-bottom: 0.8rem; }
+    h1 { font-size: 2.6rem; line-height: 1.15; color: #fff; letter-spacing: -0.03em; margin-bottom: 0.8rem; }
+    .lead { font-size: 1.15rem; color: var(--text); max-width: 780px; margin-top: 0.6rem; }
+    .body { max-width: 760px; margin-top: 2rem; }
+    .body p { color: var(--muted); margin: 0.8rem 0; }
+    .body h2 { color: #fff; font-size: 1.6rem; margin-top: 2rem; margin-bottom: 0.6rem; }
+    .body h3 { color: #fff; font-size: 1.15rem; margin-top: 1.4rem; margin-bottom: 0.4rem; }
+    .blurred { filter: blur(5px); user-select: none; pointer-events: none; }
+    .wall {
+      margin-top: 2.2rem; padding: 1.4rem; border-radius: 1rem;
+      background: linear-gradient(180deg,rgba(255,82,48,0.10),rgba(255,82,48,0));
+      border: 1px solid rgba(255,82,48,0.28);
+    }
+    .wall h3 { color:#fff; font-size:1.1rem; margin-bottom:0.4rem; }
+    .wall p { color:var(--muted); font-size:0.95rem; margin:0.3rem 0; }
+    .wall input[type="email"] {
+      width: 100%; padding: 0.8rem 1.2rem; border-radius: 999px; margin-top: 0.8rem;
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border); color: #fff; font-size: 0.95rem;
+    }
+    .wall input[type="email"]:focus { outline: none; border-color: var(--accent); }
+    .wall button { margin-top: 0.8rem; }
+    .related { margin-top: 2.4rem; padding-top: 1.2rem; border-top: 1px solid var(--border); }
+    .related h4 { color:#fff; margin-bottom:0.6rem; }
+    .related a { color:var(--text); }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">FUTU<em>RIA</em></a>
+    <a href="/" class="back">← Volver al sitio</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="meta">Escenario PRISM · FUTURIA-2026-0001</div>
+  <h1>El año en que una IA reclama personalidad jurídica</h1>
+  <p class="lead">Horizonte 2028-2035 · Plausibilidad 63/100 · Método PRISM</p>
+
+  <div class="body" id="escenario-body">
+    <h2>Resumen ejecutivo</h2>
+    <p>La pregunta no es si las empresas automatizadas van a existir. La pregunta es si Argentina las va a regular bien o va a crear un experimento desastroso que el resto del mundo usará como advertencia.</p>
+
+    <h2>Fundamentos</h2>
+    <p>Los fundamentos combinan evidencias regulatorias, tecnológicas, económicas y filosóficas. Cada supuesto es explícito y auditable.</p>
+
+    <h2>Impactos</h2>
+    <p> Económico: medio-alto. Político: transformador si se aprueba la norma. Fiscal: alto sin exenciones claras. Laboral: alto en contextos de desempleo estructural. Filosófico: apertura de nuevas preguntas sobre responsabilidad algorítmica.</p>
+
+    <h2>Señales tempranas</h2>
+    <p>Estado actual: debate parlamentario avanzado, primeros prototipos de agentes con firma digital y consultoría legal en formación.</p>
+  </div>
+
+  <div class="wall" id="wall">
+    <h3>Contenido completo disponible para suscriptores</h3>
+    <p>Registrate gratuitamente y accedé a la lectura completa del escenario.</p>
+    <form onsubmit="event.preventDefault(); alert('Mock: registro operativo cuando conectemos base de datos.');">
+      <input type="email" placeholder="tu@email.com" required>
+      <button class="btn btn-primary" type="submit">Registrarme gratuitamente</button>
+    </form>
+    <p style="font-size:0.8rem;color:var(--muted);margin-top:0.8rem;">Sin costo. Sin spam. Solo acceso anticipado y novedades.</p>
+  </div>
+
+  <div class="related">
+    <h4>Newsletters vinculadas</h4>
+    <a href="#">Edición #1: Argentina y empresas gobernadas por IA →</a><br>
+    <a href="#" style="opacity:.7;">Edición #2: análisis del anteproyecto (próximamente)</a>
+  </div>
+</div>
+
+</body>
+</html>

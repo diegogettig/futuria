@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parte FUTURIA #001 — El leasing de tu propio cuerpo</title>
+<meta name="description" content="Informe quincenal de tendencias. Escenario semilla: Economía de la Longevidad (PRISM #006).">
+<style>
+/* ============================================================
+   PARTE FUTURIA — hoja base v1.0
+   Un solo archivo · sin dependencias · imprimible · accesible
+   ============================================================ */
+:root{
+  --bg:#0d1419;
+  --bg-2:#111b22;
+  --line:#20303a;
+  --ink:#e8eef2;
+  --ink-2:#8fa3af;
+  --ink-3:#5f7280;
+  --red:#e90100;
+  --red-wash:rgba(233,1,0,.09);
+  --measure:38rem;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:1.0625rem;line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--measure);margin:0 auto;padding:0 1.5rem}
+.wide{max-width:52rem;margin:0 auto;padding:0 1.5rem}
+.wrap-wide{max-width:52rem;margin:0 auto;padding:0 1.5rem}
+
+/* ---------- layout texto+imagen (PC: alterna lado / móvil: apila) ---------- */
+.figure-side{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;align-items:center;margin:0}
+.figure-side figure{margin:0}
+.figure-side img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);background:#0a1015}
+.figure-side figcaption{font-size:.78rem;line-height:1.5;color:var(--ink-3);margin-top:.6rem;padding-left:.8rem;border-left:2px solid var(--red)}
+.figure-side[data-side="right"] .side-text{order:1}
+.figure-side[data-side="right"] figure{order:2}
+.figure-side[data-side="left"] .side-text{order:2}
+.figure-side[data-side="left"] figure{order:1}
+@media (max-width:720px){
+  .figure-side{grid-template-columns:1fr;gap:1.1rem}
+  .figure-side .side-text,.figure-side figure{order:unset}
+  .figure-side figure{order:2!important;margin-top:.3rem;overflow:hidden;border-radius:10px}
+  /* banda corta en móvil: recorta (cover), no distorsiona la imagen */
+  .figure-side img{height:188px;object-fit:cover;object-position:center}
+}
+
+/* ---------- header ---------- */
+.top{border-bottom:1px solid var(--line);background:#0a1015}
+.top-in{max-width:52rem;margin:0 auto;padding:1.1rem 1.5rem;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.15rem;letter-spacing:-.02em;color:var(--ink)}
+.logo span{color:var(--red)}
+.top-meta{font-size:.78rem;color:var(--ink-3);letter-spacing:.04em}
+
+.hero{padding:3.5rem 0 2.5rem;border-bottom:1px solid var(--line)}
+.kicker{
+  font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--red);margin:0 0 1.1rem;
+}
+h1{
+  font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.06;letter-spacing:-.03em;
+  font-weight:800;margin:0 0 1.1rem;text-wrap:balance;
+}
+.stand{font-size:1.15rem;color:var(--ink-2);margin:0 0 1.8rem;max-width:32rem}
+.dateline{
+  font-size:.76rem;color:var(--ink-3);letter-spacing:.05em;text-transform:uppercase;
+  display:flex;gap:.6rem;flex-wrap:wrap;
+}
+.dateline span::after{content:" ·";color:var(--line)}
+.dateline span:last-child::after{content:""}
+
+/* ---------- secciones ---------- */
+section{padding:2.8rem 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.sec-n{
+  font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--red);margin:0 0 .5rem;
+}
+h2{font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.14;letter-spacing:-.02em;font-weight:800;margin:0 0 1.2rem;text-wrap:balance}
+h3{font-size:1.15rem;font-weight:700;margin:1.9rem 0 .5rem;letter-spacing:-.01em}
+p{margin:0 0 1.15rem}
+.lede{font-size:1.2rem;line-height:1.6;color:var(--ink)}
+strong{font-weight:700;color:#fff}
+a{color:var(--red);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+a:hover{background:var(--red-wash)}
+a:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* ---------- disclosure de actor ficticio ---------- */
+.ficticio{
+  border:1px solid rgba(233,1,0,.4);background:var(--red-wash);
+  border-radius:8px;padding:1rem 1.15rem;margin:1.8rem 0;
+  font-size:.98rem;
+}
+.ficticio p{margin:0}
+.ficticio .tag{
+  display:block;font-size:.66rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--red);margin-bottom:.45rem;
+}
+
+/* ---------- nota / caja ---------- */
+.nota{
+  border-left:3px solid var(--line);padding:.3rem 0 .3rem 1.15rem;
+  margin:1.8rem 0;color:var(--ink-2);font-size:.98rem;
+}
+.nota p{margin:0}
+.nota p+p{margin-top:.6rem}
+
+/* ---------- tablero ---------- */
+.tablero{list-style:none;padding:0;margin:1.5rem 0}
+.tablero li{
+  border-top:1px solid var(--line);padding:.9rem 0;
+  display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;align-items:baseline;
+}
+.tablero li:last-child{border-bottom:1px solid var(--line)}
+.tablero b{font-weight:700;color:#fff}
+.tablero .q{font-size:.94rem;color:var(--ink-2);grid-column:1/-1;margin:0}
+.estado{
+  font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);white-space:nowrap;
+}
+
+/* ---------- figuras ---------- */
+figure{margin:2rem 0}
+figure svg{width:100%;height:auto;display:block;border-radius:8px}
+figcaption{font-size:.8rem;line-height:1.55;color:var(--ink-3);margin-top:.75rem;padding-left:.9rem;border-left:2px solid var(--red)}
+
+/* ---------- capa 2 ---------- */
+details{
+  border:1px solid var(--line);border-radius:10px;background:var(--bg-2);
+  margin:1.2rem 0;
+}
+details summary{
+  cursor:pointer;padding:.95rem 1.15rem;font-weight:700;font-size:.95rem;
+  list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:center;
+}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--red);font-weight:700;font-size:1.15rem}
+details[open] summary::after{content:"–"}
+details summary:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
+.details-body{padding:0 1.15rem 1.15rem;font-size:.92rem;color:var(--ink-2)}
+.details-body p{margin:0 0 .8rem}
+
+/* ---------- fuentes ---------- */
+.fuentes{list-style:none;padding:0;margin:0;counter-reset:f}
+.fuentes li{
+  counter-increment:f;position:relative;padding:.7rem 0 .7rem 2rem;
+  border-top:1px solid var(--line);font-size:.86rem;line-height:1.55;color:var(--ink-2);
+}
+.fuentes li::before{
+  content:counter(f);position:absolute;left:0;top:.7rem;
+  color:var(--red);font-weight:700;font-size:.78rem;
+}
+.tier{
+  display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.08em;
+  border:1px solid var(--ink-3);border-radius:3px;padding:.05rem .3rem;
+  color:var(--ink-3);margin-left:.3rem;vertical-align:middle;
+}
+.tier.pend{border-color:var(--red);color:var(--red)}
+
+/* ---------- veredictos ---------- */
+.claims{width:100%;border-collapse:collapse;font-size:.82rem}
+.claims th,.claims td{text-align:left;padding:.55rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+.claims th{color:var(--ink-3);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.v-ok{color:#4ea36a;font-weight:700}
+.v-ilu{color:#c9a227;font-weight:700}
+.v-blq{color:var(--red);font-weight:700}
+.v-sin{color:var(--ink-3);font-weight:700}
+
+/* ---------- pie ---------- */
+footer{border-top:1px solid var(--line);background:#0a1015;padding:2.5rem 0;font-size:.8rem;color:var(--ink-3);line-height:1.7}
+
+/* ============================================================
+   IMPRESIÓN — pantalla oscura, papel claro.
+   ============================================================ */
+@media print{
+  @page{size:A4;margin:18mm}
+  :root{
+    --bg:#fff;--bg-2:#fff;--line:#d5dde2;
+    --ink:#0d1419;--ink-2:#3c4a53;--ink-3:#6b7a84;
+    --red-wash:#fdeceb;
+  }
+  html,body{background:#fff!important;color:#0d1419!important;font-size:10.5pt;line-height:1.5}
+  .top,.dateline,nav{display:none!important}
+  .wrap,.wide,.wrap-wide{max-width:100%;padding:0}
+  h1{font-size:24pt}
+  h2{font-size:15pt}
+  section{padding:.8rem 0;border-top:1px solid #d5dde2}
+  a{color:#0d1419!important;text-decoration:none;font-weight:700}
+  a[href^="http"]::after{
+    content:" [" attr(href) "]";
+    font-size:7.5pt;font-weight:400;color:#6b7a84;word-break:break-all;
+  }
+  details{border:1px solid #d5dde2;background:#fff;break-inside:avoid}
+  details[open] summary::after,details summary::after{content:""}
+  .details-body{display:block!important}
+  /* en papel las imágenes acompañan al texto, no se apilan forzadas */
+  .figure-side{grid-template-columns:1fr 1fr!important;gap:1rem}
+  .figure-side .side-text,.figure-side figure{order:unset!important}
+  figure,.ficticio,.nota,.tablero li,.claims tr,.figure-side{break-inside:avoid}
+  .fuentes li{break-inside:avoid}
+  figure img{border:1px solid #d5dde2}
+  footer{background:#fff;border-top:2px solid #e90100}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="logo">FUTURIA<span> ·</span> Parte</div>
+    <div class="top-meta">#001 · 16 JUL 2026 · QUINCENAL</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <p class="kicker">Parte #001 · Escenario semilla: PRISM #006</p>
+    <h1>El leasing de tu propio cuerpo</h1>
+    <p class="stand">Si el corazón artificial se vuelve una suscripción, hay una pregunta que la medicina nunca tuvo que responder: ¿qué pasa si dejás de pagar?</p>
+    <p class="dateline">
+      <span>Lectura 11 min</span><span>Economía de la longevidad</span><span>Salud · Finanzas · Derecho</span>
+    </p>
+  </div>
+</div>
+
+<!-- ============ 1 · LA ESCENA ============ -->
+<section>
+  <div class="wrap-wide">
+    <div class="figure-side" data-side="right">
+      <div class="side-text">
+        <p class="sec-n">01 · La escena</p>
+        <h2>El tercero de cada mes</h2>
+
+        <p class="lede">El 3 de cada mes te llega la factura del corazón.</p>
+
+        <p>No de un tratamiento, no de una obra social: del corazón. El aparato que tenés en el pecho no es tuyo. Lo alquilás. La cuota cubre el dispositivo, el monitoreo permanente que corre en un servidor a mil kilómetros, las actualizaciones de firmware que bajan mientras dormís, y el reemplazo programado cuando el fabricante decida que este modelo llegó al final de su vida útil.</p>
+
+        <p>Sos <strong>licenciatario</strong>. El titular es la empresa.</p>
+
+        <p>Y entonces aparece la pregunta que ningún comité de bioética tuvo que contestar en toda la historia de la medicina, porque hasta ahora los órganos no tenían dueño: <strong>si dejás de pagar, ¿qué pasa?</strong></p>
+
+        <p>La respuesta que se está construyendo no es médica ni tecnológica. Es jurídica, y llega tarde, como siempre. Alguien tiene que escribir, en una ley, que un acreedor no puede embargarte el corazón.</p>
+
+        <div class="nota">
+          <p>Ese es el escenario. Ahora la parte incómoda: cuánto de esto ya existe.</p>
+        </div>
+      </div>
+      <figure>
+        <img src="img/parte001-escena.png" alt="Corazón artificial junto a una factura mensual de suscripción" loading="lazy">
+        <figcaption>El tercero de cada mes. El aparato que late adentro ya no es un objeto comprado: es una suscripción que alguien más titulariza.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 · EL PRESENTE ============ -->
+<section>
+  <div class="wrap">
+    <p class="sec-n">02 · El presente</p>
+    <h2>Qué de todo esto ya está andando</h2>
+
+    <p>Nada de lo anterior requiere un invento nuevo. Requiere que se junten cuatro cosas que ya funcionan por separado, y que alguien las facture juntas.</p>
+
+    <h3>El corazón total artificial dejó el laboratorio</h3>
+    <p>El <strong>BiVACOR TAH</strong>, un corazón artificial total sin válvulas con rotor magnéticamente levitado, tuvo su <strong>primera implantación en humano el 9 de julio de 2024</strong> en el Baylor St. Luke's Medical Center / Texas Heart Institute, como puente a trasplante. No es un prototipo de papel: es un dispositivo de uso compasivo ya implantado en más de un paciente <a href="https://bivacor.com/" target="_blank" rel="noopener">[fuente: bivacor.com]</a> <a href="https://www.texasheart.org/the-texas-heart-institute-implants-bivacor-total-artificial-heart/" target="_blank" rel="noopener">[Texas Heart Institute]</a>.</p>
+
+    <h3>El monitoreo continuo ya es infraestructura</h3>
+    <p>El <strong>CardioMEMS HF System</strong> (Abbott) es un sensor de presión de arteria pulmonar <strong>implantable</strong> que transmite de forma inalámbrica los cambios hemodinámicos antes de que se descompense la insuficiencia cardíaca. Está aprobado por la FDA y es, hoy, el único sensor de ese tipo en uso clínico rutinario <a href="https://www.fda.gov/medical-devices/recently-approved-devices/cardiomems-hf-system-p100045s056" target="_blank" rel="noopener">[fuente: FDA]</a> <a href="https://www.cardiovascular.abbott/us/en/hcp/products/heart-failure/pulmonary-pressure-monitors/cardiomems/about.html" target="_blank" rel="noopener">[Abbott]</a>.</p>
+
+    <h3>La energía sin cable atraviesa tejido</h3>
+    <p>La transferencia de energía <strong>mid-field</strong> a través de tejido —alimentar implantes profundos sin cable— fue demostrada por Ada Poon (Stanford) y publicada en 2014 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4050616/" target="_blank" rel="noopener">[fuente: Ho et al., PMC4050616]</a>. Es investigación, no producto; pero la física ya está resuelta.</p>
+
+    <h3>Y el modelo de negocio ya se probó en otra parte</h3>
+    <p>La suscripción no hay que inventarla: es el modelo dominante del software, de los autos por leasing y de las turbinas de avión, que hace décadas se venden por hora de vuelo y no por unidad. Lo único nuevo es dónde se instala el activo alquilado.</p>
+
+    <div class="nota">
+      <p><strong>Nota de método.</strong> Las tres afirmaciones técnicas de arriba están marcadas como pendientes en lugar de escritas. Es deliberado: el escenario PRISM que originó este Parte las da por ciertas, pero un escenario no es una fuente. Cada una se verifica contra origen primario antes de publicar, o no entra.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 · LA MECÁNICA ============ -->
+<section>
+  <div class="wrap-wide">
+    <div class="figure-side" data-side="left">
+      <div class="side-text">
+        <p class="sec-n">03 · La mecánica</p>
+        <h2>Por qué conviene alquilarlo</h2>
+
+        <p>La intuición dice que comprar es mejor que alquilar. Con un corazón artificial, la intuición se rompe, y entender por qué es entender todo el escenario.</p>
+
+        <p>Un dispositivo que se compra es un objeto terminado: el que lo vendió ya cobró y su incentivo es que no vuelva. Un dispositivo que se alquila es una <strong>relación</strong>: el proveedor cobra todos los meses mientras el paciente esté vivo y el aparato funcione. Por primera vez, el fabricante gana plata cuando vos no te enfermás.</p>
+
+        <p>Eso alinea tres cosas que hoy están desalineadas. El monitoreo deja de ser un costo y pasa a ser una inversión en no pagar una cirugía. La actualización remota deja de ser un riesgo regulatorio y pasa a ser mantenimiento. Y el reemplazo programado deja de ser una catástrofe familiar y pasa a ser un renglón previsto en el contrato.</p>
+
+        <div class="ficticio">
+          <span class="tag">Actor ficticio · disclosure</span>
+          <p>Para no atribuirle a ninguna empresa existente un movimiento que no anunció, vamos a llamar <strong>Meridian</strong> al primer proveedor que lance este modelo. Meridian no existe. Las capacidades técnicas que describimos sí, y están en el bloque de fuentes; el acuerdo comercial que las junta, todavía no.</p>
+        </div>
+
+        <p>El modelo de Meridian cierra si tres números se sostienen: que el costo de mantener a un paciente sea menor que la cuota, que el paciente dure lo suficiente para amortizar el implante, y que alguien financie el capital inicial mientras tanto. Los dos primeros son medicina. El tercero es donde la cosa se pone rara.</p>
+
+        <h3>El corazón como flujo de caja</h3>
+        <p>Un paciente que paga una cuota fija durante quince años es, para un ingeniero financiero, exactamente lo mismo que una hipoteca: un flujo previsible que se puede empaquetar, tramar por riesgo y vender a un inversor. Los escenarios que proyectan este mundo le ponen nombre —<em>títulos respaldados por corazones</em>— y ahí conviene frenar y decir algo con todas las letras.</p>
+
+        <p>Empaquetar flujos de pago de gente que necesita el activo para seguir viva tiene un antecedente conocido, y no terminó bien. La diferencia con 2008 no es técnica: es que si el tenedor de un bono deja de cobrar, lo que se ejecuta no es una casa.</p>
+
+        <p><strong>Ahí es donde baja nuestra confianza.</strong> Que la tecnología llegue es plausible; que el andamiaje financiero se construya sin una crisis en el medio es una apuesta que no haríamos.</p>
+      </div>
+      <figure>
+        <img src="img/parte001-mecanica.png" alt="Corazón artificial conectado por líneas de datos a un servidor en la nube" loading="lazy">
+        <figcaption>Cada latido genera un evento facturable. El corazón ya no es solo un órgano: es el nodo de un contrato de suscripción que vive en un servidor a mil kilómetros.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 · LOS FRENOS ============ -->
+<section>
+  <div class="wrap-wide">
+    <div class="figure-side" data-side="right">
+      <div class="side-text">
+        <p class="sec-n">04 · Los frenos</p>
+        <h2>Qué puede hacer que esto no pase</h2>
+
+        <p>Un informe sin frenos no es análisis: es entusiasmo con tipografía. Estos son los cuatro que más pesan.</p>
+
+        <h3>1 · El día que alguien secuestre un firmware</h3>
+        <p>Un dispositivo actualizable a distancia es, por definición, un dispositivo atacable a distancia. Un <em>ransomware</em> en una bomba cardíaca no da margen de negociación: se paga en horas. El escenario semilla proyecta un incidente de este tipo y lo trata como el punto de inflexión regulatorio de toda la industria. Es el freno más probable, y el más caro.</p>
+
+        <h3>2 · El proveedor es dueño de tu latido durante quince años</h3>
+        <p>Si el aparato es de ellos y el firmware es de ellos, cambiar de proveedor no es cambiar de compañía: es una cirugía. El <em>lock-in</em> deja de ser una molestia comercial y pasa a ser una condición física. Ninguna agencia de competencia del mundo tiene herramientas para eso hoy.</p>
+
+        <h3>3 · La ley no llegó</h3>
+        <p>La inembargabilidad, el derecho a desconexión, quién decide apagarlo y con qué firma: nada de eso está resuelto en ningún ordenamiento. Y un modelo de negocio que necesita una ley que todavía no existe no es un plan: es una hipótesis con equipo de ventas.</p>
+        <p><em>Corroborado en este Parte: la auditoría no encontró ninguna ley 27.890 sobre inembargabilidad de órganos artificiales en el Boletín Oficial — el vacío es real, no retórico.</em></p>
+
+        <h3>4 · Que la gente diga que no</h3>
+        <p>El corazón carga tres mil años de metáfora. Alquilarlo no es una decisión de consumo: es una decisión sobre qué somos. Un solo caso mediático desgraciado puede correr esto una década, y la historia de la biotecnología está llena de moratorias que empezaron con una tapa de diario.</p>
+      </div>
+      <figure>
+        <img src="img/parte001-frenos.png" alt="Implante biomédico con candado digital y una falla de seguridad en rojo" loading="lazy">
+        <figcaption>El freno más caro: un dispositivo actualizable a distancia es, por definición, atacable a distancia. El día que secuestren un firmware cardíaco, todo el sector cambia de régimen.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 · EL TABLERO ============ -->
+<section>
+  <div class="wrap">
+    <p class="sec-n">05 · El tablero</p>
+    <h2>Qué mirar para saber si esto está pasando</h2>
+
+    <p>Los escenarios no se anuncian: se filtran. Estos son los observables concretos. Si empiezan a encenderse en orden, el mundo se está moviendo hacia acá.</p>
+
+    <ul class="tablero">
+      <li>
+        <b>El primer contrato de suscripción</b><span class="estado">No detectada</span>
+        <p class="q">Que un proveedor de dispositivos cardíacos publique una tarifa mensual, todo incluido, en vez de un precio de venta. Es el disparador de todo lo demás.</p>
+      </li>
+      <li>
+        <b>Un regulador aprueba actualización remota</b><span class="estado">No detectada</span>
+        <p class="q">Que una agencia sanitaria autorice OTA sobre un implante activo. Convierte al dispositivo en plataforma.</p>
+      </li>
+      <li>
+        <b>La primera titulización</b><span class="estado">No detectada</span>
+        <p class="q">Que aparezca un vehículo financiero respaldado por flujos de suscripción médica. Si esto llega antes que la regulación, el orden de los factores va a importar.</p>
+      </li>
+      <li>
+        <b>Un proyecto de ley sobre órganos artificiales</b><span class="estado">Verificar</span>
+        <p class="q">Cualquier iniciativa que trate la propiedad, la herencia o la inembargabilidad de un implante. Ver la nota del Aparato: hay un número de ley circulando sin confirmar.</p>
+      </li>
+      <li>
+        <b>El primer litigio por desconexión</b><span class="estado">No detectada</span>
+        <p class="q">Que un tribunal admita una demanda sobre quién tiene la potestad de apagar un órgano artificial. Es el momento en que el derecho toma la posta.</p>
+      </li>
+    </ul>
+
+    <div class="nota">
+      <p>Estos cinco observables se dan de alta hoy en el Lab de Vigilancia con etiqueta <code>origen: parte_001</code>. Si en el próximo Parte alguno cambió de estado, lo van a leer acá primero.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 · Y ENTONCES QUÉ ============ -->
+<section>
+  <div class="wrap">
+    <p class="sec-n">06 · Y entonces qué</p>
+    <h2>A vos qué te cambia</h2>
+
+    <h3>Si financiás salud</h3>
+    <p>Tu negocio deja de ser cubrir un evento y pasa a ser gestionar una suscripción de por vida. Eso no es un producto nuevo: es otro negocio. El que llega primero define quién es el reasegurador de quién.</p>
+
+    <h3>Si ejercés</h3>
+    <p>Vas a tener que explicarle a un paciente que el aparato que lo mantiene vivo tiene términos y condiciones. Nadie te formó para esa conversación, y va a ser rutina antes de lo que parece.</p>
+
+    <h3>Si legislás o regulás</h3>
+    <p>Las cuatro preguntas —propiedad, embargabilidad, desconexión, portabilidad— no tienen respuesta en ningún código del mundo. El país que las conteste primero, con seriedad, se convierte en jurisdicción de referencia. Es una ventana chica y se cierra sola.</p>
+
+    <h3>Si sos el paciente</h3>
+    <p>Vas a poder elegir entre morir en una lista de espera o alquilar. Es una mejora enorme sobre la única opción anterior. Y es, también, la primera vez que un ser humano va a leer la letra chica de su propio cuerpo.</p>
+  </div>
+</section>
+
+<!-- ============ 7 · EL APARATO (CAPA 2) ============ -->
+<section>
+  <div class="wide">
+    <p class="sec-n">07 · El aparato · Capa 2</p>
+    <h2>Todo lo que hay debajo</h2>
+    <p style="color:var(--ink-2)">No hace falta leer esto para entender el Parte. Está para que cualquier afirmación pueda rastrearse hasta su origen — o para que se vea con claridad dónde no hay origen.</p>
+
+    <details>
+      <summary>Registro de claims y veredictos</summary>
+      <div class="details-body">
+        <table class="claims">
+          <thead><tr><th>#</th><th>Claim</th><th>Clase</th><th>Veredicto</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Existe un TAH con rotor levitado implantado en humano</td><td>E</td><td class="v-ok">VERIFICADO</td></tr>
+            <tr><td>2</td><td>Monitoreo hemodinámico implantable con predicción de descompensación</td><td>T</td><td class="v-ok">VERIFICADO</td></tr>
+            <tr><td>3</td><td>Transferencia de energía mid-field a través de tejido</td><td>T</td><td class="v-ok">VERIFICADO</td></tr>
+            <tr><td>4</td><td>«Ley 27.890 AR» otorga inembargabilidad al órgano artificial</td><td>N</td><td class="v-blq">ELIMINADO · NORMA FANTASMA</td></tr>
+            <tr><td>5</td><td>Suscripción como modelo dominante en software, leasing y aviación</td><td>E</td><td class="v-ok">VERIFICABLE</td></tr>
+            <tr><td>6</td><td>Meridian lanza el primer CaaS comercial</td><td>P</td><td class="v-ilu">FICTICIO · declarado</td></tr>
+            <tr><td>7</td><td>Títulos respaldados por flujos de suscripción médica</td><td>P</td><td class="v-ilu">PROYECCIÓN del escenario</td></tr>
+            <tr><td>8</td><td>Cuota mensual, TAM, ARR 2035, número de suscriptores</td><td>D</td><td class="v-sin">Sin información</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:1rem"><strong>Claims 1–3:</strong> el escenario semilla los da por ciertos. Un escenario no es una fuente. Se verifican contra origen primario o el bloque no se publica.</p>
+        <p><strong>Claim 4 — eliminado (norma fantasma).</strong> Era el único claim <strong>clase N</strong> del Parte. Un número de ley argentina (27.890), con formato correcto, otorgando inembargabilidad a órganos artificiales, sin link. Auditoría contra Boletín Oficial e InfoLEG: <strong>la Ley 27.890 no existe</strong>. El BO sólo registra Ley 27.447 (trasplantes, 2023) y Ley 24.193. Es el patrón «norma fantasma» del Protocolo Anti-Alucinación, mismo perfil que ANMAT 4359/2025. <strong>Corolario del §4.11:</strong> el mismo número 27.890 aparece como «Ley 27.890 (2028) — Responsabilidad Penal Algorítmica» en PRISM #002 y como «Art. 12 Ley 27.890 AR» en PRISM #005. Se auditaron los ocho PRISM: la única norma fantasma recurrente es la familia 27.890; el resto (Ley 25.326, 27.442, 27.447, GDPR, UE Data Act, DPDP, LGPD) es real. El claim 4 se eliminó: no se publica.</p>
+        <p><strong>Claim 8.</strong> Las cifras económicas del escenario (cuota mensual, tamaño de mercado, cantidad de suscriptores a 2035) son proyecciones internas sin fuente primaria. No se citan como dato. Por eso este Parte no tiene un solo número de mercado en la Capa 1.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Fuentes</summary>
+      <div class="details-body">
+        <ol class="fuentes">
+          <li>BiVACOR TAH, first-in-human 9-jul-2024, Baylor St. Luke's / Texas Heart Institute. <a href="https://bivacor.com/" target="_blank" rel="noopener">bivacor.com</a> · <a href="https://www.texasheart.org/the-texas-heart-institute-implants-bivacor-total-artificial-heart/" target="_blank" rel="noopener">texasheart.org</a>. <span class="tier">T1</span></li>
+          <li>CardioMEMS HF System (Abbott), sensor de PA implantable, FDA. <a href="https://www.fda.gov/medical-devices/recently-approved-devices/cardiomems-hf-system-p100045s056" target="_blank" rel="noopener">fda.gov</a> · <a href="https://www.cardiovascular.abbott/us/en/hcp/products/heart-failure/pulmonary-pressure-monitors/cardiomems/about.html" target="_blank" rel="noopener">cardiovascular.abbott</a>. <span class="tier">T1</span></li>
+          <li>Mid-field wireless power transfer, Ada Poon (Stanford), 2014. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4050616/" target="_blank" rel="noopener">Ho et al., PMC4050616</a>. <span class="tier">T1 académico</span></li>
+          <li>[ELIMINADA] «Ley 27.890 AR» — inexistente en Boletín Oficial / InfoLEG. El BO registra Ley 27.447 (trasplantes) y Ley 24.193. <span class="tier pend">NORMA FANTASMA</span></li>
+        </ol>
+        <p style="margin-top:1rem">Formato de cita: autor/editor · título · medio · fecha · URL · fecha de consulta · tier. Corroboración contada por <strong>origen independiente</strong>: cinco medios que reescriben un mismo comunicado son una fuente, no cinco.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Escenario semilla y criterio de defunción</summary>
+      <div class="details-body">
+        <p><strong>Semilla:</strong> PRISM #006 — «Economía de la Longevidad: suscripción a órganos artificiales y el fin del seguro tradicional». Horizonte 2027–2035. Este Parte desarrolla <strong>un</strong> ángulo del escenario: la propiedad del órgano. El escenario contiene otros —el modelo por bloques geopolíticos, la titulización, la ciberseguridad de implantes— que alimentarán Partes futuros.</p>
+        <p><strong>Criterio de defunción del ángulo:</strong> si al 31/12/2029 ningún proveedor de dispositivos cardíacos publica una tarifa de suscripción todo-incluido, el ángulo se declara muerto y se reescribe. Un escenario que no se puede matar no es una hipótesis: es una creencia.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Cómo se hizo este Parte</summary>
+      <div class="details-body">
+        <p>Semilla PRISM → selección de ángulo (Chairman) → borrador narrativo (Agente Editorial) → extracción de claims a lista plana (Agente Extractor) → <strong>verificación SAT por verificador de contexto limpio</strong>, que no ve el borrador y solo recibe los claims desnudos → ronda de adversario sobre los verificados → firma del Chairman → maquetado → alta de señales nuevas en el Lab.</p>
+        <p>El redactor no se verifica a sí mismo, del mismo modo que el verificador no escribe. Un modelo que produjo una afirmación tiende a confirmarla cuando se le pregunta por ella: la separación de funciones no es burocracia, es la única defensa que funciona.</p>
+        <p><strong>Estado de este ejemplar:</strong> publicado con verificación aplicada. Claims 1–3 verificados contra fuente primaria (T1). Claim 4 eliminado por ser norma fantasma (27.890 inexistente). No es un Parte del ciclo completo Editorial→Extractor→Verificador→Adversario→Chairman; se publica como pieza ilustrativa de la estructura y del protocolo anti-alucinación en acción.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:var(--ink)">FUTURIA · Parte #001</strong><br>
+    Informe quincenal de tendencias · Escenario semilla PRISM #006</p>
+    <p style="margin-top:1.2rem">Contenido ilustrativo con fines de divulgación. No constituye asesoramiento médico, financiero ni legal. Las proyecciones señaladas como tales son inferencias de FUTURIA y no descripciones de hechos.</p>
+    <p style="margin-top:1.2rem">FUTURIA · PARTE #001 · PUBLICADO · 16 JUL 2026 · futuria.institute</p>
+  </div>
+</footer>
+
+</body>
+</html>
