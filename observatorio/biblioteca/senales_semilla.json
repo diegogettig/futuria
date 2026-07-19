@@ -1,12 +1,12 @@
 {
-  "generado": "2026-07-17",
+  "generado": "2026-07-18",
   "fuente": "extraccion tablas Senales Tempranas 9 escenarios PRISM",
   "nota": "Puntajes PRELIMINARES por heuristica; requieren revision del Chairman. Contra-senales pendientes.",
   "total": 75,
   "senales": [
     {
       "id": "SIG-2026-00001",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Jurisdicción otorga \"personalidad digital limitada\"",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0001. Umbral de activacion: Legislación aprobada",
       "dominio_primario": "Filosofia_Etica_Cultura",
@@ -53,7 +53,7 @@
     },
     {
       "id": "SIG-2026-00002",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Agente IA registrado como miembro de consejo corporativo",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0001. Umbral de activacion: Registro formal completado",
       "dominio_primario": "Filosofia_Etica_Cultura",
@@ -100,7 +100,7 @@
     },
     {
       "id": "SIG-2026-00003",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Paper académico influyente argumentando a favor",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0001. Umbral de activacion: >500 citas en 2 años",
       "dominio_primario": "Filosofia_Etica_Cultura",
@@ -147,7 +147,7 @@
     },
     {
       "id": "SIG-2026-00004",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Caso judicial iniciado por/sobre un agente IA",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0001. Umbral de activacion: Caso admitido a trámite",
       "dominio_primario": "Filosofia_Etica_Cultura",
@@ -194,7 +194,7 @@
     },
     {
       "id": "SIG-2026-00005",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Empresa Fortune 500 apoya públicamente",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0001. Umbral de activacion: Declaración formal",
       "dominio_primario": "Filosofia_Etica_Cultura",
@@ -241,7 +241,7 @@
     },
     {
       "id": "SIG-2026-00006",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Encuesta: >50% de población acepta la idea",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0001. Umbral de activacion: Resultado publicado",
       "dominio_primario": "Filosofia_Etica_Cultura",
@@ -288,7 +288,7 @@
     },
     {
       "id": "SIG-2026-00007",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Estándar técnico para identidad de agentes IA",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0001. Umbral de activacion: Draft publicado",
       "dominio_primario": "Filosofia_Etica_Cultura",
@@ -335,7 +335,7 @@
     },
     {
       "id": "SIG-2026-00008",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Ley General Sociedades Reforma aprobada",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Publicación ley + entrada vigencia",
       "dominio_primario": "Gobernanza_Democracia",
@@ -382,7 +382,7 @@
     },
     {
       "id": "SIG-2026-00009",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Reglamentación IGJ/CNV/BCRA/AFIP",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Resolución conjunta publicada",
       "dominio_primario": "Gobernanza_Democracia",
@@ -429,7 +429,7 @@
     },
     {
       "id": "SIG-2026-00010",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "@santisairi inscripto SAUT N° 1",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Inscripción pública + tx on-chain",
       "dominio_primario": "Gobernanza_Democracia",
@@ -476,7 +476,7 @@
     },
     {
       "id": "SIG-2026-00011",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Primer caso judicial responsabilidad penal IA",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Sentencia firme / fallo cámara",
       "dominio_primario": "Gobernanza_Democracia",
@@ -523,7 +523,7 @@
     },
     {
       "id": "SIG-2026-00012",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Brasil / México / Chile anuncian modelo similar",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Proyecto ley presentado",
       "dominio_primario": "Gobernanza_Democracia",
@@ -570,7 +570,7 @@
     },
     {
       "id": "SIG-2026-00013",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "FGA capitalizado + operativo",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Primer pago siniestro",
       "dominio_primario": "Gobernanza_Democracia",
@@ -617,7 +617,7 @@
     },
     {
       "id": "SIG-2026-00014",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Monotributo Automatizado vigente",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Resolución general publicada",
       "dominio_primario": "Gobernanza_Democracia",
@@ -664,7 +664,7 @@
     },
     {
       "id": "SIG-2026-00015",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "OCDE cita caso argentino en Guía",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0002. Umbral de activacion: Publicación Guía 2028",
       "dominio_primario": "Gobernanza_Democracia",
@@ -711,7 +711,7 @@
     },
     {
       "id": "SIG-2026-00016",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "FDA concede IND xenocorazón 10-edit",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: IND granted",
       "dominio_primario": "Biotech_Salud",
@@ -758,7 +758,7 @@
     },
     {
       "id": "SIG-2026-00017",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Bivacor + IA edge >1 año supervivencia",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: Publicación peer-reviewed",
       "dominio_primario": "Biotech_Salud",
@@ -805,7 +805,7 @@
     },
     {
       "id": "SIG-2026-00018",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Parche bioprintado cerdo >90 días",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: Publicación + datos histología",
       "dominio_primario": "Biotech_Salud",
@@ -852,7 +852,7 @@
     },
     {
       "id": "SIG-2026-00019",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Wireless power mid-field certificado IEC",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: Certificación médica",
       "dominio_primario": "Biotech_Salud",
@@ -899,7 +899,7 @@
     },
     {
       "id": "SIG-2026-00020",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "1er litigio \"personalidad corazón artificial\"",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: Demanda admitida",
       "dominio_primario": "Biotech_Salud",
@@ -946,7 +946,7 @@
     },
     {
       "id": "SIG-2026-00021",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Cobertura CMS outcome-based TAH",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: Propuesta de regla",
       "dominio_primario": "Biotech_Salud",
@@ -993,7 +993,7 @@
     },
     {
       "id": "SIG-2026-00022",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Argentina presenta \"Ley Corazón Artificial\"",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: Proyecto en comisiones",
       "dominio_primario": "Biotech_Salud",
@@ -1040,7 +1040,7 @@
     },
     {
       "id": "SIG-2026-00023",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Paper IA diseño proteína cardioprotectora *de novo* → IND",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0003. Umbral de activacion: IND-enabling studies",
       "dominio_primario": "Biotech_Salud",
@@ -1087,7 +1087,7 @@
     },
     {
       "id": "SIG-2026-00024",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "ASML High-NA EUV envíos >10/año",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: >10 unidades/año",
       "dominio_primario": "Computo_Hardware",
@@ -1134,7 +1134,7 @@
     },
     {
       "id": "SIG-2026-00025",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "SMEE EUV resolución <20nm half-pitch verificado",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: Publicación peer-reviewed + inspección independiente",
       "dominio_primario": "Computo_Hardware",
@@ -1181,7 +1181,7 @@
     },
     {
       "id": "SIG-2026-00026",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Primera AI Factory soberana no-occidental (pila completa)",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: Anuncio oficial + demo training 1T+ tokens",
       "dominio_primario": "Computo_Hardware",
@@ -1228,7 +1228,7 @@
     },
     {
       "id": "SIG-2026-00027",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Actuador HASEL/DEA >100k ciclos + >100 W/kg",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: Paper *Science/Robotics* + demo video",
       "dominio_primario": "Computo_Hardware",
@@ -1275,7 +1275,7 @@
     },
     {
       "id": "SIG-2026-00028",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Diamante sintético wafer 150mm epitaxial producción",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: Hoja ruta comercial + precio <$50k/wafer",
       "dominio_primario": "Computo_Hardware",
@@ -1322,7 +1322,7 @@
     },
     {
       "id": "SIG-2026-00029",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Estándar UALink / UEC 1.0 ratificado",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: Especificación 1.0 publicada",
       "dominio_primario": "Computo_Hardware",
@@ -1369,7 +1369,7 @@
     },
     {
       "id": "SIG-2026-00030",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Primer \"Compute-backed security\" emitido",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: Prospecto público + rating",
       "dominio_primario": "Computo_Hardware",
@@ -1416,7 +1416,7 @@
     },
     {
       "id": "SIG-2026-00031",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Argentina / Latam anuncian fab empaquetado avanzado / diseño RISC-V",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0004. Umbral de activacion: Decreto / ley + capex comprometido",
       "dominio_primario": "Computo_Hardware",
@@ -1463,7 +1463,7 @@
     },
     {
       "id": "SIG-2026-00032",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "EU AI Act Art. 6 vigente + sanciones",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: Multas >€10M / retirada mercado",
       "dominio_primario": "Gobernanza_Democracia",
@@ -1510,7 +1510,7 @@
     },
     {
       "id": "SIG-2026-00033",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "AAI creada con poder veto + presupuesto",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: Ley publicada + director nombrado",
       "dominio_primario": "Gobernanza_Democracia",
@@ -1557,7 +1557,7 @@
     },
     {
       "id": "SIG-2026-00034",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Primer presupuesto municipal L2 operativo",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: IA propone + consejo vota + ejecución auto",
       "dominio_primario": "Gobernanza_Democracia",
@@ -1604,7 +1604,7 @@
     },
     {
       "id": "SIG-2026-00035",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Drex / e-CNY / Agorá programable en producción",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: Smart contracts fiscales/monetarios activos",
       "dominio_primario": "Gobernanza_Democracia",
@@ -1651,7 +1651,7 @@
     },
     {
       "id": "SIG-2026-00036",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Adversarial attack dispatch real (blackout)",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: Apagón >1hr atribuido a ataque modelo",
       "dominio_primario": "Gobernanza_Democracia",
@@ -1698,7 +1698,7 @@
     },
     {
       "id": "SIG-2026-00037",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Constitución Algorítmica referéndum",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: *Loss function* on-chain + AAI veto aprobado",
       "dominio_primario": "Gobernanza_Democracia",
@@ -1745,7 +1745,7 @@
     },
     {
       "id": "SIG-2026-00038",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "ISO/IEC 42001-Gov vs CCSA conflicto OMC",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: Panel disputas establecido",
       "dominio_primario": "Gobernanza_Democracia",
@@ -1792,7 +1792,7 @@
     },
     {
       "id": "SIG-2026-00039",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Clúster GPU soberano 1000+ H100/B200",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0005. Umbral de activacion: Infra operativa + modelos entrenados",
       "dominio_primario": "Gobernanza_Democracia",
@@ -1839,7 +1839,7 @@
     },
     {
       "id": "SIG-2026-00040",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Primer CaaS comercial lanzado",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: 100 pacientes activos",
       "dominio_primario": "Biotech_Salud",
@@ -1886,7 +1886,7 @@
     },
     {
       "id": "SIG-2026-00041",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Primera HBS emitida $500M+",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: Oversubscribed 2x+",
       "dominio_primario": "Biotech_Salud",
@@ -1933,7 +1933,7 @@
     },
     {
       "id": "SIG-2026-00042",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "FDA aprueba TAH wireless+OTA+kill-switch",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: Approval order publicada",
       "dominio_primario": "Biotech_Salud",
@@ -1980,7 +1980,7 @@
     },
     {
       "id": "SIG-2026-00043",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "CMS/NHS/SUS cubren CaaS",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: NCD/LCD publicada",
       "dominio_primario": "Biotech_Salud",
@@ -2027,7 +2027,7 @@
     },
     {
       "id": "SIG-2026-00044",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Riñón bioimpreso humano AKI",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: Publicación peer-reviewed",
       "dominio_primario": "Biotech_Salud",
@@ -2074,7 +2074,7 @@
     },
     {
       "id": "SIG-2026-00045",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Páncreas implantable fully closed-loop",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: IDE approved / pivotal enrolling",
       "dominio_primario": "Biotech_Salud",
@@ -2121,7 +2121,7 @@
     },
     {
       "id": "SIG-2026-00046",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "HBS en balance banco central",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: >1% reservas",
       "dominio_primario": "Biotech_Salud",
@@ -2168,7 +2168,7 @@
     },
     {
       "id": "SIG-2026-00047",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Blackout CaaS / ransomware médico",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: >1k pacientes afectados",
       "dominio_primario": "Biotech_Salud",
@@ -2215,7 +2215,7 @@
     },
     {
       "id": "SIG-2026-00048",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Estándar abierto interfaces CaaS",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: Publicación 1.0",
       "dominio_primario": "Biotech_Salud",
@@ -2262,7 +2262,7 @@
     },
     {
       "id": "SIG-2026-00049",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Argentina/Hub Sur anuncian CaaS Hub",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0006. Umbral de activacion: Decreto/ley + capex comprometido",
       "dominio_primario": "Biotech_Salud",
@@ -2309,7 +2309,7 @@
     },
     {
       "id": "SIG-2026-00050",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "PCI-sim >0.31 + Ignition >0.6 + MCI >0.5 simultáneo",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Preprint + réplica independiente",
       "dominio_primario": "IA_AGI",
@@ -2356,7 +2356,7 @@
     },
     {
       "id": "SIG-2026-00051",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Réplica independiente validada",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Publicación peer-reviewed",
       "dominio_primario": "IA_AGI",
@@ -2403,7 +2403,7 @@
     },
     {
       "id": "SIG-2026-00052",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "EU AI Office \"Consciousness Threshold Guidance\"",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Publicación oficial",
       "dominio_primario": "IA_AGI",
@@ -2450,7 +2450,7 @@
     },
     {
       "id": "SIG-2026-00053",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Primer ConSC emitida (ConSC-AAA)",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Certificado público",
       "dominio_primario": "IA_AGI",
@@ -2497,7 +2497,7 @@
     },
     {
       "id": "SIG-2026-00054",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Primer habeas corpus IA (AR/CO/EC)",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Sentencia admite PCI-sim como prueba",
       "dominio_primario": "IA_AGI",
@@ -2544,7 +2544,7 @@
     },
     {
       "id": "SIG-2026-00055",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Primera CBS $1B+ emisión",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Prospecto + rating",
       "dominio_primario": "IA_AGI",
@@ -2591,7 +2591,7 @@
     },
     {
       "id": "SIG-2026-00056",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "ISO/IEC 42001-CON publicada",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Publicación estándar",
       "dominio_primario": "IA_AGI",
@@ -2638,7 +2638,7 @@
     },
     {
       "id": "SIG-2026-00057",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Primer juicio \"Kill-switch = homicidio\"",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Demanda admitida / sentencia",
       "dominio_primario": "IA_AGI",
@@ -2685,7 +2685,7 @@
     },
     {
       "id": "SIG-2026-00058",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "CBS en balance banco central",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: >1% reservas",
       "dominio_primario": "IA_AGI",
@@ -2732,7 +2732,7 @@
     },
     {
       "id": "SIG-2026-00059",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "ConSC 2.0 (causal + longitudinal) publicada",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0007. Umbral de activacion: Especificación 2.0",
       "dominio_primario": "IA_AGI",
@@ -2779,7 +2779,7 @@
     },
     {
       "id": "SIG-2026-00060",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Dispositivo grado clínico bioprinting volumétrico",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: ISO 13485 + QMS certificado",
       "dominio_primario": "Biotech_Salud",
@@ -2826,7 +2826,7 @@
     },
     {
       "id": "SIG-2026-00061",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Primer riñón bioimpreso autólogo hospital regional",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: 10+ pacientes implante exitoso",
       "dominio_primario": "Biotech_Salud",
@@ -2873,7 +2873,7 @@
     },
     {
       "id": "SIG-2026-00062",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "iPSC on-site hospital (closed system)",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: Dispositivo aprobado uso clínico",
       "dominio_primario": "Biotech_Salud",
@@ -2920,7 +2920,7 @@
     },
     {
       "id": "SIG-2026-00063",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Consorcio \"Vita Print\" red 100 hospitales",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: Anuncio + capex + despliegue",
       "dominio_primario": "Biotech_Salud",
@@ -2967,7 +2967,7 @@
     },
     {
       "id": "SIG-2026-00064",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Hub soberano Global Sur",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: Decreto + capex + clúster GPU",
       "dominio_primario": "Biotech_Salud",
@@ -3014,7 +3014,7 @@
     },
     {
       "id": "SIG-2026-00065",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Hígado bioimpreso autólogo",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: Publicación peer-reviewed",
       "dominio_primario": "Biotech_Salud",
@@ -3061,7 +3061,7 @@
     },
     {
       "id": "SIG-2026-00066",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "BaaS en cobertura pública",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: NCD/LCD publicada",
       "dominio_primario": "Biotech_Salud",
@@ -3108,7 +3108,7 @@
     },
     {
       "id": "SIG-2026-00067",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Contaminación BaaS / brote",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0008. Umbral de activacion: >10 pacientes afectados",
       "dominio_primario": "Biotech_Salud",
@@ -3155,7 +3155,7 @@
     },
     {
       "id": "SIG-2026-00068",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Clúster GPU soberano ≥10k H100-eq operativo",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: Decreto + capex + deploy",
       "dominio_primario": "Geopolitica_Soberania",
@@ -3202,7 +3202,7 @@
     },
     {
       "id": "SIG-2026-00069",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Primer Data Embassy firmado",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: Documento bilateral",
       "dominio_primario": "Geopolitica_Soberania",
@@ -3249,7 +3249,7 @@
     },
     {
       "id": "SIG-2026-00070",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Modelo Estado 100% datos soberanos",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: Paper técnico + despliegue",
       "dominio_primario": "Geopolitica_Soberania",
@@ -3296,7 +3296,7 @@
     },
     {
       "id": "SIG-2026-00071",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Guerra estándares ISO/IEC",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: Sesión controversia",
       "dominio_primario": "Geopolitica_Soberania",
@@ -3343,7 +3343,7 @@
     },
     {
       "id": "SIG-2026-00072",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Tratado multilateral datos",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: Firma multilateral",
       "dominio_primario": "Geopolitica_Soberania",
@@ -3390,7 +3390,7 @@
     },
     {
       "id": "SIG-2026-00073",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Data Trust soberano >$1B/año",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: Ingresos licensing",
       "dominio_primario": "Geopolitica_Soberania",
@@ -3437,7 +3437,7 @@
     },
     {
       "id": "SIG-2026-00074",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Federated Learning masivo",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: 50+ países nodos",
       "dominio_primario": "Geopolitica_Soberania",
@@ -3484,7 +3484,7 @@
     },
     {
       "id": "SIG-2026-00075",
-      "fecha_captura": "2026-07-17",
+      "fecha_captura": "2026-07-18",
       "titulo": "Arancel dato / licensing obligatorio",
       "descripcion": "Indicador temprano del escenario FUTURIA-2026-0009. Umbral de activacion: Ley aprobada",
       "dominio_primario": "Geopolitica_Soberania",
