@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parte FUTURIA #004 — La pila soberana: el divisor no es el modelo, es el sustrato</title>
+<meta name="description" content="Parte quincenal de tendencias. Escenario semilla: PRISM #004 — pila tecnológica soberana.">
+<style>
+:root{
+  --bg:#0A0A0D; --bg-2:#131317; --line:#20303a;
+  --ink:#e8eef2; --ink-2:#8fa3af; --ink-3:#5f7280;
+  --red:#FF1240; --red-wash:rgba(233,1,0,.09);
+  --measure:38rem; --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.72;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--measure);margin:0 auto;padding:0 1.5rem}
+.wide{max-width:52rem;margin:0 auto;padding:0 1.5rem}
+.wrap-wide{max-width:52rem;margin:0 auto;padding:0 1.5rem}
+.figure-side{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;align-items:center;margin:0}
+.figure-side figure{margin:0}
+.figure-side img{width:100%;max-height:380px;object-fit:cover;object-position:center;display:block;border-radius:10px;border:1px solid var(--line);background:#07070A}
+.figure-side figcaption{font-size:.78rem;line-height:1.5;color:var(--ink-3);margin-top:.6rem;padding-left:.8rem;border-left:2px solid var(--red)}
+.figure-side[data-side="right"] .side-text{order:1}
+.figure-side[data-side="right"] figure{order:2}
+.figure-side[data-side="left"] .side-text{order:2}
+.figure-side[data-side="left"] figure{order:1}
+@media (max-width:720px){
+  .figure-side{grid-template-columns:1fr;gap:1.1rem}
+  .figure-side .side-text,.figure-side figure{order:unset}
+  .figure-side figure{order:2!important;margin-top:.3rem;overflow:hidden;border-radius:10px}
+  .figure-side img{height:188px;object-fit:cover;object-position:center}
+}
+.top{border-bottom:1px solid var(--line);background:#07070A}
+.top-in{max-width:52rem;margin:0 auto;padding:1.1rem 1.5rem;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.15rem;letter-spacing:-.02em;color:var(--ink)}
+.logo span{color:var(--red)}
+.top-meta{font-size:.78rem;color:var(--ink-3);letter-spacing:.04em}
+.hero{padding:3.5rem 0 2.5rem;border-bottom:1px solid var(--line)}
+.kicker{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin:0 0 1.1rem}
+h1{font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.06;letter-spacing:-.03em;font-weight:800;margin:0 0 1.1rem;text-wrap:balance}
+.stand{font-size:1.15rem;color:var(--ink-2);margin:0 0 1.8rem;max-width:32rem}
+.dateline{font-size:.76rem;color:var(--ink-3);letter-spacing:.05em;text-transform:uppercase;display:flex;gap:.6rem;flex-wrap:wrap}
+.dateline span::after{content:" ·";color:var(--line)}
+.dateline span:last-child::after{content:""}
+section{padding:2.8rem 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.sec-n{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin:0 0 .5rem}
+h2{font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.14;letter-spacing:-.02em;font-weight:800;margin:0 0 1.2rem;text-wrap:balance}
+h3{font-size:1.15rem;font-weight:700;margin:1.9rem 0 .5rem;letter-spacing:-.01em}
+p{margin:0 0 1.15rem}
+.lede{font-size:1.2rem;line-height:1.6;color:var(--ink)}
+strong{font-weight:700;color:#fff}
+a{color:var(--red);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+a:hover{background:var(--red-wash)}
+a:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.ficticio{border:1px solid rgba(233,1,0,.4);background:var(--red-wash);border-radius:8px;padding:1rem 1.15rem;margin:1.8rem 0;font-size:.98rem}
+.ficticio p{margin:0}
+.ficticio .tag{display:block;font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:.45rem}
+.nota{border-left:3px solid var(--line);padding:.3rem 0 .3rem 1.15rem;margin:1.8rem 0;color:var(--ink-2);font-size:.98rem}
+.nota p{margin:0}
+.nota p+p{margin-top:.6rem}
+.tablero{list-style:none;padding:0;margin:1.5rem 0}
+.tablero li{border-top:1px solid var(--line);padding:.9rem 0;display:grid;grid-template-columns:1fr auto;gap:.4rem 1rem;align-items:baseline}
+.tablero li:last-child{border-bottom:1px solid var(--line)}
+.tablero b{font-weight:700;color:#fff}
+.tablero .q{font-size:.94rem;color:var(--ink-2);grid-column:1/-1;margin:0}
+.estado{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap}
+figure{margin:2rem 0}
+figure svg{width:100%;height:auto;display:block;border-radius:8px}
+figcaption{font-size:.8rem;line-height:1.55;color:var(--ink-3);margin-top:.75rem;padding-left:.9rem;border-left:2px solid var(--red)}
+details{border:1px solid var(--line);border-radius:10px;background:var(--bg-2);margin:1.2rem 0}
+details summary{cursor:pointer;padding:.95rem 1.15rem;font-weight:700;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--red);font-weight:700;font-size:1.15rem}
+details[open] summary::after{content:"–"}
+details summary:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
+.details-body{padding:0 1.15rem 1.15rem;font-size:.92rem;color:var(--ink-2)}
+.details-body p{margin:0 0 .8rem}
+.claims{width:100%;border-collapse:collapse;font-size:.82rem}
+.claims th,.claims td{text-align:left;padding:.55rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+.claims th{color:var(--ink-3);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.v-ok{color:#4ea36a;font-weight:700}
+.v-ilu{color:#c9a227;font-weight:700}
+.v-blq{color:var(--red);font-weight:700}
+.v-sin{color:var(--ink-3);font-weight:700}
+footer{border-top:1px solid var(--line);background:#07070A;padding:2.5rem 0;font-size:.8rem;color:var(--ink-3);line-height:1.7}
+@media print{
+  @page{size:A4;margin:18mm}
+  :root{--bg:#fff;--bg-2:#fff;--line:#d5dde2;--ink:#0A0A0D;--ink-2:#3c4a53;--ink-3:#6b7a84;--red-wash:#fdeceb}
+  html,body{background:#fff!important;color:#0A0A0D!important;font-size:10.5pt;line-height:1.5}
+  .top,.dateline,nav{display:none!important}
+  .wrap,.wide,.wrap-wide{max-width:100%;padding:0}
+  h1{font-size:24pt}h2{font-size:15pt}
+  section{padding:.8rem 0;border-top:1px solid #d5dde2}
+  a{color:#0A0A0D!important;text-decoration:none;font-weight:700}
+  a[href^="http"]::after{content:" [" attr(href) "]";font-size:7.5pt;font-weight:400;color:#6b7a84;word-break:break-all}
+  details{border:1px solid #d5dde2;background:#fff;break-inside:avoid}
+  details[open] summary::after,details summary::after{content:""}
+  .details-body{display:block!important}
+  .figure-side{grid-template-columns:1fr 1fr!important;gap:1rem}
+  .figure-side .side-text,.figure-side figure{order:unset!important}
+  figure,.ficticio,.nota,.tablero li,.claims tr,.figure-side{break-inside:avoid}
+  .fuentes li{break-inside:avoid}
+  figure img{border:1px solid #d5dde2}
+  footer{background:#fff;border-top:2px solid #FF1240}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="logo">FUTURIA<span> ·</span> Parte</div>
+    <div class="top-meta">#004 · INFORME · 19 JUL 2026 · QUINCENAL</div>
+  </div>
+</header>
+<div class="hero">
+  <div class="wrap">
+    <p class="kicker">Parte #004 · Escenario semilla: PRISM #004</p>
+    <h1>La pila soberana: el divisor no es el modelo, es el sustrato</h1>
+    <p class="stand">La competencia por la inteligencia artificial dejó de ser de modelos. Ahora se juega en litografía, materiales, chips, memoria, energía y robótica avanzada: capas donde el control no es abierto, sino geopolítico y empresarial.</p>
+    <p class="dateline">
+      <span>Lectura 12 min</span>
+      <span>Soberanía tecnológica</span>
+      <span>Hard tech · Geopolítica · Robótica</span>
+    </p>
+  </div>
+</div>
+
+<!-- 1 · LA ESCENA -->
+<section>
+  <div class="wrap-wide">
+    <div class="figure-side" data-side="right">
+      <div class="side-text">
+        <p class="sec-n">01 · La escena</p>
+        <h2>Un puerto detenido y una fábrica activa</h2>
+        <p class="lede">Marzo de 2028. Un cargamento de obleas de diamante sintético queda retenido entre Kuala Lumpur y Hamburgo. En TV, el hecho es logística. En los mercados, es geopolítica.</p>
+        <p>Esa misma semana, dos plantas de Taiwán mencionan restricciones de envío fuera de isla. Nadie declara embargo oficial. En el sector industrial, Mitsubishi Electric, Nidec y Moog ya registraban picos de consultas sobre actuadores alternativos desde semanas antes. La señal no estaba en el Puerto; estaba en los proveedores que mueven la próxima revolución: <strong>la robótica avanzada</strong>.</p>
+        <p>La guerra de la IA se pelea en datos y modelos. La guerra de la robótica se pelea en materiales, sensores, actuadores y fábricas. En ambas, el mapa depende de unos pocos nombres.</p>
+        <div class="nota"><p>Lo que sigue es escenario. La verificación del presente está en la sección 2.</p></div>
+      </div>
+      <figure>
+        <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);background:#07070A">
+<rect width="640" height="300" fill="#07070A"/>
+<line x1="0" y1="210" x2="640" y2="210" stroke="#20303a" stroke-width="1"/>
+<g opacity="0.9">
+<rect x="60" y="150" width="70" height="60" fill="none" stroke="#FF1240" stroke-width="1.5"/>
+<rect x="135" y="150" width="70" height="60" fill="none" stroke="#8fa3af" stroke-width="1.5"/>
+<rect x="60" y="88" width="70" height="60" fill="none" stroke="#8fa3af" stroke-width="1.5"/>
+<rect x="135" y="88" width="70" height="60" fill="none" stroke="#FF1240" stroke-width="1.5"/>
+<text x="97" y="184" fill="#5f7280" font-size="10" text-anchor="middle" font-family="system-ui">wafer</text>
+</g>
+<circle cx="440" cy="120" r="46" fill="none" stroke="#FF1240" stroke-width="1.5"/>
+<line x1="440" y1="88" x2="440" y2="152" stroke="#FF1240" stroke-width="1"/>
+<line x1="408" y1="120" x2="472" y2="120" stroke="#FF1240" stroke-width="1"/>
+<text x="440" y="200" fill="#8fa3af" font-size="12" text-anchor="middle" font-family="system-ui">demora = señal</text>
+<text x="320" y="250" fill="#5f7280" font-size="11" text-anchor="middle" font-family="system-ui" font-style="italic">El sustrato físico de la IA se mueve en contenedores, no en la nube.</text>
+</svg>
+        <figcaption>Una demora administrativa en puerto puede ser, al mismo tiempo, una señal de control sobre el sustrato físico de la IA y la robótica avanzada.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · EL PRESENTE -->
+<section>
+  <div class="wrap">
+    <p class="sec-n">02 · El presente</p>
+    <h2>Cada actor, su oficio y su peso</h2>
+    <p>La confusión viene de mezclar capas. Cada nombre abajo hace una cosa diferente; entenderlas es entender quién define el ritmo y quién puede quedarse afuera.</p>
+
+    <h3>IA: modelos, chips, memoria y software</h3>
+    <p><strong>NVIDIA</strong> domina el entrenamiento de modelos con GPUs y el ecosistema CUDA; su posición en AI factory hoy es de cuello de botella singular. <strong>AMD</strong> es la alternativa con MI series en HPC/cloud. <strong>Google TPU</strong> muestra que el diseño propio de ASICs puede reemplazar GPU en carga estable a escala. <strong>Apple Silicon</strong> lleva ese diseño al extremo en edge, con impacto externo porque desplaza dependencia de x86.</p>
+    <p><strong>Arm</strong> define la arquitectura de licencia más extendida en embebidos y está entrando en alto rendimiento con Armv9; su propiedad SoftBank/Sony-Technology / escisión pendiente le da sensibilidad geopolítica directa. <strong>RISC-V</strong> es la alternativa abierta y sin dueño único; su adopción crece en soberanos, especialmente bloques soberanos.</p>
+
+    <h3>Litografía y materiales</h3>
+    <p><strong>ASML</strong> controla el paso final de fabricación de chips con sus sistemas EUV/High-NA EUV; hoy es el único con camino público para nodos sub-2nm <a href="https://www.asml.com/en/technology/euv" target="_blank" rel="noopener">[fuente: ASML]</a>. Eso define throughput y densidad por wafer. Su cadena es ZEISS (óptica) + TRUMPF (fuente láser) + Heraeus/Cymbal (materiales), todos europeos o aliados.</p>
+    <p><strong>Samsung</strong> combina memoria avanzada (HBM3E/4) con nodos maduros y componentes de potencia. Su peso en baterías de ciclo largo y electrónica de potencia es relevante para robótica avanzada <a href="https://semi.org/en" target="_blank" rel="noopener">[fuente: SEMI / WSTS]</a>.</p>
+    <p><strong>Wolfspeed / Onsemi / Infineon / STMicro / Rohm / San'an</strong> disputan SiC y GaN en potencia. Primero redefine eficiencia en inversores y carga; luego redefine densidad en actuadores.</p>
+
+    <h3>Diseño, empaquetado y memoria</h3>
+    <p><strong>TSMC</strong> (Taiwán), <strong>Intel 18A/14A</strong> (EE.UU./Alemania/Israel) y <strong>Samsung 2GAP</strong> (Corea del Sur) concentran la fabricación avanzada. TSMC es tan dominante que cualquier restricción de nodo o HBM se traduce en cuellos de botella por cliente, no por mercado. <strong>Rapidus</strong> (Japón, con apoyo IBM/Google/Toyota) busca 2nm propio para 2027.</p>
+    <p><strong>Synopsys y Cadence</strong> dominan el EDA. Sin sus herramientas no hay diseño de chips; sin diseño, no hay fabricación. Es una capa invisible y crítica <a href="https://ieee.org/" target="_blank" rel="noopener">[fuente: IEEE / CAICT]</a>. <strong>Empyrean / Primarius / Huada</strong> son la apuesta doméstica china para desacople.</p>
+    <p><strong>ASE / Amkor / JCET / TFME</strong> disputan el empaquetado avanzado. Hoy CoWoS y HBM dependen de TSMC/ASE. Un bloque soberano que no domine empaquetado no puede cerrar su pila.</p>
+
+    <h3>Robótica: actuadores, sensores y cuerpos</h3>
+    <p>Si la IA fue la revolución del pensamiento, la robótica avanzada será la revolución corporal. No falta el software; falta el cuerpo barato, fiable y con grados de libertad suficientes.</p>
+    <p><strong>Moog</strong> es el referente en actuadores de precisión para espacios que necesitan torque, control fino y fiabilidad certificada <a href="https://www.moog.com/" target="_blank" rel="noopener">[fuente: Moog]</a>. <strong>Harmonic Drive</strong> (Japón) domina reductores de alta precisión; sin ellos, los robots militares y quirúrgicos pierden repetibilidad. <strong>Maxon</strong> (Suiza) lidera en motores frameless para espacio y aeronáutica.</p>
+    <p><strong>HASEL/DEA/PAM</strong> son familias de actuadores blandos y de alta eficiencia; su promesa es menor costo, peso y mantenimiento para miles de grados de libertad <a href="https://softrobotics.org" target="_blank" rel="noopener">[fuente: Soft Robotics / IEEE RAS]</a>. Todavía falta escalar; ahí está la oportunidad y el freno.</p>
+
+    <h3>Distribución geográfica y exposición estratégica</h3>
+    <p>El mapa no es neutral. La siguiente tabla resume posición geográfica, rol en pila y exposición directa a conflictos geopolíticos.</p>
+    <ul class="fuentes">
+      <li><strong>Países Bajos</strong>: ASML, ZEISS, ASMI, NXP — litografía, óptica, equipo y automoción europea. Exposición: export controls por bloqueo tecnológico.</li>
+      <li><strong>Taiwán</strong>: TSMC, ASE, MediaTek, UMC, VISA — foundry avanzada, empaquetado, diseño. Exposición: Estrecho de Taiwán.</li>
+      <li><strong>EE.UU.</strong>: NVIDIA, AMD, Google TPU, Apple, Synopsys, Cadence, Intel, Micron, Moog, Wolfspeed — diseño, software, arquitectura, actuadores, potencia. Exposición: liderazgo normativo CHIPS Act + sanciones.</li>
+      <li><strong>Japón</strong>: Tokyo Electron, Screen, Shin-Etsu, Sumco, Rohm, Harmonic Drive, Rapidus — equipos, materiales, reductores, nueva foundry. Exposición: dependencia comercio + alianza EE.UU./Taiwán.</li>
+      <li><strong>Corea del Sur</strong>: Samsung, SK Hynix — foundry + memoria HBM. Exposición: tensión regional + dependencia agua/energía en fabs.</li>
+      <li><strong>China continental</strong>: SMIC, CXMT, Yangtze Memory, Huawei Ascend, Biren, Moore Threads, Empyrean, SMEE, Leader/Ningbo, San'an — pila alternativa. Exposición: sanciones + objetivo autosuficiencia para 2035.</li>
+      <li><strong>Suiza</strong>: Maxon, CSEM — motion de precisión e investigación avanzada. Exposición: neutralidad, normativa UE.</li>
+      <li><strong>Unión Europea</strong>: STMicro, Infineon, IMEC, Fraunhofer, Leti — potencia y research. Exposición: regulación UE CHIPS + dependencia TSMC.</li>
+      <li><strong>Bloque Ecuatorial/Soberano</strong>: GlobalFoundries (US/SG/DE), UMC/Tower (TW/IL/US), Amkor (US/MY/IN), fellows en IN/BR/MX/AR/CL/Z/AE/SA/VN/ID — nodos maduros + empaquetado + materiales. Exposición: arbitraje regulatorio + energía.</li>
+    </ul>
+
+    <div class="nota"><p>Cuando el PRISM habla de «pila soberana», la pregunta no es solo quién fabrica el chip, sino quién controla cada eslabón y en qué bloque geopolítico está parado.</p></div>
+  </div>
+</section>
+
+<!-- 3 · LA MECÁNICA -->
+<section>
+  <div class="wrap-wide">
+    <div class="figure-side" data-side="left">
+      <div class="side-text">
+        <p class="sec-n">03 · La mecánica</p>
+        <h2>La pila baja se cierra y la alta se abre</h2>
+        <p>El hardware de IA y robótica avanzada es una pila. En la parte baja están litografía, obleas, materiales críticos y energía. En la parte media, diseño, chips, memoria e interconexión. Arriba, software, modelos y estándares.</p>
+        <p><strong>IMPORTANCIA PARA IA:</strong> ASML define nodos; TSMC define volumen; Synopsys/Cadence definen diseño; NVIDIA/AMD definen throughput de entrenamiento; HBM define memoria. Sin esos eslabones, el entrenamiento de modelos triplica costo y latencia.</p>
+        <p><strong>IMPORTANCIA PARA ROBÓTICA:</strong> Samsung define electrónica de potencia y baterías; Moog/Harmonic Drive definen precisión mecánica; HASEL/DEA definen masa mecánica accesible. La próxima revolución no será un nuevo modelo; será un cuerpo robótico barato, fiable y con sensórica táctil.</p>
+
+        <h3>Qué pasaría si el escenario se profundiza o cambia</h3>
+        <p><strong>Taiwán:</strong> un bloqueo parcial de TSMC reduce 30-40% la capacidad avanzada global. EE.UU. usa Arizona y Kumamoto, pero el ramp es 18-24 meses. China usa 5nm a yield 40-50%. Resultado: racionamiento, precios duplicados y dos ecosistemas divergentes.</p>
+        <p><strong>Ciberguerra:</strong> un ataque a EDA o a máscaras de TSMC contamina diseños sin detener fábricas. El daño aparece meses después, cuando los chips funcionan mal en campo. Eso acelera reshoring y near-shoring.</p>
+        <p><strong>Estándares paralelos:</strong> UEC/UALink/CXL en el bloque occidental; estándares paralelos en el sinocéntrico. La interoperabilidad en capas altas existe, pero el lock-in ya está en firmware y certificación.</p>
+        <p><strong>Compute-backed securities:</strong> si el cómputo se tituliza, los países sin capacidad soberana dependen de liquidez externa para entrenar modelos. El acceso pasa de capacidad financiera a acceso crediticio con condicionalidad geopolítica.</p>
+        <p><strong>Crisis robótica:</strong> el primer accidente grave de humanoide desata moratoria regulatoria en UE y EE.UU. Para entonces, China ya tenía 500.000 unidades en logística/almacenes. El bloque ecuatorial produce bajo estándares más laxos y gana mercado por precio.</p>
+
+        <div class="ficticio">
+          <span class="tag">Actor ficticio · disclosure</span>
+          <p>Para no atribuirle a ninguna empresa existente un movimiento que no anunció, llamamos <strong>Nexus Semiconductor Lease</strong> al primer proveedor que ofrezca leasing de capacidad avanzada con origen alternativo. Nexus es ilustración del diseño, no una compañía lanzada.</p>
+        </div>
+      </div>
+      <figure>
+        <svg viewBox="0 0 560 440" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);background:#07070A">
+<rect width="560" height="440" fill="#07070A"/>
+<text x="30" y="34" fill="#8fa3af" font-size="12" font-family="system-ui" letter-spacing="2">PILA ALTA · se abre</text>
+<g font-family="system-ui">
+<rect x="30" y="46" width="500" height="52" fill="rgba(255,18,64,.09)" stroke="#FF1240" stroke-width="1"/>
+<text x="46" y="70" fill="#e8eef2" font-size="13" font-weight="700">Modelos · Software · Estándares</text>
+<text x="46" y="88" fill="#5f7280" font-size="11">abierto, competido, muchos actores</text>
+
+<rect x="30" y="108" width="500" height="52" fill="rgba(255,18,64,.05)" stroke="#8fa3af" stroke-width="1"/>
+<text x="46" y="132" fill="#e8eef2" font-size="13" font-weight="700">Diseño · Chips · Memoria · Interconexión</text>
+<text x="46" y="150" fill="#5f7280" font-size="11">NVIDIA, TSMC, Synopsys/Cadence, HBM — pocos actores</text>
+
+<rect x="30" y="170" width="500" height="52" fill="rgba(255,18,64,.05)" stroke="#8fa3af" stroke-width="1"/>
+<text x="46" y="194" fill="#e8eef2" font-size="13" font-weight="700">Actuadores · Sensores · Potencia (robótica)</text>
+<text x="46" y="212" fill="#5f7280" font-size="11">Moog, Harmonic Drive, HASEL — cuello del cuerpo físico</text>
+</g>
+<text x="30" y="262" fill="#FF1240" font-size="12" font-family="system-ui" letter-spacing="2">PILA BAJA · se cierra</text>
+<g font-family="system-ui">
+<rect x="30" y="274" width="500" height="52" fill="rgba(255,18,64,.12)" stroke="#FF1240" stroke-width="1.5"/>
+<text x="46" y="298" fill="#fff" font-size="13" font-weight="700">Litografía (ASML) · Obleas · Materiales críticos</text>
+<text x="46" y="316" fill="#8fa3af" font-size="11">un solo actor por eslabón — el punto de control</text>
+
+<rect x="30" y="336" width="500" height="52" fill="rgba(255,18,64,.12)" stroke="#FF1240" stroke-width="1.5"/>
+<text x="46" y="360" fill="#fff" font-size="13" font-weight="700">Energía</text>
+<text x="46" y="378" fill="#8fa3af" font-size="11">la capa que todos olvida hasta que falta</text>
+</g>
+<text x="280" y="418" fill="#5f7280" font-size="11" text-anchor="middle" font-family="system-ui" font-style="italic">El divisor no es software vs hardware: es capa abierta vs capa controlada.</text>
+</svg>
+        <figcaption>La separación útil no es software vs hardware, sino capas abiertas vs capas controladas. En cada capa hay un actor que define el ritmo según su bloque geopolítico.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · LOS FRENOS -->
+<section>
+  <div class="wrap-wide">
+    <div class="figure-side" data-side="right">
+      <div class="side-text">
+        <p class="sec-n">04 · Los frenos</p>
+        <h2>Qué puede hacer que esto no avance</h2>
+
+        <h3>1. Export controls endurecidos</h3>
+        <p>Controles por capa elevan el costo de compliance y terminan duplicando I+D por bloque regulatorio.</p>
+
+        <h3>2. Fragmentación de costos</h3>
+        <p>Tres pilas incompatibles en capas bajas suman +40-60% de capex y retrasan 2-3 años la disponibilidad fuera del bloque líder.</p>
+
+        <h3>3. Escasez de talento crítico</h3>
+        <p>PhD en materiales, litografía, EDA y robótica migran a big tech/defensa. Sin reposición académica, la pila soberana queda como fachada sin ingeniería.</p>
+
+        <h3>4. Dependencia semiconductor-batería-actuador</h3>
+        <p>La robótica avanzada depende de sensores, baterías de ciclo largo y actuadores precisos. Si Samsung/Moog/Harmonic Drive/HASEL no escalan, el cuerpo robótico se retrasa incluso si el chip avanza.</p>
+      </div>
+      <figure>
+        <svg viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line);background:#07070A">
+<rect width="640" height="280" fill="#07070A"/>
+<line x1="60" y1="140" x2="580" y2="140" stroke="#20303a" stroke-width="2"/>
+<polygon points="580,140 566,133 566,147" fill="#20303a"/>
+<g font-family="system-ui">
+<line x1="160" y1="90" x2="160" y2="190" stroke="#FF1240" stroke-width="3"/>
+<text x="160" y="78" fill="#8fa3af" font-size="10" text-anchor="middle">export controls</text>
+<line x1="290" y1="100" x2="290" y2="180" stroke="#FF1240" stroke-width="3"/>
+<text x="290" y="88" fill="#8fa3af" font-size="10" text-anchor="middle">fragmentación +40-60%</text>
+<line x1="420" y1="105" x2="420" y2="175" stroke="#FF1240" stroke-width="3"/>
+<text x="420" y="93" fill="#8fa3af" font-size="10" text-anchor="middle">talento PhD escaso</text>
+<line x1="520" y1="110" x2="520" y2="170" stroke="#FF1240" stroke-width="3"/>
+<text x="520" y="98" fill="#8fa3af" font-size="10" text-anchor="middle">chip-batería-actuador</text>
+</g>
+<text x="320" y="230" fill="#5f7280" font-size="11" text-anchor="middle" font-family="system-ui" font-style="italic">Cada freno es un costo operativo real, no una catástrofe.</text>
+</svg>
+        <figcaption>Los frenos no son catastrofistas: son costos operativos reales cuando la pila se fragmenta.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · EL TABLERO -->
+<section>
+  <div class="wrap">
+    <p class="sec-n">05 · El tablero</p>
+    <h2>Qué mirar para saber si esto avanza</h2>
+    <ul class="tablero">
+      <li><b>High-NA EUV envíos &gt;10 u/año</b><span class="estado">Emergente</span><p class="q">ASML / SEMI WWSEMS. Hito 2026-2027.</p></li>
+      <li><b>SMEE EUV half-pitch &lt;20 nm verificado independientemente</b><span class="estado">Emergente</span><p class="q">Paper independiente. Hito 2027.</p></li>
+      <li><b>Moog / Harmonic Drive / HASEL en producto robótico comercial</b><span class="estado">Investigación</span><p class="q">Prototipo validado para grados de libertad en producción en masa. Hito 2028-2029.</p></li>
+      <li><b>Samsung HBM4 / batería silicio-anodo en cliente final</b><span class="estado">Producto</span><p class="q">Lanzamiento y adopción real.</p></li>
+      <li><b>País LATAM decreta fab avanzada/RISC-V con capex</b><span class="estado">Borrador</span><p class="q">Fuente oficial + inversión. 2027.</p></li>
+      <li><b>UALink / UEC / CXL 3.x ratificado y en cliente final</b><span class="estado">Estandarización</span><p class="q">Interoperabilidad real multi-block. Hito 2027-2028.</p></li>
+      <li><b>Diamante sintético 150mm en producción</b><span class="estado">Emergente</span><p class="q">Element Six / AKHAN / NIMS. Hito 2027-2028.</p></li>
+      <li><b>Compute-backed security prospecto público</b><span class="estado">No detectado</span><p class="q">Emisión con rating. Cambia la geografía del acceso a cómputo.</p></li>
+    </ul>
+    <div class="nota"><p>Estos observables se dan de alta en el Lab con etiqueta <code>origen: parte_004</code>.</p></div>
+  </div>
+</section>
+
+<!-- 6 · Y ENTONCES QUÉ -->
+<section>
+  <div class="wrap">
+    <p class="sec-n">06 · Y entonces qué</p>
+    <h2>A vos qué te cambia</h2>
+
+    <h3>Si legisás o regulás</h3>
+    <p>La próxima revolución no es solo IA. Es IA más robótica avanzada. Las soberanías útiles son empaquetado, materiales críticos, nodos maduros, actuadores y baterías — no litografía cutting-edge como único objetivo.</p>
+
+    <h3>Si construís producto</h3>
+    <p>Mapeá dependencias por capa. ASML, TSMC, Synopsys, Samsung, Moog y HASEL no son opcionales: son rutas críticas con riesgo geopolítico propio.</p>
+
+    <h3>Si invertís</h3>
+    <p>El ruido te hace mirar marcas. Lo útil es exposición a EDA, empaquetado, memoria, materiales, actuadores y baterías. Ahí vive la soberanía efectiva y el retorno.</p>
+  </div>
+</section>
+
+<!-- 7 · EL APARATO -->
+<section>
+  <div class="wrap">
+    <p class="sec-n">07 · El aparato</p>
+    <h2>Capa 2 — Claims, geografía, escenarios, fuentes</h2>
+
+    <details>
+      <summary>Claims y veeduría</summary>
+      <div class="details-body">
+        <p>Toda afirmación verificable tiene fuente primaria. Los actores reales se citan para hechos verificados. Las proyecciones usan actor ficticio con disclosure en cuerpo.</p>
+        <table class="claims">
+          <tbody><tr><th>ID</th><th>Clase</th><th>Claim</th><th>Fuente</th><th>Veredicto</th></tr>
+          <tr><td>claim-parte-004-001</td><td><span class="v-ok">E</span></td><td>ASML High-NA EUV 0.55 NA es camino publicado para nodos sub-2nm.</td><td><a href="https://www.asml.com/en/technology/euv" target="_blank" rel="noopener">ASML</a></td><td class="v-ok">OK</td></tr>
+          <tr><td>claim-parte-004-002</td><td><span class="v-ok">E</span></td><td>SMEE EUV demostró avances relevantes en 2025 (SEMICON China / SPIE).</td><td><a href="https://spie.org/" target="_blank" rel="noopener">SPIE / SEMICON China</a></td><td class="v-ok">OK</td></tr>
+          <tr><td>claim-parte-004-003</td><td><span class="v-ok">E</span></td><td>Geopolítica: Taiwán concentra foundry/empaquetado avanzado (TSMC/ASE); bloqueo parcial reduce 30-40% capacidad global.</td><td><a href="https://semi.org/en" target="_blank" rel="noopener">SEMI / síntesis PRISM</a></td><td class="v-ilu">ILUSTRATIVO</td></tr>
+          <tr><td>claim-parte-004-004</td><td><span class="v-ok">D</span></td><td>Capex global semis 2025-2030 estimado en USD 1,5-2,0T.</td><td><a href="https://semi.org/en" target="_blank" rel="noopener">SEMI / WSTS</a></td><td class="v-ok">OK</td></tr>
+          <tr><td>claim-parte-004-005</td><td><span class="v-ok">E</span></td><td>Moog/Harmonic Drive/Maxon son referentes en actuadores de precision relevantes para robotica.</td><td><a href="https://www.moog.com/" target="_blank" rel="noopener">Moog</a></td><td class="v-ok">OK</td></tr>
+          <tr><td>claim-parte-004-006</td><td><span class="v-ok">T</span></td><td>HASEL/DEA demostraron viabilidad en papers 2024-25 (Soft Robotics / IEEE RAS).</td><td><a href="https://softrobotics.org" target="_blank" rel="noopener">Soft Robotics / IEEE RAS</a></td><td class="v-ok">OK</td></tr>
+          <tr><td>claim-parte-004-007</td><td><span class="v-ok">N</span></td><td>Ley 27.506 (modificada por Ley 27.570) — Régimen de Promoción de la Economía del Conocimiento. La cita anterior la describía como «Ley de Promoción de la Industria del Software», lo cual es incorrecto: esa era la Ley 25.922 (2004), hoy derogada. VERIFICADO contra InfoLEG.</td><td><a href="https://servicios.infoleg.gob.ar/infolegInternet/verNorma.do?id=343520" target="_blank" rel="noopener">InfoLEG / Boletín Oficial</a></td><td class="v-ok">OK</td></tr>
+          <tr><td>claim-parte-004-008</td><td><span class="v-ilu">P</span></td><td>Proyección FUTURIA: la próxima revolución post-IA será robótica avanzada si escala motor/actuador, batería y HBM.</td><td>Ninguna — proyección FUTURIA</td><td class="v-ilu">P</td></tr>
+        </tbody></table>
+      </div>
+    </details>
+
+    <details>
+      <summary>Geografía estratégica</summary>
+      <div class="details-body">
+        <table class="claims">
+          <tbody><tr><th>Bloque / País</th><th>Actores clave</th><th>Capas dominadas</th><th>Escenario probable</th></tr>
+          <tr><td>Países Bajos</td><td>ASML, ZEISS, ASMI</td><td>Litografía, óptica, equipo, materiales</td><td>Control por export controls; cuello de botella irremplazable 10-15 años.</td></tr>
+          <tr><td>Taiwán</td><td>TSMC, ASE, MediaTek</td><td>Foundry avanzada, empaquetado, diseño</td><td>Flashpoint geopolítico; interrupción reduce 30-40% capacidad global; planes de contingencia 18-24 meses.</td></tr>
+          <tr><td>EE.UU.</td><td>NVIDIA, AMD, Google, Apple, Synopsys, Cadence, Intel, Micron, Moog, Wolfspeed</td><td>Diseño, software, arquitectura, actuadores, potencia, memoria</td><td>Sanciones + CHIPS Act; liderazgo normativo; riesgo de fragmentación I+D.</td></tr>
+          <tr><td>Japón</td><td>Tokyo Electron, Screen, Shin-Etsu, Sumco, Rohm, Harmonic Drive, Rapidus</td><td>Equipos, materiales, reductores precisión, foundry 2nm</td><td>Alianza EE.UU.-Taiwán; dependencia agua/energía; retorno a fabricación nacional.</td></tr>
+          <tr><td>Corea del Sur</td><td>Samsung, SK Hynix</td><td>Foundry, HBM, electrónica potencia, baterías</td><td>Memoria dominante; riesgo tensión regional; pivote a robótica/auto.</td></tr>
+          <tr><td>China continental</td><td>SMIC, CXMT, Yangtze Memory, Huawei, Biren, Empyrean, SMEE, Leader/Ningbo</td><td>Foundry, memoria, EDA doméstica, EUV alternativo, actuadores locales</td><td>Objetivo autosuficiencia 2035; yield 40-50%; crecimiento acelerado en soberanos sin occidente.</td></tr>
+          <tr><td>UE</td><td>STMicro, Infineon, IMEC, Fraunhofer, Leti</td><td>Potencia, research, nodos maduros</td><td>Dependencia TSMC para nodos avanzados; regulación CHIPS UE; foco en SiC/GaN y empaquetado.</td></tr>
+          <tr><td>Suiza</td><td>Maxon, CSEM</td><td>Motores precisión, research</td><td>Neutralidad activa; normativa UE; hubs de talento.</td></tr>
+          <tr><td>Bloque Ecuatorial</td><td>GlobalFoundries, UMC, VIS, Tower, Amkor, IN/BR/MX/AR/CL/ZA/AE/SA/VN/ID</td><td>Nodos maduros, empaquetado, materiales, energía</td><td>Arbitraje regulatorio; energía renovable + talento; catch-up en empaquetado avanzado.</td></tr>
+        </tbody></table>
+      </div>
+    </details>
+
+    <details open>
+      <summary>Escenarios posibles y gatillos</summary>
+      <div class="details-body">
+        <p>La pila soberana tiene tres bloques semiautónomos. Cualquier shock redefine quién gana y quién depende.</p>
+        <ul class="fuentes">
+          <li><strong>Taiwán:</strong> conflicto no cinético/ciber bloqueo TSMC → escasez 30-40% → Arizona/Kumamoto/Dresde cubren parte en 18-24 meses → dos ecosistemas.</li>
+          <li><strong>Ciberguerra EDA/fab:</strong> diseño envenenado o máscaras corruptas → confianza en chips ajenos colapsa → reshoring/nearshoring → costos +40-60%.</li>
+          <li><strong>Estándares paralelos:</strong> UEC/UALink/CXL occidental vs estándares paralelos sinocéntricos → interoperabilidad solo en API; lock-in en firmware/certificación.</li>
+          <li><strong>Compute-backed securities:</strong> cómputo como activo financiero soberano → países sin capacidad propia dependen de liquidez crediticia condicionada geopolíticamente.</li>
+          <li><strong>Moratoria robótica:</strong> accidente humanoide mayor → regulación restrictiva en UE/EE.UU. → bloque ecuatorial produce bajo estándares más bajos y captura mercado por precio.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details open>
+      <summary>Adversario + método</summary>
+      <div class="details-body">
+        <p>ESTADO REAL DE VALIDACIÓN (corregido): el borrador original declaraba «0 bloqueos» pero el claim N (Ley 27.570) estaba mal descrito y con link no funcional — un bloqueante que el auto-checklist no detectó. Corregido en esta versión. Los claims E marcados OK con fuentes genéricas (homepages de SPIE, SEMI, IEEE) NO están verificados a la afirmación concreta: una homepage no es evidencia de un hecho puntual. Requieren re-verificación con URL específica antes de publicar. Este ejemplar NO pasó el gate real.</p>
+      </div>
+    </details>
+
+    <details open>
+      <summary>Fuentes con link</summary>
+      <div class="details-body">
+        <ul class="fuentes">
+          <li><a href="https://www.asml.com/en/technology/euv" target="_blank" rel="noopener">ASML</a> — litografía.</li>
+          <li><a href="https://spie.org/" target="_blank" rel="noopener">SPIE / SEMICON China</a> — sectorial/evento — litografía alternativa.</li>
+          <li><a href="https://ieee.org/" target="_blank" rel="noopener">IEEE / CAICT</a> — técnica/government-industrial — pila alternativa.</li>
+          <li><a href="https://semi.org/en" target="_blank" rel="noopener">SEMI / WSTS</a> — sectorial — capex.</li>
+          <li><a href="https://www.moog.com/" target="_blank" rel="noopener">Moog</a> — sectorial — actuadores robóticos.</li>
+          <li><a href="https://softrobotics.org" target="_blank" rel="noopener">Soft Robotics / IEEE RAS</a> — técnica — actuadores blandos.</li>
+          <li><a href="https://servicios.infoleg.gob.ar/infolegInternet/verNorma.do?id=343520" target="_blank" rel="noopener">InfoLEG / Boletín Oficial</a> — normativa.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</section>
+
+<div class="signature">
+  <div>
+    <div class="label">Firma del Chairman</div>
+    <div class="line" style="border-bottom:1px solid var(--ink);height:1rem;margin-bottom:.4rem"></div>
+    <div class="label">Diego Gettig</div>
+  </div>
+  <div>
+    <div class="label">Fecha</div>
+    <div class="line" style="border-bottom:1px solid var(--ink);height:1rem;margin-bottom:.4rem"></div>
+    <div class="label">2026-07-19</div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">Parte #004 · BORRADOR · CONFIDENCIAL · 2026-07-19</div>
+</footer>
+
+</body></html>
